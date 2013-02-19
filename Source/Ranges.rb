@@ -9,6 +9,7 @@ class Ranges
         @table[row["Key"]] = {"min" =>row["Min"].to_f, "max" => row["Max"].to_f}
       end
       find_min_max
+      @float = float_or_not?
     end
   end
 
@@ -20,12 +21,9 @@ class Ranges
       @max_max = value["max"] if @max_max.nil? || value["max"] > @max_max
     end
   end
-  
+
   def float?
-    @table.values.each do |value|
-      return true if value["min"].to_i != value["min"] || value["max"].to_i != value["max"]  # if just one value in the range is a float - we define the range over floats
-    end
-    return false
+    @float
   end
 
   def value_to_codes value
@@ -64,6 +62,17 @@ class Ranges
   end
   
   def to_s
-    "#{@min_min}-#{@max_max}"
+    float? ? "#{@min_min}-#{@max_max}" : "#{@min_min.to_i}-#{@max_max.to_i}"
   end
+
+  private
+
+  def float_or_not?
+    @table.values.each do |value|
+      return true if value["min"].to_i != value["min"] || value["max"].to_i != value["max"]  # if just one value in the range is a float - we define the range over floats
+    end
+    return false
+  end  
+
+
 end
