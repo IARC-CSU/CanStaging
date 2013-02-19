@@ -1,0 +1,88 @@
+<html>
+<head>
+<title><%= site.site %></title>
+</head>
+<body>  
+  <h1><%= site.site %></h1>
+  <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" >
+    <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
+    <table>
+      <% site.get_metas.each do |part, meta| %>
+        <tr id = "<%= part %>">
+          <td><b><%= part unless meta.fields.empty? %></b></td>
+        </tr>
+        <% meta.fields.values.each do |field| %>
+          <tr id = "<%= part %>">
+            <td><%= field.display_text %></td>
+            <td>
+            <% case field.type 
+               when :boolean %>
+                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T">Yes
+                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F">No
+            <% when :dictionary %>
+                <select name=<%= "\"data[#{part}[#{field.name}]]\"" %>>
+                  <option value='' disabled selected style='display:none;'>Please Choose</option>
+                  <% field.dictionary.table.each do |key, value| %>
+                    <option value=<%= "\"#{key}\"" %>><%= value %></option>
+                  <% end %>
+                </select>
+            <% when :number %>
+              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" hidden />
+              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <% field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %>/>
+            <% else %>
+              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" />
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+    <input type="submit" value="Calculate" />
+  </form>
+   </body>
+      <script type="text/javascript">
+function validateForm()
+{
+  <% site.get_metas.each do |part, meta| %>
+    <% meta.fields.values.each do |field| %>
+      <% case field.type 
+      when :boolean %>
+        var radios = document.getElementsByName(<%= "\"data[#{part}[#{field.name}]]\"" %>);
+        var formValid = false;
+        var i = 0;
+        while (!formValid && i < radios.length) {
+            if (radios[i].checked) formValid = true;
+            i++;        
+        }
+        if (!formValid) { alert (<%= "\" '#{field.display_text}' must be checked.\"" %>);
+          return false;
+        }
+      <% when :number %>
+        var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
+        if (x==null || x=="")
+        {
+        alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+        return false;
+        }
+
+          if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\" '#{field.display_text}' outside of scope (#{field.ranges}).\"" %>); 
+          return false;
+        } 
+/*        <% field.ranges.table.each do |code, range| %>
+          if (x > <%= range["min"] %> && x < <%= range["max"] %>) {
+            document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value = <%= code %>;
+          }
+          <% end %> */
+      <% else %>
+        var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
+        if (x==null || x=="")
+        {
+        alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+        return false;
+        }
+      <% end %>
+    <% end %>
+  <% end %>
+}
+</script>
+</html>
