@@ -1,0 +1,7 @@
+syntax: glob
+.dropbox
+NewStagingTool.lyx~
+desktop.ini
+Source/Gemfile.lock
+Source/views/assets/.gitkeep
+Source/views/tasks/.gitkeep
