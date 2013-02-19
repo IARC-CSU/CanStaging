@@ -28,7 +28,7 @@
                 </select>
             <% when :number %>
               <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" hidden />
-              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <% field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %>/>
+              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %>/>
             <% else %>
               <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" />
             <% end %>
