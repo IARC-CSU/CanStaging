@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ChestInvasion","Boolean","Extension to chest wall (not including only pectoralis muscle)","2",
+"Inflammation","Boolean","Inflammatory carcinoma","2",
+"Size","Number","Enter size of invasive tumour (cm)","1",
+"Ulceration","Boolean","Ulceration/ipsilateral satellite nodules/oedema (incl. peau d'orange) of skin","2",
+"Test","Dictionary","Testing dictionary use","3",
