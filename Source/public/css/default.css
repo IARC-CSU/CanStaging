@@ -1,0 +1,57 @@
+/* Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0 */
+
+h1{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#breast_form  { 
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse 
+}
+
+#breast_form td, #breast_form th {
+	font-size:1em;
+	border:1px solid #C74C69;
+	padding:3px 7px 2px 7px;	
+}
+
+#breast_form th {
+	font-size:1.1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#F27B96;
+	color:#ffffff;
+}
+
+#breast_form tr { 
+	color:#000000;
+	background-color:#F598AD;
+}
+
+/* */
+
+#test_form  { 
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse 
+}
+
+#test_form td, #test_form th {
+	font-size:1em;
+	border:1px solid #A2EA77;
+	padding:3px 7px 2px 7px;	
+}
+
+#test_form th {
+	font-size:1.1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#76C14A;
+	color:#ffffff;
+}
+
+#test_form tr { 
+	color:#000000;
+	background-color:#B6F094;
+}
