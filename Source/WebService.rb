@@ -20,14 +20,17 @@ available_sites.each do |site|
 end
 
 post '/tnm' do
+  puts params
   site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
   if site.nil?
     return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
   else
     site.get_metas.each do |part, meta| 
       meta.fields.keys.each do |key|
-        number = params["data"][part].delete "#{key}-number" # remove the temporary variables
-        params["data"][part][key] = meta.fields[key].value_to_codes(number).first  unless number.nil?
+        unless params["data"][part].nil?
+          number = params["data"][part].delete "#{key}-number" # remove the temporary variables
+          params["data"][part][key] = meta.fields[key].value_to_codes(number).first unless (number.nil? || number.length == 0)
+        end
       end
     end
     puts params
