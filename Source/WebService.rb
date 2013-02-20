@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+
 require 'sinatra'
 require 'json'
 
@@ -37,6 +39,10 @@ post '/tnm' do
     jdata = params["data"]
     return JSON.pretty_generate(site.calculate_tnm(jdata)) #["TNM"]
   end
+end
+
+get '/tool' do 
+  erb :tool, :locals => {:sites => @@sites.keys }
 end
 
 get '/meta/*' do |site_name|

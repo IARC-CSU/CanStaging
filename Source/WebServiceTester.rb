@@ -1,7 +1,7 @@
-##tester
+# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+
 require 'rest-client'
 require 'json'
-# require 'Time'
 require './Meta.rb'
 require 'pp'
 

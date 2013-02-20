@@ -17,8 +17,8 @@
           <th id = "<%= part %>_result">
           </th>
         </tr>
-        <% meta.fields.values.each do |field| %>
-          <tr id = "<%= part %>">
+        <% meta.fields.values.sort_by(&:group).each do |field| %>
+          <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
             <td><%= field.display_text %></td>
             <td>
             <% case field.type 
@@ -122,7 +122,7 @@ function validateForm()
 
     $.post('/tnm', term, 
       function(data) {
-        
+
         console.log(data);
 
         var el = document.getElementById(part+'_result');

@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+
 require '.\Site.rb'
 
 class Breast < Site

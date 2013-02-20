@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+
 require './LookUp.rb'
 require './Meta.rb'
 

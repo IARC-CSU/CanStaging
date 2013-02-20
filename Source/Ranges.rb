@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+
 class Ranges
   attr_accessor :table
   attr_reader :min_min, :max_max

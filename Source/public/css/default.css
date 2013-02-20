@@ -1,12 +1,32 @@
-/* Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0 */
+/* 
+Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0 
+*/
 
-h1{
+html {
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-#breast_form  { 
-	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-	border-collapse: collapse 
+table {
+	border-collapse: collapse;
+	width: 85%
+}
+
+th {
+	font-size:1.1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+}
+
+a { text-decoration:none }
+a:hover { text-decoration:underline; }
+a:visited { color:#000000;}
+
+#tool {
+	background-color:#4275A3;
+	color:#ffffff;
+	border:1px solid #000000;
 }
 
 #breast_form td, #breast_form th {
@@ -15,26 +35,27 @@ h1{
 	padding:3px 7px 2px 7px;	
 }
 
+/* Breast site*/
+
 #breast_form th {
-	font-size:1.1em;
-	text-align:left;
-	padding-top:5px;
-	padding-bottom:4px;
-	background-color:#F27B96;
+	background-color:#D3788E;
 	color:#ffffff;
 }
 
-#breast_form tr { 
+#breast_group_1 { 
+	color:#000000;
+	background-color:#F27B96;
+}
+#breast_group_2 { 
+	color:#000000;
+	background-color:#F58BA4;
+}
+#breast_group_3 { 
 	color:#000000;
 	background-color:#F598AD;
 }
 
-/* */
-
-#test_form  { 
-	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-	border-collapse: collapse 
-}
+/* Test site */
 
 #test_form td, #test_form th {
 	font-size:1em;
@@ -43,15 +64,19 @@ h1{
 }
 
 #test_form th {
-	font-size:1.1em;
-	text-align:left;
-	padding-top:5px;
-	padding-bottom:4px;
 	background-color:#76C14A;
 	color:#ffffff;
 }
 
-#test_form tr { 
+#test_group_1 { 
+	color:#000000;
+	background-color:#A2EA77;
+}
+#test_group_2 { 
+	color:#000000;
+	background-color:#AFF088;
+}
+#test_group_3 { 
 	color:#000000;
 	background-color:#B6F094;
 }
