@@ -1,15 +1,21 @@
 <html>
 <head>
 <title><%= site.site %></title>
+<link rel="stylesheet" href="/css/default.css" type="text/css">
+<script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/serializeJSON.js" type="text/javascript"></script>
 </head>
 <body>  
   <h1><%= site.site %></h1>
-  <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" >
+  <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
-    <table>
+    <table id = <%= "\"#{site.site.downcase}_form\"" %> >
       <% site.get_metas.each do |part, meta| %>
+        <% unless meta.fields.empty? %>
         <tr id = "<%= part %>">
-          <td><b><%= part unless meta.fields.empty? %></b></td>
+          <th><%= part %></th>
+          <th id = "<%= part %>_result">
+          </th>
         </tr>
         <% meta.fields.values.each do |field| %>
           <tr id = "<%= part %>">
@@ -17,28 +23,33 @@
             <td>
             <% case field.type 
                when :boolean %>
-                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T">Yes
-                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F">No
+                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
+                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')">No
             <% when :dictionary %>
-                <select name=<%= "\"data[#{part}[#{field.name}]]\"" %>>
+                <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%= part %>')">
                   <option value='' disabled selected style='display:none;'>Please Choose</option>
                   <% field.dictionary.table.each do |key, value| %>
                     <option value=<%= "\"#{key}\"" %>><%= value %></option>
                   <% end %>
                 </select>
             <% when :number %>
-              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" hidden />
-              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %>/>
+              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>')"/>
             <% else %>
-              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text" />
+              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>')"/>
             <% end %>
             </td>
           </tr>
         <% end %>
       <% end %>
+      <% end %>
+      <tr id = "result">
+        <th>TNM</th>
+        <th id = "tnm_result"></th>
+      </tr>
     </table>
     <input type="submit" value="Calculate" />
   </form>
+  <div >
    </body>
       <script type="text/javascript">
 function validateForm()
@@ -64,15 +75,9 @@ function validateForm()
         alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
         return false;
         }
-
           if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\" '#{field.display_text}' outside of scope (#{field.ranges}).\"" %>); 
           return false;
         } 
-/*        <% field.ranges.table.each do |code, range| %>
-          if (x > <%= range["min"] %> && x < <%= range["max"] %>) {
-            document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value = <%= code %>;
-          }
-          <% end %> */
       <% else %>
         var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
         if (x==null || x=="")
@@ -84,5 +89,54 @@ function validateForm()
     <% end %>
   <% end %>
 }
+</script>
+
+<script type="text/javascript">
+  /* attach a submit handler to the form */
+  $("#tnm_form").submit(function(event) {
+   
+    /* stop form from submitting normally */
+    event.preventDefault();
+
+    var term = $('#tnm_form').serializeJSON();
+    console.log(term);
+
+  $.post('/tnm', term, 
+    function(data) {
+      console.log(data);
+      var el = document.getElementById('tnm_result');
+      var text = data["TNM"][0]["Result"];
+      if (data["TNM"].length>1) text = text + " (non coclusive)"
+      el.innerHTML = text
+      alert(text)
+      }, "json");
+
+  });
+</script>
+
+<script type="text/javascript">
+
+  function change(part) {
+    var term = $('#tnm_form').serializeJSON();
+    console.log(term);
+
+    $.post('/tnm', term, 
+      function(data) {
+        
+        console.log(data);
+
+        var el = document.getElementById(part+'_result');
+        var text = data[part][0]["Result"];
+        if (data[part].length>1) text = text + " (non conclusive)"
+        el.innerHTML = text
+
+        el = document.getElementById('tnm_result');
+        text = data["TNM"][0]["Result"];
+        if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
+        el.innerHTML = text
+
+      }, "json");
+  }
+
 </script>
 </html>
