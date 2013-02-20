@@ -1,4 +1,0 @@
-"Key","DisplayText"
-"1","No distant metastases"
-"2","Distant metastases"
-"3","Distant metastases cannot be assessed"
