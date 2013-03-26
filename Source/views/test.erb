@@ -1,14 +1,15 @@
 <html>
 <head>
-<title><%= site.site %></title>
-<link rel="stylesheet" href="/css/default.css" type="text/css">
-<script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/serializeJSON.js" type="text/javascript"></script>
+  <title><%= site.site %></title>
+  <link rel="stylesheet" href="/css/default.css" type="text/css">
+  <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/js/serializeJSON.js" type="text/javascript"></script>
 </head>
 <body>  
   <h1><%= site.site %></h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
+    <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden">
     <table id = <%= "\"#{site.site.downcase}_form\"" %> >
       <% site.get_metas.each do |part, meta| %>
         <% unless meta.fields.empty? %>
@@ -49,94 +50,91 @@
     </table>
     <input type="submit" value="Calculate" />
   </form>
-  <div >
-   </body>
-      <script type="text/javascript">
-function validateForm()
-{
-  <% site.get_metas.each do |part, meta| %>
-    <% meta.fields.values.each do |field| %>
-      <% case field.type 
-      when :boolean %>
-        var radios = document.getElementsByName(<%= "\"data[#{part}[#{field.name}]]\"" %>);
-        var formValid = false;
-        var i = 0;
-        while (!formValid && i < radios.length) {
-            if (radios[i].checked) formValid = true;
-            i++;        
-        }
-        if (!formValid) { alert (<%= "\" '#{field.display_text}' must be checked.\"" %>);
-          return false;
-        }
-      <% when :number %>
-        var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
-        if (x==null || x=="")
-        {
-        alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
-        return false;
-        }
-          if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\" '#{field.display_text}' outside of scope (#{field.ranges}).\"" %>); 
-          return false;
-        } 
-      <% else %>
-        var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
-        if (x==null || x=="")
-        {
-        alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
-        return false;
-        }
+  </body>
+  <script type="text/javascript">
+    function validateForm()
+    {
+      <% site.get_metas.each do |part, meta| %>
+        <% meta.fields.values.each do |field| %>
+          <% case field.type 
+          when :boolean %>
+            var radios = document.getElementsByName(<%= "\"data[#{part}[#{field.name}]]\"" %>);
+            var formValid = false;
+            var i = 0;
+            while (!formValid && i < radios.length) {
+                if (radios[i].checked) formValid = true;
+                i++;        
+            }
+            if (!formValid) { alert (<%= "\" '#{field.display_text}' must be checked.\"" %>);
+              return false;
+            }
+          <% when :number %>
+            var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
+            if (x==null || x=="")
+            {
+            alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+            return false;
+            }
+              if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\" '#{field.display_text}' outside of scope (#{field.ranges}).\"" %>); 
+              return false;
+            } 
+          <% else %>
+            var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
+            if (x==null || x=="")
+            {
+            alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+            return false;
+            }
+          <% end %>
+        <% end %>
       <% end %>
-    <% end %>
-  <% end %>
-}
-</script>
+    }
+  </script>
 
-<script type="text/javascript">
-  /* attach a submit handler to the form */
-  $("#tnm_form").submit(function(event) {
-   
-    /* stop form from submitting normally */
-    event.preventDefault();
+  <script type="text/javascript">
+    /* attach a submit handler to the form */
+    $("#tnm_form").submit(function(event) {
+     
+      /* stop form from submitting normally */
+      event.preventDefault();
 
-    var term = $('#tnm_form').serializeJSON();
-    console.log(term);
-
-  $.post('/tnm', term, 
-    function(data) {
-      console.log(data);
-      var el = document.getElementById('tnm_result');
-      var text = data["TNM"][0]["Result"];
-      if (data["TNM"].length>1) text = text + " (non coclusive)"
-      el.innerHTML = text
-      alert(text)
-      }, "json");
-
-  });
-</script>
-
-<script type="text/javascript">
-
-  function change(part) {
-    var term = $('#tnm_form').serializeJSON();
-    console.log(term);
+      var term = $('#tnm_form').serializeJSON();
+      console.log(term);
 
     $.post('/tnm', term, 
       function(data) {
-
         console.log(data);
-
-        var el = document.getElementById(part+'_result');
-        var text = data[part][0]["Result"];
-        if (data[part].length>1) text = text + " (non conclusive)"
+        var el = document.getElementById('tnm_result');
+        var text = data["TNM"][0]["Result"];
+        if (data["TNM"].length>1) text = text + " (non coclusive)"
         el.innerHTML = text
+        alert(text)
+        }, "json");
 
-        el = document.getElementById('tnm_result');
-        text = data["TNM"][0]["Result"];
-        if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
-        el.innerHTML = text
+    });
+  </script>
 
-      }, "json");
-  }
+  <script type="text/javascript">
+    function change(part) {
+      var term = $('#tnm_form').serializeJSON();
+      console.log(term);
 
-</script>
+      $.post('/tnm', term, 
+        function(data) {
+
+          console.log(data);
+
+          var el = document.getElementById(part+'_result');
+          var text = data[part][0]["Result"];
+          if (data[part].length>1) text = text + " (non conclusive)"
+          el.innerHTML = text
+
+          el = document.getElementById('tnm_result');
+          text = data["TNM"][0]["Result"];
+          if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
+          el.innerHTML = text
+
+        }, "json");
+    }
+  </script>
 </html>

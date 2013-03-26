@@ -5,23 +5,30 @@ require 'json'
 require './Meta.rb'
 require 'pp'
 
-server = ARGV[0].nil? ? "localhost:4567" : ARGV[0]
+server = ARGV[0] || "localhost:4567"
+api_key = ARGV[1] || "xyz"
 
 jdata = {"T" => {"Size" => "1", "ChestInvasion" => "F", "Ulceration" => "F", "Inflammation" =>"F", "Test" => "1"}}
 site = "Test"
 time = Time.now
 response = ""
 # 10.times do
-  response = RestClient.post "http://#{server}/tnm", {:data =>jdata, :site=>site}, {:content_type => :json, :accept => :json}
+begin
+  response = RestClient.post "http://#{server}/tnm?key=#{api_key}", {:data =>jdata, :site=>site}, {:content_type => :json, :accept => :json}
   puts JSON.parse(response)["TNM"]
+rescue RestClient::Unauthorized => e
+  puts e.to_s
+  exit
+end
 # end
 # puts Time.now - time # ~ one second per response using mongrel or thin
 # puts response
 
 ####
 site_to_query = :breast
+
 puts "Getting meta data from #{server} on #{site_to_query}..."
-json = RestClient.get "http://#{server}/meta/#{site_to_query}"
+json = RestClient.get "http://#{server}/meta/#{site_to_query}?key=#{api_key}"
 puts json
 metas = JSON.parse(json)
 puts metas
@@ -77,7 +84,7 @@ puts
 puts "You are submitting:"
 pp data
 puts
-response = RestClient.post "http://#{server}/tnm", {:data =>data, :site=>site_to_query}, {:content_type => :json, :accept => :json}
+response = RestClient.post "http://#{server}/tnm?key=#{api_key}", {:data =>data, :site=>site_to_query}, {:content_type => :json, :accept => :json}
 puts "The results are in:"
 puts JSON.pretty_generate(JSON.parse(response))
 puts

@@ -14,7 +14,7 @@
 		<table id = "tool">
 			<% sites.each do |site| %>
 			<tr>
-				<td id = "<%= site %>_group_1"> <a href = "/test/<%= site.downcase %>"><%= site.capitalize %></a>  </td>
+				<td id = "<%= site %>_group_1"> <a href = "/test/<%= "#{site.downcase}?key=#{params[:key]}" %>"><%= site.capitalize %></a>  </td>
 			</tr>
 			<% end %>
 			</div>

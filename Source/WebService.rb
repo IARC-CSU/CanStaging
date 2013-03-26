@@ -21,6 +21,11 @@ available_sites.each do |site|
   @@sites[site.downcase.to_sym] = Site.new(site)
 end
 
+# Added a check for valid api key to all calls to the service... 
+before do
+  error 401 unless params[:key] =~ /^xyz/ # todo: change this to a system of keys per user... (now it just checks for keys starting with xyz)
+end
+
 post '/tnm' do
   puts params
   site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
