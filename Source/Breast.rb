@@ -24,6 +24,8 @@ false_code = breast.get_metas["T"].fields["ChestInvasion"].value_to_codes("false
 # puts breast.get_metas["T"].fields["Test"].value_to_code("else")
 values = {"T" => {"Size" => size_code, "ChestInvasion" => "F", "Ulceration" => "F", "Inflammation" =>"F"}}
 puts (breast.calculate_tnm(values))["TNM"][0]["Result"]
+puts (breast.calculate_tnm(values))["SG"][0]["Result"]
+
 # puts 
 ## speed test
 # time = Time.now
