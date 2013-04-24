@@ -4,10 +4,10 @@ require './LookUp.rb'
 require './Meta.rb'
 
 class Site
-  attr_reader :site
+  attr_reader :site, :lookups
   
   $TABLES_PATH = '../Tables/'
-  $PARTS = ["T", "N", "M", "GS"]
+  $PARTS = ["T", "N", "M", "SG"]
 
   def initialize site
     @site = site.capitalize
@@ -25,20 +25,28 @@ class Site
     tnm_result = ""
     tnm_message = nil
     
+    # SG might only rely on generated values
+    values["SG"] ||= {}
+    # first TNM
     $PARTS.each do |part|
-      result[part] = values[part].nil? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
-      unless part == "GS"
-        tnm_result += "#{result[part][0]["Result"]}"
-        tnm_message = "One of many possible..." if result[part].length>1 
+      unless part == "SG"
+        result[part] = values[part].nil? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
+        tnm_result += "#{result[part][0]["Result"]}" 
+        values["SG"][part] = result[part][0]["Result"]
+        tnm_message = "One of many possible..." if result[part].length>1
       end
     end
-    
+    puts values["SG"]
+    if $PARTS.include? "SG"
+      result["SG"] = values["SG"].nil? ? [{"Result" => "", "Message" => "No data"}] : @lookups["SG"].look_up(values["SG"])    
+    end
     result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message}]
+    # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     result
   end
 
   def calculate_grouped_stage values
-    @gs_lookup.look_up(values)
+    @lookups["SG"].look_up(values)
   end
   
   def get_metas
