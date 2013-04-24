@@ -5,7 +5,8 @@
   <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="/js/serializeJSON.js" type="text/javascript"></script>
 </head>
-<body>  
+<body>
+  
   <h1><%= site.site %></h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
@@ -19,27 +20,37 @@
           </th>
         </tr>
         <% meta.fields.values.sort_by(&:group).each do |field| %>
-          <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
-            <td><%= field.display_text %></td>
-            <td>
-            <% case field.type 
-               when :boolean %>
-                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
-                <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')">No
-            <% when :dictionary %>
-                <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%= part %>')">
-                  <option value='' disabled selected style='display:none;'>Please Choose</option>
-                  <% field.dictionary.table.each do |key, value| %>
-                    <option value=<%= "\"#{key}\"" %>><%= value %></option>
-                  <% end %>
-                </select>
-            <% when :number %>
-              <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>')"/>
-            <% else %>
-              <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>')"/>
-            <% end %>
-            </td>
-          </tr>
+          <% unless field.type == :generated %>
+            <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
+              <td><%= field.display_text %></td>
+              <% case field.type 
+                 when :boolean %>
+                 <td>
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')">No
+                  </td>
+              <% when :dictionary %>
+              <td>
+                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%= part %>')">
+                    <option value='' disabled selected style='display:none;'>Please Choose</option>
+                    <% field.dictionary.table.each do |key, value| %>
+                      <option value=<%= "\"#{key}\"" %>><%= value %></option>
+                    <% end %>
+                  </select>
+                  </td>
+              <% when :number %>
+              <td>
+                <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>')"/>
+                </td>
+              <% when :output %>
+                  <td id = "<%= part + '_' + field.name %>_result"></td>
+              <% else %>
+              <td>
+                <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>')"/>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
         <% end %>
       <% end %>
       <% end %>
@@ -108,7 +119,23 @@
         var text = data["TNM"][0]["Result"];
         if (data["TNM"].length>1) text = text + " (non coclusive)"
         el.innerHTML = text
-        alert(text)
+        var alert_text = "TNM: " + text + "\n"
+
+        el = document.getElementById('SG_result');
+        text = data["SG"][0]["Result"];
+        el.innerHTML = text
+        alert_text += "SG:  " + text + "\n"
+
+        for (var key in data["SG"][0]) {
+          if (key != "Result" && key != "Message") {
+            el = document.getElementById('SG_' + key + '_result');
+            text = data["SG"][0][key];
+            el.innerHTML = text
+            alert_text += key + ": " + text + "\n"
+          }
+        }
+
+        alert(alert_text)
         }, "json");
 
     });
@@ -133,6 +160,20 @@
           text = data["TNM"][0]["Result"];
           if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
           el.innerHTML = text
+
+          el = document.getElementById('SG_result');
+          text = data["SG"][0]["Result"];
+          el.innerHTML = text
+
+          for (var key in data["SG"][0]) {
+            if (key != "Result" && key != "Message") {
+              el = document.getElementById('SG_' + key + '_result');
+              text = data["SG"][0][key];
+              el.innerHTML = text
+              alert_text += key + ": " + text + "\n"
+            }
+          }
+
 
         }, "json");
     }
