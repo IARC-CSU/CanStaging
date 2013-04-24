@@ -1,11 +1,11 @@
 # Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
 
 require 'sinatra'
-require 'json'
-
 # set :server, %w[thin mongrel webrick]
 # set :environment, :production
+set :bind, '0.0.0.0'
 
+require 'json'
 require './Site.rb'
 @@sites = {}
 
@@ -23,7 +23,7 @@ end
 
 # Added a check for valid api key to all calls to the service... 
 before do
-  error 401 unless params[:key] =~ /^xyz/ # todo: change this to a system of keys per user... (now it just checks for keys starting with xyz)
+  error 401, "Key needed..." unless params[:key] =~ /^xyz/ # todo: change this to a system of keys per user... (now it just checks for keys starting with xyz)
 end
 
 post '/tnm' do
