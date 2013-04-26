@@ -25,7 +25,7 @@ end
 # puts response
 
 ####
-site_to_query = :breast
+site_to_query = :colorectal
 
 puts "Getting meta data from #{server} on #{site_to_query}..."
 json = RestClient.get "http://#{server}/meta/#{site_to_query}?key=#{api_key}"
