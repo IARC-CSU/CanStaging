@@ -7,27 +7,33 @@ set :bind, '0.0.0.0'
 
 require 'json'
 require './Site.rb'
-@@sites = {}
+require './KeyManager.rb'
 
-available_sites = Dir.entries('../Tables/').delete_if {|e| e.start_with? '.'} 
-
-# Potential override...
-# available_sites = [
-#  "Breast", 
-#  "Test"
-#  ]
-
-available_sites.each do |site|
-  @@sites[site.downcase.to_sym] = Site.new(site)
+def load_sites
+  @@sites = {}
+  available_sites = Dir.entries('../Tables/').delete_if {|e| e.start_with? '.'} 
+  # Potential override...
+  # available_sites = ["Breast","Test"]
+  available_sites.each do |site|
+    @@sites[site.downcase.to_sym] = Site.new(site)
+  end
 end
+
+def load_users
+  @@key_manager = KeyManager.new
+end
+
+load_sites
+load_users
 
 # Added a check for valid api key to all calls to the service... 
 before do
-  error 401, "Key needed..." unless params[:key] =~ /^xyz/ # todo: change this to a system of keys per user... (now it just checks for keys starting with xyz)
+  error 401, "Key needed..." unless @@key_manager.valid_key? params[:key]
 end
 
 post '/tnm' do
   puts params
+  puts params[:key]
   site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
   if site.nil?
     return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
@@ -47,7 +53,14 @@ post '/tnm' do
 end
 
 get '/tool' do 
-  erb :tool, :locals => {:sites => @@sites.keys }
+  erb :tool, :locals => { :sites => @@sites.keys }
+end
+
+get '/refresh' do
+  error 401, "Not admin..." unless @@key_manager.admin_key? params[:key]
+  load_sites
+  load_users
+  "OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}"
 end
 
 get '/meta/*' do |site_name|
