@@ -167,13 +167,16 @@
 
           var el = document.getElementById(part+'_result');
           var text = data[part][0]["Result"];
-          if (data[part].length>1) text = text + " (non conclusive)"
-          el.innerHTML = text
+          if (data[part].length>1 && !unique_result(data[part])) { 
+            text = text + " (non conclusive)";
+            console.log(data[part]);
+          };
+          el.innerHTML = text;
 
           el = document.getElementById('tnm_result');
           text = data["TNM"][0]["Result"];
           if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
-          el.innerHTML = text
+          el.innerHTML = text;
 
           el = document.getElementById('SG_result');
           text = data["SG"][0]["Result"];
@@ -183,13 +186,30 @@
             if (key != "Result" && key != "Message") {
               el = document.getElementById('SG_' + key + '_result');
               text = data["SG"][0][key];
-              el.innerHTML = text
+              if (el!=null) {
+                el.innerHTML = text;
+              }
               alert_text += key + ": " + text + "\n"
             }
           }
 
         }, "json");
     }
+
+    function unique_result(array) {
+      var lookfor = array[0].Result;
+      console.log(lookfor);
+      var i = 1;
+      var unique = true;
+      while (i<array.length){
+        console.log(array[i++].Result);
+        if (array[i++].Result != lookfor) {
+          unique = false;
+          break;
+        }
+      }
+      return unique;
+    };
   </script>
 
 </html>
