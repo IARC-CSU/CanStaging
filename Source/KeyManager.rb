@@ -46,8 +46,8 @@ class User
     @role = role
     @key = key || generate_key
   end
-  def generate_new_key
-    @key = generate_key
+  def generate_new_key (length = 16)
+    @key = generate_key length
   end
   private
   def generate_key(length = 16)

@@ -1,6 +1,6 @@
 <head>
   <title><%= site.site %></title>
-  <link rel="stylesheet" href="/css/default.css" type="text/css">
+  
   <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
   <!-- Not sure if we need this and it is rather heavy... <script src="/js/jquery-ui.min.js" type="text/javascript"></script> -->
   <script src="/js/serializeJSON.js" type="text/javascript"></script>
@@ -9,7 +9,7 @@
   <h1><%= site.site %></h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
-    <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden">
+    <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
     <table id = <%= "\"#{site.site.downcase}_form\"" %> >
       <thead>
       <tr id = "identification">
@@ -84,7 +84,7 @@
   <script type="text/javascript">
 
     function get_log(){
-      window.location = "/get_log?key=<%=params[:key]%>";
+      window.location = "/get_log";
     }
 
     function hide_unhide(part) {
@@ -117,7 +117,7 @@
       if ($("#autogenerate").prop('checked')) {
         var tumour_id = $("#tumour_id")[0].value;
         if (tumour_id.length == 0 || parseInt(tumour_id)==NaN) {
-          $.get("/next_numeric_id?key=<%=params[:key]%>", function(data) {
+          $.get("/next_numeric_id", function(data) {
             $("#tumour_id")[0].value = data;
           });
         } else {

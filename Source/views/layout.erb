@@ -5,8 +5,9 @@
     <script src="/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
-	<script src="/js/bootbox.min.js"></script>
+    <link rel="stylesheet" href="/css/default.css" type="text/css">
+	  <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
+	  <script src="/js/bootbox.min.js"></script>
   </head>
   <body style="padding-top: 50px;">
 
@@ -22,12 +23,12 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="/tool?<%= "key=#{params[:key]}" %>">
+            <a class="brand" href="/tool">
               StagingTool
             </a>
 
             <ul class="nav">
-              <li><a href="/tool?<%= "key=#{params[:key]}" %>">Home</a></li>
+              <li><a href="/tool">Home</a></li>
               <li class="dropdown">
                 <a href="#"
                       class="dropdown-toggle"
@@ -38,12 +39,12 @@
                 <ul class="dropdown-menu">
                 	<% sites.each do |site| %>
 						<li>
-							<a id = "<%= site %>_group_1" href = "/test/<%= "#{site.downcase}?key=#{params[:key]}" %>"><%= site.capitalize %></a>
+							<a id = "<%= site %>_group_1" href = "/site/<%= "#{site.downcase}" %>"><%= site.capitalize %></a>
 						</li>
 					<% end %>
                 </ul>
               </li>
-              <li><a href="/get_log?key=<%=params[:key]%>">Get log</a></li>
+              <li><a href="/get_log">Get log</a></li>
             </ul>
        		<ul class="nav pull-right">
               <li class="dropdown">
@@ -56,6 +57,17 @@
                 <ul class="dropdown-menu">
                     <li><a id = "help" href="#" role="button" onclick="help_alert()">Help</a></li>
                     <li><a id = "about" href="#" role="button" onclick="about_alert()">About</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"
+                      class="dropdown-toggle"
+                      data-toggle="dropdown">
+                      User
+                      <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                      <li><a href="/logout">Logout</a></li>
                 </ul>
               </li>
             </ul>

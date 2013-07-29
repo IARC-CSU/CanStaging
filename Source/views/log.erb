@@ -44,7 +44,7 @@
 	<script type="text/javascript">
 	function clear_log(){
 		if (confirm('Are you sure you want to delete your log?')) {
-		    $.get("/clear_log?key=<%=params[:key]%>", function(data) {
+		    $.get("/clear_log", function(data) {
 		        location.reload();
 		    });
 		} else {
@@ -52,7 +52,7 @@
 		}
 	}
 	function download_log(){
-		window.location = "/get_log.csv?key=<%=params[:key]%>";
+		window.location = "/get_log.csv";
 	}
 	</script>
 </html>
