@@ -1,0 +1,119 @@
+## Logger
+require 'sequel'
+require 'csv'
+
+class STLogger
+  DB_FILE_NAME = './logg.db'
+  def initialize
+    @db = Sequel.sqlite(DB_FILE_NAME)
+    create_tables unless(@db.tables.include? :entries)    
+    @entries_table = @db[:entries]
+    @deleted_entries_table = @db[:deleted_entries]
+  end
+
+  def log(key, tumour_id, site, input, result, ip_address)
+    puts tumour_id
+    
+    move_to_deleted(@entries_table.where(
+      :key => key, 
+      :tumour_id => tumour_id,
+      :ip_address => ip_address))
+
+    @entries_table.insert(
+      :key => key,
+      :input => input, 
+      :result => result, 
+      :tumour_id => tumour_id, 
+      :ip_address => ip_address,
+      :site => site,
+      :created_at => DateTime.now)
+  end
+
+  def report(key, ip_address, report_all = false)
+    query = @entries_table.where(:key =>key, :ip_address => ip_address)
+    query = query.exclude(:reported => true) unless report_all
+    list = query.all
+    query.update(:reported => true)
+    list
+  end
+
+  def get_csv(key, ip_address, report_all = false)
+    list = report(key, ip_address, report_all)
+    csv_string = CSV.generate do |csv|
+      unless list.length==0
+        header = [:site, :tumour_id, :created_at, "T", "N", "M", "TNM", "SG", :input, :result]
+        csv << header.map{ |e| e.to_s.gsub("_", "") }
+        list.each do |entry|
+          result = JSON.parse(entry[:result])
+          entry["T"]   = result["T"][0]["Result"]
+          entry["N"]   = result["N"][0]["Result"]
+          entry["M"]   = result["M"][0]["Result"]
+          entry["TNM"] = result["TNM"][0]["Result"]
+          entry["SG"]  = result["SG"][0]["Result"]
+          row = []
+          header.each do |column|
+            row << entry[column]
+          end
+          csv << row
+        end
+      end
+    end
+    csv_string
+  end
+
+  def clear(key, ip_address)
+    delete @entries_table.where(:key =>key, :ip_address => ip_address)
+  end
+
+  def get_next_numeric_id(key, ip_address)
+    highest = @entries_table.where(:key =>key, :ip_address => ip_address).all.max_by {|e| e[:tumour_id].to_i}
+    highest == nil ? 0 : (highest[:tumour_id].to_i + 1)
+  end
+
+  private
+
+  def move_to_deleted(query)
+    query.all.each do |entry|
+      @deleted_entries_table.insert(
+        :key => entry[:key], 
+        :input => entry[:input],
+        :result => entry[:result],
+        :site => entry[:site], 
+        :ip_address => entry[:ip_address], 
+        :created_at => entry[:created_at])
+    end
+    delete(query)
+  end
+
+  def delete(query)
+    query.delete
+  end
+
+  def create_tables
+    @db.create_table :entries do
+      primary_key :id
+      String :key
+      String :site
+      String :tumour_id
+      String :input
+      String :result
+      String :ip_address
+      TrueClass :reported, :default => false
+      DateTime :created_at
+      index :key
+      unique [:key, :tumour_id, :ip_address]
+    end
+    @db.create_table :deleted_entries do
+      primary_key :id
+      String :key
+      String :site
+      String :input
+      String :result
+      String :ip_address
+      DateTime :created_at
+      index :key
+    end
+  end
+end
+
+# STLogger.new
