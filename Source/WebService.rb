@@ -8,6 +8,7 @@ set :bind, '0.0.0.0'
 require 'json'
 require './Site.rb'
 require './KeyManager.rb'
+require './STLogger.rb'
 
 def load_sites
   @@sites = {}
@@ -23,10 +24,12 @@ def load_users
   @@key_manager = KeyManager.new
 end
 
+@@st_logger = STLogger.new
+
 load_sites
 load_users
 
-# Added a check for valid api key to all calls to the service... 
+# check for valid api key to all calls to the service... 
 before do
   error 401, "Key needed..." unless @@key_manager.valid_key? params[:key]
 end
@@ -48,12 +51,40 @@ post '/tnm' do
     end
     puts params
     jdata = params["data"]
-    return JSON.pretty_generate(site.calculate_tnm(jdata)) #["TNM"]
+    result = site.calculate_tnm(jdata)
+    puts result["TNM"][0]["Result"]
+    if result["TNM"][0]["Conclusive"]
+      @@st_logger.log(params[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
+    end
+    return JSON.pretty_generate(result)
   end
 end
 
+get '/next_numeric_id' do
+  number = @@st_logger.get_next_numeric_id(params[:key], request.ip.to_s).to_s
+  puts number
+  number
+end
+
+get '/get_log.json' do
+  JSON.pretty_generate(@@st_logger.report(params[:key], request.ip.to_s, true))
+end
+
+get '/get_log' do
+  erb :log, :locals => {:log => @@st_logger.report(params[:key], request.ip.to_s, true), :sites => @@sites.keys }, :layout => :layout
+end
+
+get '/get_log.csv' do 
+  content_type 'application/csv'
+  @@st_logger.get_csv(params[:key], request.ip.to_s, true)
+end
+
+get '/clear_log' do
+  @@st_logger.clear(params[:key], request.ip.to_s).to_s
+end
+
 get '/tool' do 
-  erb :tool, :locals => { :sites => @@sites.keys }
+  erb :tool, :locals => { :sites => @@sites.keys }, :layout => :layout
 end
 
 get '/refresh' do
@@ -81,7 +112,7 @@ get '/test/*' do |site_name|
   if @@sites[site_name.downcase.to_sym].nil? 
     halt 440, "Nothing to see here..."
   else
-    erb :test, :locals => {:site => @@sites[site_name.downcase.to_sym] }
+    erb :test, :locals => {:site => @@sites[site_name.downcase.to_sym], :sites => @@sites.keys }, :layout => :layout
   end
 end
 
