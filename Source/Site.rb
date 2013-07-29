@@ -28,19 +28,23 @@ class Site
     # SG might only rely on generated values
     values["SG"] ||= {}
     # first TNM
+    conclusive = true
     $PARTS.each do |part|
       unless part == "SG"
         result[part] = values[part].nil? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
         tnm_result += "#{result[part][0]["Result"]}" 
         values["SG"][part] = result[part][0]["Result"]
-        tnm_message = "One of many possible..." if result[part].length>1
+        if result[part].length>1
+          tnm_message = "One of many possible..."
+          conclusive = false
+        end
       end
     end
     puts values["SG"]
     if $PARTS.include? "SG"
       result["SG"] = values["SG"].nil? ? [{"Result" => "", "Message" => "No data"}] : @lookups["SG"].look_up(values["SG"])    
     end
-    result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message}]
+    result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message, "Conclusive" => conclusive}]
     # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     result
   end
