@@ -29,7 +29,12 @@
         <% meta.fields.values.sort_by(&:group).each do |field| %>
           <% unless field.type == :generated %>
             <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
-              <td><%= field.display_text %></td>
+              <% if field.type == :output %>
+                <td class = "result" >
+              <% else %>
+                <td>
+              <% end %>
+              <%= field.display_text %></td>
               <% case field.type 
                  when :boolean %>
                  <td>
