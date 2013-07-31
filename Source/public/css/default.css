@@ -55,7 +55,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#breast_form th {
+#breast_form th, #breast_form td.result{
 	background-color:#D3788E;
 	color:#ffffff;
 }
@@ -81,7 +81,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#colorectal_form th {
+#colorectal_form th, #colorectal_form td.result{
 	background-color:#D29C50;
 	color:#ffffff;
 }
@@ -108,7 +108,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#prostate_form th {
+#prostate_form th, #prostate_form td.result {
 	background-color:#50D29C;
 	color:#ffffff;
 }
@@ -135,7 +135,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#test_form th {
+#test_form th, #test_form td.result {
 	background-color:#76C14A;
 	color:#ffffff;
 }
