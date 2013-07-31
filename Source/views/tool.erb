@@ -1,17 +1,30 @@
 <link rel="stylesheet" href="/css/default.css" type="text/css">
 
-<h1>StagingTool</h1>
-<p>By Morten Ervik (IARC/CIN) and Giulio Napolitano (NICR)</p>
-<table>
-	<tr>
-		<th>Sites</th>
-	</tr>
-</table>
-<table id = "tool">
-	<% sites.each do |site| %>
-	<tr>
-		<td id = "<%= site %>_group_1"> <a href = "/site/<%= "#{site.downcase}" %>"><%= site.capitalize %></a>  </td>
-	</tr>
-	<% end %>
-	</div>
-</table>
+<h1>Cancer Staging Tool</h1>
+<p>By Morten Ervik (IARC/CIN), Giulio Napolitano (NICR), and Lisa Ranaghan (NICR)</p>
+
+Sites
+<ul class="nav nav-pills nav-stacked">
+  <% sites.each do |site| %>
+    <li><a href = "/site/<%= "#{site.downcase}" %>" id = "<%= site %>_group_1"><%= site.capitalize %></a></li>
+  <% end %>
+</ul>
+
+Endorsed by:
+<div class="row">
+  <div class="span4" align = "center">
+    <a href= "http://www.qub.ac.uk/research-centres/nicr/"><img src="./media/NICR.gif" width="120" /></a>
+  </div>
+  <div class="span4" align = "center">
+      <a href= "http://www.iarc.fr"><img class="media-object" src="./media/logoiarc.gif" width="280"/></a>
+  </div>
+  <div class="span4" align = "center">
+    <a href= "http://gicr.iarc.fr"><img src="./media/GICR-logo.jpg" width="150" /></a>
+  </div>
+  <div class="span4" align = "center">
+    <a href= "http://www.uicc.org/"><img src="./media/UICC.jpg" width="120" /></a>
+  </div>
+  <div class="span4" align = "center">
+    <a href= "http://www.iacr.com.fr/"><img src="./media/iacr-title.gif" width="350" /></a>
+  </div>
+</div>
