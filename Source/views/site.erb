@@ -34,7 +34,7 @@
                  when :boolean %>
                  <td>
                   <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')">No
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')" checked>No
                   </td>
               <% when :dictionary %>
               <td>
@@ -218,11 +218,9 @@
     $("#tnm_form").submit(function(event) {
       event.preventDefault();
       var term = $('#tnm_form').serializeJSON();
-      console.log(term);
 
       $.post('/tnm', term, 
         function(data) {
-          // console.log(data);
           var el = document.getElementById('tnm_result');
           var text = data["TNM"][0]["Result"];
           if (data["TNM"].length>1) text = text + " (non coclusive)"
