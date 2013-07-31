@@ -168,18 +168,13 @@
 
     function change(part) {
       var term = $('#tnm_form').serializeJSON();
-      console.log(term);
 
       $.post('/tnm', term, 
         function(data) {
-
-          console.log(data);
-
           var el = document.getElementById(part+'_result');
           var text = data[part][0]["Result"];
           if (data[part].length>1 && !unique_result(data[part])) { 
             text = text + " (non conclusive)";
-            console.log(data[part]);
           };
           el.innerHTML = text;
 
@@ -208,11 +203,9 @@
 
     function unique_result(array) {
       var lookfor = array[0].Result;
-      console.log(lookfor);
       var i = 1;
       var unique = true;
       while (i<array.length){
-        console.log(array[i++].Result);
         if (array[i++].Result != lookfor) {
           unique = false;
           break;
