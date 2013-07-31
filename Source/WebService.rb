@@ -3,6 +3,7 @@
 require 'sinatra'
 # set :server, %w[thin mongrel webrick]
 # set :environment, :production
+
 set :bind, '0.0.0.0'
 set :sessions, true
 set :session_secret, 'b9DNaf74K9dZAlWr6obAExa4JTNiOkBDSLjpQCH4Us3ec1o1JCCoftq4Hjceju6w'
@@ -12,10 +13,13 @@ require './Site.rb'
 require './KeyManager.rb'
 require './STLogger.rb'
 
+puts settings.environment
+
 def load_sites
   @@sites = {}
-  available_sites = Dir.entries('../Tables/').delete_if {|e| e.start_with? '.'} 
-  # Potential override...
+  available_sites = Dir.entries('../Tables/').delete_if {|e| e.start_with? '.'}   
+  available_sites.delete("Test") unless settings.environment == :development
+  # Potential override:
   # available_sites = ["Breast","Test"]
   available_sites.each do |site|
     @@sites[site.downcase.to_sym] = Site.new(site)
