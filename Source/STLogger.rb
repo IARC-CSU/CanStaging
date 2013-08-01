@@ -14,10 +14,18 @@ class STLogger
   def log(key, tumour_id, site, input, result, ip_address)
     puts tumour_id
     
-    move_to_deleted(@entries_table.where(
-      :key => key, 
-      :tumour_id => tumour_id,
-      :ip_address => ip_address))
+    # if the user does not specify tumour ID we keep everything
+    if (tumour_id == nil || tumour_id.length == 0) 
+      move_to_deleted(@entries_table.where(
+        :key => key, 
+        :tumour_id => tumour_id,
+        :ip_address => ip_address)) 
+    else
+      delete(@entries_table.where(
+        :key => key, 
+        :tumour_id => tumour_id,
+        :ip_address => ip_address))
+    end
 
     @entries_table.insert(
       :key => key,
