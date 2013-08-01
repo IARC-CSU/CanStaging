@@ -30,13 +30,22 @@ thead {
 }
 
 .by {
-	font-size: 0.7em;
+	font-size: 0.9em;
 }
 
 .disclaimer {
 	font-family: serif;
 	font-style: italic;
-	font-size: 1em;
+	font-size: 0.9em;
+}
+
+#endorsed {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#about {
+	font-family: serif;
 }
 
 #about h1 {
