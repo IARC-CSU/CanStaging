@@ -14,7 +14,7 @@
       <thead>
       <tr id = "identification">
         <td align="right">Tumour ID:</td>
-        <td><input id = "tumour_id" name="tumour_id" type="text"/><input id="autogenerate" title = "Auto-generate tumour IDs?"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked">Auto</td>
+        <td><input id = "tumour_id" name="tumour_id" type="text" title="THIS ID SHOULD NOT BE A PERSONAL IDENTIFIER."/><input id="autogenerate" title = "Auto-generate tumour IDs?"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked">Auto</td>
       </tr>
       </thead>
       <% site.get_metas.each do |part, meta| %>
