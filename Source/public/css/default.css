@@ -29,6 +29,21 @@ thead {
 	background-color: lightgrey;
 }
 
+.by {
+	font-size: 0.7em;
+}
+
+.disclaimer {
+	font-family: serif;
+	font-style: italic;
+	font-size: 1em;
+}
+
+#about h1 {
+	font-size: 1em;
+	text-decoration: underline;
+	text-align: center;
+}
 /*a { text-decoration:none }
 a:hover { text-decoration:underline; }
 a:visited { color:#000000;}*/
