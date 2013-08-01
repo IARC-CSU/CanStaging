@@ -32,7 +32,7 @@ def load_users
   @@key_manager = KeyManager.new
 end
 
-@@st_logger = STLogger.new
+@@st_logger = STLogger.new(config['system']['log_file'])
 
 load_sites
 load_users

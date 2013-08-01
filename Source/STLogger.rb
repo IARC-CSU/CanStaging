@@ -4,8 +4,8 @@ require 'csv'
 
 class STLogger
   DB_FILE_NAME = './logg.db'
-  def initialize
-    @db = Sequel.sqlite(DB_FILE_NAME)
+  def initialize(db_file_name = DB_FILE_NAME)
+    @db = Sequel.sqlite(db_file_name)
     create_tables unless(@db.tables.include? :entries)    
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
