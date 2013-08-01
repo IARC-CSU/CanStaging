@@ -142,6 +142,10 @@ get '/logout' do
   erb "<div class='alert alert-message'>Logged out</div>", :locals => { :sites => @@sites.keys }
 end
 
+get '/' do
+  redirect to('/tool')
+end
+
 not_found do
   erb "<div class='alert alert-message'>Nothing to see here...</div>", :locals => { :sites => @@sites.keys }
 end
