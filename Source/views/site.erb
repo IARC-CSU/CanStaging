@@ -63,9 +63,7 @@
               <% end %>
             </tr>
           <% end %>
-
         <% end %>
-
       <% end %>
       </tbody>
       <% end %>
@@ -111,7 +109,9 @@
       }
       if (autogenerate) {
         $("#autogenerate").prop('checked', true);
-        $("#tumour_id")[0].value = next_tumour_id(tumour_id);
+        $.get("/next_numeric_id", function(data) {
+          $("#tumour_id")[0].value = data;
+        });
       } else {
         $("#autogenerate").prop('checked', false);
       }
