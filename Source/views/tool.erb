@@ -1,15 +1,16 @@
 <link rel="stylesheet" href="/css/default.css" type="text/css">
 
-<h1>Cancer Staging Tool</h1>
+<h1>The Cancer Staging Tool</h1>
 <p>By Morten Ervik (IARC/CIN), Giulio Napolitano (NICR), and Lisa Ranaghan (NICR)</p>
 
-Sites
+<h3>​Sites</h3>
+
 <ul class="nav nav-pills nav-stacked">
   <% sites.each do |site| %>
     <li><a href = "/site/<%= "#{site.downcase}" %>" id = "<%= site %>_group_1"><%= site.capitalize %></a></li>
   <% end %>
 </ul>
-
+<hr width="75%" />
 Endorsed by:
 <div class="row">
   <div class="span4" align = "center">
@@ -28,3 +29,8 @@ Endorsed by:
     <a href= "http://www.iacr.com.fr/"><img src="./media/iacr-title.gif" width="350" /></a>
   </div>
 </div>
+<hr width="75%" />
+<p class="disclaimer">Used with the permission of the Union for International Cancer Control (UICC), Geneva, Switzerland. The original source for this material is <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Leslie+H.+Sobin">Leslie H. Sobin</a> (Editor), <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Mary+K.+Gospodarowicz">Mary K. Gospodarowicz</a> (Editor), <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Christian+Wittekind">Christian Wittekind</a> (Editor), TNM Classification of Malignant Tumours, 7th Edition, published in November 2009 by Wiley-Blackwell
+<br><br>
+This tool has been reproduced with due care. Any inconsistencies with the UICC TNM classification 7th edition and published errata are unintentional. Neither NICR nor UICC carry any liability should unforeseen errors emerge.
+</p>
