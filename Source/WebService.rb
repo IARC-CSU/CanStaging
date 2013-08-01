@@ -1,19 +1,21 @@
 # Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
 
 require 'sinatra'
-# set :server, %w[thin mongrel webrick]
-set :environment, :production
-
-set :bind, '0.0.0.0'
-set :sessions, true
-set :session_secret, 'b9DNaf74K9dZAlWr6obAExa4JTNiOkBDSLjpQCH4Us3ec1o1JCCoftq4Hjceju6w'
-
 require 'json'
 require './Site.rb'
 require './KeyManager.rb'
 require './STLogger.rb'
+require 'yaml'
 
-puts settings.environment
+config = YAML.load_file("config.yml")
+
+# set :server, %w[thin mongrel webrick]
+set :environment, :production if (config['system']['environment'] == 'production')
+set :bind, config['system']['bind']
+set :port, config['system']['port']
+
+set :sessions, true
+set :session_secret, config['system']['session_secret']
 
 def load_sites
   @@sites = {}
@@ -97,7 +99,7 @@ get '/refresh' do
   error 401, "Not admin..." unless @@key_manager.admin_key? session[:key]
   load_sites
   load_users
-  "OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}"
+  erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => @@sites.keys }
 end
 
 get '/meta/*' do |site_name|
