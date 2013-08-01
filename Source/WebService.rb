@@ -18,7 +18,7 @@ puts settings.environment
 def load_sites
   @@sites = {}
   available_sites = Dir.entries('../Tables/').delete_if {|e| e.start_with? '.'}   
-  available_sites.delete("Test") unless settings.environment == :development
+  available_sites.delete_if {|s| s.downcase.end_with? "test"} unless settings.environment == :development
   # Potential override:
   # available_sites = ["Breast","Test"]
   available_sites.each do |site|
