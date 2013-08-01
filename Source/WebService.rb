@@ -2,7 +2,7 @@
 
 require 'sinatra'
 # set :server, %w[thin mongrel webrick]
-# set :environment, :production
+set :environment, :production
 
 set :bind, '0.0.0.0'
 set :sessions, true
