@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No regional lymph node metastases"
+"2","Metastases to ipsilateral peribronchial AND/OR ipsilateral hilar nodes AND intrapulmonary nodes"
+"3","Metastases to ipsilateral mediastinal AND/OR subcarinal nodes"
+"4","Metastases to contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular nodes"
