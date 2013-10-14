@@ -13,3 +13,4 @@ Source/keyfile.txt
 Source/logg.db
 Source/config.yml
 log.txt
+Source/*.TMP
