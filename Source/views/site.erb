@@ -192,6 +192,10 @@
           text = data["SG"][0]["Result"];
           el.innerHTML = text
 
+          el = document.getElementById('SimpG_result');
+          text = data["SimpG"][0]["Result"];
+          el.innerHTML = text
+
           for (var key in data["SG"][0]) {
             if (key != "Result" && key != "Message") {
               el = document.getElementById('SG_' + key + '_result');
@@ -236,6 +240,11 @@
           text = data["SG"][0]["Result"];
           el.innerHTML = text
           alert_text += "SG:  " + text + "\n"
+
+          el = document.getElementById('SimpG_result');
+          text = data["SimpG"][0]["Result"];
+          el.innerHTML = text
+          alert_text += "SimpG:  " + text + "\n"
 
           for (var key in data["SG"][0]) {
             if (key != "Result" && key != "Message") {

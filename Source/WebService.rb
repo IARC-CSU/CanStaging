@@ -46,6 +46,7 @@ before do
 end
 
 post '/tnm' do
+  # puts params
   site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
   if site.nil?
     return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
