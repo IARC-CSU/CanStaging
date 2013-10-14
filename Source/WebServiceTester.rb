@@ -9,7 +9,7 @@ server = ARGV[0] || "localhost:4567"
 api_key = ARGV[1] || "xyz"
 
 jdata = {"T" => {"Size" => "1", "ChestInvasion" => "F", "Ulceration" => "F", "Inflammation" =>"F", "Test" => "1"}}
-site = "Test"
+site = "Lung"
 time = Time.now
 response = ""
 # 10.times do
@@ -25,7 +25,7 @@ end
 # puts response
 
 ####
-site_to_query = :colorectal
+site_to_query = :lung
 
 puts "Getting meta data from #{server} on #{site_to_query}..."
 json = RestClient.get "http://#{server}/meta/#{site_to_query}?key=#{api_key}"
