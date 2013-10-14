@@ -11,3 +11,5 @@ Videos/20130220-test-tnm.avi
 *.mp4
 Source/keyfile.txt
 Source/logg.db
+Source/config.yml
+log.txt
