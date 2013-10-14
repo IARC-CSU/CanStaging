@@ -182,29 +182,32 @@ form a {
 	background-color:#C28CD7;
 }
 
-/* Test site */
+/* Lung site */
 
-#test_form td, #test_form th {
+#lung_form td, #lung_form th {
 	font-size:1em;
 	border:1px solid #A2EA77;
 	padding:3px 7px 2px 7px;	
 }
 
-#test_form th, #test_form td.result {
+#lung_form th, #lung_form td.result {
 	background-color:#76C14A;
 	color:#ffffff;
 }
 
-#test_group_1 { 
+#lung_group_1 { 
 	color:#000000;
 	background-color:#A2EA77;
 }
-#test_group_2 { 
+#lung_group_2 { 
 	color:#000000;
 	background-color:#AFF088;
 }
-#test_group_3 { 
+#lung_group_3 { 
 	color:#000000;
 	background-color:#B6F094;
 }
-
+#lung_group_4 { 
+	color:#000000;
+	background-color:#c6FBA4;
+}
