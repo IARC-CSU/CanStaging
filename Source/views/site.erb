@@ -44,7 +44,9 @@
               <% when :dictionary %>
               <td>
                   <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%= part %>')">
+                    <% unless part == "M" %>
                     <option value='' disabled selected style='display:none;'>Please Choose</option>
+                    <% end %>
                     <% field.dictionary.table.each do |key, value| %>
                       <option value=<%= "\"#{key}\"" %>><%= value %></option>
                     <% end %>
@@ -192,9 +194,11 @@
           text = data["SG"][0]["Result"];
           el.innerHTML = text
 
-          el = document.getElementById('SimpG_result');
-          text = data["SimpG"][0]["Result"];
-          el.innerHTML = text
+          if (data["SimpG"][0]){
+            el = document.getElementById('SimpG_result');
+            text = data["SimpG"][0]["Result"];
+            el.innerHTML = text
+          }
 
           for (var key in data["SG"][0]) {
             if (key != "Result" && key != "Message") {
