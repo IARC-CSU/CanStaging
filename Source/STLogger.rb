@@ -49,7 +49,7 @@ class STLogger
     list = report(key, ip_address, report_all)
     csv_string = CSV.generate do |csv|
       unless list.length==0
-        header = [:site, :tumour_id, :created_at, "T", "N", "M", "TNM", "SG", :input, :result]
+        header = [:site, :tumour_id, :created_at, "T", "N", "M", "TNM", "SG", "SimpG", "SGrange", :input, :result]
         csv << header.map{ |e| e.to_s.gsub("_", "") }
         list.each do |entry|
           result = JSON.parse(entry[:result])
@@ -58,6 +58,8 @@ class STLogger
           entry["M"]   = result["M"][0]["Result"]
           entry["TNM"] = result["TNM"][0]["Result"]
           entry["SG"]  = result["SG"][0]["Result"]
+          entry["SimpG"] = (result["SimpG"] && result["SimpG"][0]) ? result["SimpG"][0]["Result"] : ""
+          entry["SGrange"] = (result["SGrange"] && result["SGrange"][0]) ? result["SGrange"][0]["Result"] : ""
           row = []
           header.each do |column|
             row << entry[column]
