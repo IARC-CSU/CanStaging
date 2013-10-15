@@ -39,7 +39,7 @@
                  when :boolean %>
                  <td>
                   <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')">No
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')" checked>No
                   </td>
               <% when :dictionary %>
               <td>
@@ -69,6 +69,10 @@
       <% end %>
       </tbody>
       <% end %>
+      <tr id = "sgrange">
+        <th>SG range</th>
+        <th class = "result" id = "sgrange_result"></th>
+      </tr>
       <tr id = "result">
         <th>TNM</th>
         <th class = "result" id = "tnm_result"></th>
@@ -211,6 +215,12 @@
             }
           }
 
+           if (data["SGrange"]){
+            el = document.getElementById('sgrange_result');
+            text = data["SGrange"];
+            el.innerHTML = text
+          }
+
         }, "json");
     }
 
@@ -245,10 +255,12 @@
           el.innerHTML = text
           alert_text += "SG:  " + text + "\n"
 
-          el = document.getElementById('SimpG_result');
-          text = data["SimpG"][0]["Result"];
-          el.innerHTML = text
-          alert_text += "SimpG:  " + text + "\n"
+          if (data["SimpG"][0]){
+            el = document.getElementById('SimpG_result');
+            text = data["SimpG"][0]["Result"];
+            el.innerHTML = text
+            alert_text += "SimpG:  " + text + "\n"
+          }
 
           for (var key in data["SG"][0]) {
             if (key != "Result" && key != "Message") {
@@ -258,6 +270,13 @@
               alert_text += key + ": " + text + "\n"
             }
           }
+           if (data["SGrange"]){
+            el = document.getElementById('sgrange_result');
+            text = data["SGrange"];
+            el.innerHTML = text
+            alert_text += "SG range:  " + text + "\n"
+          }
+
         bootbox.alert(alert_text);
         }, "json");
     });
