@@ -18,6 +18,8 @@
 				<td>TNM - Message</td>
 				<td>SG - Result</td>
 				<td>SG - Message</td>
+				<td>SimpG</td>
+				<td>SG range</td>
 			</tr>
 			</thead>
 			<tbody>
@@ -34,6 +36,8 @@
 					<td><%= result["TNM"][0]["Message"] %></td>
 					<td><%= result["SG"][0]["Result"] %></td>
 					<td><%= result["SG"][0]["Message"] %></td>
+					<td><%= result["SimpG"] && result["SimpG"][0] ? result["SimpG"][0]["Result"] : ""%></td>
+					<td><%= result["SGrange"] && result["SGrange"][0] ? result["SGrange"][0]["Result"] : "" %></td>
 				</tr>
 			<% end %>
 			</tbody>
