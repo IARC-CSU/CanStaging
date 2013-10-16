@@ -54,7 +54,7 @@ class Site
     if $PARTS.include? "SimpG"
       result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(result["SGrange"][0]["Result"])
     end
-    result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}} ]
+    result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ]
     # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     result
   end
