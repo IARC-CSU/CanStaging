@@ -198,6 +198,7 @@
 
           el = document.getElementById('SG_result');
           text = data["SG"][0]["Result"];
+          if (data["SG"].length>1) text = text + " (non coclusive)";
           el.innerHTML = text;
 
           if (data["SimpG"] && data["SimpG"][0]){
@@ -248,7 +249,7 @@
       event.preventDefault();
       var term = $('#tnm_form').serializeJSON();
 
-      $.post('/tnm', term, 
+      $.post('/tnm_submit', term, 
         function(data) {
           var el = document.getElementById('tnm_result');
           var text = data["TNM"][0]["Result"];
@@ -259,6 +260,7 @@
 
           el = document.getElementById('SG_result');
           text = data["SG"][0]["Result"];
+          if (data["SG"].length>1) text = text + " (non coclusive)";
           el.innerHTML = text
           alert_text += "SG:  " + text + "\n"
 
@@ -268,7 +270,7 @@
             if (el){
               el.innerHTML = text;
             }
-            alert_text += "SimpG:  " + text + "\n"
+            alert_text += "SimpG:  " + text + "\n";
           }
 
           for (var key in data["SG"][0]) {
@@ -276,9 +278,9 @@
               el = document.getElementById('SG_' + key + '_result');
               text = data["SG"][0][key];
               if (el){
-                el.innerHTML = text
+                el.innerHTML = text;
               }
-              alert_text += key + ": " + text + "\n"
+              alert_text += key + ": " + text + "\n";
             }
           }
            if (data["SGrange"]){
