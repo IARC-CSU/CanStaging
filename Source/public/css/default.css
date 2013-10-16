@@ -79,7 +79,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#breast_form th, #breast_form td.result{
+#breast_form th, #breast_form td.result, #breast_form td.result_label{
 	background-color:#D3788E;
 	color:#ffffff;
 }
@@ -105,7 +105,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#colorectal_form th, #colorectal_form td.result{
+#colorectal_form th, #colorectal_form td.result, #colorectal_form td.result_label {
 	background-color:#D29C50;
 	color:#ffffff;
 }
@@ -132,7 +132,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#prostate_form th, #prostate_form td.result {
+#prostate_form th, #prostate_form td.result, #prostate_form td.result_label {
 	background-color:#50D29C;
 	color:#ffffff;
 }
@@ -149,6 +149,10 @@ form a {
 	color:#000000;
 	background-color:#91FFD1;
 }
+#prostate_group_4 { 
+	color:#000000;
+	background-color:#A1FFE1;
+}
 
 
 /* Cervix site*/
@@ -159,7 +163,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#cervix_form th, #cervix_form td.result {
+#cervix_form th, #cervix_form td.result, #cervix_form td.result_label {
 	background-color:#8E6AB0;
 	color:#ffffff;
 }
@@ -190,7 +194,7 @@ form a {
 	padding:3px 7px 2px 7px;	
 }
 
-#lung_form th, #lung_form td.result {
+#lung_form th, #lung_form td.result, #lung_form td.result_label {
 	background-color:#76C14A;
 	color:#ffffff;
 }
