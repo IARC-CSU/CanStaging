@@ -47,26 +47,15 @@ end
 
 post '/tnm' do
   # puts params
-  site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
-  if site.nil?
-    return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
-  else
-    site.get_metas.each do |part, meta| 
-      meta.fields.keys.each do |key|
-        unless params["data"][part].nil?
-          number = params["data"][part].delete "#{key}-number" # remove the temporary variables
-          params["data"][part][key] = meta.fields[key].value_to_codes(number).first unless (number.nil? || number.length == 0)
-        end
-      end
-    end
-    jdata = params["data"]
-    result = site.calculate_tnm(jdata)
-    puts result["TNM"][0]["Result"]
-    if result["TNM"][0]["Conclusive"]
-      @@st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
-    end
-    return JSON.pretty_generate(result)
-  end
+  result = calculate_tnm(params)
+  return JSON.pretty_generate(result)
+end
+
+post '/tnm_submit' do 
+  result = calculate_tnm(params)
+  @@st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
+  puts JSON.pretty_generate(result) 
+  return JSON.pretty_generate(result)
 end
 
 get '/next_numeric_id' do
@@ -151,4 +140,23 @@ end
 
 not_found do
   erb "<div class='alert alert-message'>Nothing to see here...</div>", :locals => { :sites => @@sites.keys }
+end
+
+def calculate_tnm params
+  site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
+  if site.nil?
+    return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
+  else
+    site.get_metas.each do |part, meta| 
+      meta.fields.keys.each do |key|
+        unless params["data"][part].nil?
+          number = params["data"][part].delete "#{key}-number" # remove the temporary variables
+          params["data"][part][key] = meta.fields[key].value_to_codes(number).first unless (number.nil? || number.length == 0)
+        end
+      end
+    end
+    jdata = params["data"]
+    result = site.calculate_tnm(jdata)
+    return result
+  end
 end
