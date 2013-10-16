@@ -30,7 +30,7 @@
           <% unless field.type == :generated %>
             <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
               <% if field.type == :output %>
-                <td class = "result" >
+                <td class = "result_label" >
               <% else %>
                 <td>
               <% end %>
