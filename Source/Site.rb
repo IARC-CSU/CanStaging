@@ -33,6 +33,7 @@ class Site
     $PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         result[part] = values[part].nil? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
+        result[part] = keep_unique(result[part])
         tnm_result += "#{result[part][0]["Result"]}" 
         values["SG"][part] = result[part][0]["Result"]
         if result[part].length>1
@@ -67,6 +68,14 @@ class Site
   end
 
   private
+
+  def keep_unique results
+    found = {}
+    results.reverse.each do |e| # we reverse it so we keep the first one if duplicates
+      found[e["Result"]] = e
+    end
+    found.values
+  end
 
   def calculate_sgs tnm_results, sg_values
     sg_results = []
