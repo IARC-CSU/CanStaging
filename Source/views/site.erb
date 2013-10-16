@@ -195,11 +195,12 @@
           if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
           el.innerHTML = text;
           el.title = data["TNM"][0]["All results"].join("\n");
-
-          el = document.getElementById('SG_result');
-          text = data["SG"][0]["Result"];
-          if (data["SG"].length>1) text = text + " (non coclusive)";
-          el.innerHTML = text;
+          
+          if (data["SG"].length==1) {
+            el = document.getElementById('SG_result');
+            text = data["SG"][0]["Result"];
+            el.innerHTML = text;
+          }
 
           if (data["SimpG"] && data["SimpG"][0]){
             text = data["SimpG"][0]["Result"];
@@ -258,11 +259,14 @@
           el.title = data["TNM"][0]["All results"].join("\n");
           var alert_text = "TNM: " + text + "\n";
 
-          el = document.getElementById('SG_result');
-          text = data["SG"][0]["Result"];
-          if (data["SG"].length>1) text = text + " (non coclusive)";
-          el.innerHTML = text
-          alert_text += "SG:  " + text + "\n"
+          if (data["SG"].length==1) {
+            el = document.getElementById('SG_result');
+            text = data["SG"][0]["Result"];
+            el.innerHTML = text
+            alert_text += "SG:  " + text + "\n"
+          } else {
+            alert_text += "SG:  UNK\n"
+          }
 
           if (data["SimpG"] && data["SimpG"][0]){
             text = data["SimpG"][0]["Result"];
