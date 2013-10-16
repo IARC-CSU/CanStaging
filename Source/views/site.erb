@@ -139,6 +139,7 @@
     }
 
     function validateForm() {
+      return true; // short curcuit the form validation for now...
       <% site.get_metas.each do |part, meta| %>
         <% meta.fields.values.each do |field| %>
           <% case field.type 
@@ -193,31 +194,36 @@
           text = data["TNM"][0]["Result"];
           if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
           el.innerHTML = text;
+          el.title = data["TNM"][0]["All results"].join("\n");
 
           el = document.getElementById('SG_result');
           text = data["SG"][0]["Result"];
-          el.innerHTML = text
+          el.innerHTML = text;
 
-          if (data["SimpG"][0]){
-            el = document.getElementById('SimpG_result');
+          if (data["SimpG"] && data["SimpG"][0]){
             text = data["SimpG"][0]["Result"];
-            el.innerHTML = text
+            el = document.getElementById('SimpG_result');
+            if (el){
+              el.innerHTML = text;
+            }
           }
 
           for (var key in data["SG"][0]) {
             if (key != "Result" && key != "Message") {
               el = document.getElementById('SG_' + key + '_result');
               text = data["SG"][0][key];
+              if(data["SG"].length>1 && !unique_result(data["SG"])){
+                text = text + " (non conclusive)";
+              }
               if (el!=null) {
                 el.innerHTML = text;
               }
-              alert_text += key + ": " + text + "\n"
             }
           }
 
-           if (data["SGrange"]){
+          if (data["SGrange"]){
             el = document.getElementById('sgrange_result');
-            text = data["SGrange"];
+            text = data["SGrange"][0]["Result"];
             el.innerHTML = text
           }
 
@@ -246,19 +252,22 @@
         function(data) {
           var el = document.getElementById('tnm_result');
           var text = data["TNM"][0]["Result"];
-          if (data["TNM"].length>1) text = text + " (non coclusive)"
-          el.innerHTML = text
-          var alert_text = "TNM: " + text + "\n"
+          if (data["TNM"].length>1) text = text + " (non coclusive)";
+          el.innerHTML = text;
+          el.title = data["TNM"][0]["All results"].join("\n");
+          var alert_text = "TNM: " + text + "\n";
 
           el = document.getElementById('SG_result');
           text = data["SG"][0]["Result"];
           el.innerHTML = text
           alert_text += "SG:  " + text + "\n"
 
-          if (data["SimpG"][0]){
-            el = document.getElementById('SimpG_result');
+          if (data["SimpG"] && data["SimpG"][0]){
             text = data["SimpG"][0]["Result"];
-            el.innerHTML = text
+            el = document.getElementById('SimpG_result');
+            if (el){
+              el.innerHTML = text;
+            }
             alert_text += "SimpG:  " + text + "\n"
           }
 
@@ -266,13 +275,15 @@
             if (key != "Result" && key != "Message") {
               el = document.getElementById('SG_' + key + '_result');
               text = data["SG"][0][key];
-              el.innerHTML = text
+              if (el){
+                el.innerHTML = text
+              }
               alert_text += key + ": " + text + "\n"
             }
           }
            if (data["SGrange"]){
             el = document.getElementById('sgrange_result');
-            text = data["SGrange"];
+            text = data["SGrange"][0]["Result"];
             el.innerHTML = text
             alert_text += "SG range:  " + text + "\n"
           }
