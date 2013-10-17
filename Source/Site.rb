@@ -76,15 +76,19 @@ class Site
     end
     found.values
   end
-
+  
   def calculate_sgs tnm_results, sg_values
     sg_results = []
-      tnm_results["T"].each do |t| 
+    # tnm_results = simplify_TNMs tnm_results
+    tnm_results["T"].each do |t| 
       sg_values["T"] = t["Result"]
+      sg_values.delete("T") if t["Result"] == "TX"
       tnm_results["N"].each do |n|
         sg_values["N"] = n["Result"]
+        sg_values.delete("N") if n["Result"] == "NX"
         tnm_results["M"].each do |m|
           sg_values["M"] = m["Result"]
+          sg_values.delete("M") if t["Result"] == "MX"
           result = @lookups["SG"].look_up(sg_values)
           result.each { |r| r["TNM"] = "#{t['Result']}#{n['Result']}#{m['Result']}" }
           sg_results << result
