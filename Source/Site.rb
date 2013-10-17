@@ -76,7 +76,7 @@ class Site
     end
     found.values
   end
-  
+
   def calculate_sgs tnm_results, sg_values
     sg_results = []
     # tnm_results = simplify_TNMs tnm_results
@@ -103,6 +103,8 @@ class Site
     range = sg_results.map {|e| e["Result"].gsub(/[1-9|a-h|A-H]*/,"")}.flatten.map(&:strip)
     range.delete("RROR")
     range.delete("UNK")
+    range.delete("OULT")
+    # range.delete("0")
     puts "Range: #{range}"
     range = range.uniq.map{|e| e.gsub("IV","IIII")}.sort_by(&:length).map {|e| e.gsub("IIII","IV")}
     range_string = range.first == range.last ?  "#{range.first}" : "#{range.first} - #{range.last}"
