@@ -105,14 +105,29 @@
       return ""+(parseInt(current)+1);
     }
 
+    function setDefaultResults(){
+      var results = $(".result");
+      for(var i = 0; i<results.length; i++) {
+        var text = ""
+        // console.log(results[i]);
+        if(results[i].id == "T_result"){
+          text = "TX";
+        } else if (results[i].id == "N_result"){
+          text = "NX"
+        } else if (results[i].id == "M_result"){
+          text = "M0"
+        }
+        results[i].textContent = text;
+      }
+    }
+
     function clear_form(d) {
       var tumour_id = $("#tumour_id")[0].value;
       var autogenerate = $("#autogenerate").prop('checked');
       d.form.reset();
-      var results = $(".result");
-      for(var i = 0; i<results.length; i++) {
-        results[i].textContent = "";
-      }
+
+      setDefaultResults();
+
       if (autogenerate) {
         $("#autogenerate").prop('checked', true);
         $.get("/next_numeric_id", function(data) {
@@ -121,6 +136,19 @@
       } else {
         $("#autogenerate").prop('checked', false);
       }
+
+/*      var parts = ["T", "N", "M"];
+      for (var i in parts) {
+        part = parts[i];
+        var element = $("#"+part+"_result");
+        if (element != null) {
+          if (part == "T" || part == "N"){
+            element[0].textContent = part + "X";
+          } else {
+            element[0].textContent = part + "0";
+          }
+        }
+      }*/
     }
 
     function autogenerateUpdated() {
@@ -305,7 +333,7 @@
   autogenerateUpdated();
 
   document.title = "StagingTool - <%= site.site %>";
-
+  setDefaultResults();
   // this overrides the default...
   // function help_alert() {
   //   bootbox.alert("Help text for <%= site.site %>");
