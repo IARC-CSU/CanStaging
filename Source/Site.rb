@@ -32,7 +32,7 @@ class Site
     conclusive = true
     $PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
-        result[part] = values[part].nil? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
+        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
         tnm_result += "#{result[part][0]["Result"]}" 
         values["SG"][part] = result[part][0]["Result"]
@@ -48,11 +48,14 @@ class Site
     end
 
     # calculate SG range
-    result["SGrange"] = [ { "Result" => calculate_sg_range(result["SG"]) } ]
+    range = calculate_sg_range(result["SG"])
+    puts range
+
+    result["SGrange"] = [ { "Result" => generate_sg_range_string(range)} ]
     puts result["SGrange"]
 
     if $PARTS.include? "SimpG"
-      result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(result["SGrange"][0]["Result"])
+      result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
     end
     result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ]
     # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
@@ -91,6 +94,9 @@ class Site
           sg_values.delete("M") if t["Result"] == "MX"
           result = @lookups["SG"].look_up(sg_values)
           result.each { |r| r["TNM"] = "#{t['Result']}#{n['Result']}#{m['Result']}" }
+          result.each { |r| r["T"] = "#{t['Result']}" }
+          result.each { |r| r["N"] = "#{n['Result']}" }
+          result.each { |r| r["M"] = "#{m['Result']}" }
           sg_results << result
         end
       end
@@ -100,23 +106,20 @@ class Site
 
   def calculate_sg_range sg_results
     puts "SG results: #{sg_results}"
-    range = sg_results.map {|e| e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,"")}.flatten
-    range.delete("RROR")
-    range.delete("UNK")
-    # range.delete("OULT")
-    # range.delete("0")
+    range = sg_results.map {|e| e["Result"] = e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,""); e}.flatten
     puts "Range: #{range}"
-    range = range.uniq.sort
-    range_string = range.first == range.last ?  "#{range.first}" : "#{range.first} - #{range.last}"
-    puts "Range string: #{range_string}"
-    range_string
+    range = range.sort_by {|e| e["Result"]}
+    range.first["Result"] == range.last["Result"] ?  [range.first] : [range.first, range.last]  
   end
 
-  def calculate_SimpGs sg_range
-    range = sg_range.split("-").map(&:strip)
+  def generate_sg_range_string range
+    range.map{|e| e["Result"]}.join(" - ")
+  end
+
+  def calculate_SimpGs range
     simpg_elements = []
     range.each do |e|
-      result = @lookups["SimpG"].look_up({"SG"=>e})
+      result = @lookups["SimpG"].look_up({"SG"=>e["Result"], "T"=>e["T"], "N"=>e["N"], "M"=>e["M"]})
       simpg_elements << result[0]["Result"] unless result[0].nil?
     end
     [{"Result" => simpg_elements.join(" - ")}]
