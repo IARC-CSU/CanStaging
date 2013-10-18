@@ -100,10 +100,10 @@ class Site
 
   def calculate_sg_range sg_results
     puts "SG results: #{sg_results}"
-    range = sg_results.map {|e| e["Result"].gsub(/[1-9|a-h|A-H]*/,"")}.flatten.map(&:strip)
+    range = sg_results.map {|e| e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,"")}.flatten
     range.delete("RROR")
     range.delete("UNK")
-    range.delete("OULT")
+    # range.delete("OULT")
     # range.delete("0")
     puts "Range: #{range}"
     range = range.uniq.sort
