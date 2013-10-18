@@ -124,6 +124,7 @@ class Site
       result = @lookups["SimpG"].look_up({"SG"=>e["Result"], "T"=>e["T"], "N"=>e["N"], "M"=>e["M"]})
       simpg_elements << result[0]["Result"] unless result[0].nil?
     end
+    simpg_elements = simpg_elements.first == simpg_elements.last ? [simpg_elements.first] : simpg_elements
     [{"Result" => simpg_elements.join(" - ")}]
   end
 end
