@@ -49,10 +49,10 @@ class Site
 
     # calculate SG range
     range = calculate_sg_range(result["SG"])
-    puts range
+    # puts range
 
     result["SGrange"] = [ { "Result" => generate_sg_range_string(range)} ]
-    puts result["SGrange"]
+    # puts result["SGrange"]
 
     if $PARTS.include? "SimpG"
       result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
@@ -93,10 +93,12 @@ class Site
           sg_values["M"] = m["Result"]
           sg_values.delete("M") if t["Result"] == "MX"
           result = @lookups["SG"].look_up(sg_values)
-          result.each { |r| r["TNM"] = "#{t['Result']}#{n['Result']}#{m['Result']}" }
-          result.each { |r| r["T"] = "#{t['Result']}" }
-          result.each { |r| r["N"] = "#{n['Result']}" }
-          result.each { |r| r["M"] = "#{m['Result']}" }
+          result.each do |r| 
+            r["TNM"] = "#{t['Result']}#{n['Result']}#{m['Result']}" 
+            r["T"] = "#{t['Result']}"
+            r["N"] = "#{n['Result']}"
+            r["M"] = "#{m['Result']}"
+          end
           sg_results << result
         end
       end
@@ -105,10 +107,10 @@ class Site
   end
 
   def calculate_sg_range sg_results
-    puts "SG results: #{sg_results}"
-    range = sg_results.map {|e| e["Result"] = e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,""); e}.flatten
-    puts "Range: #{range}"
-    range = range.sort_by {|e| e["Result"]}
+    # puts "SG results: #{sg_results}"
+    # range = sg_results.map {|e| e["Result"] = e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,""); e}.flatten
+    # puts "Range: #{range}"
+    range = sg_results.sort_by {|e| e["Result"]}
     range.first["Result"] == range.last["Result"] ?  [range.first] : [range.first, range.last]  
   end
 
