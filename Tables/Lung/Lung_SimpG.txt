@@ -1,6 +1,6 @@
 "SG","Result"
-“0”,”Localised”
-“OCCULT”,”Localised”
+"0","Localised"
+"OCCULT","Localised"
 "I","Localised"
 "II","Localised"
 "III","Regional"
