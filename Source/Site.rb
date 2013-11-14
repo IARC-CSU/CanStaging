@@ -42,9 +42,10 @@ class Site
         end
       end
     end
-
+    
     if $PARTS.include? "SG"
       result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => "No data"}] : calculate_sgs(result, values["SG"])
+      result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ]
     end
 
     # calculate SG range
@@ -57,13 +58,8 @@ class Site
     if $PARTS.include? "SimpG"
       result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
     end
-    result["TNM"] = [{"Result" => tnm_result, "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ]
     # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     result
-  end
-
-  def calculate_grouped_stage values
-    @lookups["SG"].look_up(values)
   end
   
   def get_metas
@@ -103,7 +99,7 @@ class Site
         end
       end
     end
-    sg_results.flatten
+    sg_results.flatten.sort_by {|result| -count_chars(result["TNM"], "X")}
   end
 
   def calculate_sg_range sg_results
@@ -111,11 +107,13 @@ class Site
     # range = sg_results.map {|e| e["Result"] = e["Result"].strip.gsub(/[1-9|a-h|A-H]$/,""); e}.flatten
     # puts "Range: #{range}"
     range = sg_results.sort_by {|e| e["Result"]}
-    range.first["Result"] == range.last["Result"] ?  [range.first] : [range.first, range.last]  
+    range.first["Result"] == range.last["Result"] ? [range.first] : [range.first, range.last]  
   end
 
   def generate_sg_range_string range
-    range.map{|e| e["Result"]}.join(" - ")
+    r = range.map{|e| e["Result"]}
+    r = ["OCCULT"] if r.include? "OCCULT"
+    r.join(" - ")
   end
 
   def calculate_SimpGs range
@@ -126,5 +124,10 @@ class Site
     end
     simpg_elements = simpg_elements.first == simpg_elements.last ? [simpg_elements.first] : simpg_elements
     [{"Result" => simpg_elements.join(" - ")}]
+  end
+
+  private
+  def count_chars string, char = "X"
+    string.each_char.to_a.inject(0) {|r, c| c==char ? r+1 : r }
   end
 end
