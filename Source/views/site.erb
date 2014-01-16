@@ -3,7 +3,8 @@
   
   <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
   <!-- Not sure if we need this and it is rather heavy... <script src="/js/jquery-ui.min.js" type="text/javascript"></script> -->
-  <script src="/js/serializeJSON.js" type="text/javascript"></script>
+  <!-- <script src="/js/serializeJSON.js" type="text/javascript"></script> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
 </head>
 
   <h1><%= site.site %></h1>
@@ -207,7 +208,8 @@
     }
 
     function change(part) {
-      var term = $('#tnm_form').serializeJSON();
+      // var term = $('#tnm_form').serializeJSON();
+      var term = form_to_data('#tnm_form');
 
       $.post('/tnm', term, 
         function(data) {
@@ -279,8 +281,8 @@
       /* attach a submit handler to the form */
     $("#tnm_form").submit(function(event) {
       event.preventDefault();
-      var term = $('#tnm_form').serializeJSON();
-
+      // var term = $('#tnm_form').serializeJSON();
+      var term = form_to_data('#tnm_form');
       $.post('/tnm_submit', term, 
         function(data) {
           var el = document.getElementById('tnm_result');
@@ -328,6 +330,19 @@
         bootbox.alert(alert_text);
         }, "json");
     });
+
+
+  function form_to_data(form_id){
+    var form = $(form_id)[0];
+    var data = {};
+    for (var i = 0, ii = form.length; i < ii; ++i) {
+      var input = form[i];
+      if (input.name) {
+        data[input.name] = input.value;
+      }
+    }
+    return data;
+  }
 
   //update the auto-generate-stuff
   autogenerateUpdated();
