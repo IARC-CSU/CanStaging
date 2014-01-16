@@ -1,5 +1,6 @@
 system:
-  environment:      "development"
+  environment:      "production"
   bind:             "0.0.0.0"
-  port:             4567
+  port:             8008
   session_secret:   "b9DNaf74K9dZAlWr6obAExa4JTNiOkBDSLjpQCH4Us3ec1o1JCCoftq4Hjceju6w"
+  log_file:			"./logg.db"
