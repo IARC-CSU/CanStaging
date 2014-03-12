@@ -37,14 +37,14 @@
               <% end %>
               <%= field.display_text %></td>
               <% case field.type 
-                 when :boolean %>
-                 <td>
+                when :boolean %>
+                <td>
                   <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
                   <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')" checked>No
-                  </td>
+                </td>
               <% when :dictionary %>
               <td>
-                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%= part %>')">
+                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>')">
                     <% unless part == "M" %>
                     <option value='' disabled selected style='display:none;'>Please Choose</option>
                     <% end %>
@@ -52,7 +52,10 @@
                       <option value=<%= "\"#{key}\"" %>><%= value %></option>
                     <% end %>
                   </select>
-                  </td>
+                  <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
+                    Reset       
+                  </span>
+               </td>
               <% when :number %>
               <td>
                 <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>')"/>
@@ -70,13 +73,13 @@
       <% end %>
       </tbody>
       <% end %>
-      <tr id = "sgrange">
+      <tr id = "SGrange">
         <th>SG range</th>
-        <th class = "result" id = "sgrange_result"></th>
+        <th class = "result" id = "SGrange_result"></th>
       </tr>
       <tr id = "result">
         <th>TNM</th>
-        <th class = "result" id = "tnm_result"></th>
+        <th class = "result" id = "TNM_result"></th>
       </tr>
       <tr id = "buttons">
         <td></td>
@@ -94,7 +97,7 @@
   <script type="text/javascript">
 
     function get_log(){
-      window.location = "/get_log";
+      window.open("/get_log");
     }
 
     function hide_unhide(part) {
@@ -109,17 +112,23 @@
     function setDefaultResults(){
       var results = $(".result");
       for(var i = 0; i<results.length; i++) {
-        var text = ""
-        // console.log(results[i]);
-        if(results[i].id == "T_result"){
-          text = "TX";
-        } else if (results[i].id == "N_result"){
-          text = "NX"
-        } else if (results[i].id == "M_result"){
-          text = "M0"
-        }
+        var part = results[i].id.split("_")[0]
+        var text = getDefaultResult(part)
         results[i].textContent = text;
       }
+    }
+
+    function getDefaultResult(part) {
+      var text = "";
+      // console.log(results[i]);
+      if(part == "T"){
+        text = "TX";
+      } else if (part == "N"){
+        text = "NX"
+      } else if (part == "M"){
+        text = "M0"
+      }
+      return text;
     }
 
     function clear_form(d) {
@@ -207,61 +216,62 @@
       <% end %>
     }
 
+    function resultsToForm(data){
+      setDefaultResults();
+      var keys = Object.keys(data);
+      console.log(data);
+      var results = {};
+      var alertText = "<b>Results:</b>";
+      for (var i = 0; i<keys.length; i ++) {
+        var part = keys[i];
+        var el = document.getElementById(part+'_result');
+        var text = data[part][0]["Result"];
+        el.innerHTML = text;
+        if (data[part].length>1 && !unique_result(data[part])) { 
+          text = getDefaultResult(part);
+          el.innerHTML = text;
+        };
+        results[part] = text;
+        if (part == "SG") {
+          if (data["SG"].length>1) {
+            text = "UNK"
+          }
+          alertText += "<br>SG: " + text;
+          for (var key in data["SG"][0]) {
+            if (key != "Result" && key != "Message") {
+              el = document.getElementById('SG_' + key + '_result');
+              text = data["SG"][0][key];
+              if(data["SG"].length>1 && !unique_result(data["SG"])){
+                text = "";
+              }
+              if (el!=null) {
+                el.innerHTML = text;
+                if (text.length > 0){
+                  alertText += "<br>" + key + ": " + text;
+                }
+              }
+            }
+          }
+        } else if (part != "TNM"){
+          alertText += "<br>" + part + ": " + text;
+        }
+      }
+      var el   = document.getElementById('TNM_result');
+      var text = results['T']+results['N']+results['M'];
+      el.title = data["TNM"][0]["All results"].join("\n");
+      el.innerHTML = text;
+      alertText += "<br>TNM: "+ text;
+      return alertText;
+    }
+
+
     function change(part) {
       // var term = $('#tnm_form').serializeJSON();
       var term = form_to_data('#tnm_form');
 
       $.post('/tnm', term, 
         function(data) {
-          var el = document.getElementById(part+'_result');
-          var text = data[part][0]["Result"];
-          if (data[part].length>1 && !unique_result(data[part])) { 
-            text = text + " (non conclusive)";
-          };
-          el.innerHTML = text;
-
-          el = document.getElementById('tnm_result');
-          text = data["TNM"][0]["Result"];
-          if (data["TNM"][0]["Message"] != null) text = text + " (" + data["TNM"][0]["Message"] +")"
-          el.innerHTML = text;
-          el.title = data["TNM"][0]["All results"].join("\n");
-          
-          
-          el = document.getElementById('SG_result');
-          if (data["SG"].length==1) {
-            text = data["SG"][0]["Result"];
-          } else {
-            text = ""
-          }
-          el.innerHTML = text;
-
-          if (data["SimpG"] && data["SimpG"][0]){
-            text = data["SimpG"][0]["Result"];
-            el = document.getElementById('SimpG_result');
-            if (el){
-              el.innerHTML = text;
-            }
-          }
-
-          for (var key in data["SG"][0]) {
-            if (key != "Result" && key != "Message") {
-              el = document.getElementById('SG_' + key + '_result');
-              text = data["SG"][0][key];
-              if(data["SG"].length>1 && !unique_result(data["SG"])){
-                text = text + " (non conclusive)";
-              }
-              if (el!=null) {
-                el.innerHTML = text;
-              }
-            }
-          }
-
-          if (data["SGrange"]){
-            el = document.getElementById('sgrange_result');
-            text = data["SGrange"][0]["Result"];
-            el.innerHTML = text
-          }
-
+          resultsToForm(data);
         }, "json");
     }
 
@@ -278,55 +288,14 @@
       return unique;
     };
 
-      /* attach a submit handler to the form */
+    /* attach a submit handler to the form */
     $("#tnm_form").submit(function(event) {
       event.preventDefault();
       // var term = $('#tnm_form').serializeJSON();
       var term = form_to_data('#tnm_form');
       $.post('/tnm_submit', term, 
         function(data) {
-          var el = document.getElementById('tnm_result');
-          var text = data["TNM"][0]["Result"];
-          if (data["TNM"].length>1) text = text + " (non coclusive)";
-          el.innerHTML = text;
-          el.title = data["TNM"][0]["All results"].join("\n");
-          var alert_text = "TNM: " + text + "\n";
-
-          el = document.getElementById('SG_result');
-          if (data["SG"].length==1) {
-            text = data["SG"][0]["Result"];
-          } else {
-            text = "UNK"
-          }
-          alert_text += "SG:  " + text + "\n"
-          el.innerHTML = text;
-
-          if (data["SimpG"] && data["SimpG"][0]){
-            text = data["SimpG"][0]["Result"];
-            el = document.getElementById('SimpG_result');
-            if (el){
-              el.innerHTML = text;
-            }
-            alert_text += "SimpG:  " + text + "\n";
-          }
-
-          for (var key in data["SG"][0]) {
-            if (key != "Result" && key != "Message") {
-              el = document.getElementById('SG_' + key + '_result');
-              text = data["SG"][0][key];
-              if (el){
-                el.innerHTML = text;
-              }
-              alert_text += key + ": " + text + "\n";
-            }
-          }
-           if (data["SGrange"]){
-            el = document.getElementById('sgrange_result');
-            text = data["SGrange"][0]["Result"];
-            el.innerHTML = text
-            alert_text += "SG range:  " + text + "\n"
-          }
-
+        var alert_text = resultsToForm(data);
         bootbox.alert(alert_text);
         }, "json");
     });
@@ -353,5 +322,11 @@
   // function help_alert() {
   //   bootbox.alert("Help text for <%= site.site %>");
   // }
+
+  function reset(selectBoxName, part) {
+    console.log(selectBoxName);
+    $(document.getElementsByName(selectBoxName)).prop('selectedIndex',0);
+    change(part);
+  }
 
   </script>
