@@ -18,7 +18,7 @@
     );
 	  }
 	  function help_alert() {
-	  	bootbox.alert("<b>Help</b><br>The Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\"/media/StagingToolHelp.pdf\">Download a PDF guide</a> with more information.");
+	  	bootbox.alert("<b>Help</b><br>The Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\"/media/StagingToolHelp.pdf\" target=\"new\">Download a PDF guide</a> with more information.");
 	  }
  	 </script>
 
@@ -65,7 +65,8 @@
                 <a href="#"
                       class="dropdown-toggle"
                       data-toggle="dropdown">
-                      User
+                      <%= !session[:user].nil? ? session[:user].username : "" %>                      
+                      (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:user].nil? && !session[:user].role.nil? ? session[:user].role : "user" %>)
                       <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
