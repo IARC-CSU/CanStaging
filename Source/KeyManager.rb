@@ -18,10 +18,18 @@ class KeyManager
     new_user
   end
   def valid_key?(key)
-    @@users.keys.include?(key)
+    !get_user(key).nil?
+  end
+  def get_user(key)
+    # @@users.keys.include?(key)
+    if (key.nil?)
+      return nil
+    else
+      @@users.values.find { |user| key.start_with?(user.key) }
+    end
   end
   def admin_key?(key)
-    @@users[key].role == 'admin'
+    get_user(key).role == 'admin'
   end
   def save_users_to_file
     CSV.open(KEYFILENAME, "wb", {col_sep: "\t", headers: true }) do |csv|

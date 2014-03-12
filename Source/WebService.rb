@@ -40,7 +40,7 @@ load_users
 # check for valid api key to all calls to the service... 
 before do
   unless request.path_info.start_with? "/login"
-    error(401, erb(:login_form, :locals => { :sites => @@sites.keys })) unless (@@key_manager.valid_key?(params[:key] || session[:key]))
+    error(401, erb(:login_form, :locals => { :sites => @@sites.keys })) if @@key_manager.get_user(params[:key] || session[:key]).nil?
     session[:key] = params[:key] || session[:key]
   end
 end
@@ -119,8 +119,12 @@ get '/login/form' do
 end
 
 post '/login/attempt' do
-  if @@key_manager.valid_key?(params['key'])
+  user = @@key_manager.get_user(params['key'])
+  puts user
+  puts params['key']
+  if !user.nil?
     session[:key] = params['key']
+    session[:user] = user
     where_user_came_from = session[:previous_url] || '/tool'
     redirect to where_user_came_from 
   else
