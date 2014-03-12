@@ -14,3 +14,6 @@ Source/logg.db
 Source/config.yml
 log.txt
 Source/*.TMP
+Source/logg-old.db
+Source/views/site.erb~RFb8e85ce.TMP
+Source/views/site.erb~RFb8f3713.TMP
