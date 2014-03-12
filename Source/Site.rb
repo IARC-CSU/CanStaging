@@ -28,37 +28,59 @@ class Site
     # SG might only rely on generated values
     values["SG"] ||= {}
     values["SGrange"] ||= {}
-    # first TNM
+    
     conclusive = true
+    error = false
+    tnm_message_parts = []
     $PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
-        tnm_result += "#{result[part][0]["Result"]}" 
         values["SG"][part] = result[part][0]["Result"]
-        if result[part].length>1
-          tnm_message = "One of many possible..."
+        if result[part][0]["Result"] == "ERROR"
+          error = true
+          result[part] = [{"Result"=> "ERROR", "Message" => "No possible combination " }]
+          tnm_message_parts << "No such combination for #{part}s..."
+        elsif result[part].length>1
+          tnm_result += "#{get_default_result(part)}" 
+          tnm_message_parts << "One of many possible #{part}s..."
+          result[part] = [{"Result"=> get_default_result(part), "Message" => "Many possible" }] + result[part]
           conclusive = false
+        else
+          tnm_result += "#{result[part][0]["Result"]}"
         end
       end
     end
     
+    puts $PARTS
+    
+    tnm_message = tnm_message_parts.join(" ")
     if $PARTS.include? "SG"
       result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => "No data"}] : calculate_sgs(result, values["SG"])
-      result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ]
+      result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
+      error = error || !(result["SG"].find{|e| e["Result"] == "ERROR"}.nil?)
+    end    
+
+    if error
+       result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => "No data"}]    
+       result["SGrange"] = [ { "Result" => get_default_result("SGrange")} ]
+       result["SimpG"] = [ { "Result" => get_default_result("SimpG")} ]
+    else
+      if $PARTS.include? "SG" && !result["SG"].nil? && result["SG"].length > 0
+        result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
+      end
+      # calculate SG range
+      range = calculate_sg_range(result["SG"])
+      # puts range
+
+      result["SGrange"] = [ { "Result" => generate_sg_range_string(range)} ]
+      # puts result["SGrange"]
+
+      if $PARTS.include? "SimpG"
+        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
+      end
+      # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
-
-    # calculate SG range
-    range = calculate_sg_range(result["SG"])
-    # puts range
-
-    result["SGrange"] = [ { "Result" => generate_sg_range_string(range)} ]
-    # puts result["SGrange"]
-
-    if $PARTS.include? "SimpG"
-      result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
-    end
-    # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     result
   end
   
@@ -67,6 +89,18 @@ class Site
   end
 
   private
+
+  def get_default_result(part)
+    text = ""
+    if(part == "T")
+      text = "TX"
+    elsif (part == "N")
+      text = "NX"
+    elsif (part == "M")
+      text = "M0"
+    end
+    text
+  end
 
   def keep_unique results
     found = {}
@@ -120,7 +154,7 @@ class Site
     simpg_elements = []
     range.each do |e|
       result = @lookups["SimpG"].look_up({"SG"=>e["Result"], "T"=>e["T"], "N"=>e["N"], "M"=>e["M"]})
-      simpg_elements << result[0]["Result"] unless result[0].nil?
+      simpg_elements << result[0]["Result"] unless result[0].nil? || result[0]["Result"] == "ERROR"
     end
     simpg_elements = simpg_elements.first == simpg_elements.last ? [simpg_elements.first] : simpg_elements
     [{"Result" => simpg_elements.join(" - ")}]
