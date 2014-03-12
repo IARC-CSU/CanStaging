@@ -16,6 +16,9 @@ class LookUp
     responses = []
     unless @table.nil?
       keys = values.keys
+      # remove keys that have empty fields
+      puts values
+      keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0)}
       valid_entries = @table.find_all do |row|
         found = true
         keys.each do |key|
@@ -26,7 +29,7 @@ class LookUp
         found
       end
       if valid_entries.empty?
-        valid_entries << {"Result"=>"ERROR ",  "Message" => "No valid codes found..."}
+        valid_entries << {"Result"=>"ERROR",  "Message" => "No valid codes found..."}
       end
       valid_entries.map do |entry|
         response = {}
