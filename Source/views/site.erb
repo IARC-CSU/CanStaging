@@ -307,7 +307,13 @@
     for (var i = 0, ii = form.length; i < ii; ++i) {
       var input = form[i];
       if (input.name) {
-        data[input.name] = input.value;
+        if(input.type =="radio" ) {
+          if (input.checked){
+            data[input.name] = input.value;
+          }
+        } else {
+          data[input.name] = input.value;
+        }
       }
     }
     return data;
