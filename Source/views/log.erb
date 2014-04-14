@@ -20,11 +20,13 @@
 				<td>SG - Message</td>
 				<td>SimpG</td>
 				<td>SG range</td>
+				<td>Site Specific</td>
 			</tr>
 			</thead>
 			<tbody>
 			<% log.each do |entry|%>
 			<% result = JSON.parse(entry[:result]) %>
+				<% site_specific = result["SG"][0].keys - ["Result", "Message", "TNM", "T", "N", "M"] %>
 				<tr>
 					<td><%= entry[:tumour_id] %></td>
 					<td><%= entry[:created_at] %></td>
@@ -38,6 +40,7 @@
 					<td><%= result["SG"][0]["Message"] %></td>
 					<td><%= result["SimpG"] && result["SimpG"][0] ? result["SimpG"][0]["Result"] : ""%></td>
 					<td><%= result["SGrange"] && result["SGrange"][0] ? result["SGrange"][0]["Result"] : "" %></td>
+					<td><%= site_specific.map { |ss| "#{ss}: #{result['SG'][0][ss]}" }.join("; ") %></td>
 				</tr>
 			<% end %>
 			</tbody>

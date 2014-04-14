@@ -50,17 +50,21 @@ class STLogger
     list = report(key, ip_address, report_all)
     csv_string = CSV.generate do |csv|
       unless list.length==0
-        header = [:site, :tumour_id, :created_at, "T", "N", "M", "TNM", "SG", "SimpG", "SGrange", :input, :result]
+        header = [:site, "TNM version", :tumour_id, :created_at, "T", "N", "M", "TNM", "SG", "SimpG", "SGrange", "SiteSpecific", :input, :result]
         csv << header.map{ |e| e.to_s.gsub("_", "") }
         list.each do |entry|
           result = JSON.parse(entry[:result])
+          site_specific =  result["SG"][0].keys - ["Result", "Message", "TNM", "T", "N", "M"]
+          puts result if site_specific.length > 0
           entry["T"]   = result["T"][0]["Result"]
           entry["N"]   = result["N"][0]["Result"]
           entry["M"]   = result["M"][0]["Result"]
           entry["TNM"] = result["TNM"][0]["Result"]
           entry["SG"]  = result["SG"][0]["Result"]
+          entry["TNM version"] = result["version"] || "7"
           entry["SimpG"] = (result["SimpG"] && result["SimpG"][0]) ? result["SimpG"][0]["Result"] : ""
           entry["SGrange"] = (result["SGrange"] && result["SGrange"][0]) ? result["SGrange"][0]["Result"] : ""
+          entry["SiteSpecific"] = site_specific.map { |ss| "#{ss}: #{result['SG'][0][ss]}" }.join("; ")
           row = []
           header.each do |column|
             row << entry[column]
