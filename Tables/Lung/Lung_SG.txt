@@ -39,7 +39,6 @@
 "TX","N0","M0","OCCULT"
 "TX","N2","M0","IIIA"
 "TX","N3","M0","IIIB"
-"TX","NX","M0","UNK"
 "T0","N0","M1a","IV"
 "T0","N1","M1a","IV"
 "T0","N2","M1a","IV"

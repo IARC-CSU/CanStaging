@@ -47,7 +47,6 @@
 "T4b","N2a","M0","IIIC","C"
 "T4b","N2b","M0","IIIC","C"
 "T4b","N2","M0","IIIC","C"
-"TX","NX","M0","UNK",""
 "T0","N0","M1a","IVA",""
 "T0","N1a","M1a","IVA",""
 "T0","N1b","M1a","IVA",""

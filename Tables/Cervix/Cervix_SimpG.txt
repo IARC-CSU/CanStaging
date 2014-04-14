@@ -11,6 +11,7 @@
 "IIA","Localised"
 "IIA1","Localised"
 "IIA2","Localised"
+"IIB","Localised"
 "III","Regional"
 "IIIA","Regional"
 "IIIB","Regional"

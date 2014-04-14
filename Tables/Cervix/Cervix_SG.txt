@@ -35,4 +35,3 @@
 "T3","N1","M0","IIIB"
 "T3","NX","M0","III"
 "T4","ANY","M0","IVA"
-"TX","NX","M0","UNK"
