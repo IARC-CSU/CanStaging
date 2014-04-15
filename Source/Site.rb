@@ -69,15 +69,16 @@ class Site
       if $PARTS.include? "SG" && !result["SG"].nil? && result["SG"].length > 0
         result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
       end
+      # puts result["TNM"][0]["Result"]
       # calculate SG range
-      range = calculate_sg_range(result["SG"])
+      range = result["TNM"][0]["Result"] == "TXNXM0" ? [ { "Result" =>  "" } ] : calculate_sg_range(result["SG"])
       # puts range
 
-      result["SGrange"] = [ { "Result" => generate_sg_range_string(range)} ]
+      result["SGrange"] = [ { "Result" =>  generate_sg_range_string(range)} ]
       # puts result["SGrange"]
 
       if $PARTS.include? "SimpG"
-        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "") ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
+        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "" || result["TNM"][0]["Result"] == "TXNXM0" ) ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
       end
       # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
