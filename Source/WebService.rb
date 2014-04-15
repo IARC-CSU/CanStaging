@@ -67,7 +67,7 @@ get '/get_log.json' do
 end
 
 get '/get_log' do
-  erb :log, :locals => {:log => @@st_logger.report(session[:key], request.ip.to_s, true), :sites => @@sites.keys }, :layout => :layout
+  erb :log, :locals => {:log => @@st_logger.report(session[:key], request.ip.to_s, true), :sites => @@sites.keys } , :layout => nil
 end
 
 get '/get_log.csv' do 
