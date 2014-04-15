@@ -1,52 +1,59 @@
 <html>
 	<head>
-		<title>The Cancer Staging tool</title>
+		<title>CanStage - A Cancer Staging tool</title>
 		<link rel="stylesheet" href="/css/default.css" type="text/css">
+		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
 		<script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<table id = "log-table">
-			<thead>
-			<tr>
-				<td>Tumour ID</td>
-				<td>Date created</td>
-				<td>Site</td>
-				<td>T</td>
-				<td>N</td>
-				<td>M</td>
-				<td>TNM - Result</td>
-				<td>TNM - Message</td>
-				<td>SG - Result</td>
-				<td>SG - Message</td>
-				<td>SimpG</td>
-				<td>SG range</td>
-				<td>Site Specific</td>
-			</tr>
-			</thead>
-			<tbody>
-			<% log.each do |entry|%>
-			<% result = JSON.parse(entry[:result]) %>
-				<% site_specific = result["SG"][0].keys - ["Result", "Message", "TNM", "T", "N", "M"] %>
-				<tr>
-					<td><%= entry[:tumour_id] %></td>
-					<td><%= entry[:created_at] %></td>
-					<td><%= entry[:site] %></td>
-					<td title="<%= result["T"][0]["Message"]%>"><%= result["T"][0]["Result"] %></td>
-					<td title="<%= result["N"][0]["Message"]%>"><%= result["N"][0]["Result"] %></td>
-					<td title="<%= result["M"][0]["Message"]%>"><%= result["M"][0]["Result"] %></td>
-					<td><%= result["TNM"][0]["Result"] %></td>
-					<td><%= result["TNM"][0]["Message"] %></td>
-					<td><%= result["SG"][0]["Result"] %></td>
-					<td><%= result["SG"][0]["Message"] %></td>
-					<td><%= result["SimpG"] && result["SimpG"][0] ? result["SimpG"][0]["Result"] : ""%></td>
-					<td><%= result["SGrange"] && result["SGrange"][0] ? result["SGrange"][0]["Result"] : "" %></td>
-					<td><%= site_specific.map { |ss| "#{ss}: #{result['SG'][0][ss]}" }.join("; ") %></td>
-				</tr>
-			<% end %>
-			</tbody>
-		</table>
-		<input type="button" value="Clear Log" onClick="clear_log()" />
-		<input type="button" value="Download Log" onClick="download_log()" />
+	    <div align = "center">
+			<div style="width:90%" align="left">
+				<h3>CanStage log</h3>
+
+				<table id = "log-table">
+					<thead>
+					<tr>
+						<td>Tumour ID</td>
+						<td>Date created</td>
+						<td>Site</td>
+						<td>T</td>
+						<td>N</td>
+						<td>M</td>
+						<td>TNM - Result</td>
+						<td>TNM - Message</td>
+						<td>SG - Result</td>
+						<td>SG - Message</td>
+						<td>SimpG</td>
+						<td>SG range</td>
+						<td>Site Specific</td>
+					</tr>
+					</thead>
+					<tbody>
+					<% log.each do |entry|%>
+					<% result = JSON.parse(entry[:result]) %>
+						<% site_specific = result["SG"][0].keys - ["Result", "Message", "TNM", "T", "N", "M"] %>
+						<tr>
+							<td><%= entry[:tumour_id] %></td>
+							<td><%= entry[:created_at] %></td>
+							<td><%= entry[:site] %></td>
+							<td title="<%= result["T"][0]["Message"]%>"><%= result["T"][0]["Result"] %></td>
+							<td title="<%= result["N"][0]["Message"]%>"><%= result["N"][0]["Result"] %></td>
+							<td title="<%= result["M"][0]["Message"]%>"><%= result["M"][0]["Result"] %></td>
+							<td><%= result["TNM"][0]["Result"] %></td>
+							<td><%= result["TNM"][0]["Message"] %></td>
+							<td><%= result["SG"][0]["Result"] %></td>
+							<td><%= result["SG"][0]["Message"] %></td>
+							<td><%= result["SimpG"] && result["SimpG"][0] ? result["SimpG"][0]["Result"] : ""%></td>
+							<td><%= result["SGrange"] && result["SGrange"][0] ? result["SGrange"][0]["Result"] : "" %></td>
+							<td><%= site_specific.map { |ss| "#{ss}: #{result['SG'][0][ss]}" }.join("; ") %></td>
+						</tr>
+					<% end %>
+					</tbody>
+				</table>
+				<input type="button" value="Clear Log" onClick="clear_log()" />
+				<input type="button" value="Download Log" onClick="download_log()" />
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript">
 	function clear_log(){

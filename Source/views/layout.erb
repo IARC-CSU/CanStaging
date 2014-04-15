@@ -46,7 +46,7 @@
 					<% end %>
                 </ul>
               </li>
-              <li><a href="/get_log">Get log</a></li>
+              <li><a href="/get_log" target = "_blank">Get log</a></li>
             </ul>
        		<ul class="nav pull-right">
               <li class="dropdown">
@@ -79,7 +79,7 @@
     </div>
 	<div class="container">
 		<%if @error then %>
-			<div class="alert alert-error"><%=@error%></div>
+			<div class="alert alert-error"><%= @error %></div>
 		<% end %>
     	<%= yield %>
 	</div>
