@@ -49,7 +49,7 @@
                     <option value='' disabled selected style='display:none;'>Please Choose</option>
                     <% end %>
                     <% field.dictionary.table.each do |key, value| %>
-                      <option value=<%= "\"#{key}\"" %>><%= value %></option>
+                      <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
                     <% end %>
                   </select>
                   <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
@@ -97,7 +97,7 @@
   <script type="text/javascript">
 
     function get_log(){
-      window.open("/get_log");
+      window.open("/get_log", "_blank");
     }
 
     function hide_unhide(part) {
