@@ -1,0 +1,18 @@
+<h1>Upload</h1>
+<div>
+	This tool lets you upload a file containing data to be staged in batch mode.
+</div>
+<br>
+<form action='/upload' method='post' class="form-inline well" enctype='multipart/form-data' id="upload-form">
+  <input type="file" name='myfile' autofocus>
+  <!-- <input class="btn primary" type='submit' value='Upload'> -->
+  <button class="ladda-button" data-style="expand-right" data-color="green" data-size="s"><span class="ladda-label">Upload</span></button>
+  <br>
+  <br>
+  Separating character: <input type="text" name='col_sep' value=',' maxlength="3" size="1" style="width: 30px;">
+  Quoting character: <input type="text" name='quotes' value='"' maxlength="1" size="1" style="width: 30px;">
+</form>
+
+<script type="text/javascript">
+	Ladda.bind("button");
+</script>

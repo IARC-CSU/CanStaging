@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <script src="/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/ladda/spin.min.js"></script>
+    <script src="/vendor/ladda/ladda.min.js"></script>
+    <!-- <link rel="stylesheet" href="/vendor/ladda/demo.css"> -->
+    <link rel="stylesheet" href="/vendor/ladda/ladda.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/default.css" type="text/css">
 	  <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
@@ -46,6 +50,7 @@
 					<% end %>
                 </ul>
               </li>
+            <li><a href="/upload" title = "Upload a file for batch processing.">Upload</a></li>
               <li><a href="/get_log" target = "_blank">Get log</a></li>
             </ul>
        		<ul class="nav pull-right">
@@ -81,6 +86,14 @@
 		<%if @error then %>
 			<div class="alert alert-error"><%= @error %></div>
 		<% end %>
+    <%if session[:message] then %>
+      <div class="alert alert-success"><%= session[:message] %></div>
+      <% session[:message] = nil %>
+    <% end %>
+    <%if session[:error] then %>
+      <div class="alert alert-error"><%= session[:error] %></div>
+      <% session[:error] = nil %>
+    <% end %>
     	<%= yield %>
 	</div>
   </body>

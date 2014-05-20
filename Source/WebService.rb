@@ -140,6 +140,28 @@ get '/' do
   redirect to('/tool')
 end
 
+get "/upload" do 
+  erb :upload, :locals => { :sites => @@sites.keys }, :layout => :layout
+end
+
+post '/upload' do
+  params['col_sep'] = params['col_sep'] || ","
+  params['col_sep'] = "\t" if params['col_sep'] == "tab"
+  params['quote_char'] = params['quote_char'] || "\""
+  begin
+    number = parse(params['myfile'][:tempfile], session, request.ip.to_s, params['col_sep'] , params['quote_char'])
+    if number>0
+      session[:message] = "Uploaded successfully #{number} record#{ number>1 ? 's' : ''}."
+    else
+      session[:error] = "Upload failed. No records imported. (Something wrong with the file?)"
+    end
+  rescue Exception => e
+    session[:error] = "Upload failed."
+    session[:error] += "\n#{e}" if settings.environment == :development
+  end
+  redirect to('/upload')
+end
+
 not_found do
   erb "<div class='alert alert-message'>Nothing to see here...</div>", :locals => { :sites => @@sites.keys }
 end
@@ -162,3 +184,46 @@ def calculate_tnm params
     return result
   end
 end
+
+def parse(filename, session, ip, col_sep=",", quote_char='"')
+  number = 0
+  CSV.foreach(filename, {col_sep: col_sep, quote_char: quote_char, headers: true}) do |row|
+    params = {}
+    puts row
+    params["site"] = row["site"] || row["Site"]
+    if row.headers.include? "input"
+      params["data"] = JSON.parse(row["input"])
+    else
+      params["data"] = row_to_data(row)
+    end
+    puts params
+    if params["site"] # we really need to know the site...
+      result = calculate_tnm(params)
+      params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? @@st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
+      @@st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
+      number += 1
+    end
+  end
+  number
+end
+
+def row_to_data row
+  data = Hash.new { |hash, key| hash[key] = {} }
+  row.each do |column, value|
+    part, variable_name = column.split(" ", 2)
+    data[part][variable_name] = value unless variable_name.nil?
+  end
+  data
+end
+
+def data_to_row data
+  row = {}
+  data.each do |part, list| 
+    list.each do |variable, value| 
+      row["#{part} #{variable}"] = value  
+    end 
+  end
+  row
+end
+
+

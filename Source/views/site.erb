@@ -39,12 +39,12 @@
               <% case field.type 
                 when :boolean %>
                 <td>
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>')">Yes
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>')" checked>No
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">Yes
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked>No
                 </td>
               <% when :dictionary %>
               <td>
-                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>')">
+                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
                     <% unless part == "M" %>
                     <option value='' disabled selected style='display:none;'>Please Choose</option>
                     <% end %>
@@ -58,13 +58,13 @@
                </td>
               <% when :number %>
               <td>
-                <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>')"/>
+                <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
                 </td>
               <% when :output %>
                   <td class = "result" id = "<%= part + '_' + field.name %>_result"></td>
               <% else %>
               <td>
-                <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>')"/>
+                <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
                 </td>
               <% end %>
             </tr>
@@ -265,9 +265,12 @@
     }
 
 
-    function change(part) {
+    function change(part, control) {
       // var term = $('#tnm_form').serializeJSON();
       var term = form_to_data('#tnm_form');
+
+      term["data[control]"] = control; 
+      console.log(term);
 
       $.post('/tnm', term, 
         function(data) {
@@ -330,9 +333,9 @@
   // }
 
   function reset(selectBoxName, part) {
-    console.log(selectBoxName);
+    // console.log(selectBoxName);
     $(document.getElementsByName(selectBoxName)).prop('selectedIndex',0);
-    change(part);
+    change(part, selectBoxName);
   }
 
   </script>

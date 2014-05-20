@@ -3,6 +3,7 @@ require 'csv'
 
 class LookUp
   attr_reader :variables_needed, :variables_generated
+
   def initialize file_name
     unless file_name.nil? || !File.exist?(file_name)
       @table = CSV.read(file_name, :headers => true)
@@ -42,4 +43,13 @@ class LookUp
     end
     responses
   end
+
+  def control_categories control, value
+    valid_entries = @table.find_all do |row|
+      (row[control] == value || row[control]=="ANY")
+    end
+    
+    valid_entries
+  end
+
 end

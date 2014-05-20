@@ -165,4 +165,5 @@ class Site
   def count_chars string, char = "X"
     string.each_char.to_a.inject(0) {|r, c| c==char ? r+1 : r }
   end
+
 end
