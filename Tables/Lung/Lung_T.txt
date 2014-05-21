@@ -33,7 +33,6 @@
 "ANY","ANY","ANY","ANY","T","ANY","ANY","F","F","F","T3",
 "ANY","ANY","ANY","ANY","ANY","T","ANY","F","F","F","T3",
 "ANY","ANY","ANY","ANY","ANY","ANY","T","F","F","F","T3",
-"5","2","ANY","ANY","F","F","F","F","F","F","T2a",
 "5","1","T","ANY","F","F","F","F","F","F","T2a",
 "5","1","ANY","T","F","F","F","F","F","F","T2a",
 ,"2","ANY","ANY","F","F","F","F","F","F","T2",
