@@ -7,9 +7,10 @@ class STLogger
   def initialize(db_file_name = DB_FILE_NAME)
     puts db_file_name
     @db = Sequel.sqlite(db_file_name)
-    create_tables unless(@db.tables.include? :entries)    
+    create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
+    @access_log_table = @db[:access_log]
   end
 
   def log(key, tumour_id, site, input, result, ip_address)
@@ -35,6 +36,13 @@ class STLogger
       :tumour_id => tumour_id, 
       :ip_address => ip_address,
       :site => site,
+      :created_at => DateTime.now)
+  end
+
+  def log_access(key, ip_address)
+    @access_log_table.insert(
+      :key => key,
+      :ip_address => ip_address,
       :created_at => DateTime.now)
   end
 
@@ -77,7 +85,7 @@ class STLogger
   end
 
   def clear(key, ip_address)
-    delete @entries_table.where(:key =>key, :ip_address => ip_address)
+    move_to_deleted @entries_table.where(:key =>key, :ip_address => ip_address)
   end
 
   def get_next_numeric_id(key, ip_address)
@@ -105,28 +113,39 @@ class STLogger
   end
 
   def create_tables
-    @db.create_table :entries do
-      primary_key :id
-      String :key
-      String :site
-      String :tumour_id
-      String :input
-      String :result
-      String :ip_address
-      TrueClass :reported, :default => false
-      DateTime :created_at
-      index :key
-      unique [:key, :tumour_id, :ip_address]
+    unless @db.tables.include? :entries
+      @db.create_table :entries do
+        primary_key :id
+        String :key
+        String :site
+        String :tumour_id
+        String :input
+        String :result
+        String :ip_address
+        TrueClass :reported, :default => false
+        DateTime :created_at
+        index :key
+        unique [:key, :tumour_id, :ip_address]
+      end
+      @db.create_table :deleted_entries do
+        primary_key :id
+        String :key
+        String :site
+        String :input
+        String :result
+        String :ip_address
+        DateTime :created_at
+        index :key
+      end
     end
-    @db.create_table :deleted_entries do
-      primary_key :id
-      String :key
-      String :site
-      String :input
-      String :result
-      String :ip_address
-      DateTime :created_at
-      index :key
+    unless @db.tables.include? :access_log
+      @db.create_table :access_log do
+        primary_key :id
+        String :key
+        String :ip_address
+        DateTime :created_at
+        index :key
+      end
     end
   end
 end

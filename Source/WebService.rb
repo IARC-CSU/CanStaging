@@ -123,6 +123,7 @@ post '/login/attempt' do
   if !user.nil?
     session[:key] = params['key']
     session[:user] = user
+    @@st_logger.log_access(session[:key], request.ip.to_s)
     where_user_came_from = session[:previous_url] || '/tool'
     redirect to where_user_came_from 
   else
@@ -225,5 +226,3 @@ def data_to_row data
   end
   row
 end
-
-
