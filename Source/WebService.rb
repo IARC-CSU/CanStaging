@@ -150,9 +150,11 @@ post '/upload' do
   params['col_sep'] = "\t" if params['col_sep'] == "tab"
   params['quote_char'] = params['quote_char'] || "\""
   begin
-    number = parse(params['myfile'][:tempfile], session, request.ip.to_s, params['col_sep'] , params['quote_char'])
-    if number>0
-      session[:message] = "Uploaded successfully #{number} record#{ number>1 ? 's' : ''}."
+    numbers = parse(params['myfile'][:tempfile], session, request.ip.to_s, params['col_sep'] , params['quote_char'])
+    if numbers[:ok] > 0 && numbers[:failed] == 0
+      session[:message] = "Uploaded successfully #{numbers[:ok]} record#{ numbers[:ok]>1 ? 's' : ''}."
+    elsif numbers[:ok] > 0 && numbers[:failed] > 0
+      session[:message] = "Uploaded successfully #{numbers[:ok]} record#{ numbers[:ok]>1 ? 's' : ''}.\nFailed to import #{numbers[:failed]} record#{ numbers[:failed]>1 ? 's' : ''}."
     else
       session[:error] = "Upload failed. No records imported. (Something wrong with the file?)"
     end
@@ -168,7 +170,8 @@ not_found do
 end
 
 def calculate_tnm params
-  site = @@sites[params["site"].downcase.to_sym] unless params["site"].nil?
+  site_name = params["site"].downcase.strip.to_sym unless params["site"].nil?
+  site = @@sites[site_name] unless !@@sites.keys.include?(site_name)
   if site.nil?
     return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
   else
@@ -187,7 +190,8 @@ def calculate_tnm params
 end
 
 def parse(filename, session, ip, col_sep=",", quote_char='"')
-  number = 0
+  number_ok     = 0
+  number_failed = 0
   CSV.foreach(filename, {col_sep: col_sep, quote_char: quote_char, headers: true}) do |row|
     params = {}
     puts row
@@ -200,12 +204,17 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
     puts params
     if params["site"] # we really need to know the site...
       result = calculate_tnm(params)
-      params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? @@st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
-      @@st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
-      number += 1
+      puts result
+      if result["Error"] == nil
+        params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? @@st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
+        @@st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
+        number_ok += 1
+      else
+        number_failed += 1
+      end
     end
   end
-  number
+  {ok: number_ok, failed: number_failed}
 end
 
 def row_to_data row
