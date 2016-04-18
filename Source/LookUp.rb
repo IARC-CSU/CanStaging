@@ -1,4 +1,4 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 require 'csv'
 
 class LookUp
@@ -6,7 +6,7 @@ class LookUp
 
   def initialize file_name
     unless file_name.nil? || !File.exist?(file_name)
-      @table = CSV.read(file_name, :headers => true)
+      @table = CSV.read(file_name, :headers => true, encoding: "UTF-8")
       @variables_needed = @table.first.headers.take_while {|varb| varb != 'Result'}
       @variables_generated = ['Result'] + @table.first.headers.reverse.take_while {|varb| varb != 'Result'}
     end
@@ -30,7 +30,7 @@ class LookUp
         found
       end
       if valid_entries.empty?
-        valid_entries << {"Result"=>"ERROR",  "Message" => "No valid codes found..."}
+        valid_entries << {"Result"=>"ERROR",  "Message" => R18n.t[:look_up][:no_valid_code_found]}
       end
       valid_entries.map do |entry|
         response = {}

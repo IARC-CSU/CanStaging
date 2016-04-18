@@ -13,8 +13,10 @@ class Meta
   def initialize file_name = nil
     @fields = {}
     unless file_name.nil? || !File.exist?(file_name)
-      table = CSV.read(file_name, :headers => true)
+      puts file_name
+      table = CSV.read(file_name, :headers => true, encoding: "UTF-8")
       table.each do |row|
+        puts row
         name = row["Field"]
         type = row["DataType"].underscore.to_sym
         text = row["DisplayText"]

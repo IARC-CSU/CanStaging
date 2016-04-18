@@ -1,23 +1,45 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# encoding: UTF-8
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 require './LookUp.rb'
 require './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups
+  attr_reader :site, :lookups, :default_name
   
-  $TABLES_PATH = '../Tables/'
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
+  TABLES_ROOT_PATH = "../Tables"
 
-  def initialize site
+  def initialize site, language
+    puts "#{site} #{language}"
+    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
+    @default_language = "en"
+    @default_name = site    
+    if File.exist?("#{site_root_path}/default.yml")
+      yaml = YAML.load_file("#{site_root_path}/default.yml")
+      @default_name = yaml["default_name"] || @default_name
+      @default_language = yaml["default_language"] || @default_language
+      @default_site_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}/#{@default_name}" 
+    end
     @site = site.capitalize
-    path = "#{$TABLES_PATH}#{@site}/"
     @lookups = {}
     @metas = {}
     $PARTS.each do |part| 
-      @lookups[part] = LookUp.new("#{path}#{@site}_#{part}.txt")
-      @metas[part] = Meta.new("#{path}#{@site}_#{part}_Meta.txt")
+      if File.exist? "#{site_root_path}/#{@site}_#{part}.txt"
+        @lookups[part] = LookUp.new("#{site_root_path}/#{@site}_#{part}.txt")
+      else
+        @lookups[part] = LookUp.new("#{@default_site_root_path}/#{@default_name}_#{part}.txt")
+      end
+      if File.exist? "#{site_root_path}/#{@site}_#{part}_Meta.txt"
+        @metas[part] = Meta.new("#{site_root_path}/#{@site}_#{part}_Meta.txt")
+      else
+        @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
+      end
     end
+  end
+
+  def css
+    @default_name.downcase
   end
 
   def calculate_tnm values
@@ -34,16 +56,16 @@ class Site
     tnm_message_parts = []
     $PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
-        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => "No data"}] : @lookups[part].look_up(values[part])
+        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" =>  R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
           error = true
           result[part] = [{"Result"=> "ERROR", "Message" => "No possible combination " }]
-          tnm_message_parts << "No such combination for #{part}s..."
+          tnm_message_parts << R18n.t.site.no_such_comination(part)
         elsif result[part].length>1
           tnm_result += "#{get_default_result(part)}" 
-          tnm_message_parts << "One of many possible #{part}s..."
+          tnm_message_parts << R18n.t.site.one_of_many_possible(part)
           result[part] = [{"Result"=> get_default_result(part), "Message" => "Many possible" }] + result[part]
           conclusive = false
         else
@@ -52,7 +74,7 @@ class Site
       end
     end
     
-    puts $PARTS
+#     puts $PARTS 
     
     tnm_message = tnm_message_parts.join(" ")
     if $PARTS.include? "SG"
@@ -78,7 +100,7 @@ class Site
       # puts result["SGrange"]
 
       if $PARTS.include? "SimpG"
-        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "" || result["TNM"][0]["Result"] == "TXNXM0" ) ? [{"Result" => "", "Message" => "No data"}] : calculate_SimpGs(range)
+        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "" || result["TNM"][0]["Result"] == "TXNXM0" ) ? [{"Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_SimpGs(range)
       end
       # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
