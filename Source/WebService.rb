@@ -167,7 +167,7 @@ end
 
 get '/logout' do
   session.delete(:key)
-  erb "<div class='alert alert-message'>Logged out</div>", :locals => { :sites => $sites[session[:sites_locale]].values }
+  erb "<div class='alert alert-message'>#{R18n.t.service.logged_out}</div>", :locals => { :sites => $sites[session[:sites_locale]].values }
 end
 
 get '/' do
@@ -185,14 +185,14 @@ post '/upload' do
   begin
     numbers = parse(params['myfile'][:tempfile], session, request.ip.to_s, params['col_sep'] , params['quote_char'])
     if numbers[:ok] > 0 && numbers[:failed] == 0
-      session[:message] = "Uploaded successfully #{numbers[:ok]} record#{ numbers[:ok]>1 ? 's' : ''}."
+      session[:message] = R18n.t.service.uploaded_successfully_n(numbers[:ok])
     elsif numbers[:ok] > 0 && numbers[:failed] > 0
-      session[:message] = "Uploaded successfully #{numbers[:ok]} record#{ numbers[:ok]>1 ? 's' : ''}.\nFailed to import #{numbers[:failed]} record#{ numbers[:failed]>1 ? 's' : ''}."
+      session[:message] = "#{R18n.t.service.uploaded_successfully_n(numbers[:ok])}. \n#{R18n.t.service.failed_to_import_n(numbers[:ok])}"
     else
-      session[:error] = "Upload failed. No records imported. (Something wrong with the file?)"
+      session[:error] = R18n.t[:service][:upload_failed_no_records]
     end
   rescue Exception => e
-    session[:error] = "Upload failed."
+    session[:error] = R18n.t[:service][:upload_failed]
     session[:error] += "\n#{e}" if settings.environment == :development
   end
   redirect to('/upload')
@@ -209,7 +209,7 @@ def calculate_tnm params
   site_name = params["site"].downcase.strip.to_sym unless params["site"].nil?
   site = $sites[session[:sites_locale]][site_name] unless !$sites[session[:sites_locale]].keys.include?(site_name)
   if site.nil?
-    return {"Error"=>"Unknown site: #{params["site"]}"}.to_json
+    return {"Error"=> R18n.t.service.unknown_site(params["site"])}.to_json
   else
     site.get_metas.each do |part, meta| 
       meta.fields.keys.each do |key|

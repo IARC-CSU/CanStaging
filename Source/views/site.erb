@@ -13,8 +13,8 @@
     <table id = <%= "\"#{site.css}_form\"" %> >
       <thead>
       <tr id = "identification">
-        <td align="right">Tumour ID:</td>
-        <td><input id = "tumour_id" name="tumour_id" type="text" title="THIS ID SHOULD NOT BE A PERSONAL IDENTIFIER."/><input id="autogenerate" title = "Auto-generate tumour IDs?"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked">Auto</td>
+        <td align="right"><%= R18n.t[:site][:tumour_ID] %></td>
+        <td><input id = "tumour_id" name="tumour_id" type="text" title="THIS ID SHOULD NOT BE A PERSONAL IDENTIFIER."/><input id="autogenerate" title = "<%= R18n.t[:site][:auto_tooltip] %>"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked"><%= R18n.t[:site][:auto] %></td>
       </tr>
       </thead>
       <% site.get_metas.each do |part, meta| %>
@@ -73,19 +73,19 @@
       </tbody>
       <% end %>
       <tr id = "SGrange">
-        <th>SG range</th>
+        <th><%= R18n.t[:site][:sg_range] %></th>
         <th class = "result" id = "SGrange_result"></th>
       </tr>
       <tr id = "result">
-        <th>TNM</th>
+        <th><%= R18n.t[:site][:tnm] %></th>
         <th class = "result" id = "TNM_result"></th>
       </tr>
       <tr id = "buttons">
         <td></td>
         <td align="right">
-          <input type="button" value="Get log" onClick="get_log()" />
-          <input type="button" value="Reset Form" onClick="clear_form(this)" />
-          <input type="submit" value="Submit" />
+          <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" />
+          <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
+          <input type="submit" value="<%= R18n.t[:site][:submit] %>" />
         </td>
       </tr>
     </table>
@@ -188,17 +188,17 @@
                 if (radios[i].checked) formValid = true;
                 i++;        
             }
-            if (!formValid) { alert (<%= "\" '#{field.display_text}' must be checked.\"" %>);
+            if (!formValid) { alert (<%= "\"#{R18n.t.site.field_must_be_checked(field.display_text)}\"" %>);
               return false;
             }
           <% when :number %>
             var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
             if (x==null || x=="")
             {
-            alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+            alert(<%= "\"#{R18n.t.site.field_must_be_filled(field.display_text)}\"" %>);
             return false;
             }
-              if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\" '#{field.display_text}' outside of scope (#{field.ranges}).\"" %>); 
+              if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\"#{R18n.t.site.field_outside_of_scope(field.display_text, field.ranges)}\"" %>); 
               return false;
             }
           <% when :generated %>

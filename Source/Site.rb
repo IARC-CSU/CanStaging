@@ -56,17 +56,17 @@ class Site
     tnm_message_parts = []
     $PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
-        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" =>  R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
+        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
           error = true
-          result[part] = [{"Result"=> "ERROR", "Message" => "No possible combination " }]
+          result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:no_possible_combination] }]
           tnm_message_parts << R18n.t.site.no_such_comination(part)
         elsif result[part].length>1
           tnm_result += "#{get_default_result(part)}" 
           tnm_message_parts << R18n.t.site.one_of_many_possible(part)
-          result[part] = [{"Result"=> get_default_result(part), "Message" => "Many possible" }] + result[part]
+          result[part] = [{"Result"=> get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
           conclusive = false
         else
           tnm_result += "#{result[part][0]["Result"]}"
@@ -78,13 +78,13 @@ class Site
     
     tnm_message = tnm_message_parts.join(" ")
     if $PARTS.include? "SG"
-      result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => "No data"}] : calculate_sgs(result, values["SG"])
+      result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => R18n.t[:site][:no_data]}]}] : calculate_sgs(result, values["SG"])
       result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
       error = error || !(result["SG"].find{|e| e["Result"] == "ERROR"}.nil?)
     end    
 
     if error
-       result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => "No data"}]    
+       result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => R18n.t[:site][:no_data]}]}]    
        result["SGrange"] = [ { "Result" => get_default_result("SGrange")} ]
        result["SimpG"] = [ { "Result" => get_default_result("SimpG")} ]
     else

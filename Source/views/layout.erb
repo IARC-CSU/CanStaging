@@ -87,7 +87,7 @@
                       class="dropdown-toggle"
                       data-toggle="dropdown">
                       <%= !session[:user].nil? ? session[:user].username : "" %>                      
-                      (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:user].nil? && !session[:user].role.nil? ? session[:user].role : "user" %>)
+                      (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:user].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] :  R18n.t[:layout][:user] %>)
                       <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
