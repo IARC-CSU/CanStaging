@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumor não invade o brônquio principal"
+"2","Tumor envolve o brônquio principal, com >= 2cm distalmente à carina"
+"3","Tumor envolve o brônquio principal, com < 2cm distalmente à carina"
+"4","Tumor envolve a carina ou traqueia"

@@ -1,0 +1,4 @@
+﻿"Key","DisplayText"
+"1","≤3mm em profundidade COM ≤7mm de extensão horizontal"
+"2",">3mm mas ≤5mm em profundidade COM ≤7mm de extensão horizontal"
+"3",">5mm em profundidade OU >7mm de extensão horizontal"

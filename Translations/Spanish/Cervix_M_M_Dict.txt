@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","No distant (or paraortic nodes) metastases" = No evidencia de  metástasis a distancia  (o a ganglios paraaórticos)
+"2","Distant (or paraortic nodes) metastases" = Metástasis a distancia (o a ganglios paraaórticos)

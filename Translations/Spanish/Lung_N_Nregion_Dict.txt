@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","No regional lymph node metastases" = No evidencia de metástasis en ganglios regionales
+"2","Metastases to ipsilateral peribronchial AND/OR ipsilateral hilar nodes AND intrapulmonary nodes" = Metátasis a ganglios peri bronquiales ipsilaterales Y/O ganlios hiliares ipsilaterales Y nódulos intrapulmonares
+"3","Metastases to ipsilateral mediastinal AND/OR subcarinal nodes" = Metástasis a ganglios mediastínicos ipsilaterales Y/O ganglios subcarinales
+"4","Metastases to contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular nodes" = Metástasis a ganglios del mediastino contralateral,  del hilio contralateral,  del escaleno ipsilateral o contralateral o a los ganglios supraclaviculares.
+
+

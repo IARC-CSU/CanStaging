@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Introduza o tamanho do tumor invasivo (cm)","1",
+"ChestInvasion","Boolean","Extensão à parede torácica (excluindo somente músculo peitoral)","2",
+"Inflammation","Boolean","Carcinoma inflamatório","2",
+"Ulceration","Boolean","Ulceração e/ou nódulos satélites homolaterais e/ou edema da pele (incluindo pele de laranja)","2",
