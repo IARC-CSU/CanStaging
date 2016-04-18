@@ -1,0 +1,49 @@
+sites_locale: "en"
+
+service:
+  locale_changed_to: "Locale changed to"
+  available: "Available"
+  no_such_site: "Sorry no such site"
+  not_found: "Nothing to see here..."
+
+layout:
+  title: "CanStaging -- the Cancer Staging Tool"
+  home: "Home"
+  sites: "Sites"
+  upload: "Upload"
+  get_log: "Get log"
+  help: "Help"
+  help_text: "<b>Help</b><br>CanStaging - the Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Download a PDF guide</a> with more information."
+  about: "About"
+  about_text: "<div id = \\\"about\\\"> <h1>COPYRIGHT</h1> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h1>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h1> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
+  log_out: "Log out"
+  language_select: "Language select"
+
+home:
+  by: "By" 
+  and: "and" 
+  welcome: "Welcome to CanStaging, a Cancer Staging Tool, provided to you thanks to a NICR, IARC, and UICC collaboration. The tool will help maximise the availability, standardisation and comparability of cancer staging internationally."
+
+get_log:
+  tumour_ID: "Tumour ID"
+  date_created: "Date created"
+  site: "Site"
+  t: "T"
+  n: "N"
+  m: "M"
+  tnm_result: "TNM - Result"
+  tnm_message: "TNM - Message"
+  sg_result: "SG - Result"
+  sg_message: "SG - Message"
+  simpg: "SimpG"
+  sg_range: "SG Range"
+  site_specific: "Site Specific"
+
+site:
+  please_choose: "Please Choose"
+  no_data: "No data"
+  no_such_comination: "No such combination for %1..."
+  one_of_many_possible: "One of many possible %1s..."
+
+look_up:
+  no_valid_code_found: "No valid codes found..."
