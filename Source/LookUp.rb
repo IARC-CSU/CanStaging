@@ -18,7 +18,7 @@ class LookUp
     unless @table.nil?
       keys = values.keys
       # remove keys that have empty fields
-      puts values
+      # puts values if settings.environment == :development
       keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0)}
       valid_entries = @table.find_all do |row|
         found = true

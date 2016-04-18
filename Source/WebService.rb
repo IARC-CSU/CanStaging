@@ -80,7 +80,7 @@ end
 post '/tnm_submit' do 
   result = calculate_tnm(params)
   $st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
-  puts JSON.pretty_generate(result) if settings.environment == :development
+  # puts JSON.pretty_generate(result) if settings.environment == :development
   return JSON.pretty_generate(result)
 end
 
@@ -107,7 +107,6 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  puts r18n.locale.title
   erb :tool, :locals => { :sites => $sites[session[:sites_locale]].values }, :layout => :layout
 end
 
@@ -154,8 +153,6 @@ end
 
 post '/login/attempt' do
   user = $key_manager.get_user(params['key'])
-  # puts user
-  # puts params['key']
   if !user.nil?
     session[:key] = params['key']
     session[:user] = user
@@ -233,17 +230,16 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
   number_failed = 0
   CSV.foreach(filename, {col_sep: col_sep, quote_char: quote_char, headers: true}) do |row|
     params = {}
-    puts row
     params["site"] = row["site"] || row["Site"]
     if row.headers.include? "input"
       params["data"] = JSON.parse(row["input"])
     else
       params["data"] = row_to_data(row)
     end
-    puts params if settings.environment == :development
+    # puts params if settings.environment == :development
     if params["site"] # we really need to know the site...
       result = calculate_tnm(params)
-      puts result
+      # puts result if settings.environment == :development
       if result["Error"] == nil
         params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? $st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
         $st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  

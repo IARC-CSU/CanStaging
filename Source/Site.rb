@@ -11,7 +11,7 @@ class Site
   TABLES_ROOT_PATH = "../Tables"
 
   def initialize site, language
-    puts "#{site} #{language}"
+    puts "Loading: #{site} #{language}"
     site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
     @default_language = "en"
     @default_name = site    

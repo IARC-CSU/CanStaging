@@ -4,7 +4,6 @@ class Dictionary
   attr_accessor :table
   
   def initialize file_name = nil
-    puts file_name
     unless (file_name.nil?)
       csv = CSV.read(file_name, :headers => true, encoding: "UTF-8")
       @table = {}
@@ -38,7 +37,6 @@ class Dictionary
   end
   
   def self.json_create(o)
-    # puts *o['data']
     construct(*o['data'])
   end
   
