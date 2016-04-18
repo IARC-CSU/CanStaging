@@ -4,8 +4,9 @@ class Dictionary
   attr_accessor :table
   
   def initialize file_name = nil
+    puts file_name
     unless (file_name.nil?)
-      csv = CSV.read(file_name, :headers => true)
+      csv = CSV.read(file_name, :headers => true, encoding: "UTF-8")
       @table = {}
       csv.each do |row|
         @table[row["Key"]] = row["DisplayText"]
