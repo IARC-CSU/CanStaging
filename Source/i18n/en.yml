@@ -38,12 +38,15 @@ get_log:
   simpg: "SimpG"
   sg_range: "SG Range"
   site_specific: "Site Specific"
+  clear_log: "Clear log"
+  download_log: "Download log"
 
 site:
   please_choose: "Please Choose"
   no_data: "No data"
   no_such_comination: "No such combination for %1..."
   one_of_many_possible: "One of many possible %1s..."
+  reset: "Reset"
 
 look_up:
   no_valid_code_found: "No valid codes found..."

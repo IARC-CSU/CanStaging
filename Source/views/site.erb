@@ -52,7 +52,7 @@
                     <% end %>
                   </select>
                   <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
-                    Reset
+                    <%= R18n.t[:site][:reset] %>
                   </span>
                </td>
               <% when :number %>
