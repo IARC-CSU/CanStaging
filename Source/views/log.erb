@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>CanStaging - A Cancer Staging tool</title>
+		<title><%= R18n.t[:layout][:title] %></title>
 		<link rel="stylesheet" href="/css/default.css" type="text/css">
 		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
 		<script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -13,19 +13,19 @@
 				<table id = "log-table">
 					<thead>
 					<tr>
-						<td>Tumour ID</td>
-						<td>Date created</td>
-						<td>Site</td>
-						<td>T</td>
-						<td>N</td>
-						<td>M</td>
-						<td>TNM - Result</td>
-						<td>TNM - Message</td>
-						<td>SG - Result</td>
-						<td>SG - Message</td>
-						<td>SimpG</td>
-						<td>SG range</td>
-						<td>Site Specific</td>
+						<td><%= t[:get_log][:tumour_ID] %></td>
+						<td><%= t[:get_log][:date_created] %></td>
+						<td><%= t[:get_log][:site] %></td>
+						<td><%= t[:get_log][:t] %></td>
+						<td><%= t[:get_log][:n] %></td>
+						<td><%= t[:get_log][:m] %></td>
+						<td><%= t[:get_log][:tnm_result] %></td>
+						<td><%= t[:get_log][:tnm_message] %></td>
+						<td><%= t[:get_log][:sg_result] %></td>
+						<td><%= t[:get_log][:sg_message] %></td>
+						<td><%= t[:get_log][:simpg] %></td>
+						<td><%= t[:get_log][:sg_range] %></td>
+						<td><%= t[:get_log][:site_specific] %></td>
 					</tr>
 					</thead>
 					<tbody>
@@ -34,7 +34,7 @@
 						<% site_specific = result["SG"][0].keys - ["Result", "Message", "TNM", "T", "N", "M"] %>
 						<tr>
 							<td><%= entry[:tumour_id] %></td>
-							<td><%= entry[:created_at] %></td>
+							<td><%= R18n.l entry[:created_at] %></td>
 							<td><%= entry[:site] %></td>
 							<td title="<%= result["T"][0]["Message"]%>"><%= result["T"][0]["Result"] %></td>
 							<td title="<%= result["N"][0]["Message"]%>"><%= result["N"][0]["Result"] %></td>
