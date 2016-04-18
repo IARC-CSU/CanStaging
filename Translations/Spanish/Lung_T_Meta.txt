@@ -1,0 +1,11 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size" = Tamaño,"Number" = Número,"Enter size of invasive tumour (cm)","1", = Anote el tamaño del tumor invasivo (cms)
+"Bronchus" = Bronquio,"Dictionary","Bronchial invasion","2", = Invasión bronquial
+"Pleura" = Pleura,"Boolean","Invades the visceral pleura","2", = Invade la pleura visceral
+"Atelectasis" =Atelectasia ,"Boolean","Atelectasis or obstructive pneumonitis (NOT entire lung)","2", = Atelectasias o neumonitis obstructiva (NO el pulmón entero)
+"T3invasion" =Invasión T3 ,"Boolean","Tumour invades any of the following: chest wall or rib; diaphragm; phrenic nerve; mediastinal pleura; parietal pericardium","3", = El tumor invade cualquiera de las siguientes estructuras: pared torácica o costilla; diafragma; nervio frénico;  pleura mediastínica; pericardio parietal 
+"AtelectasisAll","Boolean","Atelectasis or obstructive pneumonitis of the entire lung","3", = Atelectasia o neumonitis obstructiva del pulmón completo 
+"NodulesT3" Nódulos T3 ,"Boolean","Separate tumour nodules in same lobe","3", = Nódulos tumorales separados en el mismo lóbulo
+"Vocal","Boolean","Vocal cord paralysis","4", = Parálisis de la cuerda vocal
+"NodulesT4"= Nódulos T4,"Boolean","Separate tumour nodule(s) in a different ipsilateral lobe","4", = Nódulo (s) en un lóbulo diferente ipsilateral 
+"T4invasion","Boolean","Tumour invades any of the following: mediastinum; heart or great vessels; recurrent laryngeal nerve; vertebral body; oesophagus","4", = El tumor invade cualquiera de las siguientes estructuras: mediastino; corazón o grandes vasos;  el  nervio laríngeo recurrente; cuerpo vertebral; esófago.

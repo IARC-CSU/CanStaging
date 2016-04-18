@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Ausência de metástases em linfonodos regionais"
+"2","Metástases em linfonodos peribrônquicos E/OU hilares homolaterais E nódulos intrapulmonares"
+"3","Metástases em linfonodos mediastínicos homolaterais E/OU em linfonodos subcarinais"
+"4","Metástases em linfonodos mediastínicos contralaterais, hilares contralaterais, escalenos homo- ou contralaterais, ou em linfonodos supra-claviculares"

@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Number","Número de linfonodos axilares positivos (pelo menos um depósito >2.0mm)","2",
+"Infraclavicular","Boolean","Metástases em linfonodos infraclaviculares","2",
+"MammaryClinical","Boolean","Metástases em linfonodos mamários internos detectadas clinicamente","2",
+"MammaryMicro","Boolean","Metástases em linfonodos mamários internos com metástases em linfonodo sentinela (não detectada clinicamente)","2",
+"Micrometastases","Boolean","Somente micrometástases: nenhuma >2.0mm (mas: >0.2mm ou superior a 200 células)","1",
+"Supraclavicular","Boolean","Metástases em linfonodos supraclaviculares","2",

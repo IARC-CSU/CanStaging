@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumor histológico incidental em 5% ou menos de tecido ressecado"
+"2","Tumor histológico incidental em mais de 5% de tecido ressecado"
+"3","Tumor identificado por biópsia por agulha"
+"4","Tumor que envolve uma metade de um dos lobos ou menos"
+"5","Tumor que envolve mais da metade de um dos lobos"
+"6","Tumor que envolve ambos os lobos"
