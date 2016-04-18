@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumour invades submucosa" =  El tumor invade  la submucosa
+"2","Tumour invades muscularis propria" = El tumor invade la muscularis propria
+"3","Tumour invades subserosa or into non-peritonealized pericolorectal tissues" = El tumor invade la subserosa o a los tejidos no-peritoneales pericolorrectales
+"4","Tumour perforates visceral peritoneum"  =  El tumor perfora  el peritoneo visceral 
+"5","Tumour directly invades or is adherent to other organs or structures" = El tumor  invade directamente o está adherido a otros órganos o estructuras
+

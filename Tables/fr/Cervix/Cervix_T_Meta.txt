@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Microscopic","Boolean","Microscopic lesion only","1",
+"Stromal","Dictionary","Stromal invasion","2",
+"ExtendedVisible","Dictionary","Clinically visible lesion","3",
+"BeyondUterus","Boolean","Tumour invades beyond uterus","3",
+"Parametrium","Boolean","Parametrial involvement","4",
+"Vagina","Boolean","Carcinoma involves lower 1/3 of vagina","4",
+"Pelvis","Boolean","Extension onto pelvic wall","4",
+"Hydronephrosis","Boolean","Hydronephrosis or non-functioning kidney","4",
+"Mucosa","Boolean","Tumour invades mucosa of bladder or rectum","4",

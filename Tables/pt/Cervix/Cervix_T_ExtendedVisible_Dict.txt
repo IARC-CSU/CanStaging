@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Não"
+"2","Sim, <= 4.0cm"
+"3","Sim, > 4cm"

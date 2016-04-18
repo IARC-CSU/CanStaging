@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","<=3mm in depth AND <=7mm in horizontal spread"
+"2",">3mm but <=5mm in depth AND <=7mm in horizontal spread"
+"3",">5mm in depth OR >7mm in horizontal spread"

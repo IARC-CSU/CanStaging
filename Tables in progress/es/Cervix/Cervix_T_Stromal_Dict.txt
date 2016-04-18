@@ -1,0 +1,4 @@
+﻿"Key","DisplayText"
+"1","≤3mm in depth AND ≤7mm in horizontal spread" = ≤3 mms en profundidad Y ≤7 mms de extensión superficial
+"2",">3mm but ≤5mm in depth AND ≤7mm in horizontal spread" = >3mms pero ≤5 mms en profundidad Y ≤7mms de  extensión superficial 
+"3",">5mm in depth OR >7mm in horizontal spread" = >5 mms en profundidad O >7 mms de extensión superficial

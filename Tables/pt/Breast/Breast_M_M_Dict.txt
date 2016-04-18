@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Ausência de metástases à distância"
+"2","Com metástases à distância"
