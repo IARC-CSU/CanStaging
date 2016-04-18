@@ -2,16 +2,15 @@
   <title><%= site.site %></title>
   
   <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-  <!-- Not sure if we need this and it is rather heavy... <script src="/js/jquery-ui.min.js" type="text/javascript"></script> -->
-  <!-- <script src="/js/serializeJSON.js" type="text/javascript"></script> -->
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta charset="UTF-8">
 </head>
 
   <h1><%= site.site %></h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
     <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
-    <table id = <%= "\"#{site.site.downcase}_form\"" %> >
+    <table id = <%= "\"#{site.css}_form\"" %> >
       <thead>
       <tr id = "identification">
         <td align="right">Tumour ID:</td>
@@ -29,7 +28,7 @@
         <tbody id = "<%= part %>">
         <% meta.fields.values.sort_by(&:group).each do |field| %>
           <% unless field.type == :generated %>
-            <tr id = "<%= site.site.downcase+"_group_" + (field.group.nil? ? "1" : field.group) %>">
+            <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
               <% if field.type == :output %>
                 <td class = "result_label" >
               <% else %>
@@ -39,21 +38,21 @@
               <% case field.type 
                 when :boolean %>
                 <td>
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">Yes
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked>No
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:yes] %>
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:no] %>
                 </td>
               <% when :dictionary %>
               <td>
                   <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
                     <% unless part == "M" %>
-                    <option value='' disabled selected style='display:none;'>Please Choose</option>
+                    <option value='' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
                     <% end %>
                     <% field.dictionary.table.each do |key, value| %>
                       <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
                     <% end %>
                   </select>
                   <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
-                    Reset       
+                    Reset
                   </span>
                </td>
               <% when :number %>
@@ -325,7 +324,7 @@
   //update the auto-generate-stuff
   autogenerateUpdated();
 
-  document.title = "StagingTool - <%= site.site %>";
+  document.title = "CanStaging - <%= site.site %>";
   setDefaultResults();
   // this overrides the default...
   // function help_alert() {
