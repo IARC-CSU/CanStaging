@@ -1,8 +1,5 @@
 sites_locale: "pt"
 
-yes: "Sim"
-no: "Não"
-
 service:
   locale_changed_to: "Local alterado para"
   available: "Disponível"
