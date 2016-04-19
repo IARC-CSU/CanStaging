@@ -5,9 +5,21 @@ service:
   available: "Disponível"
   no_such_site: "Desculpe, o sítio não existe"
   not_found: "Nada a ver aqui..."
+  upload_failed_no_records: "Falha no upload. Não foram importados registos. (Algo errado com o ficheiro?)" 
+  uploaded_successfully_n: !!pl 
+    1: "Upload bem sucedido 1 registo."
+    n: "Upload bem sucedido %1 registos."
+  failed_to_import_n: !!pl 
+    1: "Falha na importação 1 registo."
+    n: "Falha na importação %1 registos."
+  upload_failed: "Falha no upload."
+  unknown_site: "Localização desconhecida: %1"
+  logged_out: "Sessão terminada."
 
 layout:
   title: "CanStaging -- o Programa de Estadiamento do Cancro"
+  user: "utilizador"
+  admin: "administrador"
   home: "Home"
   sites: "Localizações"
   upload: "Upload"
@@ -38,13 +50,38 @@ get_log:
   simpg: "SimpG"
   sg_range: "SG Intervalo"
   site_specific: "Específico da localização"
+  clear_log: "Limpar log"
+  download_log: "Download log"
 
 site:
   please_choose: "Por favor escolha"
   no_data: "Sem dados"
-  no_such_comination: "Tal combinação não existe para %1..."
+  no_such_combination: "Tal combinação não existe para %1..."
+  no_possible_combination: "Tal combinação não é possível."
+  many_possible: "Várias possíveis."
   one_of_many_possible: "Uma de várias possíveis %1s..."
-  tumour_ID: "ID do Tumor"
+  reset: "Reiniciar"
+  get_log: "Adquirir log"
+  clear_form: "Limpar ficha"
+  submit: "Submeter"
+  sg_range: "SG intervalo"
+  tnm: "TNM"
+  auto: "Auto"
+  auto_tooltip: "Gerar automaticamente os IDs do tumor?"
+  tumour_ID: "ID do tumor"
+  field_must_be_filled: "'%1' necessita ser preenchido."
+  field_must_be_checked: "'%1' necessita ser revisto."
+  field_outside_of_scope: "'%1' fora do intervalo. (%2)"
+  results: "Resultados"
+
+upload:
+  upload_header: "Upload"
+  description: "Esta função permite-lhe fazer o upload de um ficheiro contendo dados para serem estadiados de uma só vez."
+  upload_button: "Upload"
+  separating_character: "Caracter de separação:"
+  quoting_character: "Caracter de citação:"
+
 
 look_up:
   no_valid_code_found: "Não foram encontrados códigos válidos..."
+  
