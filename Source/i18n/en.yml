@@ -56,7 +56,7 @@ get_log:
 site:
   please_choose: "Please Choose"
   no_data: "No data"
-  no_such_comination: "No such combination for %1..."
+  no_such_combination: "No such combination for %1..."
   no_possible_combination: "No possible combination."
   many_possible: "Many possible."
   one_of_many_possible: "One of many possible %1s..."

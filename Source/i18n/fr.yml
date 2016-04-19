@@ -37,7 +37,7 @@ get_log:
 site:
   please_choose: "Choisissez s'il vous plaît"
   no_data: "Pas des donnees"
-  no_such_comination: "Aucun combination pour %1..." 
+  no_such_combination: "Aucun combination pour %1..." 
   one_of_many_possible: "Une parmis plusieur possible %1s..."
   reset: "Réinitialiser"
 
