@@ -78,13 +78,13 @@ class Site
     
     tnm_message = tnm_message_parts.join(" ")
     if $PARTS.include? "SG"
-      result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => R18n.t[:site][:no_data]}]}] : calculate_sgs(result, values["SG"])
+      result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_sgs(result, values["SG"])
       result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
       error = error || !(result["SG"].find{|e| e["Result"] == "ERROR"}.nil?)
     end    
 
     if error
-       result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => R18n.t[:site][:no_data]}]}]    
+       result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => R18n.t[:site][:no_data]}]
        result["SGrange"] = [ { "Result" => get_default_result("SGrange")} ]
        result["SimpG"] = [ { "Result" => get_default_result("SimpG")} ]
     else
