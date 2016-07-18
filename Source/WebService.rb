@@ -12,7 +12,7 @@ require 'tilt/erb'
 
 config = YAML.load_file("config.yml")
 
-# set :server, %w[thin mongrel webrick]
+set :server, %w[thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] == 'production')
 set :bind, config['system']['bind']
 set :port, config['system']['port']
