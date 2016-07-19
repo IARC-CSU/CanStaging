@@ -1,4 +1,0 @@
-"Key","DisplayText"
-"1","No distant metastases" = No evidencia de metástasis
-"2","Separate tumour nodule(s) in a contralateral lobe tumour with pleural nodes or malignant pleural (or pericardial) effusion" =  Nódulo (s ) tumoral(es) separado (s) en un lóbulo contralateral con nódulos pleurales o derrame pleural maligno (o pericárdico)
-"3","Distant metastases" = Metástasis a distancia 
