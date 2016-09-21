@@ -1,2 +1,4 @@
 "Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Distant metastases",,
+"Pathologic","Boolean","Pathology performed","1",
+"Posttherapy","Boolean","Post neoadjuvant therapy","1",
+"M","Dictionary","Distant metastases","2",
