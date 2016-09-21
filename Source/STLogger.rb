@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+
 ## Logger
 require 'sequel'
 require 'csv'
