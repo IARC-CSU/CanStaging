@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No"                                 
+"2","Sí, <= 4,0 cms" 
+"3","Sí, > 4 cms"

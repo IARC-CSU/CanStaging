@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Microscopic","Boolean","Solo lesión microscópica","1", 
+"Stromal","Dictionary","Invasión del estroma","2",
+"ExtendedVisible","Dictionary","Lesión clínicamente visible","3",
+"BeyondUterus","Boolean","El tumor invade más allá del útero","3", 
+"Parametrium","Boolean","Parametrio invadido","4",
+"Vagina","Boolean","El carcinoma afecta el 1/3 inferior de la vagina","4", 
+"Pelvis","Boolean","Extensión a la pared pélvica","4",
+"Hydronephrosis","Boolean","Hidronefrosis o riñón no funcionante","4",
+"Mucosa","Boolean","El tumor invade la mucosa de la vejiga o recto","4",

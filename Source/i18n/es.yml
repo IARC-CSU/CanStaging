@@ -1,1 +1,85 @@
-sites_locale: "en"
+sites_locale: "es"
+
+service:
+  locale_changed_to: "Local cambiado a"
+  available: "Disponible"
+  no_such_site: "Disculpe no hay tal localización."
+  not_found: "No hay nada que ver aquí..."
+  upload_failed_no_records: "La carga falló. No se subieron los registros. (Algo erróneo en el archivo?)" 
+  uploaded_successfully_n: !!pl 
+    1: "1 registro subido adecuadamente. "
+    n: "%1 registros subidos adecuadamente."
+  failed_to_import_n: !!pl 
+    1: "Error en la importación de 1 registro."
+    n: " Error en la importación de %1 registros."
+  upload_failed: "Error en la carga."
+  unknown_site: "Localización desconocida: %1."
+  logged_out: "Sesión cerrada."
+
+layout:
+  title: "CanStaging – La herramienta/programa para estadiar el cancer" 
+  user: "usuario"
+  admin: "admin"
+  home: "Home"
+  sites: "Localizaciones"
+  upload: "Cargar"
+  get_log: "Cierre conseguido"
+  help: "Ayuda"
+  help_text: "<b>Ayuda</b><br>CanStaging - La herramienta/programa para estadiar el cáncer calcula el TNM, Estadio, Grado y otros valores para el estadiaje específicos de la localización a partir de la información introducida por el usuario  . <br> Por favor  <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Bajar la guia en PDF</a> con mas información."
+  about: "Acerca de"
+  about_text: "<div id = \\\"about\\\"> <h1>COPYRIGHT</h1> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h1>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h1> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
+  log_out: "Sesión cerrada"
+  language_select: "Seleccione idioma"
+
+home:
+  by: "Por" 
+  and: "y"
+  welcome: " Bienvenido a CanStaging, Una herramienta/programa para Estadiar el cáncer, facilitada a Ud. gracias a la colaboración de la NCIR, IARC y UICC. La herramienta/programa le ayudara a aumentar la disponibilidad, estandarización y comparabilidad del estadiaje del cáncer internacionalmente."
+
+get_log:
+  tumour_ID: "Identificación del tumor"
+  date_created: "Fecha creada"
+  site: "Localización"
+  t: "T"
+  n: "N"
+  m: "M"
+  tnm_result: "TNM – Resultado"
+  tnm_message: "TNM - Mmensaje"
+  sg_result: "SG – Resultado"
+  sg_message: "SG – Mensaje"
+  simpg: "SimpG"
+  sg_range: "SG Intervalo"
+  site_specific: "Localización Específica"
+  clear_log: "Borrar registro" 
+  download_log: "Descarga registro"
+
+site:
+  please_choose: " Por favor elija"
+  no_data: "Sin datos"
+  no_such_combination: "No hay tal combinación para %1..."
+  no_possible_combination: "Combinación imposible."
+  many_possible: "Muchas combinaciones? Posibles ."
+  one_of_many_possible: "Una de muchas combinaciones? posibles %1s..."
+  reset: "Reiniciar"
+  get_log: "Conectarse"
+  clear_form: "Restablecer el formulario"
+  submit: "Enviar"
+  sg_range: "SG rango"
+  tnm: "TNM"
+  auto: "Auto"
+  auto_tooltip: "Identificaciones del tumor ato-generadas?"
+  tumour_ID: "Identificación del tumor:"
+  field_must_be_filled: "'%1' debe ser rellenado."
+  field_must_be_checked: "'%1' debe ser revisado."
+  field_outside_of_scope: "'%1' Fuera de los valores. (%2)"
+  results: "Resultados"
+
+upload:
+  upload_header: "Cargar"
+  description: "Esta/e herramienta/programa le permite cargar un archivo que contenga datos para estadiar de manera bacht."
+  upload_button: "Cargar"
+  separating_character: "Carácter separador:"
+  quoting_character: "Carácter para citar:"
+
+look_up:
+  no_valid_code_found: "Se encontraron códigos no válidos..."

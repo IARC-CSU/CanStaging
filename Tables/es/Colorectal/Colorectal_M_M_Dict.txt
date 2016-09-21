@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No evidencia de metástasis a distancia"
+"2","Metástasis limitadas a un órgano o localizacón (ej.: hígado, pulmón, ovario, ganglio no-regional)"
+"3","Metástasis en mas de un órgano/localización o en el peritoneo"

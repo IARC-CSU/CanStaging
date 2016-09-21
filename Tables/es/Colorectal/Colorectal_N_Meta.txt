@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Número de ganglios positivos","1",
+"TumourDeposit","Boolean","Depósito tumoral en la subserosa, mesenterio, tejidos pericólicos no peritoneales o tejidos perirrectales","1", 
