@@ -14,14 +14,16 @@ class Site
     puts "Loading: #{site} #{language}"
     site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
     @default_language = "en"
-    @default_name = site    
+    @default_name = site
+    translated_name = site   
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
+      translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}/#{@default_name}" 
     end
-    @site = site.capitalize
+    @site = translated_name.capitalize
     @lookups = {}
     @metas = {}
     $PARTS.each do |part| 

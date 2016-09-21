@@ -9,7 +9,7 @@
 
 <ul class="nav nav-pills nav-stacked">
   <% sites.each do |site| %>
-    <li><a href = "/site/<%= "#{site.site.downcase}" %>" id = "<%= site.css %>_group_1"><%= site.site.capitalize %></a></li>
+    <li><a href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_group_1"><%= site.site.capitalize %></a></li>
   <% end %>
 </ul>
 <hr width="75%" />
