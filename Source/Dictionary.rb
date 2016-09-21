@@ -5,6 +5,7 @@ class Dictionary
   
   def initialize file_name = nil
     unless (file_name.nil?)
+      puts file_name
       csv = CSV.read(file_name, :headers => true, encoding: "UTF-8")
       @table = {}
       csv.each do |row|

@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","No evidencia de metástasis"
 "2","Nódulo(s) tumoral(es) separado(s) en un lóbulo contralateral con nódulos pleurales o derrame pleural maligno (o pericárdico)"
-"3","Metástasis a distancia" 
+"3","Metástasis a distancia"

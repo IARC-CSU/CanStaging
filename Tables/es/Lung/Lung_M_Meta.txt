@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Nregion","Dictionary","Ganglios regionales","1",
+"M","Dictionary","Metástasis a distancia","1"
