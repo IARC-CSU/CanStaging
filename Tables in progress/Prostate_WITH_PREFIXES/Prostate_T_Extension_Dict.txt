@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumour incidental histological  finding in = 5% resected tissue"
+"2","Tumour incidental histological finding  >5% resected tissue"
+"3","Tumour identified by needle biopsy"
+"4","Tumour involves one 1/2 of one lobe or less"
+"5","Tumour involves more than  half of one lobe"
+"6","Tumour involves both lobes"

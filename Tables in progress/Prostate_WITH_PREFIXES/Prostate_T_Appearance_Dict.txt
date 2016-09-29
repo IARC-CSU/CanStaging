@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Tumour clinically inapparent (not palpable or visible by imaging)"
+"2","Tumour clinically apparent"
