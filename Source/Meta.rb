@@ -11,6 +11,7 @@ require './Ranges.rb'
 class Meta
   attr_accessor :fields
   def initialize file_name = nil
+    puts file_name
     @fields = {}
     unless file_name.nil? || !File.exist?(file_name)
       table = CSV.read(file_name, :headers => true, encoding: "UTF-8")
@@ -20,13 +21,14 @@ class Meta
         text = row["DisplayText"]
         group = row["Group"]
         colour = row["Colour"]
-        add_field(Variable.new(name, type, text, group, colour))
+        variable = Variable.new(name, type, text, group, colour)
         case type
         when :dictionary
-          @fields[name].dictionary = Dictionary.new("#{file_name.sub("Meta.txt", "#{name}_Dict.txt")}")
+          variable.dictionary = Dictionary.new("#{file_name.sub("Meta.txt", "#{name}_Dict.txt")}")
         when :number
-          @fields[name].ranges = Ranges.new("#{file_name.sub("Meta.txt", "#{name}_Range.txt")}")
+          variable.ranges = Ranges.new("#{file_name.sub("Meta.txt", "#{name}_Range.txt")}")
         end
+        add_field(variable)
       end
     end
   end
