@@ -1,6 +1,6 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
-require '.\Site.rb'
+require '..\Site.rb'
 
 class Breast < Site
   def initialize

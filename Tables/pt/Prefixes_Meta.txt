@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Posttherapy","Boolean","Post neoadjuvant therapy","0",
+"Pathologic","Boolean","Pathology performed","0",

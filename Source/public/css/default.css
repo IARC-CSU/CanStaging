@@ -84,17 +84,32 @@ form a {
 	color:#ffffff;
 }
 
-#breast_group_1 { 
+#breast_group_0 { 
 	color:#000000;
 	background-color:#F27B96;
 }
-#breast_group_2 { 
+#breast_group_1 { 
 	color:#000000;
 	background-color:#F58BA4;
 }
-#breast_group_3 { 
+#breast_group_2 { 
 	color:#000000;
 	background-color:#F598AD;
+}
+
+#breast_group_3 { 
+	color:#000000;
+	background-color:#F8B8BD;
+}
+
+#breast_group_4 { 
+	color:#000000;
+	background-color:#FDC8CD;
+}
+
+#breast_group_5 { 
+	color:#000000;
+	background-color:#FFD8DD;
 }
 
 /* Colorectal site*/
@@ -110,13 +125,17 @@ form a {
 	color:#ffffff;
 }
 
-#colorectal_group_1 { 
+#colorectal_group_0 { 
 	color:#000000;
 	background-color:#DFB77F;
 }
-#colorectal_group_2 { 
+#colorectal_group_1 { 
 	color:#000000;
 	background-color:#FFCB81;
+}
+#colorectal_group_2 { 
+	color:#000000;
+	background-color:#FFD191;
 }
 #colorectal_group_3 { 
 	color:#000000;
@@ -137,21 +156,29 @@ form a {
 	color:#ffffff;
 }
 
-#prostate_group_1 { 
+#prostate_group_0 { 
 	color:#000000;
 	background-color:#7FDFB7;
 }
-#prostate_group_2 { 
+#prostate_group_1 { 
 	color:#000000;
 	background-color:#81FFCB;
 }
-#prostate_group_3 { 
+#prostate_group_2 { 
 	color:#000000;
 	background-color:#91FFD1;
 }
-#prostate_group_4 { 
+#prostate_group_3 { 
 	color:#000000;
 	background-color:#A1FFE1;
+}
+#prostate_group_4 { 
+	color:#000000;
+	background-color:#B1FFF1;
+}
+#prostate_group_5 { 
+	color:#000000;
+	background-color:#C1FFFF;
 }
 
 
@@ -168,22 +195,25 @@ form a {
 	color:#ffffff;
 }
 
-#cervix_group_1 { 
+#cervix_group_0 { 
 	color:#000000;
 	background-color:#9C6ECA;
 }
-#cervix_group_2 { 
+#cervix_group_1 { 
 	color:#000000;
 	background-color:#AD81D7;
 }
-#cervix_group_3 { 
+#cervix_group_2 { 
 	color:#000000;
 	background-color:#B28BD7;
 }
-
-#cervix_group_4 { 
+#cervix_group_3 { 
 	color:#000000;
 	background-color:#C28CD7;
+}
+#cervix_group_4 { 
+	color:#000000;
+	background-color:#D29CE7;
 }
 
 /* Lung site */
@@ -199,19 +229,23 @@ form a {
 	color:#ffffff;
 }
 
-#lung_group_1 { 
+#lung_group_0 { 
 	color:#000000;
 	background-color:#A2EA77;
 }
-#lung_group_2 { 
+#lung_group_1 { 
 	color:#000000;
 	background-color:#AFF088;
 }
-#lung_group_3 { 
+#lung_group_2 { 
 	color:#000000;
 	background-color:#B6F094;
 }
+#lung_group_3 { 
+	color:#000000;
+	background-color:#C6FBA4;
+}
 #lung_group_4 { 
 	color:#000000;
-	background-color:#c6FBA4;
+	background-color:#D6FFB4;
 }
