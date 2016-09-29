@@ -5,17 +5,19 @@ require './LookUp.rb'
 require './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "../Tables"
 
   def initialize site, language
     puts "Loading: #{site} #{language}"
-    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
-    @default_language = "en"
     @default_name = site
     translated_name = site   
+    @default_language = "en"
+    language_root_path = "#{TABLES_ROOT_PATH}/#{language}"
+    default_language_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}"
+    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
@@ -33,18 +35,29 @@ class Site
         @lookups[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}.txt")
       else
         @lookups[part] = LookUp.new("#{@default_site_root_path}/#{@default_name}_#{part}.txt")
-      end
+      end    
       # Load up metas
       if File.exist? "#{site_root_path}/#{@default_name}_#{part}_Meta.txt"
         @metas[part] = Meta.new("#{site_root_path}/#{@default_name}_#{part}_Meta.txt")
       else
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
-      # Load up prefixes
-      if File.exist? "#{site_root_path}/#{@default_name}_#{part}_prefix.txt"
-        @prefixes[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}_prefixes.txt")
-      else
-        @prefixes[part] = LookUp.new("#{TABLES_ROOT_PATH}/default_prefixes.txt")
+      # Add prefixes to the meta if needed
+      unless part == "SG" || part == "SimpG" || part == "SGrange"
+        unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
+          if File.exist? "#{language_root_path}/Prefixes_Meta.txt"
+            to_add = Meta.new("#{language_root_path}/Prefixes_Meta.txt")
+          elsif File.exist? "#{default_language_root_path}/Prefixes_Meta.txt"
+            to_add = Meta.new("#{default_language_root_path}/Prefixes_Meta.txt")
+          end
+          to_add.fields.values.each {|variable| @metas[part].add_field variable } unless to_add.nil?
+        end
+        # Load up prefixes
+        if File.exist? "#{site_root_path}/#{@default_name}_#{part}_prefix.txt"
+          @prefixes[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}_prefixes.txt")
+        else
+          @prefixes[part] = LookUp.new("#{TABLES_ROOT_PATH}/default_prefixes.txt")
+        end
       end
     end
   end
