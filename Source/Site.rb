@@ -76,7 +76,7 @@ class Site
     values["SG"] ||= {}
     values["SGrange"] ||= {}
     
-    puts values
+    # puts values
 
     conclusive = true
     error = false
@@ -134,7 +134,7 @@ class Site
       end
       # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
-    puts result
+    # puts result
     result
   end
   
