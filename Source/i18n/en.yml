@@ -73,6 +73,7 @@ site:
   field_must_be_checked: "'%1' must be checked."
   field_outside_of_scope: "'%1' outside of scope. (%2)"
   results: "Results"
+  tnm_with_prefixes: "TNM with prefixes"
 
 upload:
   upload_header: "Upload"
