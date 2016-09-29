@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Pathology performed","1",
+"Posttherapy","Boolean","Post neoadjuvant therapy","1",
+"Axillary","Number","Number of  positive axillary nodes (if path: at least one deposit >2.0mm)","4",
+"Matted","Boolean","Positive axillary nodes are fixed or matted","4",
+"Infraclavicular","Boolean","Metastases in infraclavicular nodes","3",
+"MammaryClinical","Boolean","Metastases in clinically detected internal mammary nodes","3",
+"MammaryMicro","Boolean","Metastases in internal mammary nodes with metastases in sentinel lymphnode (not clinically detected)","3",
+"Micrometastases","Boolean","Micrometastases only: none >2.0mm (but: >0.2mm or more than 200 cells)","2",
+"Supraclavicular","Boolean","Metastases in supraclavicular nodes","5",

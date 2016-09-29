@@ -1,0 +1,6 @@
+"Pathologic","Posttherapy","M","Nodes","Bone","Other","Result","Message"
+"F","ANY","1","ANY","ANY","ANY","M0",
+"ANY","ANY","2","F","F","F","M1",
+"ANY","ANY","2","T","F","F","M1a",
+"ANY","ANY","2","ANY","T","F","M1b",
+"ANY","ANY","2","ANY","ANY","T","M1c",
