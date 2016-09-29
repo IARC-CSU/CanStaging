@@ -20,7 +20,7 @@ class Meta
         text = row["DisplayText"]
         group = row["Group"]
         colour = row["Colour"]
-        @fields[name] = Variable.new(name, type, text, group, colour)
+        add_field(Variable.new(name, type, text, group, colour))
         case type
         when :dictionary
           @fields[name].dictionary = Dictionary.new("#{file_name.sub("Meta.txt", "#{name}_Dict.txt")}")
@@ -49,4 +49,7 @@ class Meta
     meta
   end
   
+  def add_field(variable)
+    @fields[variable.name] = variable
+  end
 end
