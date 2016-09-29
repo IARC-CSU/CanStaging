@@ -21,7 +21,8 @@ class Meta
         text = row["DisplayText"]
         group = row["Group"] || "1"
         colour = row["Colour"]
-        variable = Variable.new(name, type, text, group, colour)
+        tooltip = row["Tooltip"] || ""
+        variable = Variable.new(name, type, text, group, colour, tooltip)
         case type
         when :dictionary
           variable.dictionary = Dictionary.new("#{file_name.sub("Meta.txt", "#{name}_Dict.txt")}")

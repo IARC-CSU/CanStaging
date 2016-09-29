@@ -3,8 +3,8 @@
 require './Library.rb' 
 
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary
-  def initialize (name, type, display_text, group, colour, dictionary=nil, ranges=nil)
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip
+  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil)
     @name = name
     @type = type
     @display_text = display_text
@@ -12,6 +12,7 @@ class Variable
     @colour = colour
     @dictionary = dictionary
     @ranges = ranges
+    @tooltip = tooltip
   end
   
   def dictionary= dictionary

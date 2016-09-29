@@ -32,7 +32,7 @@
               <% if field.type == :output %>
                 <td class = "result_label" >
               <% else %>
-                <td>
+                <td title = "<%= field.tooltip %>">
               <% end %>
               <%= field.display_text %></td>
               <% case field.type 
