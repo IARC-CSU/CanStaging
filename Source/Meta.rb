@@ -19,7 +19,7 @@ class Meta
         name = row["Field"]
         type = row["DataType"].underscore.to_sym
         text = row["DisplayText"]
-        group = row["Group"]
+        group = row["Group"] || "1"
         colour = row["Colour"]
         variable = Variable.new(name, type, text, group, colour)
         case type
