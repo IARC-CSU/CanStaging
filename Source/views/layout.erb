@@ -45,7 +45,7 @@
                 <ul class="dropdown-menu">
                 	<% sites.each do |site| %>
         						<li>
-        							<a id = "<%= site.css %>_group_1" href = "/site/<%= "#{site.site.downcase}" %>"><%= site.site.capitalize %></a>
+        							<a id = "<%= site.css %>_group_1" href = "/site/<%= "#{site.default_name.downcase}" %>"><%= site.site.capitalize %></a>
         						</li>
 					       <% end %>
                 </ul>
