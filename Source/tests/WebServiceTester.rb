@@ -2,7 +2,7 @@
 
 require 'rest-client'
 require 'json'
-require './Meta.rb'
+require '../Meta.rb'
 require 'pp'
 
 server = ARGV[0] || "localhost:4567"

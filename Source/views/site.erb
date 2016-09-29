@@ -8,7 +8,7 @@
 
   <h1><%= site.site %></h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
-    <input name="site" value="<%= site.site %>" hidden = true type = "hidden">
+    <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
     <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
     <table id = <%= "\"#{site.css}_form\"" %> >
       <thead>
@@ -79,6 +79,10 @@
       <tr id = "result">
         <th><%= R18n.t[:site][:tnm] %></th>
         <th class = "result" id = "TNM_result"></th>
+      </tr>
+      <tr id = "result_with_prefixes">
+        <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
+        <th class = "result" id = "TNMwP_result"></th>
       </tr>
       <tr id = "buttons">
         <td></td>
@@ -218,7 +222,7 @@
     function resultsToForm(data){
       setDefaultResults();
       var keys = Object.keys(data);
-      console.log(data);
+      // console.log(data);
       var results = {};
       var alertText = "<b>Results:</b>";
       for (var i = 0; i<keys.length; i ++) {
@@ -255,6 +259,12 @@
           alertText += "<br>" + part + ": " + text;
         }
       }
+      var el1  = document.getElementById('TNMwP_result');
+      var text = data["TNMwP"][0]["Result"];
+      // el1.title = data["TNMwP"][0]["All results"].join("\n");
+      el1.innerHTML = text;
+      alertText += "<br>TNM with prefixes: "+ text;
+
       var el   = document.getElementById('TNM_result');
       var text = results['T']+results['N']+results['M'];
       el.title = data["TNM"][0]["All results"].join("\n");
@@ -269,7 +279,7 @@
       var term = form_to_data('#tnm_form');
 
       term["data[control]"] = control; 
-      console.log(term);
+      // console.log(term);
 
       $.post('/tnm', term, 
         function(data) {

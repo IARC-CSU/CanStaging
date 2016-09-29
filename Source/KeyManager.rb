@@ -1,3 +1,5 @@
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+
 require 'csv'
 
 class KeyManager

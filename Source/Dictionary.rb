@@ -1,4 +1,4 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 class Dictionary
   attr_accessor :table

@@ -5,17 +5,19 @@ require './LookUp.rb'
 require './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "../Tables"
 
   def initialize site, language
     puts "Loading: #{site} #{language}"
-    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
-    @default_language = "en"
     @default_name = site
     translated_name = site   
+    @default_language = "en"
+    language_root_path = "#{TABLES_ROOT_PATH}/#{language}"
+    default_language_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}"
+    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
@@ -26,16 +28,36 @@ class Site
     @site = translated_name.capitalize
     @lookups = {}
     @metas = {}
+    @prefixes = {}
     $PARTS.each do |part| 
-      if File.exist? "#{site_root_path}/#{@site}_#{part}.txt"
-        @lookups[part] = LookUp.new("#{site_root_path}/#{@site}_#{part}.txt")
+      # Load up definitions
+      if File.exist? "#{site_root_path}/#{@default_name}_#{part}.txt"
+        @lookups[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}.txt")
       else
         @lookups[part] = LookUp.new("#{@default_site_root_path}/#{@default_name}_#{part}.txt")
-      end
-      if File.exist? "#{site_root_path}/#{@site}_#{part}_Meta.txt"
-        @metas[part] = Meta.new("#{site_root_path}/#{@site}_#{part}_Meta.txt")
+      end    
+      # Load up metas
+      if File.exist? "#{site_root_path}/#{@default_name}_#{part}_Meta.txt"
+        @metas[part] = Meta.new("#{site_root_path}/#{@default_name}_#{part}_Meta.txt")
       else
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
+      end
+      # Add prefixes to the meta if needed
+      unless part == "SG" || part == "SimpG" || part == "SGrange"
+        unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
+          if File.exist? "#{language_root_path}/Prefixes_Meta.txt"
+            to_add = Meta.new("#{language_root_path}/Prefixes_Meta.txt")
+          elsif File.exist? "#{default_language_root_path}/Prefixes_Meta.txt"
+            to_add = Meta.new("#{default_language_root_path}/Prefixes_Meta.txt")
+          end
+          to_add.fields.values.each {|variable| @metas[part].add_field variable } unless to_add.nil?
+        end
+        # Load up prefixes
+        if File.exist? "#{site_root_path}/#{@default_name}_#{part}_prefix.txt"
+          @prefixes[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}_prefixes.txt")
+        else
+          @prefixes[part] = LookUp.new("#{TABLES_ROOT_PATH}/default_prefixes.txt")
+        end
       end
     end
   end
@@ -47,12 +69,15 @@ class Site
   def calculate_tnm values
     result = {}
     tnm_result = ""
+    tnm_with_prefixes_result = ""
     tnm_message = nil
     
     # SG might only rely on generated values
     values["SG"] ||= {}
     values["SGrange"] ||= {}
     
+    # puts values
+
     conclusive = true
     error = false
     tnm_message_parts = []
@@ -71,17 +96,20 @@ class Site
           result[part] = [{"Result"=> get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
           conclusive = false
         else
-          tnm_result += "#{result[part][0]["Result"]}"
+          tnm_result += "#{result[part][0]["Result"]}"          
         end
+        prefix = @prefixes[part].look_up(values[part])
+        tnm_with_prefixes_result += prefix[0]["Result"] + "#{result[part][0]["Result"]}" # unless prefix.nil? || prefix.length == 0
       end
     end
     
-#     puts $PARTS 
+    # puts $PARTS 
     
     tnm_message = tnm_message_parts.join(" ")
     if $PARTS.include? "SG"
       result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_sgs(result, values["SG"])
       result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
+      result["TNMwP"] = [{"Result" => tnm_with_prefixes_result, "Message" => "", "Conclusive" => conclusive, "All results" => "" } ] 
       error = error || !(result["SG"].find{|e| e["Result"] == "ERROR"}.nil?)
     end    
 
@@ -106,6 +134,7 @@ class Site
       end
       # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
+    # puts result
     result
   end
   
@@ -167,6 +196,10 @@ class Site
     # puts "Range: #{range}"
     range = sg_results.sort_by {|e| e["Result"]}
     range.first["Result"] == range.last["Result"] ? [range.first] : [range.first, range.last]  
+  end
+
+  def calculate_prefix 
+
   end
 
   def generate_sg_range_string range

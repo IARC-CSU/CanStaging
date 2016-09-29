@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Metástases à distância",,
+"M","Dictionary","Metástases à distância","1",
