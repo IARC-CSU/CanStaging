@@ -1,0 +1,11 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Anote el tamaño del tumor invasivo (cms)","1",
+"Bronchus","Dictionary","Invasión bronquial","2",
+"Pleura","Boolean","Invade la pleura visceral","2",
+"Atelectasis","Boolean","Atelectasias o neumonitis obstructiva (NO el pulmón entero)","2",
+"T3invasion","Boolean","El tumor invade cualquiera de las siguientes estructuras: pared torácica o costilla; diafragma; nervio frénico;  pleura mediastínica; pericardio parietal","3",
+"AtelectasisAll","Boolean","Atelectasia o neumonitis obstructiva del pulmón completo","3", 
+"NodulesT3","Boolean","Nódulos tumorales separados en el mismo lóbulo","3", 
+"Vocal","Boolean","Parálisis de la cuerda vocal","4",
+"NodulesT4","Boolean","Nódulo (s) en un lóbulo diferente ipsilateral","4", 
+"T4invasion","Boolean","El tumor invade cualquiera de las siguientes estructuras: mediastino; corazón o grandes vasos;  el  nervio laríngeo recurrente; cuerpo vertebral; esófago.","4",
