@@ -8,7 +8,7 @@ class Site
   attr_reader :site, :lookups, :default_name, :prefixes, :metas
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
-  TABLES_ROOT_PATH = "../Tables"
+  TABLES_ROOT_PATH = "./Tables"
 
   def initialize site, language
     puts "Loading: #{site} #{language}"

@@ -1,3 +1,0 @@
-"Key","DisplayText"
-"1","Aucun metastase distant"
-"2","Metastase distant"

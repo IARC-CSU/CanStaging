@@ -1,3 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour","Tooltip"
-"PositiveN","Number","Number of positive nodes","1",,
-"TumourDeposit","Boolean","Tumour deposit(s), i.e 'satellites'in subserosa or in non-peritonealized pericolic or perirectal soft tissue","1",,"Only applies when number of involved regional nodes = 0"

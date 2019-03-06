@@ -1,2 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Metastase distant",1,

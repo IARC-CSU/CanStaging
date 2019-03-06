@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumour does NOT invade main bronchus"
+"2","Tumour involves the main bronchus >= 2cm distal to the carina"
+"3","Tumour involves the main brochus < 2cm distal to the carina"
+"4","Tumour involves the carina or trachea"

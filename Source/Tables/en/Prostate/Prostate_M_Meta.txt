@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Pathology performed","1",
+"Posttherapy","Boolean","Post neoadjuvant therapy","1",
+"M","Dictionary","Distant metastases","2",
+"Nodes","Boolean","Metastases to non-regional nodes","3",
+"Bone","Boolean","Metastases to bone","3",
+"Other","Boolean","Metastases to  other sites","3",

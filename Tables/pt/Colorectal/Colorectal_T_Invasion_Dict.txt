@@ -1,6 +1,0 @@
-"Key","DisplayText"
-"1","Tumor invade a submucosa"
-"2","Tumor invade a muscularis propria"
-"3","Tumor invade a subserosa ou tecidos peri-cólicos ou peri-rectais, não peritonizados"
-"4","Tumor perfura o peritoneu visceral"
-"5","Tumor invade directamente ou adere a outros órgãos ou estruturas"

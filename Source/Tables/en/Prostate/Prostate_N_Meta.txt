@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Pathology performed","1",
+"Posttherapy","Boolean","Post neoadjuvant therapy","1",
+"PositiveN","Number","Number of positive nodes","2",

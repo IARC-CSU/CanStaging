@@ -38,11 +38,11 @@ $sites = {}
 
 ##
 def load_sites
-  available_languages = Dir.entries("../Tables").select {|entry| File.directory? File.join("../Tables",entry) and !(entry =='.' || entry == '..') }
+  available_languages = Dir.entries("./Tables").select {|entry| File.directory? File.join("./Tables",entry) and !(entry =='.' || entry == '..') }
   available_languages.each do |language|
     $sites[language] = {}
     # available_sites = Dir.entries().delete_if {|e| e.start_with?('.') || e.ends_with?('txt')}   
-    available_sites = Dir.entries("../Tables/#{language}").select {|entry| File.directory? File.join("../Tables/#{language}",entry) and !(entry =='.' || entry == '..') }
+    available_sites = Dir.entries("./Tables/#{language}").select {|entry| File.directory? File.join("./Tables/#{language}",entry) and !(entry =='.' || entry == '..') }
     available_sites.each do |site|
       $sites[language][site.downcase.to_sym] = Site.new(site,language)
     end

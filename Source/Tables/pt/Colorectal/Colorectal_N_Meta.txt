@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Número de linfonodos positivos","1",
+"TumourDeposit","Boolean","Depósito tumoral na subserosa, no mesentério ou nos tecidos peri-cólicos ou peri-rectais, não peritonizados","1",

@@ -1,5 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Size","Number","Tamaño del tumor invasivo (cms)","1",
-"ChestInvasion","Boolean","Extensión a la pared torácica (no incluyendo el músculo pectoral)","2",  
-"Inflammation","Boolean","Carcinoma imflamatorio","2",
-"Ulceration","Boolean","Ulceración/nódulos satélites ipsilaterales/edema (incluyendo piel de naranja)","2", 

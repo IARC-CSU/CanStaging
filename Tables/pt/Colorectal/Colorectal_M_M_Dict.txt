@@ -1,4 +1,0 @@
-"Key","DisplayText"
-"1","Ausência de metástases à distância"
-"2","Com metástases à distância confinadas a um órgão/localização (ex.: fígado, pulmão, ovário, linfonodo não regional)"
-"3","Com metástases à distância em mais de um órgão/localização ou no peritoneu"

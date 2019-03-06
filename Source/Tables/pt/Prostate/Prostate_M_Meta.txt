@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"M","Dictionary","Metástases à distância","1",
+"Nodes","Boolean","Metástases em linfonodos não regionais","2",
+"Bone","Boolean","Metástases ósseas","2",
+"Other","Boolean","Metástases noutras localizações","2",

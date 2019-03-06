@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Number","Number of  positive axillary nodes (at least one deposit >2.0mm)","2",
+"Infraclavicular","Boolean","Metastases in infraclavicular nodes","2",
+"MammaryClinical","Boolean","Metastases in clinically detected internal mammary nodes","2",
+"MammaryMicro","Boolean","Metastases in internal mammary nodes with metastases in sentinel lymphnode (not clinically detected)","2",
+"Micrometastases","Boolean","Micrometastases only: none >2.0mm (but: >0.2mm or more than 200 cells)","1",
+"Supraclavicular","Boolean","Metastases in supraclavicular nodes","2",
