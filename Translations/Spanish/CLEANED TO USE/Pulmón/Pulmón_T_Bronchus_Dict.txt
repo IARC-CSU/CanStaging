@@ -1,6 +1,0 @@
-"Key","DisplayText"
-"1","El tumor NO invad el broquio principal"
-"2","El tumor afecta al  bronquio principal >= 2cms de la  carina distal"
-"3","El tumor afecta al  bronquio principal < 2cms de la  carina distal"
-"4","El tumor afecta a la carina o a la tráquea"
-

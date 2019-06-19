@@ -1,5 +1,0 @@
-"Key","DisplayText"
-"1","El tumor invade  la submucosa"
-"2","El tumor invade la muscularis propria"
-"3","El tumor invade la subserosa o los tejidos no-peritoneales pericolorrectales"
-"4","El tumor perfora  el peritoneo visceral órganos o estructuras"

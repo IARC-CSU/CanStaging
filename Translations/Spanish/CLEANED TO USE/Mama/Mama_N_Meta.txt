@@ -1,7 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Axillary","Number","Número de ganglios axilares positivos (al menos un depósito >2 mms)","2", 
-"Infraclavicular","Boolean","Metástasis en ganglios infraclaviculares","2",
-"MammaryClinical","Boolean","Metástasis en ganglios de la mamaria interna detectados clínicamente","2",
-"MammaryMicro","Boolean","Metástasis en ganglios de la mamaria interna con metátasis en el ganglio centinela (no detectado clínicamente)","2",
-"Micrometastases","Boolean","Solamente micrometástasis: ninguna >2 mms (pero: >0,2 mms o más de 200 células)","1",
-"Supraclavicular","Boolean","Metástasis en ganglios supraclaviculares","2", 
