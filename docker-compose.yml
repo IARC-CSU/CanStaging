@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  canstaging:
+    build:
+      context: .
+      dockerfile: sources/Dockerfile
+    ports: 8073:80
+    volumes: 
+      - canstagingpersist:/app/data
+    restart: always
+
+volumes:
+  canstagingpersist:
