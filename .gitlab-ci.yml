@@ -10,7 +10,7 @@ deploy_staging:
         - staging
     only:
         refs:
-            - development
+            - develop
     stage: deploy
     script:
         - sudo docker-compose -p CanStaging up -d --build
