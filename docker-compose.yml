@@ -3,7 +3,7 @@ services:
   canstaging:
     build:
       context: sources/
-    ports: 8073:80
+    ports: "8073:80"
     volumes: 
       - canstagingpersist:/app/data
     restart: always
