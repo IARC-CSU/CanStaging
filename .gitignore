@@ -1,5 +1,3 @@
-Source/config.yml
-Source/keyfile.txt
 Source/logg.db
 syntax: glob
 .dropbox
@@ -11,7 +9,6 @@ Videos/20130220-breast-tnm.avi
 Videos/20130220-test-tnm.avi
 .dropbox.attr
 *.mp4
-Source/keyfile.txt
 Source/logg.db
 log.txt
 Source/*.TMP
