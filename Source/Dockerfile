@@ -1,12 +1,13 @@
 FROM ruby:2.5
-EXPOSE 8008
+LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
+EXPOSE 80
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile* ./
 RUN bundle install
 
 COPY . .
