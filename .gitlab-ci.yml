@@ -1,0 +1,16 @@
+stages:
+    - deploy
+
+before_script:
+    - echo "Executing on `hostname`"
+    - echo "Working directory is `pwd`"
+
+deploy_staging:
+    tags:
+        - staging
+    only:
+        refs:
+            - develop
+    stage: deploy
+    script:
+        - sudo docker-compose -p CanStaging up -d --build
