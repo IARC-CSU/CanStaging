@@ -2,14 +2,15 @@ FROM ruby:2.5
 LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
 EXPOSE 80
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+RUN apt-get update -qq && apt-get install -y build-essential
 
-WORKDIR /app
+ENV APP_HOME /app
+RUN mkdir $APP_HOME
+WORKDIR $APP_HOME
 
-COPY Gemfile* ./
-RUN bundle install
+ADD Gemfile* $APP_HOME/
+RUN bundle install --without development test
 
-COPY . .
+ADD . $APP_HOME
 
 CMD ["./WebService.rb"]
