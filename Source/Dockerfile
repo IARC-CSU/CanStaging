@@ -13,4 +13,4 @@ RUN bundle install --without development test
 
 ADD . $APP_HOME
 
-CMD ["./WebService.rb"]
+CMD ["ruby","WebService.rb"]
