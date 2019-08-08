@@ -22,6 +22,11 @@ Execute ```ruby WebService.rb``` in the Source folder.
 
 ### Access Stand alone tool
 
-Navigate to http://localhost using your favourite browser. (If that happens not to be Internet Explorer.)
+Navigate to http://localhost:80 using your favourite browser. (If that happens _not_ to be Internet Explorer.)
 
+## Configuration
+
+### Port
+
+You can set the tool to use another port than the default port 80 by changing it in the config.yml file.
 
