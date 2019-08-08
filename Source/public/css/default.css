@@ -112,6 +112,89 @@ form a {
 	background-color:#FFD8DD;
 }
 
+/* pathological */ 
+
+#breastp_form td, #breastp_form th {
+	font-size:1em;
+	border:1px solid #C74C69;
+	padding:3px 7px 2px 7px;	
+}
+
+#breastp_form th, #breastp_form td.result, #breastp_form td.result_label{
+	background-color:#D3788E;
+	color:#ffffff;
+}
+
+#breastp_group_0 { 
+	color:#000000;
+	background-color:#F27B96;
+}
+#breastp_group_1 { 
+	color:#000000;
+	background-color:#F58BA4;
+}
+#breastp_group_2 { 
+	color:#000000;
+	background-color:#F598AD;
+}
+
+#breastp_group_3 { 
+	color:#000000;
+	background-color:#F8B8BD;
+}
+
+#breastp_group_4 { 
+	color:#000000;
+	background-color:#FDC8CD;
+}
+
+#breastp_group_5 { 
+	color:#000000;
+	background-color:#FFD8DD;
+}
+
+
+/* clinical */ 
+
+#breastc_form td, #breastc_form th {
+	font-size:1em;
+	border:1px solid #C74C69;
+	padding:3px 7px 2px 7px;	
+}
+
+#breastc_form th, #breastc_form td.result, #breastc_form td.result_label{
+	background-color:#D3788E;
+	color:#ffffff;
+}
+
+#breastc_group_0 { 
+	color:#000000;
+	background-color:#F27B96;
+}
+#breastc_group_1 { 
+	color:#000000;
+	background-color:#F58BA4;
+}
+#breastc_group_2 { 
+	color:#000000;
+	background-color:#F598AD;
+}
+
+#breastc_group_3 { 
+	color:#000000;
+	background-color:#F8B8BD;
+}
+
+#breastc_group_4 { 
+	color:#000000;
+	background-color:#FDC8CD;
+}
+
+#breastc_group_5 { 
+	color:#000000;
+	background-color:#FFD8DD;
+}
+
 /* Colorectal site*/
 
 #colorectal_form td, #colorectal_form th {
