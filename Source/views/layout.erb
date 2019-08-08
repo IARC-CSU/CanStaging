@@ -50,6 +50,21 @@
 					       <% end %>
                 </ul>
               </li>
+               <li class="dropdown">
+                <a href="#"
+                      class="dropdown-toggle"
+                      data-toggle="dropdown">
+                      <%= R18n.t[:layout][:tnm_version] %>
+                      <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                      <a href = "./?tnm_version=v7" >Version 7</a>
+                    </li><li>
+                      <a href = "./?tnm_version=v8" >Version 8</a>
+                    </li>
+                </ul>
+              </li>
             <li><a href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a></li>
               <li><a href="/get_log" target = "_blank"><%= R18n.t[:layout][:get_log] %></a></li>
             </ul>
