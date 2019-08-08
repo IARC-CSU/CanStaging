@@ -10,20 +10,22 @@ class Site
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
 
-  def initialize site, language
-    puts "Loading: #{site} #{language}"
+  def initialize site, language, tnm_version
+    puts "Loading: #{site}, #{language}, #{tnm_version}"
     @default_name = site
     translated_name = site   
     @default_language = "en"
-    language_root_path = "#{TABLES_ROOT_PATH}/#{language}"
-    default_language_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}"
-    site_root_path = "#{TABLES_ROOT_PATH}/#{language}/#{site}" 
+    tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
+    puts tnm_version_root_path
+    default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
+    language_root_path = "#{tnm_version_root_path}/#{language}"
+    site_root_path = "#{language_root_path}/#{site}" 
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
       translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
-      @default_site_root_path = "#{TABLES_ROOT_PATH}/#{@default_language}/#{@default_name}" 
+      @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
     end
     @site = translated_name.capitalize
     @lookups = {}
@@ -56,7 +58,7 @@ class Site
         if File.exist? "#{site_root_path}/#{@default_name}_#{part}_prefix.txt"
           @prefixes[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}_prefixes.txt")
         else
-          @prefixes[part] = LookUp.new("#{TABLES_ROOT_PATH}/default_prefixes.txt")
+          @prefixes[part] = LookUp.new("#{tnm_version_root_path}/default_prefixes.txt")
         end
       end
     end
@@ -99,7 +101,7 @@ class Site
           tnm_result += "#{result[part][0]["Result"]}"          
         end
         prefix = @prefixes[part].look_up(values[part])
-        tnm_with_prefixes_result += prefix[0]["Result"] + "#{result[part][0]["Result"]}" # unless prefix.nil? || prefix.length == 0
+        tnm_with_prefixes_result += prefix[0]["Result"] + "#{result[part][0]["Result"]}" unless prefix.nil? || prefix.length == 0
       end
     end
     
