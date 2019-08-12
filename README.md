@@ -10,7 +10,7 @@ Download from installer http://railsinstaller.org/en and run it.
 
 #### Install Ruby on Linux
 
-Debian-based distributions (Ubuntu/Pop_OS!/etc): ```apt install ruby```
+Debian-based distributions (Ubuntu/Pop_OS!/etc): ```apt install ruby``` followed by ```gem install bundler```
 
 #### Install necessary libraries
 
