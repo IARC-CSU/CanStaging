@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No distant metastases"
+"2","Metastases confined to one organ or site(e.g. liver, lung, ovary, non-regional nodes) without peritoneal metastases"
+"3","Metastases in more than one organ"
+"4","Metastasis to the peritoneum with or without other organ involvment"
