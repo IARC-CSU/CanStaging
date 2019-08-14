@@ -225,6 +225,36 @@ form a {
 	background-color:#FFD191;
 }
 
+/* Colorectal site*/
+
+#colorectal_v8_form td, #colorectal_v8_form th {
+	font-size:1em;
+	border:1px solid #C28C40;
+	padding:3px 7px 2px 7px;	
+}
+
+#colorectal_v8_form th, #colorectal_v8_form td.result, #colorectal_v8_form td.result_label {
+	background-color:#D29C50;
+	color:#ffffff;
+}
+
+#colorectal_v8_group_0 { 
+	color:#000000;
+	background-color:#DFB77F;
+}
+#colorectal_v8_group_1 { 
+	color:#000000;
+	background-color:#FFCB81;
+}
+#colorectal_v8_group_2 { 
+	color:#000000;
+	background-color:#FFD191;
+}
+#colorectal_v8_group_3 { 
+	color:#000000;
+	background-color:#FFD191;
+}
+
 
 /* Prostate site*/
 
