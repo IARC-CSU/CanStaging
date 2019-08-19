@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Appearance","Dictionary","Appearance","2",
+"Extension","Dictionary","Extension","3",
+"Capsule","Boolean","Extends through the prostatic capsule","4",
+"Neck","Boolean","Bladder neck (microscopically)","4",
+"Vescicles","Boolean","Seminal vescicles","4",
+"Bladder","Boolean","Bladder","5",
+"Sphincter","Boolean","External sphincter","5",
+"Rectum","Boolean","Rectum or levator muscles","5",
+"Wall","Boolean","Pelvic wall","5",

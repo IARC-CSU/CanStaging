@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"T","generated","T","1",
+"N","generated","N","1",
+"M","generated","M","1",
+"Gleason","Number","Gleason score","2",
+"PSA","Number","PSA value","2",
