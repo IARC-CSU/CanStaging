@@ -294,6 +294,42 @@ form a {
 	background-color:#C1FFFF;
 }
 
+#prostate_v8_form td, #prostate_v8_form th {
+	font-size:1em;
+	border:1px solid #40C28C;
+	padding:3px 7px 2px 7px;	
+}
+
+#prostate_v8_form th, #prostate_v8_form td.result, #prostate_v8_form td.result_label {
+	background-color:#50D29C;
+	color:#ffffff;
+}
+
+#prostate_v8_group_0 { 
+	color:#000000;
+	background-color:#7FDFB7;
+}
+#prostate_v8_group_1 { 
+	color:#000000;
+	background-color:#81FFCB;
+}
+#prostate_v8_group_2 { 
+	color:#000000;
+	background-color:#91FFD1;
+}
+#prostate_v8_group_3 { 
+	color:#000000;
+	background-color:#A1FFE1;
+}
+#prostate_v8_group_4 { 
+	color:#000000;
+	background-color:#B1FFF1;
+}
+#prostate_v8_group_5 { 
+	color:#000000;
+	background-color:#C1FFFF;
+}
+
 
 /* Cervix site*/
 
