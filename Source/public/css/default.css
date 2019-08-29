@@ -572,3 +572,37 @@ form a {
 	color:#000000;
 	background-color:#BFD6B4;
 }
+
+/* Pancreas */
+
+#pancreas_v8_form td, #pancreas_v8_form th {
+	font-size:1em;
+	border:1px solid #BA92A7;
+	padding:3px 7px 2px 7px;	
+}
+
+#pancreas_v8_form th, #pancreas_v8_form td.result, #pancreas_v8_form td.result_label {
+	background-color:#B1569A;
+	color:#ffffff;
+}
+
+#pancreas_v8_group_0 { 
+	color:#000000;
+	background-color:#BA92A7;
+}
+#pancreas_v8_group_1 { 
+	color:#000000;
+	background-color:#BF9FB8;
+}
+#pancreas_v8_group_2 { 
+	color:#000000;
+	background-color:#BFA6C4;
+}
+#pancreas_v8_group_3 { 
+	color:#000000;
+	background-color:#BFD6F4;
+}
+#pancreas_v8_group_4 { 
+	color:#000000;
+	background-color:#BFD6F4;
+}
