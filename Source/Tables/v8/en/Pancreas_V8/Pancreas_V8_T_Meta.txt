@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Tumour size in greatest dimension","3",
+"T4invasion","Boolean","Invloves coeliac axis, superior mesenteric artery and/or common hepatic artery","2",
