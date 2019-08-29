@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Solitary or Multiple tumour(s)","2",
+"Size","Number","Greatest dimension of the tumour(s)","2",
+"Vascular","Dictionary","Vascular invasion","2",
+"Invasion","Boolean","Tumour directly invades adjacent organs other than gallbladder","2",
+"Visceral","Boolean","Tumour perforates the visceral peritoneum","2",
