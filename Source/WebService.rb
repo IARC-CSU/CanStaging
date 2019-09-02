@@ -38,16 +38,23 @@ $sites = {}
 
 ##
 def load_sites
-  available_languages = Dir.entries("./Tables").select {|entry| File.directory? File.join("./Tables",entry) and !(entry =='.' || entry == '..') }
-  available_languages.each do |language|
-    $sites[language] = {}
-    # available_sites = Dir.entries().delete_if {|e| e.start_with?('.') || e.ends_with?('txt')}   
-    available_sites = Dir.entries("./Tables/#{language}").select {|entry| File.directory? File.join("./Tables/#{language}",entry) and !(entry =='.' || entry == '..') }
-    available_sites.each do |site|
-      $sites[language][site.downcase.to_sym] = Site.new(site,language)
-    end
-    $sites[language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development
-  end  
+  tables_path = "./Tables"
+  available_tnm_versions  = Dir.entries(tables_path).select {|entry| File.directory? File.join(tables_path,entry) and !(entry =='.' || entry == '..') }
+  available_tnm_versions.each do |tnm_version|
+    tnm_verision_path = "#{tables_path}/#{tnm_version}"
+    $sites[tnm_version] = {}
+    available_languages = Dir.entries(tnm_verision_path).select {|entry| File.directory? File.join(tnm_verision_path, entry) and !(entry =='.' || entry == '..') }
+    available_languages.each do |language|
+      $sites[tnm_version][language] = {}
+      language_path    = "#{tnm_verision_path}/#{language}"
+      # available_sites = Dir.entries().delete_if {|e| e.start_with?('.') || e.ends_with?('txt')}   
+      available_sites = Dir.entries(language_path).select {|entry| File.directory? File.join(language_path,entry) and !(entry =='.' || entry == '..') }
+      available_sites.each do |site|
+        $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
+      end
+      $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development
+    end  
+  end
 end
 
 $st_logger = STLogger.new(config['system']['log_file'])
@@ -57,23 +64,25 @@ $key_manager = KeyManager.new
 
 ## Routing rules
 
-## load a stored locale or default to english
 before do
+  ## load a stored locale or default to english
   session[:locale] = params[:locale] || session[:locale] || "en"
   R18n.set(session[:locale])
   session[:sites_locale] = R18n.t[:sites_locale]
+  ## set tnm version
+  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v7"
 end
 
 # check for valid api key to all calls to the service... 
 before do
   unless request.path_info.start_with? "/login"
-    error(401, erb(:login_form, :locals => { :sites => $sites[session[:sites_locale]].values })) if $key_manager.get_user(params[:key] || session[:key]).nil?
+    error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     session[:key] = params[:key] || session[:key]
   end
 end
 
 post '/tnm' do
-  # puts params if settings.environment == :development
+  puts params if settings.environment == :development
   result = calculate_tnm(params)
   return JSON.pretty_generate(result)
 end
@@ -95,7 +104,7 @@ get '/get_log.json' do
 end
 
 get '/get_log' do
-  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:sites_locale]].values } , :layout => nil
+  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values } , :layout => nil
 end
 
 get '/get_log.csv' do 
@@ -108,14 +117,14 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  erb :tool, :locals => { :sites => $sites[session[:sites_locale]].values }, :layout => :layout
+  erb :tool, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
 end
 
 get '/refresh' do
   error 401, "Not admin..." unless $key_manager.admin_key? session[:key]
   load_sites
   $key_manager = KeyManager.new
-  erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:sites_locale]].values }
+  erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
 end
 
 get '/locale/*' do |locale|
@@ -127,7 +136,7 @@ get '/locale/*' do |locale|
 end
 
 get '/meta/*' do |site_name|
-  site = $sites[session[:sites_locale]][site_name.downcase.to_sym]
+  site = $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym]
   if site.nil?
     response = {"Error"=>"Unknown site: #{site_name}"}.to_json
   else
@@ -137,19 +146,19 @@ get '/meta/*' do |site_name|
 end
 
 get '/sites.json' do
-  $sites[session[:sites_locale]].keys.to_json
+  $sites[session[:tnm_version]][session[:sites_locale]].keys.to_json
 end
 
 get '/site/*' do |site_name|
-  if $sites[session[:sites_locale]][site_name.downcase.to_sym].nil? 
-    erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:sites_locale]].values }
+  if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
+    erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values }
   else
-    erb :site, :locals => {:site => $sites[session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:sites_locale]].values }, :layout => :layout
+    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
   end
 end
 
 get '/login/form' do 
-  erb :login_form, :locals => { :sites => $sites[session[:sites_locale]].values }
+  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
 end
 
 post '/login/attempt' do
@@ -162,13 +171,13 @@ post '/login/attempt' do
     redirect to where_user_came_from 
   else
     @error = 'Sorry not a valid key '
-    halt erb :login_form, :locals => { :sites => $sites[session[:sites_locale]].values }
+    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
   end
 end
 
 get '/logout' do
   session.delete(:key)
-  erb "<div class='alert alert-message'>#{R18n.t.service.logged_out}</div>", :locals => { :sites => $sites[session[:sites_locale]].values }
+  erb "<div class='alert alert-message'>#{R18n.t.service.logged_out}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
 end
 
 get '/' do
@@ -176,7 +185,7 @@ get '/' do
 end
 
 get "/upload" do 
-  erb :upload, :locals => { :sites => $sites[session[:sites_locale]].values }, :layout => :layout
+  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
 end
 
 post '/upload' do
@@ -200,7 +209,7 @@ post '/upload' do
 end
 
 not_found do
-  erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:sites_locale]].values }
+  erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
 end
 
 
@@ -208,7 +217,7 @@ end
 
 def calculate_tnm params
   site_name = params["site"].downcase.strip.to_sym unless params["site"].nil?
-  site = $sites[session[:sites_locale]][site_name] unless !$sites[session[:sites_locale]].keys.include?(site_name)
+  site = $sites[session[:tnm_version]][session[:sites_locale]][site_name] unless !$sites[session[:tnm_version]][session[:sites_locale]].keys.include?(site_name)
   if site.nil?
     return {"Error"=> R18n.t.service.unknown_site(params["site"])}.to_json
   else

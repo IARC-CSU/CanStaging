@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour",
+"Ipsilateral","Boolean","Metastasis in ipsilateral Axillary levels I or II","3",
+"Matted","Boolean","Metastasis in axillary lymph nodes fixed or matted to one another or to other structures","4",
+"InternalMammary","Boolean","Metastasis in internal mammary nodes is clinically detected","4",
+"Infraclavicular","Boolean","Metastasis in infraclavicular lymph nodes","4",
+"Supraclavicular","Boolean","Metastasis in supraclavicular lymph nodes","4",
