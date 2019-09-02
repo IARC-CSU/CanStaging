@@ -606,3 +606,45 @@ form a {
 	color:#000000;
 	background-color:#BFD6F4;
 }
+
+
+/* Ovary site*/
+
+#ovary_v8_form td, #ovary_v8_form th {
+	font-size:1em;
+	border:1px solid #B73C59;
+	padding:3px 7px 2px 7px;	
+}
+
+#ovary_v8_form th, #ovary_v8_form td.result, #ovary_v8_form td.result_label{
+	background-color:#C3687E;
+	color:#ffffff;
+}
+
+#ovary_v8_group_0 { 
+	color:#000000;
+	background-color:#E26B86;
+}
+#ovary_v8_group_1 { 
+	color:#000000;
+	background-color:#E57B94;
+}
+#ovary_v8_group_2 { 
+	color:#000000;
+	background-color:#E5889D;
+}
+
+#ovary_v8_group_3 { 
+	color:#000000;
+	background-color:#E8A8AD;
+}
+
+#ovary_v8_group_4 { 
+	color:#000000;
+	background-color:#EDB8BD;
+}
+
+#ovary_v8_group_5 { 
+	color:#000000;
+	background-color:#EFC8CD;
+}
