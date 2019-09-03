@@ -26,6 +26,7 @@ class Site
       translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
+      @css = yaml["css"] || @default_name.split("_").first.downcase      
     end
     @site = translated_name.capitalize
     @lookups = {}
@@ -65,7 +66,7 @@ class Site
   end
 
   def css
-    @default_name.downcase
+    @css.downcase
   end
 
   def calculate_tnm values
