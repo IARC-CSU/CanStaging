@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"LamProp","Boolean","Tumour invades lamina propria or muscularis mucosae","2",
+"Submucosa","Boolean","Tumour invades submucosa","2",
+"MuscProp","Boolean","Tumour invades muscularis propria","2",
+"Adventitia","Boolean","Tumour invades adventitia","2",
+"AdjA","Boolean","Tumour invades pleura, pericardium, azygos vein, diaphragm or peritoneum","2",
+"AdjB","Boolean","Tumour invades other adjacent structures such as aorta, vertebral body or trachea","2",
