@@ -21,7 +21,7 @@ home:
   by: "Par"
   and: "et"
   welcome: "Bienvenue à CanStaging, un outil de stadification du cancer, qui vous est fourni grâce à un NICR, la collaboration du CIRC, et UICC. L'outil permettra de maximiser la disponibilité, la normalisation et la comparabilité des stadification du cancer à l'échelle internationale."
-  no_sites_translated: "No sites has been translated to this language yet."
+  no_sites_translated: "No sites translated to this language yet."
 
 get_log:
   tumour_ID: "ID Tumeur"
