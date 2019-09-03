@@ -158,7 +158,7 @@ form a {
 
 #breast_c_v8_form td, #breast_c_v8_form th {
 	font-size:1em;
-	border:1px solid #C74C69;
+	/*border:1px solid #C74C69;*/
 	padding:3px 7px 2px 7px;	
 }
 
@@ -169,30 +169,30 @@ form a {
 
 #breast_c_v8_group_0 { 
 	color:#000000;
-	background-color:#F27B96;
+	border-color:#F27B96;
 }
 #breast_c_v8_group_1 { 
 	color:#000000;
-	background-color:#F58BA4;
+	border-color:#F58BA4;
 }
 #breast_c_v8_group_2 { 
 	color:#000000;
-	background-color:#F598AD;
+	border-color:#F598AD;
 }
 
 #breast_c_v8_group_3 { 
 	color:#000000;
-	background-color:#F8B8BD;
+	border-color:#F8B8BD;
 }
 
 #breast_c_v8_group_4 { 
 	color:#000000;
-	background-color:#FDC8CD;
+	border-color:#FDC8CD;
 }
 
 #breast_c_v8_group_5 { 
 	color:#000000;
-	background-color:#FFD8DD;
+	border-color:#FFD8DD;
 }
 
 /* Colorectal site*/
