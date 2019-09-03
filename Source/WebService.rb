@@ -124,7 +124,9 @@ get '/refresh' do
   error 401, "Not admin..." unless $key_manager.admin_key? session[:key]
   load_sites
   $key_manager = KeyManager.new
-  erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  session[:message] = "OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}"
+  redirect to('/tool')
+  # erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
 end
 
 get '/locale/*' do |locale|
@@ -151,7 +153,9 @@ end
 
 get '/site/*' do |site_name|
   if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
-    erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values }
+    # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values }
+    session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
+    redirect to where_user_came_from 
   else
     erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
   end
@@ -168,16 +172,18 @@ post '/login/attempt' do
     session[:user] = user
     $st_logger.log_access(session[:key], request.ip.to_s)
     where_user_came_from = session[:previous_url] || '/tool'
+    session[:message] = R18n.t.service.logged_in
     redirect to where_user_came_from 
   else
-    @error = 'Sorry not a valid key '
+    session[:error] = 'Sorry not a valid key '
     halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
   end
 end
 
 get '/logout' do
   session.delete(:key)
-  erb "<div class='alert alert-message'>#{R18n.t.service.logged_out}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  session[:message] = R18n.t.service.logged_out
+  redirect to('/tool')
 end
 
 get '/' do
