@@ -35,6 +35,7 @@ home:
   by: "Por" 
   and: "y"
   welcome: " Bienvenido a CanStaging, Una herramienta/programa para Estadiar el cáncer, facilitada a Ud. gracias a la colaboración de la NCIR, IARC y UICC. La herramienta/programa le ayudara a aumentar la disponibilidad, estandarización y comparabilidad del estadiaje del cáncer internacionalmente."
+  no_sites_translated: "No sites has been translated to this language yet."
 
 get_log:
   tumour_ID: "Identificación del tumor"

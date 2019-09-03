@@ -7,6 +7,7 @@
 <hr width="75%" />
 <h4>​Sites</h4>
 
+  <% R18n.t[:home][:no_sites_translated] if sites.empty? %>
 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
   <% sites.each do |site| %>
     <a class="nav-link" href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_group_1"><%= site.site.capitalize %></a>
