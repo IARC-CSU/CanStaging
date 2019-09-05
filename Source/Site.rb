@@ -15,6 +15,7 @@ class Site
     @default_name = site
     translated_name = site   
     @default_language = "en"
+    @css = @default_name.split("_").first.downcase  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
     puts tnm_version_root_path
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
@@ -26,7 +27,7 @@ class Site
       translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
-      @css = yaml["css"] || @default_name.split("_").first.downcase      
+      @css = yaml["css"] || @default_name      
     end
     @site = translated_name.capitalize
     @lookups = {}
