@@ -1,6 +1,6 @@
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
-require './Library.rb' 
+require_relative './Library.rb' 
 
 class Variable
   attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip

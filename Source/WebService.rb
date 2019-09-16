@@ -1,14 +1,16 @@
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
+$:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
+
 require 'sinatra'
 require 'json'
-require './Site.rb'
-require './KeyManager.rb'
-require './STLogger.rb'
 require 'yaml'
 require 'sinatra/r18n'
 require 'logger'
 require 'tilt/erb'
+require_relative './Site.rb'
+require_relative './KeyManager.rb'
+require_relative './STLogger.rb'
 
 config = YAML.load_file("config.yml")
 

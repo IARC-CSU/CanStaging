@@ -1,8 +1,8 @@
 # encoding: UTF-8
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
-require './LookUp.rb'
-require './Meta.rb'
+require_relative './LookUp.rb'
+require_relative './Meta.rb'
 
 class Site
   attr_reader :site, :lookups, :default_name, :prefixes, :metas
