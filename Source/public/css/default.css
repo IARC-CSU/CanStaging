@@ -142,7 +142,6 @@ form a {
 	background-color:#FFD191;
 }
 
-
 /* Prostate site*/
 
 #prostate_form td, #prostate_form th {
@@ -180,7 +179,6 @@ form a {
 	color:#000000;
 	background-color:#C1FFFF;
 }
-
 
 /* Cervix site*/
 
@@ -248,4 +246,220 @@ form a {
 #lung_group_4 { 
 	color:#000000;
 	background-color:#D6FFB4;
+}
+
+
+#lung_form td, #lung_form th {
+	font-size:1em;
+	border:1px solid #A2EA77;
+	padding:3px 7px 2px 7px;	
+}
+
+#lung_form th, #lung_form td.result, #lung_form td.result_label {
+	background-color:#76C14A;
+	color:#ffffff;
+}
+
+#lung_group_0 { 
+	color:#000000;
+	background-color:#A2EA77;
+}
+#lung_group_1 { 
+	color:#000000;
+	background-color:#AFF088;
+}
+#lung_group_2 { 
+	color:#000000;
+	background-color:#B6F094;
+}
+#lung_group_3 { 
+	color:#000000;
+	background-color:#C6FBA4;
+}
+#lung_group_4 { 
+	color:#000000;
+	background-color:#D6FFB4;
+}
+
+/* Oesophagus */
+
+
+#oesophagus_form td, #oesophagus_form th {
+	font-size:1em;
+	border:1px solid #A2FA77;
+	padding:3px 7px 2px 7px;	
+}
+
+#oesophagus_form th, #oesophagus_form td.result, #oesophagus_form td.result_label {
+	background-color:#76F14A;
+	color:#ffffff;
+}
+
+#oesophagus_group_0 { 
+	color:#000000;
+	background-color:#A2FA77;
+}
+#oesophagus_group_1 { 
+	color:#000000;
+	background-color:#AFFF88;
+}
+#oesophagus_group_2 { 
+	color:#000000;
+	background-color:#B6FF94;
+}
+#oesophagus_group_3 { 
+	color:#000000;
+	background-color:#F6FFA4;
+}
+#oesophagus_group_4 { 
+	color:#000000;
+	background-color:#F6FFB4;
+}
+
+
+/* Oesophagus */
+
+
+#stomach_form td, #stomach_form th {
+	font-size:1em;
+	border:1px solid #FAA277;
+	padding:3px 7px 2px 7px;	
+}
+
+#stomach_form th, #stomach_form td.result, #stomach_form td.result_label {
+	background-color:#F1764A;
+	color:#ffffff;
+}
+
+#stomach_group_0 { 
+	color:#000000;
+	background-color:#FAA277;
+}
+#stomach_group_1 { 
+	color:#000000;
+	background-color:#FFAF88;
+}
+#stomach_group_2 { 
+	color:#000000;
+	background-color:#FFB694;
+}
+#stomach_group_3 { 
+	color:#000000;
+	background-color:#FFF6A4;
+}
+#stomach_group_4 { 
+	color:#000000;
+	background-color:#FFF6B4;
+}
+
+
+/* Oesophagus */
+
+
+#liver_form td, #liver_form th {
+	font-size:1em;
+	border:1px solid #BA9277;
+	padding:3px 7px 2px 7px;	
+}
+
+#liver_form th, #liver_form td.result, #liver_form td.result_label {
+	background-color:#B1564A;
+	color:#ffffff;
+}
+
+#liver_group_0 { 
+	color:#000000;
+	background-color:#BA9277;
+}
+#liver_group_1 { 
+	color:#000000;
+	background-color:#BF9F88;
+}
+#liver_group_2 { 
+	color:#000000;
+	background-color:#BFA694;
+}
+#liver_group_3 { 
+	color:#000000;
+	background-color:#BFD6A4;
+}
+#liver_group_4 { 
+	color:#000000;
+	background-color:#BFD6B4;
+}
+
+/* Pancreas */
+
+#pancreas_form td, #pancreas_form th {
+	font-size:1em;
+	border:1px solid #BA92A7;
+	padding:3px 7px 2px 7px;	
+}
+
+#pancreas_form th, #pancreas_form td.result, #pancreas_form td.result_label {
+	background-color:#B1569A;
+	color:#ffffff;
+}
+
+#pancreas_group_0 { 
+	color:#000000;
+	background-color:#BA92A7;
+}
+#pancreas_group_1 { 
+	color:#000000;
+	background-color:#BF9FB8;
+}
+#pancreas_group_2 { 
+	color:#000000;
+	background-color:#BFA6C4;
+}
+#pancreas_group_3 { 
+	color:#000000;
+	background-color:#BFD6F4;
+}
+#pancreas_group_4 { 
+	color:#000000;
+	background-color:#BFD6F4;
+}
+
+
+/* Ovary site*/
+
+#ovary_form td, #ovary_form th {
+	font-size:1em;
+	border:1px solid #B73C59;
+	padding:3px 7px 2px 7px;	
+}
+
+#ovary_form th, #ovary_form td.result, #ovary_form td.result_label{
+	background-color:#C3687E;
+	color:#ffffff;
+}
+
+#ovary_group_0 { 
+	color:#000000;
+	background-color:#E26B86;
+}
+#ovary_group_1 { 
+	color:#000000;
+	background-color:#E57B94;
+}
+#ovary_group_2 { 
+	color:#000000;
+	background-color:#E5889D;
+}
+
+#ovary_group_3 { 
+	color:#000000;
+	background-color:#E8A8AD;
+}
+
+#ovary_group_4 { 
+	color:#000000;
+	background-color:#EDB8BD;
+}
+
+#ovary_group_5 { 
+	color:#000000;
+	background-color:#EFC8CD;
 }

@@ -3,10 +3,10 @@
 require 'csv'
 require 'json'
 
-require './Variable.rb'
-require './Library.rb'
-require './Dictionary.rb'
-require './Ranges.rb'
+require_relative './Variable.rb'
+require_relative './Library.rb'
+require_relative './Dictionary.rb'
+require_relative './Ranges.rb'
 
 class Meta
   attr_accessor :fields

@@ -1,7 +1,7 @@
 <head>
   <title><%= site.site %></title>
   
-  <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
   <meta charset="UTF-8">
 </head>
@@ -10,7 +10,7 @@
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
     <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
-    <table id = <%= "\"#{site.css}_form\"" %> >
+    <table class="table" id = <%= "\"#{site.css}_form\"" %> >
       <thead>
       <tr id = "identification">
         <td align="right"><%= R18n.t[:site][:tumour_ID] %></td>

@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Side","Dictionary","Affected ovary(ies)","2",
+"Status","Dictionary","Tumour status","2",
+"Ascites","Dictionary","Malignant cells in ascites or peritoneal washings","2",
+"Extrapelvic","Dictionary","Extrapelvic involvment","2",
+"Retroperitoneal","Boolean","Retroperitoneal nodes involvment","2",

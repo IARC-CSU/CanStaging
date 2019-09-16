@@ -20,3 +20,5 @@ Source/views/site.erb~RFb8f3713.TMP
 Testing Phase 1/Issues from testing Phase 1.xlsx.orig
 .hgignore
 Build/
+
+*.exe
