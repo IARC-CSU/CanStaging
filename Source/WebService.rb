@@ -1,14 +1,16 @@
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
+$:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
+
 require 'sinatra'
 require 'json'
-require './Site.rb'
-require './KeyManager.rb'
-require './STLogger.rb'
 require 'yaml'
 require 'sinatra/r18n'
 require 'logger'
 require 'tilt/erb'
+require_relative './Site.rb'
+require_relative './KeyManager.rb'
+require_relative './STLogger.rb'
 
 config = YAML.load_file("config.yml")
 
@@ -76,7 +78,7 @@ end
 # check for valid api key to all calls to the service... 
 before do
   unless request.path_info.start_with? "/login"
-    error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values })) if $key_manager.get_user(params[:key] || session[:key]).nil?
+    error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     session[:key] = params[:key] || session[:key]
   end
 end
@@ -104,7 +106,7 @@ get '/get_log.json' do
 end
 
 get '/get_log' do
-  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values } , :layout => nil
+  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} } , :layout => nil
 end
 
 get '/get_log.csv' do 
@@ -117,14 +119,16 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  erb :tool, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
+  erb :tool, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
 end
 
 get '/refresh' do
   error 401, "Not admin..." unless $key_manager.admin_key? session[:key]
   load_sites
   $key_manager = KeyManager.new
-  erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  session[:message] = "OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}"
+  redirect to('/tool')
+  # erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
 get '/locale/*' do |locale|
@@ -146,19 +150,21 @@ get '/meta/*' do |site_name|
 end
 
 get '/sites.json' do
-  $sites[session[:tnm_version]][session[:sites_locale]].keys.to_json
+  $sites[session[:tnm_version]][session[:sites_locale]].keys.sort.to_json
 end
 
 get '/site/*' do |site_name|
   if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
-    erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values }
+    # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+    session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
+    redirect to where_user_came_from 
   else
-    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
+    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
   end
 end
 
 get '/login/form' do 
-  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
 post '/login/attempt' do
@@ -168,16 +174,18 @@ post '/login/attempt' do
     session[:user] = user
     $st_logger.log_access(session[:key], request.ip.to_s)
     where_user_came_from = session[:previous_url] || '/tool'
+    session[:message] = R18n.t.service.logged_in
     redirect to where_user_came_from 
   else
-    @error = 'Sorry not a valid key '
-    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+    session[:error] = 'Sorry not a valid key '
+    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
   end
 end
 
 get '/logout' do
   session.delete(:key)
-  erb "<div class='alert alert-message'>#{R18n.t.service.logged_out}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  session[:message] = R18n.t.service.logged_out
+  redirect to('/tool')
 end
 
 get '/' do
@@ -185,7 +193,7 @@ get '/' do
 end
 
 get "/upload" do 
-  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }, :layout => :layout
+  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
 end
 
 post '/upload' do
@@ -209,7 +217,7 @@ post '/upload' do
 end
 
 not_found do
-  erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values }
+  erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
 

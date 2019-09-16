@@ -112,89 +112,6 @@ form a {
 	background-color:#FFD8DD;
 }
 
-/* pathological */ 
-
-#breast_p_v8_form td, #breastp_form th {
-	font-size:1em;
-	border:1px solid #C74C69;
-	padding:3px 7px 2px 7px;	
-}
-
-#breast_p_v8_form th, #breast_p_v8_form td.result, #breast_p_v8_form td.result_label{
-	background-color:#D3788E;
-	color:#ffffff;
-}
-
-#breast_p_v8_group_0 { 
-	color:#000000;
-	background-color:#F27B96;
-}
-#breast_p_v8_group_1 { 
-	color:#000000;
-	background-color:#F58BA4;
-}
-#breast_p_v8_group_2 { 
-	color:#000000;
-	background-color:#F598AD;
-}
-
-#breast_p_v8_group_3 { 
-	color:#000000;
-	background-color:#F8B8BD;
-}
-
-#breast_p_v8_group_4 { 
-	color:#000000;
-	background-color:#FDC8CD;
-}
-
-#breast_p_v8_group_5 { 
-	color:#000000;
-	background-color:#FFD8DD;
-}
-
-
-/* clinical */ 
-
-#breast_c_v8_form td, #breast_c_v8_form th {
-	font-size:1em;
-	/*border:1px solid #C74C69;*/
-	padding:3px 7px 2px 7px;	
-}
-
-#breast_c_v8_form th, #breast_c_v8_form td.result, #breast_c_v8_form td.result_label{
-	background-color:#D3788E;
-	color:#ffffff;
-}
-
-#breast_c_v8_group_0 { 
-	color:#000000;
-	border-color:#F27B96;
-}
-#breast_c_v8_group_1 { 
-	color:#000000;
-	border-color:#F58BA4;
-}
-#breast_c_v8_group_2 { 
-	color:#000000;
-	border-color:#F598AD;
-}
-
-#breast_c_v8_group_3 { 
-	color:#000000;
-	border-color:#F8B8BD;
-}
-
-#breast_c_v8_group_4 { 
-	color:#000000;
-	border-color:#FDC8CD;
-}
-
-#breast_c_v8_group_5 { 
-	color:#000000;
-	border-color:#FFD8DD;
-}
-
 /* Colorectal site*/
 
 #colorectal_form td, #colorectal_form th {
@@ -224,37 +141,6 @@ form a {
 	color:#000000;
 	background-color:#FFD191;
 }
-
-/* Colorectal site*/
-
-#colorectal_v8_form td, #colorectal_v8_form th {
-	font-size:1em;
-	border:1px solid #C28C40;
-	padding:3px 7px 2px 7px;	
-}
-
-#colorectal_v8_form th, #colorectal_v8_form td.result, #colorectal_v8_form td.result_label {
-	background-color:#D29C50;
-	color:#ffffff;
-}
-
-#colorectal_v8_group_0 { 
-	color:#000000;
-	background-color:#DFB77F;
-}
-#colorectal_v8_group_1 { 
-	color:#000000;
-	background-color:#FFCB81;
-}
-#colorectal_v8_group_2 { 
-	color:#000000;
-	background-color:#FFD191;
-}
-#colorectal_v8_group_3 { 
-	color:#000000;
-	background-color:#FFD191;
-}
-
 
 /* Prostate site*/
 
@@ -294,43 +180,6 @@ form a {
 	background-color:#C1FFFF;
 }
 
-#prostate_v8_form td, #prostate_v8_form th {
-	font-size:1em;
-	border:1px solid #40C28C;
-	padding:3px 7px 2px 7px;	
-}
-
-#prostate_v8_form th, #prostate_v8_form td.result, #prostate_v8_form td.result_label {
-	background-color:#50D29C;
-	color:#ffffff;
-}
-
-#prostate_v8_group_0 { 
-	color:#000000;
-	background-color:#7FDFB7;
-}
-#prostate_v8_group_1 { 
-	color:#000000;
-	background-color:#81FFCB;
-}
-#prostate_v8_group_2 { 
-	color:#000000;
-	background-color:#91FFD1;
-}
-#prostate_v8_group_3 { 
-	color:#000000;
-	background-color:#A1FFE1;
-}
-#prostate_v8_group_4 { 
-	color:#000000;
-	background-color:#B1FFF1;
-}
-#prostate_v8_group_5 { 
-	color:#000000;
-	background-color:#C1FFFF;
-}
-
-
 /* Cervix site*/
 
 #cervix_form td, #cervix_form th {
@@ -361,40 +210,6 @@ form a {
 	background-color:#C28CD7;
 }
 #cervix_group_4 { 
-	color:#000000;
-	background-color:#D29CE7;
-}
-
-/* Cervix site*/
-
-#cervix_v8_form td, #cervix_v8_form th {
-	font-size:1em;
-	border:1px solid #7644A6;
-	padding:3px 7px 2px 7px;	
-}
-
-#cervix_v8_form th, #cervix_v8_form td.result, #cervix_v8_form td.result_label {
-	background-color:#8E6AB0;
-	color:#ffffff;
-}
-
-#cervix_v8_group_0 { 
-	color:#000000;
-	background-color:#9C6ECA;
-}
-#cervix_v8_group_1 { 
-	color:#000000;
-	background-color:#AD81D7;
-}
-#cervix_v8_group_2 { 
-	color:#000000;
-	background-color:#B28BD7;
-}
-#cervix_v8_group_3 { 
-	color:#000000;
-	background-color:#C28CD7;
-}
-#cervix_v8_group_4 { 
 	color:#000000;
 	background-color:#D29CE7;
 }
@@ -434,34 +249,34 @@ form a {
 }
 
 
-#lung_v8_form td, #lung_v8_form th {
+#lung_form td, #lung_form th {
 	font-size:1em;
 	border:1px solid #A2EA77;
 	padding:3px 7px 2px 7px;	
 }
 
-#lung_v8_form th, #lung_v8_form td.result, #lung_v8_form td.result_label {
+#lung_form th, #lung_form td.result, #lung_form td.result_label {
 	background-color:#76C14A;
 	color:#ffffff;
 }
 
-#lung_v8_group_0 { 
+#lung_group_0 { 
 	color:#000000;
 	background-color:#A2EA77;
 }
-#lung_v8_group_1 { 
+#lung_group_1 { 
 	color:#000000;
 	background-color:#AFF088;
 }
-#lung_v8_group_2 { 
+#lung_group_2 { 
 	color:#000000;
 	background-color:#B6F094;
 }
-#lung_v8_group_3 { 
+#lung_group_3 { 
 	color:#000000;
 	background-color:#C6FBA4;
 }
-#lung_v8_group_4 { 
+#lung_group_4 { 
 	color:#000000;
 	background-color:#D6FFB4;
 }
@@ -469,34 +284,34 @@ form a {
 /* Oesophagus */
 
 
-#oesophagus_v8_form td, #oesophagus_v8_form th {
+#oesophagus_form td, #oesophagus_form th {
 	font-size:1em;
 	border:1px solid #A2FA77;
 	padding:3px 7px 2px 7px;	
 }
 
-#oesophagus_v8_form th, #oesophagus_v8_form td.result, #oesophagus_v8_form td.result_label {
+#oesophagus_form th, #oesophagus_form td.result, #oesophagus_form td.result_label {
 	background-color:#76F14A;
 	color:#ffffff;
 }
 
-#oesophagus_v8_group_0 { 
+#oesophagus_group_0 { 
 	color:#000000;
 	background-color:#A2FA77;
 }
-#oesophagus_v8_group_1 { 
+#oesophagus_group_1 { 
 	color:#000000;
 	background-color:#AFFF88;
 }
-#oesophagus_v8_group_2 { 
+#oesophagus_group_2 { 
 	color:#000000;
 	background-color:#B6FF94;
 }
-#oesophagus_v8_group_3 { 
+#oesophagus_group_3 { 
 	color:#000000;
 	background-color:#F6FFA4;
 }
-#oesophagus_v8_group_4 { 
+#oesophagus_group_4 { 
 	color:#000000;
 	background-color:#F6FFB4;
 }
@@ -505,34 +320,34 @@ form a {
 /* Oesophagus */
 
 
-#stomach_v8_form td, #stomach_v8_form th {
+#stomach_form td, #stomach_form th {
 	font-size:1em;
 	border:1px solid #FAA277;
 	padding:3px 7px 2px 7px;	
 }
 
-#stomach_v8_form th, #stomach_v8_form td.result, #stomach_v8_form td.result_label {
+#stomach_form th, #stomach_form td.result, #stomach_form td.result_label {
 	background-color:#F1764A;
 	color:#ffffff;
 }
 
-#stomach_v8_group_0 { 
+#stomach_group_0 { 
 	color:#000000;
 	background-color:#FAA277;
 }
-#stomach_v8_group_1 { 
+#stomach_group_1 { 
 	color:#000000;
 	background-color:#FFAF88;
 }
-#stomach_v8_group_2 { 
+#stomach_group_2 { 
 	color:#000000;
 	background-color:#FFB694;
 }
-#stomach_v8_group_3 { 
+#stomach_group_3 { 
 	color:#000000;
 	background-color:#FFF6A4;
 }
-#stomach_v8_group_4 { 
+#stomach_group_4 { 
 	color:#000000;
 	background-color:#FFF6B4;
 }
@@ -541,68 +356,68 @@ form a {
 /* Oesophagus */
 
 
-#liver_v8_form td, #liver_v8_form th {
+#liver_form td, #liver_form th {
 	font-size:1em;
 	border:1px solid #BA9277;
 	padding:3px 7px 2px 7px;	
 }
 
-#liver_v8_form th, #liver_v8_form td.result, #liver_v8_form td.result_label {
+#liver_form th, #liver_form td.result, #liver_form td.result_label {
 	background-color:#B1564A;
 	color:#ffffff;
 }
 
-#liver_v8_group_0 { 
+#liver_group_0 { 
 	color:#000000;
 	background-color:#BA9277;
 }
-#liver_v8_group_1 { 
+#liver_group_1 { 
 	color:#000000;
 	background-color:#BF9F88;
 }
-#liver_v8_group_2 { 
+#liver_group_2 { 
 	color:#000000;
 	background-color:#BFA694;
 }
-#liver_v8_group_3 { 
+#liver_group_3 { 
 	color:#000000;
 	background-color:#BFD6A4;
 }
-#liver_v8_group_4 { 
+#liver_group_4 { 
 	color:#000000;
 	background-color:#BFD6B4;
 }
 
 /* Pancreas */
 
-#pancreas_v8_form td, #pancreas_v8_form th {
+#pancreas_form td, #pancreas_form th {
 	font-size:1em;
 	border:1px solid #BA92A7;
 	padding:3px 7px 2px 7px;	
 }
 
-#pancreas_v8_form th, #pancreas_v8_form td.result, #pancreas_v8_form td.result_label {
+#pancreas_form th, #pancreas_form td.result, #pancreas_form td.result_label {
 	background-color:#B1569A;
 	color:#ffffff;
 }
 
-#pancreas_v8_group_0 { 
+#pancreas_group_0 { 
 	color:#000000;
 	background-color:#BA92A7;
 }
-#pancreas_v8_group_1 { 
+#pancreas_group_1 { 
 	color:#000000;
 	background-color:#BF9FB8;
 }
-#pancreas_v8_group_2 { 
+#pancreas_group_2 { 
 	color:#000000;
 	background-color:#BFA6C4;
 }
-#pancreas_v8_group_3 { 
+#pancreas_group_3 { 
 	color:#000000;
 	background-color:#BFD6F4;
 }
-#pancreas_v8_group_4 { 
+#pancreas_group_4 { 
 	color:#000000;
 	background-color:#BFD6F4;
 }
@@ -610,41 +425,41 @@ form a {
 
 /* Ovary site*/
 
-#ovary_v8_form td, #ovary_v8_form th {
+#ovary_form td, #ovary_form th {
 	font-size:1em;
 	border:1px solid #B73C59;
 	padding:3px 7px 2px 7px;	
 }
 
-#ovary_v8_form th, #ovary_v8_form td.result, #ovary_v8_form td.result_label{
+#ovary_form th, #ovary_form td.result, #ovary_form td.result_label{
 	background-color:#C3687E;
 	color:#ffffff;
 }
 
-#ovary_v8_group_0 { 
+#ovary_group_0 { 
 	color:#000000;
 	background-color:#E26B86;
 }
-#ovary_v8_group_1 { 
+#ovary_group_1 { 
 	color:#000000;
 	background-color:#E57B94;
 }
-#ovary_v8_group_2 { 
+#ovary_group_2 { 
 	color:#000000;
 	background-color:#E5889D;
 }
 
-#ovary_v8_group_3 { 
+#ovary_group_3 { 
 	color:#000000;
 	background-color:#E8A8AD;
 }
 
-#ovary_v8_group_4 { 
+#ovary_group_4 { 
 	color:#000000;
 	background-color:#EDB8BD;
 }
 
-#ovary_v8_group_5 { 
+#ovary_group_5 { 
 	color:#000000;
 	background-color:#EFC8CD;
 }

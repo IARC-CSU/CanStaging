@@ -32,6 +32,7 @@ layout:
   log_out: "Log out"
   language_select: "Language select"
   tnm_version: "TNM version"
+  no_sites_translated: "No sites translated to this language yet."
 
 home:
   by: "By" 

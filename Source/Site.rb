@@ -1,8 +1,8 @@
 # encoding: UTF-8
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
-require './LookUp.rb'
-require './Meta.rb'
+require_relative './LookUp.rb'
+require_relative './Meta.rb'
 
 class Site
   attr_reader :site, :lookups, :default_name, :prefixes, :metas
@@ -15,6 +15,7 @@ class Site
     @default_name = site
     translated_name = site   
     @default_language = "en"
+    @css = @default_name.split("_").first.downcase  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
     puts tnm_version_root_path
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
@@ -26,6 +27,7 @@ class Site
       translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
+      @css = yaml["css"] || @default_name      
     end
     @site = translated_name.capitalize
     @lookups = {}
@@ -65,7 +67,7 @@ class Site
   end
 
   def css
-    @default_name.downcase
+    @css.downcase
   end
 
   def calculate_tnm values
