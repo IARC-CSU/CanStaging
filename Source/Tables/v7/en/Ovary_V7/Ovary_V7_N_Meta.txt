@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"NRegional","boolean","Regional lymph node metastasis","3",

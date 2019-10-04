@@ -1,0 +1,13 @@
+"T","N","M","Result","FIGO"
+"T0","N0","M0","0",
+"T1a","N0","M0","IA","IA"
+"T1b","N0","M0","IB","IB"
+"T1c","N0","M0","IC","IC"
+"T2a","N0","M0","IIA","IIA"
+"T2b","N0","M0","IIB","IIB"
+"T2c","N0","M0","IIC","IIC"
+"T3a","N0","M0","IIIA2","IIIA2"
+"T3b","N0","M0","IIIB","IIIB"
+"T3c","ANY","M0","IIIC","IIIC"
+"ANY","N1","M0","IIIC","IIIC"
+"ANY","ANY","M1","IV","IV"
