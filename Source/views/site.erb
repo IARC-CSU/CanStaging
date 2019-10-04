@@ -78,7 +78,7 @@
       </tr>
       <tr id = "result">
         <th><%= R18n.t[:site][:tnm] %></th>
-        <th class = "result" id = "TNM_result"></th>
+        <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
       </tr>
       <tr id = "result_with_prefixes">
         <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
@@ -98,6 +98,8 @@
   </body>
 
   <script type="text/javascript">
+
+    var tnm_tooltip_text;
 
     function get_log(){
       window.open("/get_log", "_blank");
@@ -267,9 +269,11 @@
 
       var el   = document.getElementById('TNM_result');
       var text = results['T']+results['N']+results['M'];
-      el.title = data["TNM"][0]["All results"].join("\n");
+      tnm_tooltip_text = data["TNM"][0]["All results"].join("\n")
+      el.title = "Copy to clipboard:\n"+ tnm_tooltip_text;
       el.innerHTML = text;
       alertText += "<br>TNM: "+ text;
+      tnm_result = text;
       return alertText;
     }
 
@@ -345,6 +349,36 @@
     // console.log(selectBoxName);
     $(document.getElementsByName(selectBoxName)).prop('selectedIndex',0);
     change(part, selectBoxName);
+  }
+
+  function copyToClipboard(id) {
+    /* Get the text field */
+    var copyTextElement = document.getElementById(id);
+
+    var copyText = copyTextElement.innerText;
+
+     // Create new element
+     var el = document.createElement('textarea');
+     // Set value (string to be copied)
+     el.value = copyText;
+     // Set non-editable to avoid focus and move outside of view
+     el.setAttribute('readonly', '');
+     el.style = {position: 'absolute', left: '-9999px'};
+     document.body.appendChild(el);
+     // Select text inside element
+     el.select();
+     // Copy text to clipboard
+     document.execCommand('copy');
+     // Remove temporary element
+    document.body.removeChild(el);
+    /* Alert the copied text */
+    var tooltip = document.getElementById("myTooltip");
+    copyTextElement.title = "Copied: " + copyText;
+  }
+
+  function outFunc(id) {
+    var tooltip = document.getElementById(id);
+    tooltip.title = "Copy to clipboard:\n"+tnm_tooltip_text;
   }
 
   </script>

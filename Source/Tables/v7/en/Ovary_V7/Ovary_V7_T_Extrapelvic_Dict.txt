@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No extrapelvic involvment"
+"2","Microscopic extrapelvic peritoneal involvment"
+"3","Macroscopic peritoneal metastasis beyond pelvic brim (≤2cm in greatest dimension)"
+"4","Macroscopic peritoneal metastasis beyond pelvic brim (>2cm in greatest dimension)"

@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","No distant metastasis"
+"2","Distance metasstasis (excludes peritoneal metastasis)"

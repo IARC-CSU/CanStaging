@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Limited to one ovary"
+"2","Both ovaries are affected"
