@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","No malignant cells in ascites or peritoneal washings"
+"2","Malignant cells in ascites or peritoneal washings"
