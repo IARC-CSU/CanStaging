@@ -35,3 +35,15 @@ Execute ```ruby WebService.rb``` in the Source folder.
 ### Access Stand alone tool
 
 Navigate to http://localhost:80 using your favourite browser. (If that happens _not_ to be Internet Explorer.)
+
+## Generate .exe
+
+```ocra --gem-full WebService.rb views/* public/*```
+
+Files and folders needed by resulting executable:
+
+- i18n
+- Tables
+- config.yml
+- keyfile.txt
+
