@@ -1,0 +1,8 @@
+"SG","Result"
+"I","Localised"
+"II","Localised"
+"IIIA","Localised"
+"IIIB","Localised"
+"IIIC","Localised"
+"IVA","Regional"
+"IVB","Distant"

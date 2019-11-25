@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Solitary or Multiple Tumour(s)","2",
+"Size","Number","Greatest dimension of the tumour(s)","2",
+"VascularInvasion","Boolean","Vascular Invasion","2",
+"HepaticVein","Boolean","Tumour involving a major branch of the portal or hepatic vein(s)","2",
+"AdjInvasion","Boolean","Tumour(s) with direct invasion of adjaacent organs other than the gallbladder or with perforatioon of visceral peritoneum","2",
