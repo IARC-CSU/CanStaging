@@ -22,3 +22,5 @@ Testing Phase 1/Issues from testing Phase 1.xlsx.orig
 Build/
 
 *.exe
+
+Source/dist/
