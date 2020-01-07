@@ -9,6 +9,8 @@ class Site
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
+  LOCAL_IMAGES_ROOT_PATH = "./public/gfx"
+  SERVER_IMAGES_ROOT_PATH = "gfx/"
 
   def initialize site, language, tnm_version
     puts "Loading: #{site}, #{language}, #{tnm_version}"
@@ -46,6 +48,24 @@ class Site
       else
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
+      # Add image paths 
+      if ["T","N","M"].include? part
+        @metas[part].fields.each do |variable_name, variable|
+          relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
+          relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
+          print "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
+          if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
+            variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_path}"
+            puts " - Found"
+          elsif File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_default_path}"
+            variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_default_path}"
+            puts " - Found English"
+          else 
+            puts " - Not found"
+          end
+        end
+      end
+
       # Add prefixes to the meta if needed
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")

@@ -3,8 +3,8 @@
 require_relative './Library.rb' 
 
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip
-  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil)
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image
+  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil)
     @name = name
     @type = type
     @display_text = display_text
@@ -13,6 +13,7 @@ class Variable
     @dictionary = dictionary
     @ranges = ranges
     @tooltip = tooltip
+    @image = image
   end
   
   def dictionary= dictionary
@@ -46,6 +47,10 @@ class Variable
     end
   end
   
+  def set_image_path path 
+    @image = path
+  end
+
   def to_s
     "#{@name}(#{@type})"
   end

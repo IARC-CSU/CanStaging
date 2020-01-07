@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Distant metastases","2",
+"Field","DataType","DisplayText","Group","Colour","Image"
+"M","Dictionary","Distant metastases","2","",""
