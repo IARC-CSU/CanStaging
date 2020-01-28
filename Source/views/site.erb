@@ -34,7 +34,14 @@
               <% else %>
                 <td title = "<%= field.tooltip %>">
               <% end %>
-              <%= field.display_text %></td>
+
+              <% if field.image.nil? %>
+                <%= field.display_text %>
+              <% else %>
+                <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %> </span></div>
+              <% end %>
+                  
+              </td>
               <% case field.type 
                 when :boolean %>
                 <td>
@@ -380,5 +387,19 @@
     var tooltip = document.getElementById(id);
     tooltip.title = "Copy to clipboard:\n"+tnm_tooltip_text;
   }
+
+  $(".illustrated").mouseenter(function(){
+        if ($(this).parent('div').children('div.image').length) {
+            $(this).parent('div').children('div.image').show();
+        } else {
+            var image_name=$(this).data('image');
+            var imageTag='<div class="image" style="position:absolute;">'+'<img src="'+image_name+'" alt="image" />'+'</div>';
+            $(this).parent('div').append(imageTag);
+        }
+    });
+
+    $(".illustrated").mouseleave(function(){
+        $(this).parent('div').children('div.image').hide();
+    });
 
   </script>
