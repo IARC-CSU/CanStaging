@@ -5,7 +5,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
@@ -15,6 +15,7 @@ class Site
     @default_name = site
     translated_name = site   
     @default_language = "en"
+    @tnm_version = tnm_version
     @css = @default_name.split("_").first.downcase  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
     puts tnm_version_root_path
