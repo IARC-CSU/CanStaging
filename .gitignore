@@ -24,3 +24,5 @@ Build/
 *.exe
 
 Source/dist/
+
+Source/out.txt
