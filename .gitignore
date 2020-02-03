@@ -26,3 +26,5 @@ Build/
 Source/dist/
 
 Source/out.txt
+
+Source/debug.log

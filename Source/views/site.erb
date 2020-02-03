@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
 </head>
 
-  <h1><%= site.site %></h1>
+  <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
   <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
     <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
     <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
