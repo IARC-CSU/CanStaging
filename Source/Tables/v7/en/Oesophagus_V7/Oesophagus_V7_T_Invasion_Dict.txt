@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","No Invasion"
+"2","Tumour invades lamina propria or muscularis mucosae"
+"3","Tumour invades submucosa"
+"4","Tumour invades muscularis propria"
+"5","Tumour invades adventitia"
+"6","Tumour invades pleura, pericardium or diaphragm"
+"7","Tumour invades other adjacent structures such as aorta, vertebral body or trachea"

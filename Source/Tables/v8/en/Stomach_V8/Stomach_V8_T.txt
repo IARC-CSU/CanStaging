@@ -1,8 +1,8 @@
-"LamProp","Submucosa","MuscProp","Subserosa","Serosa","AdjacentStructure","Result","Message"
-"F","F","F","F","F","F","T0",
-"T","F","F","F","F","F","T1a",
-"ANY","T","F","F","F","F","T1b",
-"ANY","ANY","T","F","F","F","T2",
-"ANY","ANY","ANY","T","F","F","T3",
-"ANY","ANY","ANY","ANY","T","F","T4a",
-"ANY","ANY","ANY","ANY","ANY","T","T4b",
+"Invasion","Result","Message"
+"1","T0",
+"2","T1a",
+"3","T1b",
+"4","T2",
+"5","T3",
+"6","T4a",
+"7","T4b",

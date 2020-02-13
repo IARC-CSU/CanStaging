@@ -1,7 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"LamProp","Boolean","Tumour invades lamina propria or muscularis mucosae","2",
-"Submucosa","Boolean","Tumour invades submucosa","2",
-"MuscProp","Boolean","Tumour invades muscularis propria","2",
-"Subserosa","Boolean","Tumour invades subserosa","2",
-"Serosa","Boolean","Tumour perforates serosa","2",
-"AdjacentStructure","Boolean","Tumour invades adjacent structures","2",
+"Invasion","Dictionary","Level of Invasion","2",

@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","No invasion"
+"2","Tumour invades lamina propria or muscularis mucosae"
+"3","Tumour invades submucosa"
+"4","Tumour invades muscularis propria"
+"5","Tumour invades subserosa"
+"6","Tumour perforates serosa"
+"7","Tumour invades adjacent structures"

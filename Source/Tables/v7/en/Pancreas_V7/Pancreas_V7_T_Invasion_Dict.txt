@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No invasion"
+"2","Tumour extends beyond oancreas, but without involvment of coeliac axis or superior mesenteric artery"
+"3","Tumour involves coeliac axis or superior mesenteric artery"

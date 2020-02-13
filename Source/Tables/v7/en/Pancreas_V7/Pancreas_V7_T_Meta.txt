@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Tumour size in greatest dimension","3",
+"Invasion","Dictionary","Level of invasion","3",
