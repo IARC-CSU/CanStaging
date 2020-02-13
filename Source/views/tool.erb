@@ -5,7 +5,7 @@
 <hr width="75%" />
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
-<h4>​Sites</h4>
+<h4>​Sites [<%= sites.first.tnm_version unless sites.empty? %>]</h4>
 
 <%= R18n.t[:home][:no_sites_translated] if sites.empty? %>
 
