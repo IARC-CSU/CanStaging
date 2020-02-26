@@ -46,7 +46,8 @@
                 when :boolean %>
                 <td>
                   <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:yes] %>
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:no] %>
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:no] %>                  
+                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="X" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:site][:dontknow] %>
                 </td>
               <% when :dictionary %>
               <td>

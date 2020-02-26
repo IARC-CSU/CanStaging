@@ -77,6 +77,7 @@ site:
   field_outside_of_scope: "'%1' outside of scope. (%2)"
   results: "Results"
   tnm_with_prefixes: "TNM with prefixes"
+  dontknow: "Don't know"
 
 upload:
   upload_header: "Upload"
