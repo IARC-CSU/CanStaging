@@ -1,4 +1,5 @@
 "LamProp","Submucosa","MuscProp","Adventitia","AdjA","AdjB","Result","Message"
+"X","X","X","X","X","X","TX",
 "T","F","F","F","F","F","T1a",
 "ANY","T","F","F","F","F","T1b",
 "ANY","ANY","T","F","F","F","T2",

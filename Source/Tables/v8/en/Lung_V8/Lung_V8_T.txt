@@ -1,4 +1,5 @@
 "Size","Minimal","Bronchus","Pleura","Atelectasis","T3invasion","NodulesT3","Vocal","T4invasion","NodulesT4","Result","Message"
+"X","X","X","X","X","X","X","X","X","X","TX",
 "ANY","T","1","F","F","F","F","F","F","F","T1mi",
 "2","F","1","F","F","F","F","F","F","F","T1a",
 "3","F","1","F","F","F","F","F","F","F","T1b",

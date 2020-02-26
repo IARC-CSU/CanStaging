@@ -1,4 +1,5 @@
 "Micrometastases","Axillary","Matted","MammaryMicro","MammaryClinical","Infraclavicular","Supraclavicular","Result","Message"
+"X","X","X","X","X","X","X","NX",
 "F","1","F","F","F","F","F","N0",
 "T","ANY","ANY","ANY","ANY","F","F","N1mi",
 "F","2","ANY","F","F","F","F","N1a",
