@@ -32,7 +32,16 @@ class LookUp
         found
       end
       if valid_entries.empty?
-        valid_entries << {"Result"=>"ERROR",  "Message" => R18n.t[:look_up][:no_valid_code_found]}
+        # does it contain don't knows -- we replace them with no's and try again
+        if values.values.include?("X") 
+          new_values = {}
+          values.each {|key, value| values[key] == "X" ? new_values[key] = "F" : new_values[key] = value}
+          r_temp = look_up(new_values)
+          return r_temp
+        else
+          # else return 
+          valid_entries << {"Result"=>"ERROR",  "Message" => R18n.t[:look_up][:no_valid_code_found]}
+        end 
       end
       valid_entries.map do |entry|
         response = {}
@@ -43,6 +52,7 @@ class LookUp
         responses << response
       end
     end
+
     responses
   end
 

@@ -232,8 +232,10 @@ def calculate_tnm params
     site.get_metas.each do |part, meta| 
       meta.fields.keys.each do |key|
         unless params["data"][part].nil?
-          number = params["data"][part].delete "#{key}-number" # remove the temporary variables
-          params["data"][part][key] = meta.fields[key].value_to_codes(number).first unless (number.nil? || number.length == 0)
+          if params["data"][part].include?("#{key}-number")
+            number = params["data"][part].delete "#{key}-number" # remove the temporary variables
+            params["data"][part][key] = meta.fields[key].value_to_codes(number).first
+          end
         end
       end
     end

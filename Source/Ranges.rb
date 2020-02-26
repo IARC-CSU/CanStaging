@@ -31,13 +31,17 @@ class Ranges
   def value_to_codes value
     # puts value
     value = value.gsub(',','.').gsub(/[^0-9\.]/,'') # remove all letters and replace comma with periods...
-    return nil if value.gsub('.','').empty? # return nil if we don't have any numbers left...
-    value = value.to_f
-    codes = []
-    @table.keys.each do |k|
-      codes << k if ((value >= @table[k]["min"].to_f) && (value <= @table[k]["max"].to_f))
+    if value.gsub('.','').empty? 
+      # return "X" (don't know) if we don't have any numbers left...
+      return ["X"]
+    else 
+      value = value.to_f
+      codes = []
+      @table.keys.each do |k|
+        codes << k if ((value >= @table[k]["min"].to_f) && (value <= @table[k]["max"].to_f))
+      end
+      codes
     end
-    codes
   end
   
   def code_to_value code
