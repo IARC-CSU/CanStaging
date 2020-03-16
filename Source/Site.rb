@@ -5,16 +5,18 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
   LOCAL_IMAGES_ROOT_PATH = "./public/gfx"
-  SERVER_IMAGES_ROOT_PATH = "gfx/"
+  SERVER_IMAGES_ROOT_PATH = "/gfx/"
 
   def initialize site, language, tnm_version
     puts "Loading: #{site}, #{language}, #{tnm_version}"
     @default_name = site
+    @pdf = nil
+    @png = nil
     translated_name = site   
     @default_language = "en"
     @tnm_version = tnm_version
@@ -30,8 +32,24 @@ class Site
       translated_name = yaml["translated_name"] || translated_name 
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
-      @css = yaml["css"] || @default_name      
+      @css = yaml["css"] || @default_name
     end
+
+    # Add pdf/png if it is present
+    pdf_path = "#{tnm_version}/#{language}/#{site}/#{site}.pdf"
+    png_path = "#{tnm_version}/#{language}/#{site}/#{site}.png"
+
+    puts pdf_path
+    
+    if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{pdf_path}"
+      @pdf = "#{SERVER_IMAGES_ROOT_PATH}/#{pdf_path}"
+      puts "Found PDF! : #{@pdf} "
+    end
+
+    if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{png_path}"
+      @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+    end
+
     @site = translated_name.capitalize
     @lookups = {}
     @metas = {}
