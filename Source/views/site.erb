@@ -215,22 +215,20 @@
             }
           <% when :number %>
             var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
-            if (x==null || x=="")
-            {
-            alert(<%= "\"#{R18n.t.site.field_must_be_filled(field.display_text)}\"" %>);
-            return false;
+            if (x==null || x=="") {
+              alert(<%= "\"#{R18n.t.site.field_must_be_filled(field.display_text)}\"" %>);
+              return false;
             }
-              if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\"#{R18n.t.site.field_outside_of_scope(field.display_text, field.ranges)}\"" %>); 
+            if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\"#{R18n.t.site.field_outside_of_scope(field.display_text, field.ranges)}\"" %>); 
               return false;
             }
           <% when :generated %>
           // Do nothing
           <% else %>
             var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
-            if (x==null || x=="")
-            {
-            alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
-            return false;
+            if (x==null || x=="") {
+             alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+             return false;
             }
           <% end %>
         <% end %>
@@ -246,35 +244,37 @@
       for (var i = 0; i<keys.length; i ++) {
         var part = keys[i];
         var el = document.getElementById(part+'_result');
-        var text = data[part][0]["Result"];
-        el.innerHTML = text;
-        if (data[part].length>1 && !unique_result(data[part])) { 
-          text = getDefaultResult(part);
+        if (el != null) {
+          var text = data[part][0]["Result"];
           el.innerHTML = text;
-        };
-        results[part] = text;
-        if (part == "SG") {
-          if (data["SG"].length>1) {
-            text = "UNK"
-          }
-          alertText += "<br>SG: " + text;
-          for (var key in data["SG"][0]) {
-            if (key != "Result" && key != "Message") {
-              el = document.getElementById('SG_' + key + '_result');
-              text = data["SG"][0][key];
-              if(data["SG"].length>1 && !unique_result(data["SG"])){
-                text = "";
-              }
-              if (el!=null) {
-                el.innerHTML = text;
-                if (text.length > 0){
-                  alertText += "<br>" + key + ": " + text;
+          if (data[part].length>1 && !unique_result(data[part])) { 
+            text = getDefaultResult(part);
+            el.innerHTML = text;
+          };
+          results[part] = text;
+          if (part == "SG") {
+            if (data["SG"].length>1) {
+              text = "UNK"
+            }
+            alertText += "<br>SG: " + text;
+            for (var key in data["SG"][0]) {
+              if (key != "Result" && key != "Message") {
+                el = document.getElementById('SG_' + key + '_result');
+                text = data["SG"][0][key];
+                if(data["SG"].length>1 && !unique_result(data["SG"])){
+                  text = "";
+                }
+                if (el!=null) {
+                  el.innerHTML = text;
+                  if (text.length > 0){
+                    alertText += "<br>" + key + ": " + text;
+                  }
                 }
               }
             }
+          } else if (part != "TNM"){
+            alertText += "<br>" + part + ": " + text;
           }
-        } else if (part != "TNM"){
-          alertText += "<br>" + part + ": " + text;
         }
       }
       var el1  = document.getElementById('TNMwP_result');

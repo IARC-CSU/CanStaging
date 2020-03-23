@@ -91,7 +91,7 @@ end
 
 post '/tnm_submit' do 
   result = calculate_tnm(params)
-  $st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
+  $st_logger.log(session[:key], params["tumour_id"], session[:tnm_version], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
   # puts JSON.pretty_generate(result) if settings.environment == :development
   return JSON.pretty_generate(result)
 end
@@ -239,6 +239,7 @@ def calculate_tnm params
     end
     jdata = params["data"]
     result = site.calculate_tnm(jdata)
+    result["tnm_version"] = session[:tnm_version]
     return result
   end
 end

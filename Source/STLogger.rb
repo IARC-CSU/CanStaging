@@ -15,7 +15,7 @@ class STLogger
     @access_log_table = @db[:access_log]
   end
 
-  def log(key, tumour_id, site, input, result, ip_address)
+  def log(key, tumour_id, tnm_version, site, input, result, ip_address)
     puts tumour_id
     
     # if the user does not specify tumour ID we keep everything
@@ -37,6 +37,7 @@ class STLogger
       :result => result, 
       :tumour_id => tumour_id, 
       :ip_address => ip_address,
+      :tnm_version => tnm_version,
       :site => site,
       :created_at => DateTime.now)
   end
@@ -71,7 +72,7 @@ class STLogger
           entry["M"]   = result["M"][0]["Result"]
           entry["TNM"] = result["TNM"][0]["Result"]
           entry["SG"]  = result["SG"][0]["Result"]
-          entry["TNM version"] = result["version"] || "7"
+          entry["TNM version"] = result["tnm_version"] || "v7"
           entry["SimpG"] = (result["SimpG"] && result["SimpG"][0]) ? result["SimpG"][0]["Result"] : ""
           entry["SGrange"] = (result["SGrange"] && result["SGrange"][0]) ? result["SGrange"][0]["Result"] : ""
           entry["SiteSpecific"] = site_specific.map { |ss| "#{ss}: #{result['SG'][0][ss]}" }.join("; ")
@@ -104,6 +105,7 @@ class STLogger
         :input => entry[:input],
         :result => entry[:result],
         :site => entry[:site], 
+        :tnm_version => entry[:tnm_version],
         :ip_address => entry[:ip_address], 
         :created_at => entry[:created_at])
     end
@@ -120,6 +122,7 @@ class STLogger
         primary_key :id
         String :key
         String :site
+        String :tnm_version
         String :tumour_id
         String :input
         String :result
@@ -133,6 +136,7 @@ class STLogger
         primary_key :id
         String :key
         String :site
+        String :tnm_version
         String :input
         String :result
         String :ip_address
