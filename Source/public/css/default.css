@@ -24,6 +24,10 @@ tr {
 	border:1px solid #000;
 }
 
+.big {
+	width: 100%;
+}
+
 thead {
 	border:0px solid #000;
 	background-color: lightgrey;

@@ -48,6 +48,7 @@ get_log:
   m: "M"
   tnm_result: "TNM - Result"
   tnm_message: "TNM - Message"
+  tnm_version: "TNM - Version"
   sg_result: "SG - Result"
   sg_message: "SG - Message"
   simpg: "SimpG"

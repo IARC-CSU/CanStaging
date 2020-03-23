@@ -7,102 +7,110 @@
 </head>
 
   <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
-  <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
-    <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
-    <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
-    <table class="table" id = <%= "\"#{site.css}_form\"" %> >
-      <thead>
-      <tr id = "identification">
-        <td align="right"><%= R18n.t[:site][:tumour_ID] %></td>
-        <td><input id = "tumour_id" name="tumour_id" type="text" title="THIS ID SHOULD NOT BE A PERSONAL IDENTIFIER."/><input id="autogenerate" title = "<%= R18n.t[:site][:auto_tooltip] %>"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked"><%= R18n.t[:site][:auto] %></td>
-      </tr>
-      </thead>
-      <% site.get_metas.each do |part, meta| %>
-        <% unless meta.fields.empty? %>
-        <thead>
-        <tr id = "<%= part %>" onclick = "hide_unhide('<%= part %>')">
-          <th><%= part %></th>
-          <th class = "result" id = "<%= part %>_result">
-          </th>
-        </tr>
-        <tbody id = "<%= part %>">
-        <% meta.fields.values.sort_by(&:group).each do |field| %>
-          <% unless field.type == :generated %>
-            <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
-              <% if field.type == :output %>
-                <td class = "result_label" >
-              <% else %>
-                <td title = "<%= field.tooltip %>">
-              <% end %>
 
-              <% if field.image.nil? %>
-                <%= field.display_text %>
-              <% else %>
-                <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %> </span></div>
-              <% end %>
-                  
-              </td>
-              <% case field.type 
-                when :boolean %>
+  <!-- For now we either have a PDF or a form... -->
+  <% unless site.pdf.nil? %> 
+    <% if site.png.nil? %> 
+      <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
+    <% else %>
+      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}'></a>" %> 
+    <% end %>
+  <% else %> 
+    <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
+      <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
+      <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
+      <table class="table" id = <%= "\"#{site.css}_form\"" %> >
+        <thead>
+        <tr id = "identification">
+          <td align="right"><%= R18n.t[:site][:tumour_ID] %></td>
+          <td><input id = "tumour_id" name="tumour_id" type="text" title="THIS ID SHOULD NOT BE A PERSONAL IDENTIFIER."/><input id="autogenerate" title = "<%= R18n.t[:site][:auto_tooltip] %>"name = "auto_id" type="checkbox" onchange = "autogenerateUpdated()" checked = "checked"><%= R18n.t[:site][:auto] %></td>
+        </tr>
+        </thead>
+        <% site.get_metas.each do |part, meta| %>
+          <% unless meta.fields.empty? %>
+          <tr id = "<%= part %>" onclick = "hide_unhide('<%= part %>')">
+            <th><%= part %></th>
+            <th class = "result" id = "<%= part %>_result">
+            </th>
+          </tr>
+          <tbody id = "<%= part %>">
+          <% meta.fields.values.sort_by(&:group).each do |field| %>
+            <% unless field.type == :generated %>
+              <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
+                <% if field.type == :output %>
+                  <td class = "result_label" >
+                <% else %>
+                  <td title = "<%= field.tooltip %>">
+                <% end %>
+
+                <% if field.image.nil? %>
+                  <%= field.display_text %>
+                <% else %>
+                  <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %> </span></div>
+                <% end %>
+                    
+                </td>
+                <% case field.type 
+                  when :boolean %>
+                  <td>
+                    <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:yes] %>
+                    <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:no] %>
+                    <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="X" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:site][:dontknow] %>
+                  </td>
+                <% when :dictionary %>
                 <td>
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:yes] %>
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:no] %>                  
-                  <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="X" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:site][:dontknow] %>
-                </td>
-              <% when :dictionary %>
-              <td>
-                  <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
-                    <% unless part == "M" %>
-                    <option value='' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
-                    <% end %>
-                    <% field.dictionary.table.each do |key, value| %>
-                      <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
-                    <% end %>
-                  </select>
-                  <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
-                    <%= R18n.t[:site][:reset] %>
-                  </span>
-               </td>
-              <% when :number %>
-              <td>
-                <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
-                </td>
-              <% when :output %>
-                  <td class = "result" id = "<%= part + '_' + field.name %>_result"></td>
-              <% else %>
-              <td>
-                <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
-                </td>
-              <% end %>
-            </tr>
+                    <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
+                      <% unless part == "M" %>
+                      <option value='' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
+                      <% end %>
+                      <% field.dictionary.table.each do |key, value| %>
+                        <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
+                      <% end %>
+                    </select>
+                    <span onclick="reset(<%= "\'data[#{part}[#{field.name}]]\'" %>, '<%= part %>');">
+                      <%= R18n.t[:site][:reset] %>
+                    </span>
+                 </td>
+                <% when :number %>
+                <td>
+                  <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
+                  </td>
+                <% when :output %>
+                    <td class = "result" id = "<%= part + '_' + field.name %>_result"></td>
+                <% else %>
+                <td>
+                  <input name=<%= "\"data[#{part}[#{field.name}]]\"" %> type="text"  onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
+                  </td>
+                <% end %>
+              </tr>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-      </tbody>
-      <% end %>
-      <tr id = "SGrange">
-        <th><%= R18n.t[:site][:sg_range] %></th>
-        <th class = "result" id = "SGrange_result"></th>
-      </tr>
-      <tr id = "result">
-        <th><%= R18n.t[:site][:tnm] %></th>
-        <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
-      </tr>
-      <tr id = "result_with_prefixes">
-        <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
-        <th class = "result" id = "TNMwP_result"></th>
-      </tr>
-      <tr id = "buttons">
-        <td></td>
-        <td align="right">
-          <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" />
-          <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
-          <input type="submit" value="<%= R18n.t[:site][:submit] %>" />
-        </td>
-      </tr>
-    </table>
-  </form>
-
+        </tbody>
+        <% end %>
+        <tr id = "SGrange">
+          <th><%= R18n.t[:site][:sg_range] %></th>
+          <th class = "result" id = "SGrange_result"></th>
+        </tr>
+        <tr id = "result">
+          <th><%= R18n.t[:site][:tnm] %></th>
+          <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
+        </tr>
+        <tr id = "result_with_prefixes">
+          <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
+          <th class = "result" id = "TNMwP_result"></th>
+        </tr>
+        <tr id = "buttons">
+          <td></td>
+          <td align="right">
+            <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" />
+            <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
+            <input type="submit" value="<%= R18n.t[:site][:submit] %>" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  <% end %>
   </body>
 
   <script type="text/javascript">
@@ -207,22 +215,20 @@
             }
           <% when :number %>
             var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}-number]]\"" %>].value;
-            if (x==null || x=="")
-            {
-            alert(<%= "\"#{R18n.t.site.field_must_be_filled(field.display_text)}\"" %>);
-            return false;
+            if (x==null || x=="") {
+              alert(<%= "\"#{R18n.t.site.field_must_be_filled(field.display_text)}\"" %>);
+              return false;
             }
-              if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\"#{R18n.t.site.field_outside_of_scope(field.display_text, field.ranges)}\"" %>); 
+            if (x < <%=field.ranges.min_min%> || x > <%=field.ranges.max_max%>) { alert (<%= "\"#{R18n.t.site.field_outside_of_scope(field.display_text, field.ranges)}\"" %>); 
               return false;
             }
           <% when :generated %>
           // Do nothing
           <% else %>
             var x = document.forms["tnm_form"][<%= "\"data[#{part}[#{field.name}]]\"" %>].value;
-            if (x==null || x=="")
-            {
-            alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
-            return false;
+            if (x==null || x=="") {
+             alert(<%= "\" '#{field.display_text}' must be filled out.\"" %>);
+             return false;
             }
           <% end %>
         <% end %>
@@ -238,35 +244,37 @@
       for (var i = 0; i<keys.length; i ++) {
         var part = keys[i];
         var el = document.getElementById(part+'_result');
-        var text = data[part][0]["Result"];
-        el.innerHTML = text;
-        if (data[part].length>1 && !unique_result(data[part])) { 
-          text = getDefaultResult(part);
+        if (el != null) {
+          var text = data[part][0]["Result"];
           el.innerHTML = text;
-        };
-        results[part] = text;
-        if (part == "SG") {
-          if (data["SG"].length>1) {
-            text = "UNK"
-          }
-          alertText += "<br>SG: " + text;
-          for (var key in data["SG"][0]) {
-            if (key != "Result" && key != "Message") {
-              el = document.getElementById('SG_' + key + '_result');
-              text = data["SG"][0][key];
-              if(data["SG"].length>1 && !unique_result(data["SG"])){
-                text = "";
-              }
-              if (el!=null) {
-                el.innerHTML = text;
-                if (text.length > 0){
-                  alertText += "<br>" + key + ": " + text;
+          if (data[part].length>1 && !unique_result(data[part])) { 
+            text = getDefaultResult(part);
+            el.innerHTML = text;
+          };
+          results[part] = text;
+          if (part == "SG") {
+            if (data["SG"].length>1) {
+              text = "UNK"
+            }
+            alertText += "<br>SG: " + text;
+            for (var key in data["SG"][0]) {
+              if (key != "Result" && key != "Message") {
+                el = document.getElementById('SG_' + key + '_result');
+                text = data["SG"][0][key];
+                if(data["SG"].length>1 && !unique_result(data["SG"])){
+                  text = "";
+                }
+                if (el!=null) {
+                  el.innerHTML = text;
+                  if (text.length > 0){
+                    alertText += "<br>" + key + ": " + text;
+                  }
                 }
               }
             }
+          } else if (part != "TNM"){
+            alertText += "<br>" + part + ": " + text;
           }
-        } else if (part != "TNM"){
-          alertText += "<br>" + part + ": " + text;
         }
       }
       var el1  = document.getElementById('TNMwP_result');
