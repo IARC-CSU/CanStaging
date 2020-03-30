@@ -11,7 +11,7 @@ require_relative './Ranges.rb'
 class Meta
   attr_accessor :fields
   def initialize file_name = nil
-    puts file_name
+    # puts file_name if $DEBUG
     @fields = {}
     unless file_name.nil? || !File.exist?(file_name)
       table = CSV.read(file_name, :headers => true, encoding: "UTF-8")

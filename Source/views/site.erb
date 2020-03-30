@@ -13,7 +13,7 @@
     <% if site.png.nil? %> 
       <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
     <% else %>
-      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}'></a>" %> 
+      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
     <% end %>
   <% else %> 
     <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">

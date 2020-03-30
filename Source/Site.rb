@@ -22,7 +22,7 @@ class Site
     @tnm_version = tnm_version
     @css = @default_name.split("_").first.downcase  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
-    puts tnm_version_root_path
+    # puts tnm_version_root_path if !defined?(settings) || $DEBUG
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
     language_root_path = "#{tnm_version_root_path}/#{language}"
     site_root_path = "#{language_root_path}/#{site}" 
@@ -39,11 +39,11 @@ class Site
     pdf_path = "#{tnm_version}/#{language}/#{site}/#{site}.pdf"
     png_path = "#{tnm_version}/#{language}/#{site}/#{site}.png"
 
-    puts pdf_path
+    # puts pdf_path if !defined?(settings) || $DEBUG
     
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{pdf_path}"
       @pdf = "#{SERVER_IMAGES_ROOT_PATH}/#{pdf_path}"
-      puts "Found PDF! : #{@pdf} "
+      puts "Found PDF! : #{@pdf} " if $DEBUG
     end
 
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{png_path}"
@@ -72,15 +72,15 @@ class Site
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
-          print "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
+          print "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}" if $DEBUG
           if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
             variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_path}"
-            puts " - Found"
+            puts " - Found" if $DEBUG
           elsif File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_default_path}"
             variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_default_path}"
-            puts " - Found English"
+            puts " - Found English" if $DEBUG
           else 
-            puts " - Not found"
+            puts " - Not found" if $DEBUG
           end
         end
       end
@@ -119,7 +119,7 @@ class Site
     values["SG"] ||= {}
     values["SGrange"] ||= {}
     
-    # puts values
+    # puts values if $DEBUG
 
     conclusive = true
     error = false

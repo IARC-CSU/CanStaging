@@ -6,6 +6,7 @@ class LookUp
   attr_reader :variables_needed, :variables_generated
 
   def initialize file_name
+    # puts file_name if !defined?(settings) || settings.environment == :development
     unless file_name.nil? || !File.exist?(file_name)
       @table = []
   
@@ -51,7 +52,7 @@ class LookUp
     unless @table.nil?
       keys = values.keys
       # remove keys that have empty fields
-      # puts values if settings.environment == :development
+      # puts values if !defined?(settings) || settings.environment == :development
       keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0)}
       valid_entries = @table.find_all do |row|
         found = true
