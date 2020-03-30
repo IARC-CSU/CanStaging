@@ -1,5 +1,4 @@
 "Solitary","Size","Vascular","Invasion","Visceral","Result","Message"
-"X","X","X","X","X","X",
 "F","F","1","F","F","T1a",
 "1","2","1","F","F","T1a",
 "1","2","2","F","F","T1a",

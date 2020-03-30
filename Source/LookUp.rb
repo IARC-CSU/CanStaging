@@ -6,11 +6,42 @@ class LookUp
   attr_reader :variables_needed, :variables_generated
 
   def initialize file_name
-    # puts file_name
     unless file_name.nil? || !File.exist?(file_name)
-      @table = CSV.read(file_name, :headers => true, encoding: "UTF-8")
-      @variables_needed = @table.first.headers.take_while {|varb| varb != 'Result'}
-      @variables_generated = ['Result'] + @table.first.headers.reverse.take_while {|varb| varb != 'Result'}
+      @table = []
+  
+      # T, N, or M -- assume last letter of file_name is part 
+      part = file_name.split(".")[-2][-1].upcase
+
+      # read csv
+      csv = CSV.read(file_name, :headers => true, encoding: "UTF-8")
+
+      # set up input/output variable mappings
+      @variables_needed = csv.first.headers.take_while {|varb| varb != 'Result'}
+      @variables_generated = ['Result'] + csv.first.headers.reverse.take_while {|varb| varb != 'Result'}
+
+      # add a line of Xs to T, N
+      if ['T','N'].include? part
+        x_row = {'Result'=> part+'X'}
+        @variables_needed.each {|varb| x_row[varb] = 'X'}
+        @table << x_row
+      end
+
+      # convert csv to array of hashes
+      csv.map { |row| @table << row.to_h }
+
+      # find first row with no Xs and threat them as defaults
+      @table.each do |row| 
+        if row.to_h.values.include?("X")
+          # do nothing
+        else
+          # default values found
+          @defaults = row.to_h
+          # ANY is not a valid default and is replaced with blank...
+          @defaults.inject(@defaults) { |h, (k,v)| v == "ANY" ? h[k] = "" : h[k] = v; h }
+          puts "Defaults: #{@defaults}" if DEBUG
+          break
+        end
+      end
     end
   end
 
@@ -35,7 +66,8 @@ class LookUp
         # does it contain don't knows -- we replace them with no's and try again
         if values.values.include?("X") 
           new_values = {}
-          values.each {|key, value| values[key] == "X" ? new_values[key] = "F" : new_values[key] = value}
+          values.each { |key, value| values[key] == "X" ? new_values[key] = @defaults[key] : new_values[key] = value }
+          # values.each { |key, value| values[key] == "X" ? new_values[key] = "" : new_values[key] = value }
           r_temp = look_up(new_values)
           return r_temp
         else

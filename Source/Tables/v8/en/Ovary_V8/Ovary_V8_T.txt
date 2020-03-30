@@ -1,5 +1,4 @@
 "Side","Status","Ascites","Extrapelvic","Retroperitoneal","Result","Message"
-"X","X","X","X","X","TX",
 "1","1","1","1","F","T1a",
 "2","1","1","1","F","T1b",
 "ANY","2","1","1","F","T1c1",
