@@ -16,6 +16,9 @@ config = YAML.load_file("config.yml")
 
 set :server, %w[thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] == 'production')
+
+$DEBUG = settings.environment == :production ? false : true
+
 set :bind, config['system']['bind']
 set :port, config['system']['port']
 

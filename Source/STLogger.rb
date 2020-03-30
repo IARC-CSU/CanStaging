@@ -16,7 +16,7 @@ class STLogger
   end
 
   def log(key, tumour_id, tnm_version, site, input, result, ip_address)
-    puts tumour_id
+    # puts tumour_id if $DEBUG
     
     # if the user does not specify tumour ID we keep everything
     if (tumour_id == nil || tumour_id.length == 0) 
