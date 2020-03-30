@@ -73,7 +73,7 @@
                  </td>
                 <% when :number %>
                 <td>
-                  <input name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
+                  <input class = "number" name=<%= "\"data[#{part}[#{field.name}-number]]\"" %> type="number" step = <%= field.ranges.float? ? 0.1 : 1 %> min = <%= field.ranges.min_min %> max = <%= field.ranges.max_max %> title=<%= "\"#{field.ranges}\"" %> onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"/>
                   </td>
                 <% when :output %>
                     <td class = "result" id = "<%= part + '_' + field.name %>_result"></td>
