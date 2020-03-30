@@ -1,4 +1,5 @@
 "Pathologic","Posttherapy","Size","ChestInvasion","Ulceration","Inflammation","Result","Message"
+"F","F","1","F","F","F","T0",
 "ANY","ANY","1","F","F","F","T0",
 "ANY","ANY","2","F","F","F","T1a",
 "ANY","ANY","3","F","F","F","T1b",
