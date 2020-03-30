@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"p","Pathological"
+"c","Clinical"

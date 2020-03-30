@@ -2,3 +2,5 @@
 "T","generated","T","1",
 "N","generated","N","1",
 "M","generated","M","1",
+"Morphology","Dictionary","Morphology","2",
+"Tests","Dictionary","Pathological/clinical","3",
