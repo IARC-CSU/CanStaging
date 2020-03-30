@@ -15,6 +15,11 @@ table {
 	border:1px solid #000;
 }
 
+thead {
+	border:0px solid #000;
+	background-color: lightgrey;
+}
+
 tr {
 	font-size:1em;
 	text-align:left;
@@ -24,14 +29,23 @@ tr {
 	border:1px solid #000;
 }
 
+td,
+th {
+  text-align: left;
+  width:50%;
+}
+
+.number,
+select {
+    max-width: 85%;
+    min-width: 85%;
+    width: 85% !important;	
+}
+
 .big {
 	width: 100%;
 }
 
-thead {
-	border:0px solid #000;
-	background-color: lightgrey;
-}
 
 .by {
 	font-size: 0.9em;
