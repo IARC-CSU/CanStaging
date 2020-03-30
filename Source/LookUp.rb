@@ -9,7 +9,7 @@ class LookUp
     unless file_name.nil? || !File.exist?(file_name)
       @table = []
   
-      # T, N, or M -- assume last letter of file_name is part 
+      # assume last letter of file_name is part 
       part = file_name.split(".")[-2][-1].upcase
 
       # read csv
@@ -38,7 +38,7 @@ class LookUp
           @defaults = row.to_h
           # ANY is not a valid default and is replaced with blank...
           @defaults.inject(@defaults) { |h, (k,v)| v == "ANY" ? h[k] = "" : h[k] = v; h }
-          puts "Defaults: #{@defaults}" # if DEBUG
+          # puts "Defaults: #{@defaults}" # if DEBUG
           break
         end
       end
