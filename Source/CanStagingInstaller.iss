@@ -23,7 +23,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir={#CanStagingDir}\dist
-OutputBaseFilename=CanStaging-setup
+OutputBaseFilename=CanStaging-{#MyAppVersion}-setup
 Compression=lzma
 SolidCompression=yes
 

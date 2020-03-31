@@ -2,7 +2,6 @@ echo off
 
 REM Build executable
 REM ocra --gem-full --gemfile Gemfile WebService.rb views/* public/*
-REM ocra --no-lzma --gem-full --gemfile Gemfile WebService.rb views/* public/*
 
 REM Build installer
 set isxpath="C:\Program Files (x86)\Inno Setup 5"
@@ -14,5 +13,5 @@ set zx=%zippath%\7z.exe
 REM if not exist %isx% set errormsg=%isx% not found && goto errorhandler
 %isx% "%iwz%"
 cd dist
-%zx% a -tzip CanStaging-Setup.zip CanStaging-Setup.exe
+%zx% a -tzip CanStaging-Setup.zip *.exe
 cd ..
