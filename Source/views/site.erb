@@ -61,7 +61,7 @@
                 <td>
                     <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
                       <% unless part == "M" %>
-                      <option value='' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
+                      <option value='X' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
                       <% end %>
                       <% field.dictionary.table.each do |key, value| %>
                         <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
