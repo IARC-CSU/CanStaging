@@ -9,6 +9,8 @@ class KeyManager
   def initialize
     if File.exist? KEYFILENAME
       load_users
+    else
+      # add defaults?      
     end
   end
   def load_users
@@ -21,16 +23,8 @@ class KeyManager
     @@users[new_user.key] = new_user
     new_user
   end
-  def need_authentication?
-    # If we have no keyfile -- let in anyone
-    return !@@users.empty?
-  end
   def valid_key?(key)
-    if need_authentication?
-      return !get_user(key).nil?
-    else
-      return true
-    end
+    !get_user(key).nil?
   end
   def get_user(key)
     # @@users.keys.include?(key)
