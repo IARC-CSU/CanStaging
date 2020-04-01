@@ -15,7 +15,7 @@ service:
   upload_failed: "Upload failed."
   unknown_site: "Unknown site: %1"
   logged_out: "Logged out."
-  looged_in: "Logged in."
+  logged_in: "Logged in."
 
 layout:
   title: "CanStaging -- the Cancer Staging Tool"
