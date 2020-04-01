@@ -1,6 +1,0 @@
-key	username	email	role
-xyz	anyone	ervikm@iarc.fr	user
-123	test	ervikm@iarc.fr	user
-3AMAGFcdisyE1nVo	morten	ervikm@iarc.fr	admin
-GZGJezngU8qrXwEO	giulio	g.napolitano@qub.ac.uk	admin
-

@@ -5,7 +5,7 @@ require 'sequel'
 require 'csv'
 
 class STLogger
-  DB_FILE_NAME = './logg.db'
+  DB_FILE_NAME = './data/logg.db'
   def initialize(db_file_name = DB_FILE_NAME)
     puts db_file_name
     @db = Sequel.sqlite(db_file_name)

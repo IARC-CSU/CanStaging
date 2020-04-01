@@ -3,11 +3,13 @@
 require 'csv'
 
 class KeyManager
-  KEYFILENAME="keyfile.txt"
+  KEYFILENAME="./data/keyfile.txt"
   @@users = {}
   ROLES = ['user', 'admin']
   def initialize
-    load_users
+    if File.exist? KEYFILENAME
+      load_users
+    end
   end
   def load_users
     CSV.foreach(KEYFILENAME, {col_sep: "\t", headers: true }) do |row|
@@ -19,8 +21,16 @@ class KeyManager
     @@users[new_user.key] = new_user
     new_user
   end
+  def need_authentication?
+    # If we have no keyfile -- let in anyone
+    return !@@users.empty?
+  end
   def valid_key?(key)
-    !get_user(key).nil?
+    if need_authentication?
+      return !get_user(key).nil?
+    else
+      return true
+    end
   end
   def get_user(key)
     # @@users.keys.include?(key)
