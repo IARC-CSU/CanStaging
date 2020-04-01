@@ -96,7 +96,7 @@ end
 
 post '/tnm_submit' do 
   result = calculate_tnm(params)
-  $st_logger.log(session[:key], params["tumour_id"], session[:tnm_version], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
+  $st_logger.log(session[:key], params["tumour_id"], params["tnm_version"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
   # puts JSON.pretty_generate(result) if settings.environment == :development
   return JSON.pretty_generate(result)
 end
@@ -230,7 +230,11 @@ end
 
 def calculate_tnm params
   site_name = params["site"].downcase.strip.to_sym unless params["site"].nil?
-  site = $sites[session[:tnm_version]][session[:sites_locale]][site_name] unless !$sites[session[:tnm_version]][session[:sites_locale]].keys.include?(site_name)
+
+  # TNM Version is pulled from the parameters or the session if unavailable
+  tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
+
+  site = $sites[tnm_version][session[:sites_locale]][site_name] unless !$sites[tnm_version][session[:sites_locale]].keys.include?(site_name)
   if site.nil?
     return {"Error"=> R18n.t.service.unknown_site(params["site"])}.to_json
   else
