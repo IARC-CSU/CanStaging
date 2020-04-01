@@ -11,8 +11,10 @@ require 'tilt/erb'
 require_relative './Site.rb'
 require_relative './KeyManager.rb'
 require_relative './STLogger.rb'
-## fix before upgrading to newer version of Ruby
-require 'backports/2.4.0/hash/transform_values'
+## fix before upgrading to newer version of Ruby (2.4+)
+unless defined?({}.transform_values)
+  require 'backports/2.4.0/hash/transform_values'
+end
 
 config = YAML.load_file("config.yml")
 
