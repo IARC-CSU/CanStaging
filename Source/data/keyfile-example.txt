@@ -1,0 +1,2 @@
+key	username	email	role
+xyz	anyone	something@iarc.fr	user
