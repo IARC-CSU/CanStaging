@@ -1,7 +1,7 @@
 echo off 
 
 REM Build executable
-REM ocra --gem-full WebService.rb views/* public/*
+REM ocra --icon gfx\logo.ico --gemfile Gemfile WebService.rb views/* public/*
 
 REM Build installer
 set isxpath="C:\Program Files (x86)\Inno Setup 5"
