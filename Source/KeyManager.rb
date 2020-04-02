@@ -10,7 +10,9 @@ class KeyManager
     if File.exist? KEYFILENAME
       load_users
     else
-      # add defaults?      
+      # add defaults
+      key = 'xyz'
+      @@users[key] = User.new("Default", "NA", "user", key)
     end
   end
   def load_users
