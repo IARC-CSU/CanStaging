@@ -75,6 +75,17 @@ select {
 a:hover { text-decoration:underline; }
 a:visited { color:#000000;}*/
 
+div.image {
+    position: absolute;
+    background: #ffffff;
+    border: solid 1px #eee;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    text-align: left;
+    background: white;
+    padding: 10px ;
+    pointer-events: none;
+}
+
 form a {
 	font-size: 0.8em;
 }

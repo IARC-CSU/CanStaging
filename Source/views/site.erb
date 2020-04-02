@@ -8,7 +8,7 @@
 
   <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
 
-  <!-- For now we either have a PDF or a form... -->
+  <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
     <% if site.png.nil? %> 
       <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
@@ -18,7 +18,7 @@
   <% else %> 
     <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
       <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
-      <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
+      <input name="tnm_version" value="<%= site.tnm_version %>" hidden = true type = "hidden">
       <table class="table" id = <%= "\"#{site.css}_form\"" %> >
         <thead>
         <tr id = "identification">
@@ -46,7 +46,7 @@
                 <% if field.image.nil? %>
                   <%= field.display_text %>
                 <% else %>
-                  <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %> </span></div>
+                  <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %></span></div>
                 <% end %>
                     
                 </td>

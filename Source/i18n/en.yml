@@ -15,7 +15,7 @@ service:
   upload_failed: "Upload failed."
   unknown_site: "Unknown site: %1"
   logged_out: "Logged out."
-  looged_in: "Logged in."
+  logged_in: "Logged in."
 
 layout:
   title: "CanStaging -- the Cancer Staging Tool"
@@ -38,6 +38,7 @@ home:
   by: "By" 
   and: "and" 
   welcome: "Welcome to CanStaging, a Cancer Staging Tool, provided to you thanks to a NICR, IARC, and UICC collaboration. The tool will help maximise the availability, standardisation and comparability of cancer staging internationally."
+  endorsed_by: "Endorsed by"
 
 get_log:
   tumour_ID: "Tumour ID"
@@ -55,7 +56,7 @@ get_log:
   sg_range: "SG Range"
   site_specific: "Site Specific"
   clear_log: "Clear log"
-  download_log: "Download log"
+  download_log: "Download detailed log"
 
 site:
   please_choose: "Please Choose"

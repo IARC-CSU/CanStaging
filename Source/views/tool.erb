@@ -5,9 +5,9 @@
 <hr width="75%" />
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
-<h4>​Sites [<%= sites.first.tnm_version unless sites.empty? %>]</h4>
+<h4>​Sites [<%= session[:tnm_version]  %>]</h4>
 
-<%= R18n.t[:home][:no_sites_translated] if sites.empty? %>
+<%= R18n.t[:home][:no_sites_translated] if sites.nil? || sites.empty? %>
 
 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
   <% sites.each do |site| %>
@@ -17,7 +17,7 @@
 
 <hr width="75%" />
 
-<p id="endorsed">Endorsed by:</p>
+<p id="endorsed"><%= R18n.t[:home][:endorsed_by] %>:</p>
 <div class="row">
   <div class="col" align = "center">
     <a href= "http://www.qub.ac.uk/research-centres/nicr/"><img src="./media/NICR.gif" width="120" title="NICR" /></a>

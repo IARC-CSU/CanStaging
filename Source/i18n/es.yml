@@ -52,7 +52,7 @@ get_log:
   sg_range: "SG Intervalo"
   site_specific: "Localización Específica"
   clear_log: "Borrar registro" 
-  download_log: "Descarga registro"
+  download_log: "Descarga registro (detailed)"
 
 site:
   please_choose: " Por favor elija"
