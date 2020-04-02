@@ -3,11 +3,14 @@
 ## Logger
 require 'sequel'
 require 'csv'
+require 'fileutils'
 
 class STLogger
   DB_FILE_NAME = './data/logg.db' # overridden by config.yml
   def initialize(db_file_name = DB_FILE_NAME)
-    puts db_file_name
+    unless File.directory?(DB_FILE_NAME)
+      FileUtils.mkdir_p(DB_FILE_NAME)
+    end
     @db = Sequel.sqlite(db_file_name)
     create_tables
     @entries_table = @db[:entries]
