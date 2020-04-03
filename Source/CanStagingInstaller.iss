@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CanStaging"
-#define MyAppVersion "0.5.1"
+#define MyAppVersion "0.5.3"
 #define MyAppPublisher "IARC"
 #define MyAppURL "http://canstaging.iarc.fr"
 #define MyAppExeName "launch.bat"
@@ -23,7 +23,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir={#CanStagingDir}\dist
-OutputBaseFilename=CanStaging-setup
+OutputBaseFilename=CanStaging-{#MyAppVersion}-setup
 Compression=lzma
 SolidCompression=yes
 
@@ -42,10 +42,9 @@ Source: "{#CanStagingDir}\launch.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\i18n\*"; DestDir: "{app}\i18n"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\public\gfx\*"; DestDir: "{app}\public\gfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#CanStagingDir}\config.yml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\keyfile.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\launch.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\WebService.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#CanStagingDir}\data\config.yml"; DestDir: "{app}\data"; Flags: ignoreversion
+Source: "{#CanStagingDir}\loader.html"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#CanStagingDir}\CanStaging.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
