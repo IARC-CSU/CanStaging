@@ -193,6 +193,7 @@ post '/login/attempt' do
   if !user.nil?
     session[:key] = params['key']
     session[:user] = user
+    session[:local] = (request.ip.to_s == "127.0.0.1")
     $st_logger.log_access(session[:key], request.ip.to_s)
     where_user_came_from = session[:previous_url] || '/tool'
     session[:message] = R18n.t.service.logged_in
@@ -207,6 +208,15 @@ get '/logout' do
   session.delete(:key)
   session[:message] = R18n.t.service.logged_out
   redirect to('/tool')
+end
+
+get '/shutdown' do 
+  if session[:local] 
+    Sinatra::Application.quit!
+  else
+    ## this should never happen
+    redirect to('/tool')
+  end
 end
 
 get '/' do

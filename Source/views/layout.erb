@@ -103,7 +103,10 @@
                       (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:user].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] :  R18n.t[:layout][:user] %>)
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="/logout"><%= R18n.t[:layout][:log_out] %></a>
+                  <a class="dropdown-item" href="/logout"><%= R18n.t[:layout][:log_out] %></a>
+                  <% if session[:local] %>
+                    <a class="dropdown-item" href="/shutdown"><%= R18n.t[:layout][:shutdown] %></a>
+                  <% end %>
                 </div>
               </li>
             </ul>
