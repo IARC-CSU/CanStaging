@@ -214,7 +214,7 @@ get '/shutdown' do
   if config['system']['standalone'] && session[:local] 
     Sinatra::Application.quit!
   else
-    session[:message] = R18n.t.service.invalid_url
+    session[:error] = R18n.t.service.invalid_url
     redirect to('/tool')
   end
 end
