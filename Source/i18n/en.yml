@@ -16,6 +16,7 @@ service:
   unknown_site: "Unknown site: %1"
   logged_out: "Logged out."
   logged_in: "Logged in."
+  invalid_url: "Invalid URL."
 
 layout:
   title: "CanStaging -- the Cancer Staging Tool"
@@ -33,6 +34,7 @@ layout:
   language_select: "Language select"
   tnm_version: "TNM version"
   no_sites_translated: "No sites translated to this language yet."
+  shutdown: "Shutdown"
 
 home:
   by: "By" 
