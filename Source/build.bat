@@ -1,7 +1,10 @@
 echo off 
 
 REM Build executable
-REM ocra --icon gfx\logo.ico --gemfile Gemfile WebService.rb views/* public/*
+REM create_exe.bat
+
+REM Delete old stuff
+rm dist\*.*
 
 REM Build installer
 set isxpath="C:\Program Files (x86)\Inno Setup 5"
