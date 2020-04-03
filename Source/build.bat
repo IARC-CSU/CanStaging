@@ -16,5 +16,5 @@ set zx=%zippath%\7z.exe
 REM if not exist %isx% set errormsg=%isx% not found && goto errorhandler
 %isx% "%iwz%"
 cd dist
-%zx% a -tzip CanStaging-Setup.zip CanStaging-Setup.exe
+%zx% a -tzip CanStaging-Setup.zip *.exe
 cd ..
