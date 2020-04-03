@@ -1,3 +1,11 @@
+<link rel="stylesheet" href="/css/default.css" type="text/css">
+
+<h1>CanStaging</h1>
+<p class="by"><%= R18n.t[:home][:by] %> Morten Ervik (IARC/CSU), Giulio Napolitano (NICR), Kenneth Yeung (NICR), James Brierley (TNM Core Group, UICC), Colin Fox (NICR), <%= R18n.t[:home][:and] %> Lisa Ranaghan (NICR)</p>
+<hr width="75%" />
+<p class="welcome"><%= R18n.t[:home][:welcome] %></p>
+<hr width="75%" />
+
 <form action='/login/attempt' method='post' class="form-inline well">
   <input type="password" name='key' placeholder="key" autofocus>
   <input class="btn primary" type='submit' value='log in'>
