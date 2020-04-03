@@ -15,13 +15,26 @@ require_relative './STLogger.rb'
 unless defined?({}.transform_values)
   require 'backports/2.4.0/hash/transform_values'
 end
+require 'fileutils'
 
-config = YAML.load_file("config.yml")
+# first load default config
+config = YAML.load_file("./data/config.yml")
+
+# if we are running in standalone mode load config from user folder
+if config['system']['standalone']
+  puts "Standalone mode"
+  # first create necessary directory
+  home_dir = "#{Dir.home}/.canstaging"
+  unless File.directory?(home_dir)
+    FileUtils.mkdir_p(home_dir)
+  end
+  config['system']['log_file'] = "#{home_dir}/logg.db"
+end
 
 set :server, %w[thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] == 'production')
 
-$DEBUG = settings.environment == :production ? false : true
+$DEBUG = (settings.environment == :development)
 
 set :bind, config['system']['bind']
 set :port, config['system']['port']
