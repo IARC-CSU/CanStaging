@@ -211,7 +211,7 @@ get '/logout' do
 end
 
 get '/shutdown' do 
-  if session[:local] 
+  if config['system']['standalone'] && session[:local] 
     Sinatra::Application.quit!
   else
     ## this should never happen
