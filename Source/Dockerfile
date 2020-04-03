@@ -2,7 +2,7 @@ FROM ruby:2.5
 LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
 EXPOSE 80
 
-RUN apt-get update -qq && apt-get install -y build-essential
+RUN apt-get update -qq && apt-get install -y build-essential nano
 
 ENV APP_HOME /app
 RUN mkdir $APP_HOME
