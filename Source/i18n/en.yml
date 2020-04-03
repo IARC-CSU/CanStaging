@@ -16,6 +16,7 @@ service:
   unknown_site: "Unknown site: %1"
   logged_out: "Logged out."
   logged_in: "Logged in."
+  invalid_url: "Invalid URL."
 
 layout:
   title: "CanStaging -- the Cancer Staging Tool"
