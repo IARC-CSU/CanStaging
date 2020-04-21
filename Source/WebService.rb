@@ -251,7 +251,6 @@ not_found do
   erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
-
 ## Helper functions
 
 def calculate_tnm params

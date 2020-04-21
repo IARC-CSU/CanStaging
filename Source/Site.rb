@@ -131,7 +131,7 @@ class Site
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
           error = true
-          result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:no_possible_combination] }]
+          result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:invalid_combination] }]
           tnm_message_parts << R18n.t.site.no_such_combination(part)
         elsif result[part].length>1
           tnm_result += "#{get_default_result(part)}" 

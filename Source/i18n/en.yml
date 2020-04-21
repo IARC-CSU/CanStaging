@@ -65,6 +65,7 @@ site:
   no_data: "No data"
   no_such_combination: "No such combination for %1..."
   no_possible_combination: "No possible combination."
+  invalid_combination: "Invalid combination."
   many_possible: "Many possible."
   one_of_many_possible: "One of many possible %1s..."
   reset: "Reset"
