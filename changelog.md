@@ -1,10 +1,11 @@
 # Changelog CanStaging
 
-## Upcoming
+## 0.5.4 (2020-04-21)
 
+- 'Invalid combination instead of ERROR'
 - Improved password page (WIP)
 
-## 0.5.2 (April 2020)
+## 0.5.2 (2020-04-03)
 
 - Regrouped Oesophagus into one table.
 - Defaults read from first entry in table without Xs
@@ -25,16 +26,16 @@
 - Fixed error when deploying due to difference in Ruby version.
 - Other bug fixes.
 
-## 0.4.0 (March 2020)
+## 0.4.0 (2020-03-30)
 
 - Images and PDFs for Essential TNM added.
 
-## 0.3.0 (March 2020)
+## 0.3.0 (2020-03-12)
 
 - Handle "don't knows".
 - TNM version explicit on the site selection screen and forms.
 - Prepared tables for Xs for missing data.
 
-## 0.2.0 (February 2020)
+## 0.2.0 (2020-02-03)
 
 - Images added for Stomach, Liver, Oesophagus, Pancreas, Colorectal and Ovary.
