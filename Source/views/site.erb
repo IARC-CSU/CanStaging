@@ -246,7 +246,11 @@
         var el = document.getElementById(part+'_result');
         if (el != null) {
           var text = data[part][0]["Result"];
-          el.innerHTML = text;
+          if (text == "ERROR") {
+            el.innerHTML = data[part][0]["Message"]
+          } else {
+            el.innerHTML = text;
+          }
           if (data[part].length>1 && !unique_result(data[part])) { 
             text = getDefaultResult(part);
             el.innerHTML = text;

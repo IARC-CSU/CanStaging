@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+    /* https://www.w3schools.com/howto/howto_css_loader.asp */
     /* Center the loader */
     #loader {
       position: absolute;
@@ -82,6 +83,7 @@
         {
             ifOffline && ifOffline.constructor == Function && ifOffline();
         };
+        // https://stackoverflow.com/questions/126772/how-to-force-a-web-browser-not-to-cache-images
         img.src = "http://localhost/media/ping.gif?"+performance.now();        
     }
 
@@ -94,7 +96,7 @@
         function ()
         {
             //  server offline code here
-            setTimeout(check, 1000);
+            setTimeout(check, 1000); // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
         });
 
     }
