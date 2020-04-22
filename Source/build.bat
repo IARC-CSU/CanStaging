@@ -23,7 +23,7 @@ REM make zip file
 %zx% a -tzip CanStaging.zip CanStaging.exe
 %zx% a -tzip CanStaging.zip launch.bat
 %zx% a -tzip CanStaging.zip loader.html
-%zx% a -tzip CanStaging.zip data
+%zx% a "-xr!logg.db" -tzip CanStaging.zip data
 %zx% a -tzip CanStaging.zip i18n
 %zx% a -tzip CanStaging.zip public
 %zx% a -tzip CanStaging.zip Tables
