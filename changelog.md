@@ -1,5 +1,9 @@
 # Changelog CanStaging
 
+## 0.5.5 (2020-04-27)
+
+- Fixed bug where server didn't launch in stand alone mode if home dir was not accessible...
+
 ## 0.5.4 (2020-04-21)
 
 - 'Invalid combination instead of ERROR'
