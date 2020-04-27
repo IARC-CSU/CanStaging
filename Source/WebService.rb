@@ -18,23 +18,40 @@ end
 require 'fileutils'
 
 # first load default config
+
+config_default = {  'system' => {'log_file' => "./data/logg.db" }}
+
 config = YAML.load_file("./data/config.yml")
 
 # if we are running in standalone mode load config from user folder
 if config['system']['standalone']
   puts "Standalone mode"
-  # first create necessary directory
-  home_dir = "#{Dir.home}/.canstaging"
-  unless File.directory?(home_dir)
-    FileUtils.mkdir_p(home_dir)
+  # Check if we haven't overridden the config and home dir exist
+  if config['system']['log_file'].nil? 
+
+    if File.directory?(Dir.home)
+      # first create necessary directory
+      home_dir = "#{Dir.home}/.canstaging"
+      unless File.directory?(home_dir)
+        FileUtils.mkdir_p(home_dir)
+      end
+      config['system']['log_file'] = "#{home_dir}/logg.db"
+    else
+      puts "Invalid home directory: #{Dir.home} -- defaulting to #{config_default['system']['log_file']}"
+      config['system']['log_file'] = config_default['system']['log_file']
+    end
   end
-  config['system']['log_file'] = "#{home_dir}/logg.db"
 end
 
+## Merge config overwriting anything in default config...
+config = config_default.merge(config)
+
 set :server, %w[thin mongrel webrick]
-set :environment, :production if (config['system']['environment'] == 'production')
+set :environment, :production if (config['system']['environment'] != 'development')
 
 $DEBUG = (settings.environment == :development)
+
+puts config if $DEBUG
 
 set :bind, config['system']['bind']
 set :port, config['system']['port']

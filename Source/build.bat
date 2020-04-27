@@ -1,7 +1,10 @@
 echo off 
 
+REM Build changelog html
+python -m markdown ..\changelog.md > public\changelog.html
+
 REM Build executable
-REM create_exe.bat
+create_exe.bat
 
 REM Delete old stuff
 rm dist\*.*
@@ -27,4 +30,5 @@ REM make zip file
 %zx% a -tzip CanStaging.zip i18n
 %zx% a -tzip CanStaging.zip public
 %zx% a -tzip CanStaging.zip Tables
+%zx% a -tzip CanStaging.zip ..\changelog.md
 move CanStaging.zip dist
