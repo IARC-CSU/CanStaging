@@ -1,10 +1,7 @@
 echo off 
 
-REM Build changelog html
-python -m markdown ..\changelog.md > public\changelog.html
-
 REM Build executable
-create_exe.bat
+REM create_exe.bat
 
 REM Delete old stuff
 rm dist\*.*
