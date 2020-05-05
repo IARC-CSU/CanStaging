@@ -1,5 +1,10 @@
 # Changelog CanStaging
 
+## 0.5.7 (2020-05-05)
+
+- Installer generator automatically signs installer.
+- Generate changelog.html automatically in build script.
+
 ## 0.5.5 (2020-04-27)
 
 - Fixed bug where server didn't launch in stand alone mode if home dir was not accessible...
