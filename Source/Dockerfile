@@ -10,7 +10,7 @@ WORKDIR $APP_HOME
 
 ADD Gemfile* $APP_HOME/
 RUN gem install bundler
-RUN bundle config set without 'development test'
+# RUN bundle config set without 'development test'
 RUN bundle install
 
 ADD . $APP_HOME
