@@ -16,4 +16,5 @@ RUN bundle install
 ADD . $APP_HOME
 
 # CMD ["ruby","WebService.rb"]
+# Make sure we load ruby with the gems specified in the Gemfile...
 CMD ["bundle", "exec", "ruby", "WebService.rb"]
