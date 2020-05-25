@@ -2,6 +2,8 @@
 
 $:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
 
+require "bundler/setup" # to make sure we load the versions from the gemfile
+
 require 'sinatra'
 require 'json'
 require 'yaml'
