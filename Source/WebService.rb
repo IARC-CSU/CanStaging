@@ -160,6 +160,11 @@ get '/tool' do
   erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
 end
 
+get '/about' do 
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
 get '/refresh' do
   error 401, "Not admin..." unless $key_manager.admin_key? session[:key]
   load_sites
