@@ -15,4 +15,5 @@ RUN bundle install
 
 ADD . $APP_HOME
 
-CMD ["ruby","WebService.rb"]
+# CMD ["ruby","WebService.rb"]
+CMD ["bundle", "exec", "ruby", "WebService.rb"]
