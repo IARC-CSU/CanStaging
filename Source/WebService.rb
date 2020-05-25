@@ -16,6 +16,7 @@ unless defined?({}.transform_values)
   require 'backports/2.4.0/hash/transform_values'
 end
 require 'fileutils'
+require 'rdiscount'
 
 # first load default config
 
@@ -163,6 +164,12 @@ end
 get '/about' do 
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
+get '/changelog' do
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  markdown = RDiscount.new(open('./changelog.md').read)
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
 end
 
 get '/refresh' do
