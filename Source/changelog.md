@@ -1,5 +1,9 @@
 # Changelog CanStaging
 
+## 0.5.9 (2020-05-25)
+
+- Changelog is now dynamically read by the tool.
+
 ## 0.5.8 (2020-05-25)
 
 - Added images for Prostate and Cervix.
