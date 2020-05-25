@@ -1,5 +1,10 @@
 # Changelog CanStaging
 
+## 0.5.8 (2020-05-25)
+
+- Added images for Prostate and Cervix.
+- About moved to a page instead of pop-up.
+
 ## 0.5.7 (2020-05-05)
 
 - Installer generator automatically signs installer.
