@@ -1,4 +1,4 @@
-FROM ruby:2.7
+FROM ruby:2.6
 LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
 EXPOSE 80
 
