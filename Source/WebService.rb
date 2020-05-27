@@ -49,7 +49,7 @@ end
 ## Merge config overwriting anything in default config...
 config = config_default.merge(config)
 
-set :server, %w[thin mongrel webrick]
+set :server, %w[puma thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] != 'development')
 
 $DEBUG = (settings.environment == :development)
