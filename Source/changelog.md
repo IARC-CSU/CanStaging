@@ -1,5 +1,13 @@
 # Changelog CanStaging
 
+## 0.6.0 (2020-05-27)
+
+- Ruby changed from 2.4 to 2.6.
+- Web server changed from Thin to Puma.
+- All gems are the latest version.
+- Lung images added.
+- Oesophagus images updated.
+
 ## 0.5.9 (2020-05-25)
 
 - Changelog is now dynamically read by the tool.
