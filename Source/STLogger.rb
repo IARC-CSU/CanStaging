@@ -12,7 +12,7 @@ class STLogger
     unless File.directory?(dirname)
       FileUtils.mkdir_p(dirname)
     end
-    @db = Sequel.sqlite(db_file_name)
+    @db = Sequel.amalgalite(db_file_name)
     create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]

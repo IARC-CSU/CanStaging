@@ -2,6 +2,8 @@
 
 $:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
 
+require "bundler/setup" # to make sure we load the versions from the gemfile
+
 require 'sinatra'
 require 'json'
 require 'yaml'
@@ -16,6 +18,7 @@ unless defined?({}.transform_values)
   require 'backports/2.4.0/hash/transform_values'
 end
 require 'fileutils'
+require 'rdiscount'
 
 # first load default config
 
@@ -46,7 +49,7 @@ end
 ## Merge config overwriting anything in default config...
 config = config_default.merge(config)
 
-set :server, %w[thin mongrel webrick]
+set :server, %w[puma thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] != 'development')
 
 $DEBUG = (settings.environment == :development)
@@ -158,6 +161,17 @@ end
 get '/tool' do 
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
+get '/about' do 
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
+get '/changelog' do
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  markdown = RDiscount.new(open('./changelog.md').read)
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
 end
 
 get '/refresh' do

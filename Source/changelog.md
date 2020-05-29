@@ -1,5 +1,26 @@
 # Changelog CanStaging
 
+## 0.6.1 (2020-05-29)
+
+- Changed to the amalgalite gem for sqlite access. 
+
+## 0.6.0 (2020-05-27)
+
+- Ruby changed from 2.4 to 2.6.
+- Web server changed from Thin to Puma.
+- All gems are the latest version.
+- Lung images added.
+- Oesophagus images updated.
+
+## 0.5.9 (2020-05-25)
+
+- Changelog is now dynamically read by the tool.
+
+## 0.5.8 (2020-05-25)
+
+- Added images for Prostate and Cervix.
+- About moved to a page instead of pop-up.
+
 ## 0.5.7 (2020-05-05)
 
 - Installer generator automatically signs installer.

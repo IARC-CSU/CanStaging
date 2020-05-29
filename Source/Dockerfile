@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.6
 LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
 EXPOSE 80
 
@@ -9,8 +9,12 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 ADD Gemfile* $APP_HOME/
-RUN bundle install --without development test
+RUN gem install bundler
+# RUN bundle config set without 'development test'
+RUN bundle install
 
 ADD . $APP_HOME
 
-CMD ["ruby","WebService.rb"]
+# CMD ["ruby","WebService.rb"]
+# Make sure we load ruby with the gems specified in the Gemfile...
+CMD ["bundle", "exec", "ruby", "WebService.rb"]
