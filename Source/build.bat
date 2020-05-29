@@ -27,5 +27,5 @@ REM make zip file
 %zx% a -tzip CanStaging.zip i18n
 %zx% a -tzip CanStaging.zip public
 %zx% a -tzip CanStaging.zip Tables
-%zx% a -tzip CanStaging.zip ..\changelog.md
+%zx% a -tzip CanStaging.zip changelog.md
 move CanStaging.zip dist
