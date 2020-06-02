@@ -1,0 +1,469 @@
+/* 
+Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0 
+Background: http://philbit.com/svgpatterns
+TODO: Align palette with this: https://gco.iarc.fr/api/globocan/v1/2018/meta/cancers/all/
+
+sass .\views\stylesheets\default.scss > .\public\css\default.css
+*/
+
+$breast_color: #C74C69;
+// $colon_color: #FFD803;
+$colon_color: #60A561;
+$prostate_color: #34A76E;
+$cervix_color: #FF7500;
+$lung_color: #1E90FF;
+$oesophagus_color: #DC1341;
+$stomach_color: #4682B4;
+$liver_color: #F3A654;
+$pancreas_color: lighten(#940009,20%);
+$ovary_color: lighten(#8C07C2,15%);
+
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border:1px solid #000;
+}
+
+thead {
+	border:0px solid #000;
+	background-color: lightgrey;
+}
+
+tr {
+	font-size:1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	/*opacity: 0.8;*/
+	border:1px solid #000;
+}
+
+td,
+th {
+  text-align: left;
+  width:50%;
+}
+
+.number,
+select {
+    max-width: 85%;
+    min-width: 85%;
+    width: 85% !important;	
+}
+
+.big {
+	width: 100%;
+}
+
+
+.by {
+	font-size: 0.9em;
+}
+
+.disclaimer {
+	font-family: serif;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+#endorsed {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#about {
+	font-family: serif;
+}
+
+#about h1 {
+	font-size: 1em;
+	text-decoration: underline;
+	text-align: center;
+}
+/*a { text-decoration:none }
+a:hover { text-decoration:underline; }
+a:visited { color:#000000;}*/
+
+div.image {
+    position: absolute;
+    background: #ffffff;
+    border: solid 1px #eee;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    text-align: left;
+    background: white;
+    padding: 10px ;
+    pointer-events: none;
+}
+
+form a {
+	font-size: 0.8em;
+}
+
+#log-table td {
+	border:1px solid grey;
+}
+
+#tool {
+	background-color:#4275A3;
+	color:#ffffff;
+	border:1px solid #000000;
+}
+
+/* Breast site*/
+
+#breast_form td, #breast_form th {
+	font-size:1em;
+	border:1px solid $breast_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#breast_form th, #breast_form td.result, #breast_form td.result_label{
+	background-color: lighten($breast_color, 10%);
+	color: #ffffff;
+}
+
+#breast_group_0 { 
+	color:#000000;
+	background-color: lighten($breast_color, 15%);
+}
+#breast_group_1 { 
+	color:#000000;
+	background-color: lighten($breast_color, 20%);
+}
+#breast_group_2 { 
+	color:#000000;
+	background-color: lighten($breast_color, 25%);
+}
+
+#breast_group_3 { 
+	color:#000000;
+	background-color: lighten($breast_color, 30%);
+}
+
+#breast_group_4 { 
+	color:#000000;
+	background-color: lighten($breast_color, 35%);
+}
+
+#breast_group_5 { 
+	color:#000000;
+	background-color: lighten($breast_color, 40%);
+}
+
+/* Colorectal site*/
+
+#colorectal_form td, #colorectal_form th {
+	font-size:1em;
+	border:1px solid $colon_color;
+	padding:3px 7px 2px 7px;
+}
+
+#colorectal_form th, #colorectal_form td.result, #colorectal_form td.result_label {
+	background-color: lighten($colon_color, 10%);
+	color:#ffffff;
+}
+
+#colorectal_group_0 { 
+	color:#000000;
+	background-color: lighten($colon_color, 15%);
+}
+#colorectal_group_1 { 
+	color:#000000;
+	background-color: lighten($colon_color, 20%);
+}
+#colorectal_group_2 { 
+	color:#000000;
+	background-color: lighten($colon_color, 25%);
+}
+#colorectal_group_3 { 
+	color:#000000;
+	background-color: lighten($colon_color, 30%);
+}
+
+/* Prostate site*/
+
+#prostate_form td, #prostate_form th {
+	font-size:1em;
+	border:1px solid $prostate_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#prostate_form th, #prostate_form td.result, #prostate_form td.result_label {
+	background-color: lighten($prostate_color, 10%);
+	color:#ffffff;
+}
+
+#prostate_group_0 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 15%);
+}
+#prostate_group_1 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 20%);
+}
+#prostate_group_2 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 25%);
+}
+#prostate_group_3 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 30%);
+}
+#prostate_group_4 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 35%);
+}
+#prostate_group_5 { 
+	color:#000000;
+	background-color: lighten($prostate_color, 40%);
+}
+
+/* Cervix site*/
+
+#cervix_form td, #cervix_form th {
+	font-size:1em;
+	border:1px solid $cervix_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#cervix_form th, #cervix_form td.result, #cervix_form td.result_label {
+	background-color: lighten($cervix_color, 10%);
+	color:#ffffff;
+}
+
+#cervix_group_0 { 
+	color:#000000;
+	background-color: lighten($cervix_color, 15%);
+}
+#cervix_group_1 { 
+	color:#000000;
+	background-color: lighten($cervix_color, 20%);
+}
+#cervix_group_2 { 
+	color:#000000;
+	background-color: lighten($cervix_color, 25%);
+}
+#cervix_group_3 { 
+	color:#000000;
+	background-color: lighten($cervix_color, 30%);
+}
+#cervix_group_4 { 
+	color:#000000;
+	background-color: lighten($cervix_color, 35%);
+}
+
+/* Lung site */
+
+#lung_form td, #lung_form th {
+	font-size:1em;
+	border:1px solid $lung_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#lung_form th, #lung_form td.result, #lung_form td.result_label {
+	background-color: lighten($lung_color, 10%);
+	color:#ffffff;
+}
+
+#lung_group_0 { 
+	color:#000000;
+	background-color: lighten($lung_color, 15%);
+}
+#lung_group_1 { 
+	color:#000000;
+	background-color: lighten($lung_color, 20%);
+}
+#lung_group_2 { 
+	color:#000000;
+	background-color: lighten($lung_color, 25%);
+}
+#lung_group_3 { 
+	color:#000000;
+	background-color: lighten($lung_color, 30%);
+}
+#lung_group_4 { 
+	color:#000000;
+	background-color: lighten($lung_color, 35%);
+}
+
+/* Oesophagus */
+
+#oesophagus_form td, #oesophagus_form th {
+	font-size:1em;
+	border:1px solid $oesophagus_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#oesophagus_form th, #oesophagus_form td.result, #oesophagus_form td.result_label {
+	background-color: lighten($oesophagus_color, 10%);
+	color:#ffffff;
+}
+
+#oesophagus_group_0 { 
+	color:#000000;
+	background-color: lighten($oesophagus_color, 15%);
+}
+#oesophagus_group_1 { 
+	color:#000000;
+	background-color: lighten($oesophagus_color, 20%);
+}
+#oesophagus_group_2 { 
+	color:#000000;
+	background-color: lighten($oesophagus_color, 25%);
+}
+#oesophagus_group_3 { 
+	color:#000000;
+	background-color: lighten($oesophagus_color, 30%);
+}
+#oesophagus_group_4 { 
+	color:#000000;
+	background-color: lighten($oesophagus_color, 35%);
+}
+
+/* Stomach */
+;
+#stomach_form td, #stomach_form th {
+	font-size:1em;
+	border:1px solid $stomach_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#stomach_form th, #stomach_form td.result, #stomach_form td.result_label {
+	background-color: lighten($stomach_color, 10%);
+	color:#ffffff;
+}
+
+#stomach_group_0 { 
+	color:#000000;
+	background-color: lighten($stomach_color, 15%);
+}
+#stomach_group_1 { 
+	color:#000000;
+	background-color: lighten($stomach_color, 20%);
+}
+#stomach_group_2 { 
+	color:#000000;
+	background-color: lighten($stomach_color, 25%);
+}
+#stomach_group_3 { 
+	color:#000000;
+	background-color: lighten($stomach_color, 30%);
+}
+#stomach_group_4 { 
+	color:#000000;
+	background-color: lighten($stomach_color, 35%);
+}
+
+
+/* Liver */
+
+#liver_form td, #liver_form th {
+	font-size:1em;
+	border:1px solid $liver_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#liver_form th, #liver_form td.result, #liver_form td.result_label {
+	background-color: lighten($liver_color, 10%);
+	color:#ffffff;
+}
+
+#liver_group_0 { 
+	color:#000000;
+	background-color: lighten($liver_color, 15%);
+}
+#liver_group_1 { 
+	color:#000000;
+	background-color: lighten($liver_color, 20%);
+}
+#liver_group_2 { 
+	color:#000000;
+	background-color: lighten($liver_color, 25%);
+}
+#liver_group_3 { 
+	color:#000000;
+	background-color: lighten($liver_color, 30%);
+}
+#liver_group_4 { 
+	color:#000000;
+	background-color: lighten($liver_color, 35%);
+}
+
+/* Pancreas */
+
+
+#pancreas_form td, #pancreas_form th {
+	font-size:1em;
+	border:1px solid $pancreas_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#pancreas_form th, #pancreas_form td.result, #pancreas_form td.result_label {
+	background-color: lighten($pancreas_color, 10%);
+	color:#ffffff;
+}
+
+#pancreas_group_0 { 
+	color:#000000;
+	background-color: lighten($pancreas_color, 15%);
+}
+#pancreas_group_1 { 
+	color:#000000;
+	background-color: lighten($pancreas_color, 20%);
+}
+#pancreas_group_2 { 
+	color:#000000;
+	background-color: lighten($pancreas_color, 25%);
+}
+#pancreas_group_3 { 
+	color:#000000;
+	background-color: lighten($pancreas_color, 30%);
+}
+#pancreas_group_4 { 
+	color:#000000;
+	background-color: lighten($pancreas_color, 35%);
+}
+
+
+/* Ovary site*/
+
+#ovary_form td, #ovary_form th {
+	font-size:1em;
+	border:1px solid $ovary_color;
+	padding:3px 7px 2px 7px;	
+}
+
+#ovary_form th, #ovary_form td.result, #ovary_form td.result_label{
+	background-color: lighten($ovary_color, 10%);
+	color:#ffffff;
+}
+
+#ovary_group_0 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 15%);
+}
+#ovary_group_1 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 20%);
+}
+#ovary_group_2 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 25%);
+}
+
+#ovary_group_3 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 30%);
+}
+
+#ovary_group_4 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 35%);
+}
+
+#ovary_group_5 { 
+	color:#000000;
+	background-color: lighten($ovary_color, 40%);
+}
