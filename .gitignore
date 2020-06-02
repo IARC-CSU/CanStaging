@@ -27,3 +27,4 @@ Source/data/keyfile.txt
 Source/vendor/
 changelog.html
 Source/.vscode/settings.json
+.sass-cache/
