@@ -2,7 +2,7 @@
 
 ## 0.6.1 (2020-05-29)
 
-- Changed to the amalgalite gem for sqlite access. 
+- Changed to the amalgalite gem for sqlite access.
 
 ## 0.6.0 (2020-05-27)
 
