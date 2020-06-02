@@ -2,22 +2,22 @@
 Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0 
 Background: http://philbit.com/svgpatterns
-TODO: Align palette with this: https://gco.iarc.fr/api/globocan/v1/2018/meta/cancers/all/
+Palette aligned with: https://gco.iarc.fr/api/globocan/v1/2018/meta/cancers/all/
 
 sass .\views\stylesheets\default.scss > .\public\css\default.css
 */
-
-$breast_color: #C74C69;
-// $colon_color: #FFD803;
-$colon_color: #60A561;
-$prostate_color: #34A76E;
-$cervix_color: #FF7500;
-$lung_color: #1E90FF;
-$oesophagus_color: #DC1341;
-$stomach_color: #4682B4;
-$liver_color: #F3A654;
-$pancreas_color: lighten(#940009,20%);
-$ovary_color: lighten(#8C07C2,15%);
+                                        //old
+$breast_color: #C74C69;               //#C74C69
+// $colon_color: #FFD803;               //#C28C40
+$colon_color: #60A561;                //#C28C40
+$prostate_color: #34A76E;             //#40C28C
+$cervix_color: #FF7500;               //#7644A6
+$lung_color: #1E90FF;                 //#A2EA77
+$oesophagus_color: #DC1341;           //#76F14A
+$stomach_color: #4682B4;              //#FAA277
+$liver_color: #F3A654;                //#BA9277
+$pancreas_color: lighten(#940009,20%);//#B1569A
+$ovary_color: lighten(#8C07C2,15%);   //#C3687E
 
 
 table {
