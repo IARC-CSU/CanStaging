@@ -1,5 +1,9 @@
 # Changelog CanStaging
 
+## 0.6.2 (TBD)
+
+- Colors now harmonized with GCO colors 
+
 ## 0.6.1 (2020-05-29)
 
 - Changed to the amalgalite gem for sqlite access.
