@@ -9,9 +9,27 @@
 
 <%= R18n.t[:home][:no_sites_translated] if sites.nil? || sites.empty? %>
 
-<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+<!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
   <% sites.each do |site| %>
-    <a class="nav-link" href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_group_1"><%= site.site.capitalize %></a>
+    <a class="nav-link" href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_menu"><%= site.site.capitalize %></a>
+  <% end %>
+</div>
+ -->
+<div class="card-columns">
+  <% sites.each do |site| %>
+  <a href = "/site/<%= "#{site.default_name.downcase}" %>">
+    <div class="card">
+        <div class="card-header" id = "<%= site.css %>_menu">
+          <%= site.site.capitalize %>
+        </div>
+      <div class="card-body">
+        <!-- <h5 class="card-title"><%= site.site.capitalize%> </h5> -->
+        <!-- <p class="card-text">Info?</p> -->
+        <!-- <a href="#" class="btn btn-primary">Go</a> -->
+        <p class="card-text"><small class="text-muted">TNM version <%= session[:tnm_version]  %> </small></p>
+      </div>
+    </div>
+  </a>
   <% end %>
 </div>
 
