@@ -2,7 +2,10 @@
 
 ## 0.6.2 (TBD)
 
-- Colors now harmonized with GCO colors 
+- Melanoma added.
+- Colors harmonized with GCO colors.
+- Landing page now has a card based layout.
+- Other fixes.
 
 ## 0.6.1 (2020-05-29)
 
