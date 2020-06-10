@@ -5,6 +5,7 @@
 - Melanoma added.
 - Colors harmonized with GCO colors.
 - Landing page now has a card based layout.
+- Breast images added.
 - Illustrations now only pops up when hovering eye icon.
 - Upgraded to FontAwesome 5.
 - Other fixes.
