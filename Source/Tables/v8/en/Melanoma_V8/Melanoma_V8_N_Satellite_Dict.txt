@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No Satellite or in-transit metastasis"
+"2","Satellite metastasis"
+"3","In-transit metastasis"

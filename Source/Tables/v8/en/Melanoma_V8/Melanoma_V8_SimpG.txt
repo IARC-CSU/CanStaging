@@ -1,0 +1,6 @@
+"M","Result"
+"M0","Regional"
+"M1a","Distant"
+"M1b","Distant"
+"M1c","Distant"
+"M1d","Distant"

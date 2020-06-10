@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","No distant metastases"
+"2","Skin, subcutaneous tissue or lymph node(s) metastases beyond the regional lymphnodes"
+"3","Lung metastases"
+"4","Metastases in other non-central nervous system sites"
+"5","Central nervous system metastases"

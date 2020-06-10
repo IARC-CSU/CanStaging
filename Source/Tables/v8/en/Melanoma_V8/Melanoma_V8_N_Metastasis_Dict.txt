@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No regional lymph node metastasis"
+"2","Only microscopic metastasis (clinically occult)"
+"3","Macroscopic metastasis (clinically apperant)"

@@ -1,8 +1,17 @@
 # Changelog CanStaging
 
+## 0.6.2 (TBD)
+
+- Melanoma added.
+- Colors harmonized with GCO colors.
+- Landing page now has a card based layout.
+- Illustrations now only pops up when hovering eye icon.
+- Upgraded to FontAwesome 5.
+- Other fixes.
+
 ## 0.6.1 (2020-05-29)
 
-- Changed to the amalgalite gem for sqlite access. 
+- Changed to the amalgalite gem for sqlite access.
 
 ## 0.6.0 (2020-05-27)
 

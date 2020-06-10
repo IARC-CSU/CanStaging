@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Number of positive regional lymph nodes","2",
+"Metastasis","Dictionary","Microscopic or macroscopic metastasis","2",
+"Satellite","Dictionary","Satellite or in-transit metastasis","2",
+"Matted","Dictionary","Matted metastatic regional lymph nodes","2",

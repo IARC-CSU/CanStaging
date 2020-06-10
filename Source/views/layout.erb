@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/default.css" type="text/css">
-	  <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/solid.min.css">
   </head>
   <body>
 
@@ -48,7 +49,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <% sites.each do |site| %>
-                  <a class="dropdown-item" id="<%= site.css %>_group_1" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site.capitalize %></a>
+                  <a class="dropdown-item" id="<%= site.css %>_menu" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site.capitalize %></a>
                  <% end %>
                 </div>
               </li>
