@@ -46,7 +46,7 @@
                 <% if field.image.nil? %>
                   <%= field.display_text %>
                 <% else %>
-                  <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %></span></div>
+                  <div><%= field.display_text %> <span class="illustrated" href="#" data-image="../<%= field.image %>"><i class="fas fa-eye"></i></span></div>
                 <% end %>
                     
                 </td>
