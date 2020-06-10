@@ -5,6 +5,8 @@
 - Melanoma added.
 - Colors harmonized with GCO colors.
 - Landing page now has a card based layout.
+- Illustrations now only pops up when hovering eye icon.
+- Upgraded to FontAwesome 5.
 - Other fixes.
 
 ## 0.6.1 (2020-05-29)
