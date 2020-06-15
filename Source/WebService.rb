@@ -20,6 +20,11 @@ end
 require 'fileutils'
 require 'rdiscount'
 
+# Puma stuff
+require 'bundler'
+require 'puma'
+require "rack/handler/puma"
+
 # first load default config
 
 config_default = {  'system' => {'log_file' => "./data/logg.db" }}
