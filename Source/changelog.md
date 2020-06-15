@@ -1,11 +1,16 @@
 # Changelog CanStaging
 
-## 0.6.2 (TBD)
+## 0.6.3 (2020-06-15)
+
+- Illustrations now show up on click instead of hover.
+
+## 0.6.2 (2020-06-12)
 
 - Melanoma added.
 - Colors harmonized with GCO colors.
 - Landing page now has a card based layout.
 - Illustrations now only pops up when hovering eye icon.
+- Breast images added.
 - Upgraded to FontAwesome 5.
 - Other fixes.
 
