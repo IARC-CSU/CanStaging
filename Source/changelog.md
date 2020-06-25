@@ -1,5 +1,10 @@
 # Changelog CanStaging
 
+## Upcoming (TBD)
+
+- Breast, Cervix, Ovary, Prostate, Lung, and Oesophagus images updated.
+- Some spelling errors fixed.
+
 ## 0.6.3 (2020-06-15)
 
 - Illustrations now show up on click instead of hover.
