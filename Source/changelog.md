@@ -1,6 +1,6 @@
 # Changelog CanStaging
 
-## 0.6.4 (TBD)
+## 0.6.4 (2020-07-03)
 
 - Breast, Cervix, Ovary, Prostate, Lung, and Oesophagus images updated.
 - Framework for the system of pop up texts/lists in place.
