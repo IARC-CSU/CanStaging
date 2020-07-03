@@ -51,7 +51,7 @@
 
                 <% if !field.text.nil? %>
                     <% html = '"' + field.text.gsub("\n"," ") +'"' %>
-                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900, height=600"); win.document.body.innerHTML = <%= html %>'><i class="fas fa-eye"></i></span>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900, height=600"); win.document.body.innerHTML = <%= html %>'><i class="fas fa-file"></i></span>
                 <% end %>
                     
                 </td>
