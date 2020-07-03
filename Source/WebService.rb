@@ -55,7 +55,7 @@ if config['system']['standalone']
 end
 
 ## Merge config overwriting anything in default config...
-config = config_default.merge(config)
+config['system'] = config_default['system'].merge(config['system'])
 
 set :server, %w[puma thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] != 'development')
