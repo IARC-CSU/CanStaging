@@ -43,12 +43,15 @@
                   <td title = "<%= field.tooltip %>">
                 <% end %>
 
-                <% if field.image.nil? %>
-                  <%= field.display_text %>
-                <% else %>
-                  <div>
-                    <%= field.display_text %> <span class="illustrated-disabled" href="#" data-image="../<%= field.image %>" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900, height=600');"><i class="fas fa-eye"></i></span>
-                  </div>
+                <%= field.display_text %>
+
+                <% if !field.image.nil? %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900, height=600');"><i class="fas fa-eye"></i></span>
+                <% end %>
+
+                <% if !field.text.nil? %>
+                    <% html = '"' + field.text.gsub("\n"," ") +'"' %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900, height=600"); win.document.body.innerHTML = <%= html %>'><i class="fas fa-eye"></i></span>
                 <% end %>
                     
                 </td>
