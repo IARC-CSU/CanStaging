@@ -43,6 +43,7 @@ Source: "{#CanStagingDir}\launch.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\changelog.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\i18n\*"; DestDir: "{app}\i18n"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\public\gfx\*"; DestDir: "{app}\public\gfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#CanStagingDir}\public\txt\*"; DestDir: "{app}\public\txt\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\data\config.yml"; DestDir: "{app}\data"; Flags: ignoreversion
 Source: "{#CanStagingDir}\loader.html"; DestDir: "{app}"; Flags: ignoreversion
