@@ -46,12 +46,12 @@
                 <%= field.display_text %>
 
                 <% if !field.image.nil? %>
-                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900, height=600');"><i class="fas fa-eye"></i></span>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
                 <% end %>
 
                 <% if !field.text.nil? %>
                     <% html = '"' + field.text.gsub("\n"," ") +'"' %>
-                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900, height=600"); win.document.body.innerHTML = <%= html %>'><i class="fas fa-file"></i></span>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
                 <% end %>
                     
                 </td>

@@ -97,13 +97,18 @@ class Site
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           print "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}" if $DEBUG
+          html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"></head><body>'
           if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}"
             puts " - Found" if $DEBUG
             # Load it into the variable already
-            variable.text = RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}").read).to_html
+            html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}").read).to_html
+            html += "</body></html>"
+            variable.text = html
           elsif File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}"
-            puts " - Found English" if $DEBUG
-            variable.text = RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}").read).to_html
+            puts " - Found English" if $DEBUG            
+            html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}").read).to_html
+            html += "</body></html>"
+            variable.text = html
           else 
             puts " - Not found" if $DEBUG
           end
