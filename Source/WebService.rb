@@ -27,7 +27,7 @@ require "rack/handler/puma"
 
 # first load default config
 
-config_default = {  'system' => {'log_file' => "./data/logg.db" }}
+config_default = { 'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0' } }
 
 config = YAML.load_file("./data/config.yml")
 
@@ -35,6 +35,9 @@ config = YAML.load_file("./data/config.yml")
 if config['system']['standalone']
   puts "Standalone mode"
   # Check if we haven't overridden the config and home dir exist
+  config_default['system']['port'] = 9292
+  config_default['system']['bind'] = 'localhost'
+
   if config['system']['log_file'].nil? 
 
     if File.directory?(Dir.home)
@@ -52,7 +55,7 @@ if config['system']['standalone']
 end
 
 ## Merge config overwriting anything in default config...
-config = config_default.merge(config)
+config['system'] = config_default['system'].merge(config['system'])
 
 set :server, %w[puma thin mongrel webrick]
 set :environment, :production if (config['system']['environment'] != 'development')
