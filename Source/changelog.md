@@ -1,8 +1,11 @@
 # Changelog CanStaging
 
-## Upcoming (TBD)
+## 0.6.4 (TBD)
 
 - Breast, Cervix, Ovary, Prostate, Lung, and Oesophagus images updated.
+- Framework for the system of pop up texts/lists in place.
+- Melanoma now split in clinical/pathological.
+- Fixed issues with Oesophagus tables.
 - Some spelling errors fixed.
 
 ## 0.6.3 (2020-06-15)
