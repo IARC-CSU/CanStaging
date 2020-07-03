@@ -71,10 +71,10 @@
     </style>
     <script type="text/javascript">
 
+    var server = "http://127.0.0.1:9292";
     
-
     // https://stackoverflow.com/questions/5224197/javascript-check-if-server-is-online
-    function ifServerOnline(ifOnline, ifOffline, port_no)
+    function ifServerOnline(ifOnline, ifOffline)
     {
         var img = document.body.appendChild(document.createElement("img"));
         img.onload = function()
@@ -86,26 +86,27 @@
             ifOffline && ifOffline.constructor == Function && ifOffline();
         };
         // https://stackoverflow.com/questions/126772/how-to-force-a-web-browser-not-to-cache-images
-        img.src = "http://localhost:"+port_no+"/media/ping.gif?"+performance.now();        
+        console.log(server + "/media/ping.gif?"+performance.now()); 
+        img.src = server + "/media/ping.gif?"+performance.now();        
     }
 
-    async function check(port_no) {
+    async function check() {
         ifServerOnline(function()
         {
             //  server online code here
-            window.location="http://localhost:"+port_no+"/tool";
+            window.location=server+"/tool";
         },
         function ()
         {
             //  server offline code here
             setTimeout(check, 1000); // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
-        }, port_no);
+        }, server);
 
     }
 
     window.onload = function() {
-        var port_no = '9292';
-        check(port_no);
+        
+        check();
     }
 </script>
 </head>
