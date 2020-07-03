@@ -86,7 +86,6 @@
             ifOffline && ifOffline.constructor == Function && ifOffline();
         };
         // https://stackoverflow.com/questions/126772/how-to-force-a-web-browser-not-to-cache-images
-        console.log(server + "/media/ping.gif?"+performance.now()); 
         img.src = server + "/media/ping.gif?"+performance.now();        
     }
 
