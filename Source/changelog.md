@@ -1,5 +1,9 @@
 # Changelog CanStaging
 
+## 0.6.5 (TBD)
+
+- Only show "TNM with Prefixes" on v7.
+
 ## 0.6.4 (2020-07-03)
 
 - Breast, Cervix, Ovary, Prostate, Lung, and Oesophagus images updated.
