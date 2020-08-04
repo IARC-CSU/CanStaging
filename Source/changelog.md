@@ -3,6 +3,7 @@
 ## 0.6.5 (TBD)
 
 - Only show "TNM with Prefixes" on v7.
+- Updated batch data uploader to, for example, work with with TNM versions.
 
 ## 0.6.4 (2020-07-03)
 
