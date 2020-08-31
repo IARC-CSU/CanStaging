@@ -12,7 +12,13 @@ class STLogger
     unless File.directory?(dirname)
       FileUtils.mkdir_p(dirname)
     end
-    @db = Sequel.amalgalite(db_file_name)
+    begin
+      @db = Sequel.amalgalite(db_file_name)
+    rescue Exception => e # Sequel::DatabaseConnectionError
+      puts e 
+      # Fall back to memory db
+      @db = Sequel.amalgalite(":memory:")
+    end
     create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
@@ -98,6 +104,10 @@ class STLogger
   def get_next_numeric_id(key, ip_address)
     highest = @entries_table.where(:key =>key, :ip_address => ip_address).all.max_by {|e| e[:tumour_id].to_i}
     highest == nil ? 0 : (highest[:tumour_id].to_i + 1)
+  end
+
+  def in_memory?
+    @db.opts[:database] == ":memory:"
   end
 
   private
