@@ -289,10 +289,12 @@
         }
       }
       var el1  = document.getElementById('TNMwP_result');
-      var text = data["TNMwP"][0]["Result"];
-      // el1.title = data["TNMwP"][0]["All results"].join("\n");
-      el1.innerHTML = text;
-      alertText += "<br>TNM with prefixes: "+ text;
+      if (el!=null) {
+        var text = data["TNMwP"][0]["Result"];
+        // el1.title = data["TNMwP"][0]["All results"].join("\n");
+        el1.innerHTML = text;
+        alertText += "<br>TNM with prefixes: "+ text;
+      }
 
       var el   = document.getElementById('TNM_result');
       var text = results['T']+results['N']+results['M'];
