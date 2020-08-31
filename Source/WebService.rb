@@ -120,7 +120,8 @@ before do
   R18n.set(session[:locale])
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
-  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v7"
+  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v8"
+  session[:in_memory] = $st_logger.in_memory?
 end
 
 # check for valid api key to all calls to the service... 
@@ -325,6 +326,7 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
   CSV.foreach(filename, {col_sep: col_sep, quote_char: quote_char, headers: true}) do |row|
     params = {}
     params["site"] = row["site"] || row["Site"]
+    params["tnm_version"] = row["TNM version"] || row["TNM Version"]
     if row.headers.include? "input"
       params["data"] = JSON.parse(row["input"])
     else
@@ -336,7 +338,8 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
       # puts result if settings.environment == :development
       if result["Error"] == nil
         params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? $st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
-        $st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
+        tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
+        $st_logger.log(session[:key], params["tumour_id"], tnm_version, params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
         number_ok += 1
       else
         number_failed += 1
@@ -349,7 +352,7 @@ end
 def row_to_data row
   data = Hash.new { |hash, key| hash[key] = {} }
   row.each do |column, value|
-    part, variable_name = column.split(" ", 2)
+    part, variable_name = column.split("_", 2)
     data[part][variable_name] = value unless variable_name.nil?
   end
   data
@@ -359,7 +362,7 @@ def data_to_row data
   row = {}
   data.each do |part, list| 
     list.each do |variable, value| 
-      row["#{part} #{variable}"] = value  
+      row["#{part}_#{variable}"] = value  
     end 
   end
   row

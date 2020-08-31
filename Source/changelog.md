@@ -1,5 +1,11 @@
 # Changelog CanStaging
 
+## 0.6.5 (TBD)
+
+- Fall back to in-memory database if no other options.
+- Only show "TNM with Prefixes" on v7.
+- Updated batch data uploader to, for example, work with with TNM versions.
+
 ## 0.6.4 (2020-07-03)
 
 - Breast, Cervix, Ovary, Prostate, Lung, and Oesophagus images updated.

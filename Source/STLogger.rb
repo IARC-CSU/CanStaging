@@ -8,9 +8,15 @@ require 'fileutils'
 class STLogger
   DB_FILE_NAME = './data/logg.db' # overridden by config.yml
   def initialize(db_file_name = DB_FILE_NAME)
-    dirname = File.dirname(db_file_name)
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
+    begin
+      dirname = File.dirname(db_file_name)
+      unless File.directory?(dirname)
+        FileUtils.mkdir_p(dirname)
+      end
+    rescue Exception => e # Sequel::DatabaseConnectionError
+      puts e 
+      # Fall back to memory db
+      db_file_name = ":memory:"
     end
     @db = Sequel.amalgalite(db_file_name)
     create_tables
@@ -98,6 +104,10 @@ class STLogger
   def get_next_numeric_id(key, ip_address)
     highest = @entries_table.where(:key =>key, :ip_address => ip_address).all.max_by {|e| e[:tumour_id].to_i}
     highest == nil ? 0 : (highest[:tumour_id].to_i + 1)
+  end
+
+  def in_memory?
+    @db.opts[:database] == ":memory:"
   end
 
   private
