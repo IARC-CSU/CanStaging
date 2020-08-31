@@ -8,17 +8,17 @@ require 'fileutils'
 class STLogger
   DB_FILE_NAME = './data/logg.db' # overridden by config.yml
   def initialize(db_file_name = DB_FILE_NAME)
-    dirname = File.dirname(db_file_name)
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
-    end
     begin
-      @db = Sequel.amalgalite(db_file_name)
+      dirname = File.dirname(db_file_name)
+      unless File.directory?(dirname)
+        FileUtils.mkdir_p(dirname)
+      end
     rescue Exception => e # Sequel::DatabaseConnectionError
       puts e 
       # Fall back to memory db
-      @db = Sequel.amalgalite(":memory:")
+      db_file_name = ":memory:"
     end
+    @db = Sequel.amalgalite(db_file_name)
     create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
