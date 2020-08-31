@@ -1,10 +1,11 @@
 # Changelog CanStaging
 
-## 0.6.5 (TBD)
+## 0.6.5 (2020-08-31)
 
 - Fall back to in-memory database if no other options.
 - Only show "TNM with Prefixes" on v7.
 - Updated batch data uploader to, for example, work with with TNM versions.
+- Demo version implemented.
 
 ## 0.6.4 (2020-07-03)
 
