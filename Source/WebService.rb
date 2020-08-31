@@ -120,7 +120,8 @@ before do
   R18n.set(session[:locale])
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
-  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v7"
+  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v8"
+  session[:in_memory] = $st_logger.in_memory?
 end
 
 # check for valid api key to all calls to the service... 
