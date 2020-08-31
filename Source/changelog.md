@@ -2,6 +2,7 @@
 
 ## 0.6.5 (TBD)
 
+- Fall back to in-memory database if no other options.
 - Only show "TNM with Prefixes" on v7.
 - Updated batch data uploader to, for example, work with with TNM versions.
 
