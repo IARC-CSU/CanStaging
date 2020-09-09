@@ -34,7 +34,7 @@ layout:
 home:
   by: "Por" 
   and: "e" 
-  welcome: "Bem vindo ao CanStaging, um Program de Estadiamento do Cancro, que lhe é disponibilizado a partir de uma colaboração conjunta do NICR, da IARC e da UICC. O programa ajudá-lo-á a maximizar a disponibilidade, padronização e comparabilidade do estadiamento do cancro a nível internacional."
+  welcome_old: "Bem vindo ao CanStaging, um Program de Estadiamento do Cancro, que lhe é disponibilizado a partir de uma colaboração conjunta do NICR, da IARC e da UICC. O programa ajudá-lo-á a maximizar a disponibilidade, padronização e comparabilidade do estadiamento do cancro a nível internacional."
   no_sites_translated: "No sites translated to this language yet."
 
 get_log:
