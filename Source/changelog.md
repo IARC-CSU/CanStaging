@@ -1,5 +1,12 @@
 # Changelog CanStaging
 
+## 0.6.6 (2020-09-09)
+
+- Welcome text updated.
+- About doc updated.
+- Logos updated.
+- Default to TNM8.
+
 ## 0.6.5 (2020-08-31)
 
 - Fall back to in-memory database if no other options.
