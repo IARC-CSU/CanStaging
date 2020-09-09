@@ -4,6 +4,7 @@ Palette URL: http://colorschemedesigner.com/#5t42kfLGrg0g0
 Background: http://philbit.com/svgpatterns
 Palette aligned with: https://gco.iarc.fr/api/globocan/v1/2018/meta/cancers/all/
 
+TODO: Automate this:
 sass .\views\stylesheets\default.scss > .\public\css\default.css
 */
                                         //old
@@ -71,9 +72,12 @@ select {
 	font-size: 0.9em;
 }
 
-#endorsed {
+.endorsed {
 	text-align: center;
 	text-decoration: underline;
+}
+div.row.endorsed {
+	padding-bottom: 10px;
 }
 
 #about {
