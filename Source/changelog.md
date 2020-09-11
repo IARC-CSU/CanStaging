@@ -1,9 +1,13 @@
 # Changelog CanStaging
 
+## 0.6.7 (2020-TBC)
+
+- About text updated.
+
 ## 0.6.6 (2020-09-09)
 
 - Welcome text updated.
-- About doc updated.
+- Help doc updated.
 - Logos updated.
 - Default to TNM8.
 
