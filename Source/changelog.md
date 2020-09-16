@@ -3,6 +3,7 @@
 ## 0.6.7 (2020-TBC)
 
 - About text updated.
+- Tidied up the login-page.
 
 ## 0.6.6 (2020-09-09)
 
