@@ -1,3 +1,0 @@
-"Key","DisplayText"
-"1","Something"
-"2","Something else"
