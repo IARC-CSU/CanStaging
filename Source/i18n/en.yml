@@ -97,3 +97,6 @@ upload:
 
 look_up:
   no_valid_code_found: "No valid codes found..."
+
+about:
+  by: "Developed, designed, and maintained by"
