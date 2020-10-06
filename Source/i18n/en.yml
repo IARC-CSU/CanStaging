@@ -44,6 +44,7 @@ home:
   and: "and" 
   welcome: "Welcome to the Cancer Staging Tool, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach.  Colorectal cancer may be staged using the TNM staging versions 5 and 8."
   endorsed_by: "Endorsed by"
+  log_in: "Log in"
 
 get_log:
   tumour_ID: "Tumour ID"
@@ -96,3 +97,6 @@ upload:
 
 look_up:
   no_valid_code_found: "No valid codes found..."
+
+about:
+  by: "Developed, designed, and maintained by"
