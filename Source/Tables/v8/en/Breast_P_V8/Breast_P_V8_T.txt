@@ -1,5 +1,4 @@
 "Size","ChestInvasion","Ulceration","Inflammation","Result","Message"
-"F","F","F","F","T0",
 "1","F","F","F","T0",
 "2","F","F","F","T1a",
 "3","F","F","F","T1b",
