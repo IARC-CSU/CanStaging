@@ -34,6 +34,7 @@ layout:
   about: "About"
   about_text: "<div id = \\\"about\\\"> <h2>COPYRIGHT</h2> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h2>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h2> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
   log_out: "Log out"
+  log_in: "Log in"
   language_select: "Language select"
   tnm_version: "TNM version"
   no_sites_translated: "No sites translated to this language yet."
@@ -45,6 +46,7 @@ home:
   welcome: "Welcome to the Cancer Staging Tool, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach.  Colorectal cancer may be staged using the TNM staging versions 5 and 8."
   endorsed_by: "Endorsed by"
   log_in: "Log in"
+  enter_key: "Enter your key."
 
 get_log:
   tumour_ID: "Tumour ID"
