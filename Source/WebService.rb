@@ -141,7 +141,7 @@ end
 
 # check for valid api key to all calls to the service... 
 before do
-  unless request.path_info.start_with? "/login"
+  unless request.path_info.start_with?("/login") || request.path_info.start_with?("/tool") || request.path_info.start_with?("/about")
     error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     session[:key] = params[:key] || session[:key]
   end

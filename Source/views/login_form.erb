@@ -9,7 +9,7 @@
   <div class="form-group">
     <!-- <label for="key">Key</label> -->
     <input type="password" name='key' placeholder="key" autofocus class="form-control" id="key" aria-describedby="keyHelp" placeholder="Enter key">
-    <small id="emailHelp" class="form-text text-muted">Enter your unique key.</small>
+    <small id="emailHelp" class="form-text text-muted"><%= R18n.t[:home][:enter_key] %> </small>
   </div>
   <input class="btn btn-primary" type='submit' value='<%= R18n.t[:home][:log_in] %>'>
 </form>
