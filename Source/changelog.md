@@ -1,4 +1,4 @@
-# Changelog CanStaging
+# Changelog CanStaging+
 
 ## 0.6.7 (2020-TBC)
 
