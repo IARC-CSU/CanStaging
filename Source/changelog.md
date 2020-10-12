@@ -4,6 +4,9 @@
 
 - About text updated.
 - Tidied up the login-page.
+- Added a log in menu item and made login screen more clear.
+- You no longer need to log in before the staging form itself.
+- Language menu removed -- for now.
 
 ## 0.6.6 (2020-09-09)
 
