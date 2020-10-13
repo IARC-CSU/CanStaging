@@ -9,6 +9,7 @@
 - Language menu removed -- for now.
 - CanStaging is now CanStaging+
 - Issues in Breast tables resolved.
+- Issues in Breast images resolved.
 - Other fixes.
 
 ## 0.6.6 (2020-09-09)
