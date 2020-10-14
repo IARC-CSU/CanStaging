@@ -43,7 +43,7 @@ layout:
 home:
   by: "By" 
   and: "and" 
-  welcome: "Welcome to the CanStaging+, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach.  Colorectal cancer may be staged using the TNM staging versions 5 and 8."
+  welcome: "Welcome to CanStaging+, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach.  Colorectal cancer may be staged using the TNM staging versions 5 and 8."
   endorsed_by: "Endorsed by"
   log_in: "Log in"
   enter_key: "Enter your key."
