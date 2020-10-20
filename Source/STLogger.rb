@@ -28,12 +28,13 @@ class STLogger
       unless File.directory?(dirname)
         FileUtils.mkdir_p(dirname)
       end
+      @db = Sequel.amalgalite(db_file_name)
     rescue Exception => e # Sequel::DatabaseConnectionError
       puts e 
       # Fall back to memory db
       db_file_name = ":memory:"
+      @db = Sequel.amalgalite(db_file_name)
     end
-    @db = Sequel.amalgalite(db_file_name)
     create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
