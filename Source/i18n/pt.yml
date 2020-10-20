@@ -17,7 +17,7 @@ service:
   logged_out: "Sessão terminada."
 
 layout:
-  title: "CanStaging+ -- o Programa de Estadiamento do Cancro"
+  title: "CanStaging<sup>+</sup> -- o Programa de Estadiamento do Cancro"
   user: "utilizador"
   admin: "administrador"
   home: "Home"
@@ -25,7 +25,7 @@ layout:
   upload: "Upload"
   get_log: "Adquirir log"
   help: "Ajuda"
-  help_text: "<b>Ajuda</b><br>CanStaging+ - o Programa de Estadiamento do Cancro calcula o TNM, o Estadio, o Grau e intervalos de Estadios a partir da informação introduzida pelo utilizador. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Faça o Download do manual em PDF guide</a> com mais informação."
+  help_text: "<b>Ajuda</b><br>CanStaging<sup>+</sup> - o Programa de Estadiamento do Cancro calcula o TNM, o Estadio, o Grau e intervalos de Estadios a partir da informação introduzida pelo utilizador. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Faça o Download do manual em PDF guide</a> com mais informação."
   about: "Sobre"
   about_text: "<div id = \\\"about\\\"> <h2>COPYRIGHT</h2> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h2>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h2> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
   log_out: "Terminar sessão"
@@ -34,7 +34,7 @@ layout:
 home:
   by: "Por" 
   and: "e" 
-  welcome_old: "Bem vindo ao CanStaging+, um Program de Estadiamento do Cancro, que lhe é disponibilizado a partir de uma colaboração conjunta do NICR, da IARC e da UICC. O programa ajudá-lo-á a maximizar a disponibilidade, padronização e comparabilidade do estadiamento do cancro a nível internacional."
+  welcome_old: "Bem vindo ao CanStaging<sup>+</sup>, um Program de Estadiamento do Cancro, que lhe é disponibilizado a partir de uma colaboração conjunta do NICR, da IARC e da UICC. O programa ajudá-lo-á a maximizar a disponibilidade, padronização e comparabilidade do estadiamento do cancro a nível internacional."
   no_sites_translated: "No sites translated to this language yet."
 
 get_log:
