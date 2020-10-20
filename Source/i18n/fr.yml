@@ -5,13 +5,13 @@ service:
   available: "Disponible"
 
 layout:
-  title: "CanStaging+ -- l'outil de stadification du cancer"
+  title: "CanStaging<sup>+</sup> -- l'outil de stadification du cancer"
   home: "Acceuil"
   sites: "Des sites"
   upload: "Importer"
   get_log: "Obtenir le fichier journal"
   help: "Aide"
-  help_text: "<b>Aide</b><br>CanStaging+ - l'outil de stadification du cancer calcule TNM, stade, le grade, et d'autres scores spécifiques au site scène à partir des informations brutes saisies par l'utilisateur. <br>S'il vous plaît <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\"> Télécharger </a> une guide PDF avec plus d'informations."
+  help_text: "<b>Aide</b><br>CanStaging<sup>+</sup> - l'outil de stadification du cancer calcule TNM, stade, le grade, et d'autres scores spécifiques au site scène à partir des informations brutes saisies par l'utilisateur. <br>S'il vous plaît <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\"> Télécharger </a> une guide PDF avec plus d'informations."
   about: "Apropos"
   about_text: "<div id = \\\"about\\\"> <h1>DROITS D'AUTEURS</h1> <p>Ce produit est protégé par le droit d'auteur. Sauf autorisation spécifique, aucune partie de cet outil peut être distribuée ou reproduite par quelque moyen ou sous quelque forme, sans l'autorisation préalable écrite de la NICR.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. Tous les droits sont réservés.<br></p> <h1>GARANTIES, EXCLUSIONS ET LIMITATIONS DE RESPONSABILITÉ</h1> <p>CET OUTIL EST FOURNI \\\"TEL QUEL\\\" SANS GARANTIE OU CONDITION DE QUELQUE NATURE QUE CE SOIT, EXPLICITE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES OU CONDITIONS IMPLICITES DE QUALITÉ MARCHANDE, D'ADAPTATION À UN USAGE PARTICULIER OU NON -INFRINGEMENT. </p> <p> NICR ASSUME AUCUNE RESPONSABILITÉ POUR LES ERREURS OU OMISSIONS DANS CET OUTIL.</p> <p>EN AUCUN CAS LA NICR  NE SERA RESPONSABLE DE TOUT DOMMAGE SPÉCIAUX OU INDIRECTS DE QUELQUE NATURE QUE CE SOIT, OU TOUT DOMMAGE (Y COMPRIS, SANS LIMITATION, celles résultant de: (1) RELIANCE SUR LES MATERIAUX PRÉSENTÉ, (2) FRAIS DE REMPLACEMENT MARCHANDISES, (3) PERTE d'UTILISATION, dE DONNÉES OU dE PROFITS, (4) RETARD OU INTERRUPTION d'AFFAIRES, (5) ET TOUTE THÉORIE dE RESPONSABILITÉ, PROVENANT dE OU eN RELATION AVEC L'UTILISATION OU lA PERFORMANCE dE L'INFORMATION) OU NON NICR A ETE INFORME DE LA POSSIBILITE DE TELS DOMMAGES. </p> <p> CET OUTIL PEUT CONTENIR DES TECHNIQUES OU AUTRES INEXACTITUDES. TOUTEFOIS, LA NICR NE FAIT AUCUN ENGAGEMENT DE FOURNIR DES MISES À JOUR. </P> </div>"
   log_out: "Se déconnecter"
@@ -20,7 +20,7 @@ layout:
 home:
   by: "Par"
   and: "et"
-  welcome_old: "Bienvenue à CanStaging+, un outil de stadification du cancer, qui vous est fourni grâce à un NICR, la collaboration du CIRC, et UICC. L'outil permettra de maximiser la disponibilité, la normalisation et la comparabilité des stadification du cancer à l'échelle internationale."
+  welcome_old: "Bienvenue à CanStaging<sup>+</sup>, un outil de stadification du cancer, qui vous est fourni grâce à un NICR, la collaboration du CIRC, et UICC. L'outil permettra de maximiser la disponibilité, la normalisation et la comparabilité des stadification du cancer à l'échelle internationale."
   no_sites_translated: "No sites translated to this language yet."
 
 get_log:

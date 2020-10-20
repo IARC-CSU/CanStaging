@@ -1,5 +1,9 @@
 # Changelog CanStaging+
 
+## 0.6.8 (2020-10-20)
+- Improved handling of write protected/missing log folder.
+- CanStaging+ is now CanStaging<sup>+</sup>
+
 ## 0.6.7 (2020-10-14)
 
 - About text updated.
