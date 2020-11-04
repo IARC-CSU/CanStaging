@@ -5,7 +5,7 @@ service:
   available: "Disponible"
 
 layout:
-  title: "CanStaging<sup>+</sup> -- l'outil de stadification du cancer"
+  title: "CanStaging+ -- l'outil de stadification du cancer"
   home: "Acceuil"
   sites: "Des sites"
   upload: "Importer"

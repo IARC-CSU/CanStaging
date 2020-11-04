@@ -19,7 +19,7 @@ service:
   invalid_url: "Invalid URL."
 
 layout:
-  title: "CanStaging<sup>+</sup> -- the Cancer Staging Tool"
+  title: "CanStaging+ -- the Cancer Staging Tool"
   user: "user"
   admin: "admin"
   home: "Home"
