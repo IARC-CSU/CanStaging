@@ -17,7 +17,7 @@ service:
   logged_out: "Sesión cerrada."
 
 layout:
-  title: "CanStaging<sup>+</sup> – La herramienta/programa para estadiar el cancer" 
+  title: "CanStaging+ – La herramienta/programa para estadiar el cancer" 
   user: "usuario"
   admin: "admin"
   home: "Home"

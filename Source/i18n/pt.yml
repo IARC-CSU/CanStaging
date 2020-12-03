@@ -17,7 +17,7 @@ service:
   logged_out: "Sessão terminada."
 
 layout:
-  title: "CanStaging<sup>+</sup> -- o Programa de Estadiamento do Cancro"
+  title: "CanStaging+ -- o Programa de Estadiamento do Cancro"
   user: "utilizador"
   admin: "administrador"
   home: "Home"

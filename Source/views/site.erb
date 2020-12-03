@@ -260,7 +260,14 @@
           }
           if (data[part].length>1 && !unique_result(data[part])) { 
             text = getDefaultResult(part);
-            el.innerHTML = text;
+            additional_text = ""
+            items = []
+            for (var j = 0; j < data[part].length; j++) {
+              items.push(data[part][j]["Result"])
+            }
+            items = Array.from(new Set(items))
+            additional_text = items.sort().join(", ")
+            el.innerHTML = text //+ " (" + additional_text+ ")" ;
           };
           results[part] = text;
           if (part == "SG") {

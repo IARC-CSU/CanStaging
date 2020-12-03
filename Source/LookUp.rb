@@ -26,7 +26,7 @@ class LookUp
       @table = []
   
       # assume last letter of file_name is part 
-      part = file_name.split(".")[-2][-1].upcase
+      @part = file_name.split(".")[-2][-1].upcase
 
       # read csv
       csv = CSV.read(file_name, :headers => true, encoding: "UTF-8")
@@ -36,11 +36,11 @@ class LookUp
       @variables_generated = ['Result'] + csv.first.headers.reverse.take_while {|varb| varb != 'Result'}
 
       # add a line of Xs to T, N
-      if ['T','N'].include? part
-        x_row = {'Result'=> part+'X'}
-        @variables_needed.each {|varb| x_row[varb] = 'X'}
-        @table << x_row
-      end
+      # if ['T','N'].include? @part
+      #   x_row = {'Result'=> @part+'X'}
+      #   @variables_needed.each {|varb| x_row[varb] = 'X'}
+      #   @table << x_row
+      # end
 
       # convert csv to array of hashes
       csv.map { |row| @table << row.to_h }
@@ -68,18 +68,30 @@ class LookUp
       keys = values.keys
       # remove keys that have empty fields
       # puts values if !defined?(settings) || settings.environment == :development
-      keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0)}
-      valid_entries = @table.find_all do |row|
-        found = true
-        keys.each do |key|
-          if @variables_needed.include?(key)
-            found = found && (row[key] == values[key] || row[key]=="ANY")
+      ## If all values are X or empty
+      if (values.values + ['X','']).uniq.sort == ['','X']
+        valid_entries = [{'Result'=> @part+'X'}]
+      else ## If some values are X
+        new_values = {}
+  
+        values.each { |key, value| new_values[key] = value if values[key] != "X" }
+      
+        values = new_values
+
+        keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0) && (values[key] != 'X')}
+
+        valid_entries = @table.find_all do |row|
+          found = true
+          keys.each do |key|
+            if @variables_needed.include?(key)
+              found = found && (row[key] == values[key] || row[key]=="ANY")
+            end
           end
+          found
         end
-        found
       end
       if valid_entries.empty?
-        # does it contain don't knows -- we replace them with no's and try again
+        # does it contain don't knows -- we replace them with defaults and try again
         if values.values.include?("X") 
           new_values = {}
           values.each { |key, value| values[key] == "X" ? new_values[key] = @defaults[key] : new_values[key] = value }
@@ -100,7 +112,6 @@ class LookUp
         responses << response
       end
     end
-
     responses
   end
 

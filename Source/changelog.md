@@ -1,9 +1,14 @@
 # Changelog CanStaging+
 
+## 0.6.9 (2020-12-03)
+- Improved 'Don't know' algorithm.
+- Registration form added.
+- Cosmetic changes.
+
 ## 0.6.8 (2020-10-20)
 
 - Improved handling of write protected/missing log folder.
-- CanStaging+ is now CanStaging<sup>+</sup>
+- CanStaging+ is now CanStaging<sup>+</sup>.
 
 ## 0.6.7 (2020-10-14)
 
