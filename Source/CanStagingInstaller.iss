@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CanStaging+"
-#define MyAppVersion "0.6.8"
+#define MyAppVersion "0.6.9"
 #define MyAppPublisher "IARC"
-#define MyAppURL "http://canstaging.iarc.fr"
+#define MyAppURL "http://www.canstaging.org"
 #define MyAppExeName "launch.bat"
 #define CanStagingDir "C:\Users\ervikm\Documents\GitLab\CanStaging\Source"
 
