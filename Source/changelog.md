@@ -1,7 +1,8 @@
 # Changelog CanStaging+
 
-## 0.6.9 (2020-11-TBD)
-- Registration added.
+## 0.6.9 (2020-12-03)
+- Improved 'Don't know' algorithm.
+- Registration form added.
 - Cosmetic changes.
 
 ## 0.6.8 (2020-10-20)
