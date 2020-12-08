@@ -9,4 +9,7 @@
 "T3b","N0","M0","III",
 "T4","N0","M0","III",
 "ANY","N1","M0","IV",
-"ANY","ANY","M1","IV",
+"ANY","ANY","M1a","IV",
+"ANY","ANY","M1b","IV",
+"ANY","ANY","M1c","IV",
+

@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"RetroperitonealN","Number","Retroperitoneal lymph node(only) metastasis size(mm)","3",
+"RetroperitonealN","Number","Regional lymph node metastasis size (mm)","3",

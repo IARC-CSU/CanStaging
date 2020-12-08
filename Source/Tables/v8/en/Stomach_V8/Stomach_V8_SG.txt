@@ -1,5 +1,7 @@
 "T","N","M","Result"
 "T0","N0","M0","0"
+"TX","ANY","M0","Not Known"
+"ANY","NX","M0","Not Known"
 "T1a","N0","M0","IA"
 "T1b","N0","M0","IA"
 "T1a","N1","M0","IB"
