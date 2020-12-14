@@ -34,7 +34,7 @@
             </th>
           </tr>
           <tbody id = "<%= part %>">
-          <% meta.fields.values.sort_by(&:group).each do |field| %>
+          <% meta.fields.values.sort_by(&:order).each do |field| %>
             <% unless field.type == :generated %>
               <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
                 <% if field.type == :output %>

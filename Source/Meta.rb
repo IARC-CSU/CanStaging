@@ -68,6 +68,7 @@ class Meta
   end
   
   def add_field(variable)
+    variable.order = @fields.length
     @fields[variable.name] = variable
   end
 end
