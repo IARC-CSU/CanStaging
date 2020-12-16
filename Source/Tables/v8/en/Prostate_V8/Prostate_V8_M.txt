@@ -1,6 +1,8 @@
-"M","Nodes","Bone","Other","Result","Message"
-"1","ANY","ANY","ANY","M0",
-"2","F","F","F","M1",
-"2","T","F","F","M1a",
-"ANY","ANY","2","ANY","T","F","M1b",
-"2","ANY","ANY","T","M1c",
+"Nodes","Bone","Other","Result","Message"
+"F","F","F","M0",
+"T","F","F","M1a",
+"F","T","F","M1b",
+"F","F","T","M1c",
+"T","T","F","M1c",
+"F","T","T","M1c",
+"T","F","T","M1c",

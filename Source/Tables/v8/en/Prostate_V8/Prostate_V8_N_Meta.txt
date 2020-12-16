@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","Number of positive nodes","2",
+"PositiveN","Number","Number of regional positive nodes","2",

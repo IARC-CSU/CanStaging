@@ -20,7 +20,7 @@ require_relative './Library.rb'
 require 'rdiscount'
 
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order
   def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil, text=nil)
     @name = name
     @type = type
@@ -42,6 +42,10 @@ class Variable
     @ranges = ranges
   end
   
+  def order= order
+    @order = order
+  end
+
   def value_to_codes value
     codes = []
     case type.to_sym
