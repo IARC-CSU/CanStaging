@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastases","Boolean","Were metastases present at diagnosis?","",
+"UncertainMetastases","Boolean","Was it uncertain whether metastases were present at diagnosis?","",
+"PrimaryInvolvement","Boolean","Was involvement at diagnosis at the primary site only (brain or spine)?","",
