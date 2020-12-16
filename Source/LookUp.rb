@@ -70,7 +70,7 @@ class LookUp
       # puts values if !defined?(settings) || settings.environment == :development
       ## If all values are X or empty
       if (values.values + ['X','']).uniq.sort == ['','X']
-        valid_entries = [{'Result'=> @part+'X'}]
+        valid_entries = [{'Result'=> Site.get_default_result(@part)}]
       else ## If some values are X
         new_values = {}
   

@@ -93,14 +93,16 @@
         <% end %>
         </tbody>
         <% end %>
-        <tr id = "SGrange">
-          <th><%= R18n.t[:site][:sg_range] %></th>
-          <th class = "result" id = "SGrange_result"></th>
-        </tr>
-        <tr id = "result">
-          <th><%= R18n.t[:site][:tnm] %></th>
-          <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
-        </tr>
+        <% if site.tnm_version != 'Toronto' %>
+          <tr id = "SGrange">
+            <th><%= R18n.t[:site][:sg_range] %></th>
+            <th class = "result" id = "SGrange_result"></th>
+          </tr>
+          <tr id = "result">
+            <th><%= R18n.t[:site][:tnm] %></th>
+            <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
+          </tr>
+        <% end %>
         <% if site.tnm_version == 'v7' %>
           <tr id = "result_with_prefixes">
             <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
@@ -304,12 +306,14 @@
       }
 
       var el   = document.getElementById('TNM_result');
-      var text = results['T']+results['N']+results['M'];
-      tnm_tooltip_text = data["TNM"][0]["All results"].join("\n")
-      el.title = "Copy to clipboard:\n"+ tnm_tooltip_text;
-      el.innerHTML = text;
-      alertText += "<br>TNM: "+ text;
-      tnm_result = text;
+      if (el!=null) {
+        var text = results['T']+results['N']+results['M'];
+        tnm_tooltip_text = data["TNM"][0]["All results"].join("\n")
+        el.title = "Copy to clipboard:\n"+ tnm_tooltip_text;
+        el.innerHTML = text;
+        alertText += "<br>TNM: "+ text;
+        tnm_result = text;
+      }
       return alertText;
     }
 

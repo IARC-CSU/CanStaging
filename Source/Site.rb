@@ -185,7 +185,7 @@ class Site
     tnm_message_parts = []
     @PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
-        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
+        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => Site.get_default_result(part), "Message" => R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
@@ -193,9 +193,9 @@ class Site
           result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:invalid_combination] }]
           tnm_message_parts << R18n.t.site.no_such_combination(part)
         elsif result[part].length>1
-          tnm_result += "#{get_default_result(part)}" 
+          tnm_result += "#{Site.get_default_result(part)}" 
           tnm_message_parts << R18n.t.site.one_of_many_possible(part)
-          result[part] = [{"Result"=> get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
+          result[part] = [{"Result"=> Site.get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
           conclusive = false
         else
           tnm_result += "#{result[part][0]["Result"]}"          
@@ -217,8 +217,8 @@ class Site
 
     if error
        result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => R18n.t[:site][:no_data]}]
-       result["SGrange"] = [ { "Result" => get_default_result("SGrange")} ]
-       result["SimpG"] = [ { "Result" => get_default_result("SimpG")} ]
+       result["SGrange"] = [ { "Result" => Site.get_default_result("SGrange")} ]
+       result["SimpG"] = [ { "Result" => Site.get_default_result("SimpG")} ]
     else
       if @PARTS.include? "SG" && !result["SG"].nil? && result["SG"].length > 0
         result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
@@ -248,7 +248,7 @@ class Site
 
   private
 
-  def get_default_result(part)
+  def self.get_default_result(part)
     text = ""
     if(part == "T")
       text = "TX"
