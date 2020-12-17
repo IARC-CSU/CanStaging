@@ -55,8 +55,7 @@ class Site
     language_root_path = "#{tnm_version_root_path}/#{language}"
     site_root_path = "#{language_root_path}/#{site}" 
     @PARTS = detect_parts("#{site_root_path}/#{site}_")
-    puts @PARTS
-
+    
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
