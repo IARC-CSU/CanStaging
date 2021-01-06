@@ -1,5 +1,20 @@
 # Changelog CanStaging+
 
+## 0.7.2 (2021-01-TBD)
+
+- Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
+- Better handling of missing staging system. (To allow Toronot-guidelines.)
+- Disabled collapse of T, N, M parts of form.
+- Description text of Lung T added.
+- Added support for Markdown in DisplayText field of form.
+- Better cropping of some images.
+- Fixed some table issues
+	- Prostate SimpG
+	- Removed "Don't know" for Breast P V8 Micromets
+	- FIGO back for TNM7.
+	- Added highlighting.
+- Other fixes.
+
 ## 0.7.1 (2020-12-17)
 
 - Colorectal (under TNM7) now labeled as TNM5.
