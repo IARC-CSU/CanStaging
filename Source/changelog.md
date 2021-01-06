@@ -3,7 +3,7 @@
 ## 0.7.2 (2021-01-TBD)
 
 - Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
-- Better handling of missing staging system. (To allow Toronot-guidelines.)
+- Better handling of missing staging system. (To allow Toronto-guidelines.)
 - Disabled collapse of T, N, M parts of form.
 - Description text of Lung T added.
 - Added support for Markdown in DisplayText field of form.
