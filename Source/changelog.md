@@ -1,4 +1,4 @@
-# Changelog CanStaging+
+# Changelog CanStaging<sup>+</sup>
 
 ## 0.7.2 (2021-01-TBD)
 
