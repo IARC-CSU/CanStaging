@@ -22,7 +22,7 @@
 
 ## 0.7.0 (2020-12-16)
 - Updated busines logic.
-- Fixed the bug where the ordering of fields on the forms sometimes was wrong.Fixed the bug where the ordering of fields on the forms sometimes was wrong.
+- Fixed the bug where the ordering of fields on the forms sometimes was wrong.
 - Stability improvements.
 
 ## 0.6.9 (2020-12-03)
