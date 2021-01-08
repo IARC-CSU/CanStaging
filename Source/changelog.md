@@ -1,6 +1,6 @@
 # Changelog CanStaging<sup>+</sup>
 
-## 0.7.2 (2021-01-TBD)
+## 0.7.2 (2021-01-08)
 
 - Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
 - Better handling of missing staging system. (To allow Toronto-guidelines.)
@@ -8,7 +8,7 @@
 - Description text of Lung T added.
 - Added support for Markdown in DisplayText field of form.
 - Better cropping of some images.
-- Fixed some table issues
+- Fixed some table issues:
 	- Prostate SimpG
 	- Removed "Don't know" for Breast P V8 Micromets
 	- FIGO back for TNM7.
