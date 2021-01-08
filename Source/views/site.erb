@@ -43,7 +43,7 @@
                   <td title = "<%= field.tooltip %>">
                 <% end %>
 
-                <%= field.display_text %>
+                <%= RDiscount.new(field.display_text).to_html.gsub(/^<p>/,'').gsub(/<\/p>$/,'').strip %>
 
                 <% if !field.image.nil? %>
                     <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
@@ -51,7 +51,7 @@
 
                 <% if !field.text.nil? %>
                     <% html = '"' + field.text.gsub("\n"," ") +'"' %>
-                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
+                    <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
                 <% end %>
                     
                 </td>
@@ -129,8 +129,8 @@
     }
 
     function hide_unhide(part) {
-     $('tbody#'+part).toggle( {easing: 'swing'} ); 
-     /*$('tbody#'+part).toggle( 'scale', { percent: 0 }, 500 );*/
+     // $('tbody#'+part).toggle( {easing: 'swing'} ); 
+     // $('tbody#'+part).toggle( 'scale', { percent: 0 }, 500 );
     }
 
     function next_tumour_id(current) {

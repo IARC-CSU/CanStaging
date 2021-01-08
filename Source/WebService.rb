@@ -183,7 +183,7 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
 end
 
