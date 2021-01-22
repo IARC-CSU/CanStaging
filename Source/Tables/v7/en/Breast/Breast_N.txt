@@ -1,4 +1,5 @@
 "Pathologic","Posttherapy","Micrometastases","Axillary","Matted","MammaryMicro","MammaryClinical","Infraclavicular","Supraclavicular","Result","Message"
+"F","F","F","1","F","F","F","F","F","N0",
 "ANY","ANY","F","1","F","F","F","F","F","N0",
 "T","F","T","ANY","ANY","ANY","ANY","F","F","N1mi",
 "T","F","F","2","ANY","F","F","F","F","N1a",

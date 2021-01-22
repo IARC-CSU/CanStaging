@@ -11,3 +11,4 @@
 "IVA","Distant"
 "IVB","Distant"
 "IVC","Distant"
+"Not Known","Not Known"

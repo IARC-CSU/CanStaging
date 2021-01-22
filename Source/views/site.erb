@@ -8,17 +8,17 @@
 
   <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
 
-  <!-- For now we either have a PDF or a form... -->
+  <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
     <% if site.png.nil? %> 
       <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
     <% else %>
-      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}'></a>" %> 
+      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
     <% end %>
   <% else %> 
     <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
       <input name="site" value="<%= site.default_name %>" hidden = true type = "hidden">
-      <!-- <input name="key" value="<%= params[:key] %>" hidden = true type = "hidden"> -->
+      <input name="tnm_version" value="<%= site.tnm_version %>" hidden = true type = "hidden">
       <table class="table" id = <%= "\"#{site.css}_form\"" %> >
         <thead>
         <tr id = "identification">
@@ -28,14 +28,13 @@
         </thead>
         <% site.get_metas.each do |part, meta| %>
           <% unless meta.fields.empty? %>
-          <thead>
           <tr id = "<%= part %>" onclick = "hide_unhide('<%= part %>')">
             <th><%= part %></th>
             <th class = "result" id = "<%= part %>_result">
             </th>
           </tr>
           <tbody id = "<%= part %>">
-          <% meta.fields.values.sort_by(&:group).each do |field| %>
+          <% meta.fields.values.sort_by(&:order).each do |field| %>
             <% unless field.type == :generated %>
               <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
                 <% if field.type == :output %>
@@ -44,10 +43,15 @@
                   <td title = "<%= field.tooltip %>">
                 <% end %>
 
-                <% if field.image.nil? %>
-                  <%= field.display_text %>
-                <% else %>
-                  <div><span class="illustrated" href="#" data-image="../<%= field.image %>"><%= field.display_text %> </span></div>
+                <%= RDiscount.new(field.display_text).to_html.gsub(/^<p>/,'').gsub(/<\/p>$/,'').strip %>
+
+                <% if !field.image.nil? %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
+                <% end %>
+
+                <% if !field.text.nil? %>
+                    <% html = '"' + field.text.gsub("\n"," ") +'"' %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
                 <% end %>
                     
                 </td>
@@ -56,12 +60,13 @@
                   <td>
                     <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="T" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)"><%= R18n.t[:yes] %>
                     <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="F" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:no] %>
+                    <input type="radio" name=<%= "\"data[#{part}[#{field.name}]]\"" %> value="X" onchange = "change('<%= part %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)" checked><%= R18n.t[:site][:dontknow] %>
                   </td>
                 <% when :dictionary %>
                 <td>
                     <select name=<%= "\"data[#{part}[#{field.name}]]\"" %> onchange = "change('<%=part  %>', <%= "\'data[#{part}[#{field.name}]]\'" %>)">
                       <% unless part == "M" %>
-                      <option value='' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
+                      <option value='X' disabled selected style='display:none;'><%= R18n.t[:site][:please_choose] %> </option>
                       <% end %>
                       <% field.dictionary.table.each do |key, value| %>
                         <option value=<%= "\"#{key}\"" %> title=<%= "\"#{value}\"" %> ><%= value %></option>
@@ -96,10 +101,12 @@
           <th><%= R18n.t[:site][:tnm] %></th>
           <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
         </tr>
-        <tr id = "result_with_prefixes">
-          <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
-          <th class = "result" id = "TNMwP_result"></th>
-        </tr>
+        <% if site.tnm_version == 'v7' %>
+          <tr id = "result_with_prefixes">
+            <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
+            <th class = "result" id = "TNMwP_result"></th>
+          </tr>
+        <% end %>
         <tr id = "buttons">
           <td></td>
           <td align="right">
@@ -122,8 +129,8 @@
     }
 
     function hide_unhide(part) {
-     $('tbody#'+part).toggle( {easing: 'swing'} ); 
-     /*$('tbody#'+part).toggle( 'scale', { percent: 0 }, 500 );*/
+     // $('tbody#'+part).toggle( {easing: 'swing'} ); 
+     // $('tbody#'+part).toggle( 'scale', { percent: 0 }, 500 );
     }
 
     function next_tumour_id(current) {
@@ -246,10 +253,21 @@
         var el = document.getElementById(part+'_result');
         if (el != null) {
           var text = data[part][0]["Result"];
-          el.innerHTML = text;
+          if (text == "ERROR") {
+            el.innerHTML = data[part][0]["Message"]
+          } else {
+            el.innerHTML = text;
+          }
           if (data[part].length>1 && !unique_result(data[part])) { 
             text = getDefaultResult(part);
-            el.innerHTML = text;
+            additional_text = ""
+            items = []
+            for (var j = 0; j < data[part].length; j++) {
+              items.push(data[part][j]["Result"])
+            }
+            items = Array.from(new Set(items))
+            additional_text = items.sort().join(", ")
+            el.innerHTML = text //+ " (" + additional_text+ ")" ;
           };
           results[part] = text;
           if (part == "SG") {
@@ -278,10 +296,12 @@
         }
       }
       var el1  = document.getElementById('TNMwP_result');
-      var text = data["TNMwP"][0]["Result"];
-      // el1.title = data["TNMwP"][0]["All results"].join("\n");
-      el1.innerHTML = text;
-      alertText += "<br>TNM with prefixes: "+ text;
+      if (el!=null) {
+        var text = data["TNMwP"][0]["Result"];
+        // el1.title = data["TNMwP"][0]["All results"].join("\n");
+        el1.innerHTML = text;
+        alertText += "<br>TNM with prefixes: "+ text;
+      }
 
       var el   = document.getElementById('TNM_result');
       var text = results['T']+results['N']+results['M'];
@@ -354,7 +374,7 @@
   //update the auto-generate-stuff
   autogenerateUpdated();
 
-  document.title = "CanStaging - <%= site.site %>";
+  document.title = "CanStaging<sup>+</sup> - <%= site.site %>";
   setDefaultResults();
   // this overrides the default...
   // function help_alert() {

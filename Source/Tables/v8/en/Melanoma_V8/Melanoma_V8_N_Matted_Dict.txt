@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Matted metastatic regional lymph nodes absent"
+"2","Matted metastatic regional lymph nodes present"

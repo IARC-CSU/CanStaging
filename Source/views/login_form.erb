@@ -1,4 +1,17 @@
-<form action='/login/attempt' method='post' class="form-inline well">
-  <input type="password" name='key' placeholder="key" autofocus>
-  <input class="btn primary" type='submit' value='log in'>
+<link rel="stylesheet" href="/css/default.css" type="text/css">
+
+<h1>CanStaging<sup>+</sup></h1>
+<hr width="75%" />
+<p class="welcome"><%= R18n.t[:home][:welcome] %></p>
+<hr width="75%" />
+
+<form action='/login/attempt' method='post'>
+  <div class="form-group">
+    <!-- <label for="key">Key</label> -->
+    <input type="password" name='key' placeholder="key" autofocus class="form-control" id="key" aria-describedby="keyHelp" placeholder="Enter key">
+    <small id="emailHelp" class="form-text text-muted"><%= R18n.t[:home][:enter_key] %> </small>
+  </div>
+  <input class="btn btn-primary" type='submit' value='<%= R18n.t[:home][:log_in] %>'>
 </form>
+
+If you don't have a key please <a href='/register'>register</a>.

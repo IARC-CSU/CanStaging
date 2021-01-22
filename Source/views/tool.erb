@@ -1,24 +1,48 @@
 <link rel="stylesheet" href="/css/default.css" type="text/css">
 
-<h1>CanStaging</h1>
-<p class="by"><%= R18n.t[:home][:by] %> Morten Ervik (IARC/CSU), Giulio Napolitano (NICR), Kenneth Yeung (NICR), James Brierley (TNM Core Group, UICC), Colin Fox (NICR), <%= R18n.t[:home][:and] %> Lisa Ranaghan (NICR)</p>
+<% tnm_versions = {'v8' => 'TNM8', 'v7'=> 'TNM7', 'eTNM'=> 'Essential TNM', 'Toronto' => 'Toronto', 'v5' => 'TNM5' }%>
+
+<h1>CanStaging<sup>+</sup></h1>
 <hr width="75%" />
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
-<h4>​Sites [<%= sites.first.tnm_version unless sites.empty? %>]</h4>
+<h4>​Sites <%= tnm_versions[session[:tnm_version]]  %></h4>
 
-<%= R18n.t[:home][:no_sites_translated] if sites.empty? %>
+<%= R18n.t[:home][:no_sites_translated] if sites.nil? || sites.empty? %>
 
-<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+<!-- <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
   <% sites.each do |site| %>
-    <a class="nav-link" href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_group_1"><%= site.site.capitalize %></a>
+    <a class="nav-link" href = "/site/<%= "#{site.default_name.downcase}" %>" id = "<%= site.css %>_menu"><%= site.site.capitalize %></a>
+  <% end %>
+</div>
+-->
+
+<div class="card-columns">
+  <% sites.each do |site| %>
+  <a href = "/site/<%= "#{site.default_name.downcase}" %>">
+    <div class="card">
+        <div class="card-header" id = "<%= site.css %>_menu">
+          <%= site.site.capitalize %>
+        </div>
+      <div class="card-body">
+        <!-- <h5 class="card-title"><%= site.site.capitalize%> </h5> -->
+        <!-- <p class="card-text">Info?</p> -->
+        <!-- <a href="#" class="btn btn-primary">Go</a> -->
+        <% if site.default_name.downcase == 'colorectal' && session[:tnm_version] == 'v7' %>
+          <p class="card-text"><small class="text-muted"><%= tnm_versions['v5']  %> </small></p>
+        <% else %>
+          <p class="card-text"><small class="text-muted"><%= tnm_versions[session[:tnm_version]]  %> </small></p>
+        <% end %>
+      </div>
+    </div>
+  </a>
   <% end %>
 </div>
 
 <hr width="75%" />
 
-<p id="endorsed">Endorsed by:</p>
-<div class="row">
+<p class="endorsed"><%= R18n.t[:home][:endorsed_by] %>:</p>
+<div class="row endorsed">
   <div class="col" align = "center">
     <a href= "http://www.qub.ac.uk/research-centres/nicr/"><img src="./media/NICR.gif" width="120" title="NICR" /></a>
   </div>
@@ -29,7 +53,10 @@
     <a href= "http://gicr.iarc.fr"><img src="./media/GICR-logo.jpg" width="150" title="GICR" /></a>
   </div>
 </div>
-<div class = "row">
+<div class = "row endorsed">
+  <div class="col" align = "center">
+    <a href= "https://gco.iarc.fr/survival/survmark/"><img src="./media/ICBP_logo.png" width="120" title="ICBP" /></a>
+  </div>
   <div class="col" align = "center">
     <a href= "http://www.uicc.org/"><img src="./media/UICC.jpg" width="120" title="UICC" /></a>
   </div>
@@ -39,7 +66,10 @@
 </div>
 
 <hr width="75%" />
-<p class="disclaimer">Used with the permission of the Union for International Cancer Control (UICC), Geneva, Switzerland. The original source for this material is <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Leslie+H.+Sobin">Leslie H. Sobin</a> (Editor), <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Mary+K.+Gospodarowicz">Mary K. Gospodarowicz</a> (Editor), <a href="http://eu.wiley.com/WileyCDA/Section/id-302479.html?query=Christian+Wittekind">Christian Wittekind</a> (Editor), TNM Classification of Malignant Tumours, 7th Edition, published in November 2009 by Wiley-Blackwell
+<p class="disclaimer">Used with the permission of the Union for International Cancer Control (UICC), Geneva, Switzerland. The original source for this materials are Leslie H. Sobin (Editor), Mary K. Gospodarowicz (Editor), Christian Wittekind (Editor), 'TNM Classification of Malignant Tumours, 7th Edition', published in 2009 by Wiley-Blackwell,  James D. Brierley (Editor), Mary K. Gospodarowicz (Editor), Christian Wittekind (Editor), 'TNM Classification of Malignant Tumours, 8th Edition', published in 2016 by Wiley-Blackwell, and Piñeros M, Parkin DM, Ward K, Chokunonga E, Ervik M, Farrugia H, Gospodarowicz M, O'Sullivan B, Soerjomataram I, Swaminathan R, Znaor A, Bray F, Brierley J., 'Essential TNM: a registry tool to reduce gaps in cancer staging information', published in 2019 in Lancet Oncol. 20(2):e103-e111. doi:10.1016/S1470-2045(18)30897-0.
 <br><br>
-This tool has been reproduced with due care. Any inconsistencies with the UICC TNM classification 7th edition and published errata are unintentional. Neither NICR nor UICC carry any liability should unforeseen errors emerge.
+This tool has been reproduced with due care. Any inconsistencies with the UICC TNM classification
+7th and 8th editions in addition to essential TNM and published errata are unintentional. Neither
+NICR, IARC nor UICC carry any liability should unforeseen errors emerge. However we would be
+pleased to receive all comments on any inconsistencies.
 </p>

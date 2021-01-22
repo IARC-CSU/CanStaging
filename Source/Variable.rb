@@ -1,10 +1,27 @@
+# This file is part of CanStaging.
+
+# CanStaging is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# CanStaging is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
+
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 require_relative './Library.rb' 
 
+require 'rdiscount'
+
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image
-  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil)
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order
+  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil, text=nil)
     @name = name
     @type = type
     @display_text = display_text
@@ -13,7 +30,8 @@ class Variable
     @dictionary = dictionary
     @ranges = ranges
     @tooltip = tooltip
-    @image = image
+    @image = image  # pop up image
+    @text = text    # pop up text -- potentially in markdown
   end
   
   def dictionary= dictionary
@@ -24,6 +42,10 @@ class Variable
     @ranges = ranges
   end
   
+  def order= order
+    @order = order
+  end
+
   def value_to_codes value
     codes = []
     case type.to_sym
@@ -47,8 +69,12 @@ class Variable
     end
   end
   
-  def set_image_path path 
+  def image= path 
     @image = path
+  end
+
+  def text= path 
+    @text = path
   end
 
   def to_s

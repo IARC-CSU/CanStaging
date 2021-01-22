@@ -1,3 +1,3 @@
-echo "Starting CanStaging -- Please wait." 
-START "CanStaging" .\WebService.exe
-rundll32 url.dll,FileProtocolHandler http://localhost
+echo "Starting CanStaging+ -- Please wait." 
+START /min "CanStaging+" .\CanStaging.exe
+rundll32 url.dll,FileProtocolHandler .\loader.html

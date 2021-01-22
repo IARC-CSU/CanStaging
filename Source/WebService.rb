@@ -1,6 +1,23 @@
+# This file is part of CanStaging.
+
+# CanStaging is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# CanStaging is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
+
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 $:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
+
+require "bundler/setup" # to make sure we load the versions from the gemfile
 
 require 'sinatra'
 require 'json'
@@ -11,11 +28,57 @@ require 'tilt/erb'
 require_relative './Site.rb'
 require_relative './KeyManager.rb'
 require_relative './STLogger.rb'
+## fix before upgrading to newer version of Ruby (2.4+)
+unless defined?({}.transform_values)
+  require 'backports/2.4.0/hash/transform_values'
+end
+require 'fileutils'
+require 'rdiscount'
 
-config = YAML.load_file("config.yml")
+# Puma stuff
+require 'bundler'
+require 'puma'
+require "rack/handler/puma"
 
-set :server, %w[thin mongrel webrick]
-set :environment, :production if (config['system']['environment'] == 'production')
+# first load default config
+
+config_default = { 'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0' } }
+
+config = YAML.load_file("./data/config.yml")
+
+# if we are running in standalone mode load config from user folder
+if config['system']['standalone']
+  puts "Standalone mode"
+  # Check if we haven't overridden the config and home dir exist
+  config_default['system']['port'] = 9292
+  config_default['system']['bind'] = 'localhost'
+
+  if config['system']['log_file'].nil? 
+
+    if File.directory?(Dir.home)
+      # first create necessary directory
+      home_dir = "#{Dir.home}/.canstaging"
+      unless File.directory?(home_dir)
+        FileUtils.mkdir_p(home_dir)
+      end
+      config['system']['log_file'] = "#{home_dir}/logg.db"
+    else
+      puts "Invalid home directory: #{Dir.home} -- defaulting to #{config_default['system']['log_file']}"
+      config['system']['log_file'] = config_default['system']['log_file']
+    end
+  end
+end
+
+## Merge config overwriting anything in default config...
+config['system'] = config_default['system'].merge(config['system'])
+
+set :server, %w[puma thin mongrel webrick]
+set :environment, :production if (config['system']['environment'] != 'development')
+
+$DEBUG = (settings.environment == :development)
+
+puts config if $DEBUG
+
 set :bind, config['system']['bind']
 set :port, config['system']['port']
 
@@ -72,12 +135,13 @@ before do
   R18n.set(session[:locale])
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
-  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v7"
+  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v8"
+  session[:in_memory] = $st_logger.in_memory?
 end
 
 # check for valid api key to all calls to the service... 
 before do
-  unless request.path_info.start_with? "/login"
+  unless request.path_info.start_with?("/login") || request.path_info.start_with?("/tool") || request.path_info.start_with?("/about") || request.path_info.start_with?("/register")
     error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     session[:key] = params[:key] || session[:key]
   end
@@ -91,7 +155,7 @@ end
 
 post '/tnm_submit' do 
   result = calculate_tnm(params)
-  $st_logger.log(session[:key], params["tumour_id"], session[:tnm_version], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
+  $st_logger.log(session[:key], params["tumour_id"], params["tnm_version"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
   # puts JSON.pretty_generate(result) if settings.environment == :development
   return JSON.pretty_generate(result)
 end
@@ -119,7 +183,19 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  erb :tool, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
+  sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
+get '/about' do 
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+end
+
+get '/changelog' do
+  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
+  markdown = RDiscount.new(open('./changelog.md').read)
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
 end
 
 get '/refresh' do
@@ -167,11 +243,16 @@ get '/login/form' do
   erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
+get '/register' do 
+  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+end
+
 post '/login/attempt' do
   user = $key_manager.get_user(params['key'])
   if !user.nil?
     session[:key] = params['key']
     session[:user] = user
+    session[:local] = (request.ip.to_s == "127.0.0.1")
     $st_logger.log_access(session[:key], request.ip.to_s)
     where_user_came_from = session[:previous_url] || '/tool'
     session[:message] = R18n.t.service.logged_in
@@ -186,6 +267,15 @@ get '/logout' do
   session.delete(:key)
   session[:message] = R18n.t.service.logged_out
   redirect to('/tool')
+end
+
+get '/shutdown' do 
+  if config['system']['standalone'] && session[:local] 
+    Sinatra::Application.quit!
+  else
+    session[:error] = R18n.t.service.invalid_url
+    redirect to('/tool')
+  end
 end
 
 get '/' do
@@ -220,20 +310,25 @@ not_found do
   erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
-
 ## Helper functions
 
 def calculate_tnm params
   site_name = params["site"].downcase.strip.to_sym unless params["site"].nil?
-  site = $sites[session[:tnm_version]][session[:sites_locale]][site_name] unless !$sites[session[:tnm_version]][session[:sites_locale]].keys.include?(site_name)
+
+  # TNM Version is pulled from the parameters or the session if unavailable
+  tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
+
+  site = $sites[tnm_version][session[:sites_locale]][site_name] unless !$sites[tnm_version][session[:sites_locale]].keys.include?(site_name)
   if site.nil?
     return {"Error"=> R18n.t.service.unknown_site(params["site"])}.to_json
   else
     site.get_metas.each do |part, meta| 
       meta.fields.keys.each do |key|
         unless params["data"][part].nil?
-          number = params["data"][part].delete "#{key}-number" # remove the temporary variables
-          params["data"][part][key] = meta.fields[key].value_to_codes(number).first unless (number.nil? || number.length == 0)
+          if params["data"][part].include?("#{key}-number")
+            number = params["data"][part].delete "#{key}-number" # remove the temporary variables
+            params["data"][part][key] = meta.fields[key].value_to_codes(number).first
+          end
         end
       end
     end
@@ -250,6 +345,7 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
   CSV.foreach(filename, {col_sep: col_sep, quote_char: quote_char, headers: true}) do |row|
     params = {}
     params["site"] = row["site"] || row["Site"]
+    params["tnm_version"] = row["TNM version"] || row["TNM Version"]
     if row.headers.include? "input"
       params["data"] = JSON.parse(row["input"])
     else
@@ -261,7 +357,8 @@ def parse(filename, session, ip, col_sep=",", quote_char='"')
       # puts result if settings.environment == :development
       if result["Error"] == nil
         params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? $st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
-        $st_logger.log(session[:key], params["tumour_id"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
+        tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
+        $st_logger.log(session[:key], params["tumour_id"], tnm_version, params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
         number_ok += 1
       else
         number_failed += 1
@@ -274,7 +371,7 @@ end
 def row_to_data row
   data = Hash.new { |hash, key| hash[key] = {} }
   row.each do |column, value|
-    part, variable_name = column.split(" ", 2)
+    part, variable_name = column.split("_", 2)
     data[part][variable_name] = value unless variable_name.nil?
   end
   data
@@ -284,7 +381,7 @@ def data_to_row data
   row = {}
   data.each do |part, list| 
     list.each do |variable, value| 
-      row["#{part} #{variable}"] = value  
+      row["#{part}_#{variable}"] = value  
     end 
   end
   row

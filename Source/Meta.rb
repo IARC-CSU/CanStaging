@@ -1,4 +1,19 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# This file is part of CanStaging.
+
+# CanStaging is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# CanStaging is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
+
+# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 require 'csv'
 require 'json'
@@ -11,7 +26,7 @@ require_relative './Ranges.rb'
 class Meta
   attr_accessor :fields
   def initialize file_name = nil
-    puts file_name
+    # puts file_name if $DEBUG
     @fields = {}
     unless file_name.nil? || !File.exist?(file_name)
       table = CSV.read(file_name, :headers => true, encoding: "UTF-8")
@@ -53,6 +68,7 @@ class Meta
   end
   
   def add_field(variable)
+    variable.order = @fields.length
     @fields[variable.name] = variable
   end
 end

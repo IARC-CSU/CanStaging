@@ -1,0 +1,16 @@
+# Malignant Melanoma of Skin Regional Lymph Nodes
+
+|    <br>Primary Tumour Site <br>   <br>                              |    <br>Regional Lymph Nodes<br>   <br>                                                                                                             |
+|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <br>Head and Neck                                                |    <br>Cervical Nodes                                                                                                                              |
+|    <br>Lip                                                          |    <br>Facial <br>   <br>Preauricular <br>   <br>Submandibular<br>   <br>Submental                                                                 |
+|    <br>Eyelid/Canthus                                               |    <br>Facial <br>   <br>Infra-auricular<br>   <br>Preauricular <br>   <br>Submandibular                                                           |
+|    <br>External Ear/Auditory Canal                                  |    <br>Pre-auricular and Post-auricular (Mastoid)                                                                                                  |
+|    <br>Face, Other (cheek, chin, forehead, jaw, nose and temple)    |    <br>Facial <br>   <br>Preauricular <br>   <br>Submandibular<br>   <br>Submental                                                                 |
+|    <br>Scalp                                                        |    <br>Occipital<br>   <br>Preauricular<br>   <br>Post-auricular (Mastoid)<br>   <br>Spinal Accessory (Posterior Cervical)                         |
+|    <br>Neck                                                         |    <br>Axillary<br>   <br>Occipital Spinal Accessory (Posterior Cervical) <br>   <br>Preauricular<br>   <br>Submental<br>   <br>Supraclavicular    |
+|    <br>Upper Trunk                                                  |    <br>Axillary<br>   <br>Cervical<br>   <br>Internal Mammary<br>   <br>Supraclavicular                                                            |
+|    <br>Lower Trunk                                                  |    <br>Femoral (Superficial Inguinal)                                                                                                              |
+|    <br>Arm/Shoulder                                                 |    <br>Axillary<br>   <br>Epitrochlear (for hand/arm)<br>   <br>Spinal Accessory (for shoulder)                                                    |
+|    <br>Leg/Hip                                                      |    <br>Femoral (Superficial Inguinal) <br>   <br>Popliteal (for heel and calf)                                                                     |
+|    <br>Vulva/Penis/Scrotum                                          |    <br>Deep Inguinal<br>   <br>Femoral (Superficial Inguinal)                                                                                      |

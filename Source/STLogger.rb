@@ -1,14 +1,40 @@
+# This file is part of CanStaging.
+
+# CanStaging is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# CanStaging is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
+
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 ## Logger
 require 'sequel'
 require 'csv'
+require 'fileutils'
 
 class STLogger
-  DB_FILE_NAME = './logg.db'
+  DB_FILE_NAME = './data/logg.db' # overridden by config.yml
   def initialize(db_file_name = DB_FILE_NAME)
-    puts db_file_name
-    @db = Sequel.sqlite(db_file_name)
+    begin
+      dirname = File.dirname(db_file_name)
+      unless File.directory?(dirname)
+        FileUtils.mkdir_p(dirname)
+      end
+      @db = Sequel.amalgalite(db_file_name)
+    rescue Exception => e # Sequel::DatabaseConnectionError
+      puts e 
+      # Fall back to memory db
+      db_file_name = ":memory:"
+      @db = Sequel.amalgalite(db_file_name)
+    end
     create_tables
     @entries_table = @db[:entries]
     @deleted_entries_table = @db[:deleted_entries]
@@ -16,7 +42,7 @@ class STLogger
   end
 
   def log(key, tumour_id, tnm_version, site, input, result, ip_address)
-    puts tumour_id
+    # puts tumour_id if $DEBUG
     
     # if the user does not specify tumour ID we keep everything
     if (tumour_id == nil || tumour_id.length == 0) 
@@ -94,6 +120,10 @@ class STLogger
   def get_next_numeric_id(key, ip_address)
     highest = @entries_table.where(:key =>key, :ip_address => ip_address).all.max_by {|e| e[:tumour_id].to_i}
     highest == nil ? 0 : (highest[:tumour_id].to_i + 1)
+  end
+
+  def in_memory?
+    @db.opts[:database] == ":memory:"
   end
 
   private

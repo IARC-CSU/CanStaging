@@ -1,4 +1,20 @@
 # encoding: UTF-8
+
+# This file is part of CanStaging.
+
+# CanStaging is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# CanStaging is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
+
 # Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
 
 require_relative './LookUp.rb'
@@ -11,6 +27,8 @@ class Site
   TABLES_ROOT_PATH = "./Tables"
   LOCAL_IMAGES_ROOT_PATH = "./public/gfx"
   SERVER_IMAGES_ROOT_PATH = "/gfx/"
+  LOCAL_TEXTS_ROOT_PATH = "./public/txt"
+  SERVER_TEXTS_ROOT_PATH = "/txt/"
 
   def initialize site, language, tnm_version
     puts "Loading: #{site}, #{language}, #{tnm_version}"
@@ -22,7 +40,7 @@ class Site
     @tnm_version = tnm_version
     @css = @default_name.split("_").first.downcase  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
-    puts tnm_version_root_path
+    # puts tnm_version_root_path if !defined?(settings) || $DEBUG
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
     language_root_path = "#{tnm_version_root_path}/#{language}"
     site_root_path = "#{language_root_path}/#{site}" 
@@ -38,16 +56,21 @@ class Site
     # Add pdf/png if it is present
     pdf_path = "#{tnm_version}/#{language}/#{site}/#{site}.pdf"
     png_path = "#{tnm_version}/#{language}/#{site}/#{site}.png"
+    txt_path = "#{tnm_version}/#{language}/#{site}/#{site}.txt"
 
-    puts pdf_path
+    # puts pdf_path if !defined?(settings) || $DEBUG
     
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{pdf_path}"
       @pdf = "#{SERVER_IMAGES_ROOT_PATH}/#{pdf_path}"
-      puts "Found PDF! : #{@pdf} "
+      puts "Found PDF! : #{@pdf} " if $DEBUG
     end
 
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{png_path}"
       @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+    end
+
+    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{png_path}"
+      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{png_path}"
     end
 
     @site = translated_name.capitalize
@@ -72,19 +95,41 @@ class Site
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
-          print "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
+          print "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}" if $DEBUG
           if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_path}"
-            variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_path}"
-            puts " - Found"
+            variable.image = "#{SERVER_IMAGES_ROOT_PATH}/#{relative_path}"
+            puts " - Found" if $DEBUG
           elsif File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{relative_default_path}"
-            variable.set_image_path "#{SERVER_IMAGES_ROOT_PATH}/#{relative_default_path}"
-            puts " - Found English"
+            variable.image = "#{SERVER_IMAGES_ROOT_PATH}/#{relative_default_path}"
+            puts " - Found English" if $DEBUG
           else 
-            puts " - Not found"
+            puts " - Not found" if $DEBUG
           end
         end
       end
-
+      # Add text paths 
+      if ["T","N","M"].include? part
+        @metas[part].fields.each do |variable_name, variable|
+          relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
+          relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"
+          print "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}" if $DEBUG
+          html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body>'
+          if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}"
+            puts " - Found" if $DEBUG
+            # Load it into the variable already
+            html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}").read).to_html
+            html += "</body></html>"
+            variable.text = html
+          elsif File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}"
+            puts " - Found English" if $DEBUG            
+            html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}").read).to_html
+            html += "</body></html>"
+            variable.text = html
+          else 
+            puts " - Not found" if $DEBUG
+          end
+        end
+      end
       # Add prefixes to the meta if needed
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
@@ -119,7 +164,7 @@ class Site
     values["SG"] ||= {}
     values["SGrange"] ||= {}
     
-    # puts values
+    # puts values if $DEBUG
 
     conclusive = true
     error = false
@@ -131,7 +176,7 @@ class Site
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
           error = true
-          result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:no_possible_combination] }]
+          result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:invalid_combination] }]
           tnm_message_parts << R18n.t.site.no_such_combination(part)
         elsif result[part].length>1
           tnm_result += "#{get_default_result(part)}" 

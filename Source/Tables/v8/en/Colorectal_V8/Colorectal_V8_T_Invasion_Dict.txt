@@ -4,3 +4,4 @@
 "3","Tumour invades subserosa or into non-peritonealized pericolorectal tissues"
 "4","Tumour perforates visceral peritoneum"
 "5","Tumour directly invades or is adherent to other organs or structures"
+"6","Tumuor cannot be assessed"

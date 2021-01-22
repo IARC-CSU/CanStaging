@@ -15,29 +15,38 @@ service:
   upload_failed: "Upload failed."
   unknown_site: "Unknown site: %1"
   logged_out: "Logged out."
-  looged_in: "Logged in."
+  logged_in: "Logged in."
+  invalid_url: "Invalid URL."
 
 layout:
-  title: "CanStaging -- the Cancer Staging Tool"
+  title: "CanStaging+ -- the Cancer Staging Tool"
   user: "user"
   admin: "admin"
   home: "Home"
   sites: "Sites"
   upload: "Upload"
   get_log: "Get log"
+  get_log_title: "Download the log of submitted cases."
+  get_temp_log: "Get <i>temporary</i> log"
+  get_temp_log_title: "Download the log of submitted cases. Please note that this log will be lost when the staging tool is shut down." 
   help: "Help"
-  help_text: "<b>Help</b><br>CanStaging - the Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Download a PDF guide</a> with more information."
+  help_text: "<b>Help</b><br>CanStaging<sup>+</sup> - the Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Download a PDF guide</a> with more information."
   about: "About"
-  about_text: "<div id = \\\"about\\\"> <h1>COPYRIGHT</h1> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h1>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h1> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
+  about_text: "<div id = \\\"about\\\"> <h2>COPYRIGHT</h2> <p>This product is protected by copyright. Except as specifically permitted, no portion of this tool may be distributed or reproduced by any means, or in any form, without the NICR's prior written permission.</p> <p>Copyright © The Queen's University of Belfast, 2013 - Northern Ireland Cancer Registry, The Queen's University of Belfast, nicr@qub.ac.uk. All rights reserved.<br></p> <h2>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h2> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, THE NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p> </div>"
   log_out: "Log out"
+  log_in: "Log in"
   language_select: "Language select"
   tnm_version: "TNM version"
   no_sites_translated: "No sites translated to this language yet."
+  shutdown: "Shutdown"
 
 home:
   by: "By" 
   and: "and" 
-  welcome: "Welcome to CanStaging, a Cancer Staging Tool, provided to you thanks to a NICR, IARC, and UICC collaboration. The tool will help maximise the availability, standardisation and comparability of cancer staging internationally."
+  welcome: "Welcome to CanStaging<sup>+</sup>, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach.  Colorectal cancer may be staged using the TNM staging versions 5 and 8."
+  endorsed_by: "Endorsed by"
+  log_in: "Log in"
+  enter_key: "Enter your key."
 
 get_log:
   tumour_ID: "Tumour ID"
@@ -49,26 +58,27 @@ get_log:
   tnm_result: "TNM - Result"
   tnm_message: "TNM - Message"
   tnm_version: "TNM - Version"
-  sg_result: "SG - Result"
-  sg_message: "SG - Message"
+  sg_result: "Stage Group - Result"
+  sg_message: "Stage Group - Message"
   simpg: "SimpG"
-  sg_range: "SG Range"
+  sg_range: "Stage Group Range"
   site_specific: "Site Specific"
   clear_log: "Clear log"
-  download_log: "Download log"
+  download_log: "Download detailed log"
 
 site:
   please_choose: "Please Choose"
   no_data: "No data"
   no_such_combination: "No such combination for %1..."
   no_possible_combination: "No possible combination."
+  invalid_combination: "Invalid combination."
   many_possible: "Many possible."
   one_of_many_possible: "One of many possible %1s..."
   reset: "Reset"
   get_log: "Get log"
   clear_form: "Reset form"
   submit: "Submit"
-  sg_range: "SG range"
+  sg_range: "Stage Group Range"
   tnm: "TNM"
   auto: "Auto"
   auto_tooltip: "Auto-generate tumour IDs?"
@@ -78,6 +88,7 @@ site:
   field_outside_of_scope: "'%1' outside of scope. (%2)"
   results: "Results"
   tnm_with_prefixes: "TNM with prefixes"
+  dontknow: "Don't know"
 
 upload:
   upload_header: "Upload"
@@ -88,3 +99,6 @@ upload:
 
 look_up:
   no_valid_code_found: "No valid codes found..."
+
+about:
+  by: "Developed, designed, and maintained by"

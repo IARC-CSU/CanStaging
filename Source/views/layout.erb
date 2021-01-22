@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/default.css" type="text/css">
-	  <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/vendor/fontawesome/css/solid.min.css">
   </head>
   <body>
 
@@ -30,7 +31,7 @@
 
     <div class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-      <a class="navbar-brand" href="/tool">CanStaging</a>
+      <a class="navbar-brand" href="/tool">CanStaging<sup>+</sup></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,7 +49,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <% sites.each do |site| %>
-                  <a class="dropdown-item" id="<%= site.css %>_group_1" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site.capitalize %></a>
+                  <a class="dropdown-item" id="<%= site.css %>_menu" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site.capitalize %></a>
                  <% end %>
                 </div>
               </li>
@@ -66,13 +67,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/get_log" target = "_blank"><%= R18n.t[:layout][:get_log] %></a>
-              </li>
 
+            <% if session[:in_memory] %>
+              <li class="nav-item">                
+                <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_temp_log_title] %>" ><%= R18n.t[:layout][:get_temp_log] %></a>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_log_title] %>" ><%= R18n.t[:layout][:get_log] %></a>
+              </li>
+            <% end %>
             </ul>
             <ul class="navbar-nav">
-              <li class="nav-item dropdown">
+<!--               <li class="nav-item dropdown">
 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= R18n.t[:layout][:language_select] %>
@@ -84,7 +91,7 @@
                     </a>
                   <% end %>                   
                 </div>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,19 +99,27 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#" role="button" onclick="help_alert()"><%= R18n.t[:layout][:help] %></a>
-                    <a class="dropdown-item" href="#" role="button" onclick="about_alert()"><%= R18n.t[:layout][:about] %></a>
+                    <a class="dropdown-item" href="/about"><%= R18n.t[:layout][:about] %></a>
+                    <a class="dropdown-item" href="/register">Register</a>
+                    <a class="dropdown-item" href="/changelog">Changelog</a>
                 </div>
               </li>
 
               <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <%= !session[:user].nil? ? session[:user].username : "" %>                      
-                      (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:user].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] :  R18n.t[:layout][:user] %>)
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="/logout"><%= R18n.t[:layout][:log_out] %></a>
-                </div>
+                <% if session[:key].nil? %>
+                  <a class="nav-link" href="/login/form" title = "<%= R18n.t[:layout][:log_in] %>" ><%= R18n.t[:layout][:log_in] %></a>    
+                <% else %>
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= !session[:user].nil? ? session[:user].username : "" %>                      
+                        (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:key].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] :  R18n.t[:layout][:user] %>)
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/logout"><%= R18n.t[:layout][:log_out] %></a>
+                    <% if session[:local] %>
+                      <a class="dropdown-item" href="/shutdown"><%= R18n.t[:layout][:shutdown] %></a>
+                    <% end %>
+                  </div>
+                <% end %>
               </li>
             </ul>
         </div>
