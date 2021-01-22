@@ -14,3 +14,15 @@ deploy_staging:
     stage: deploy
     script:
         - sudo docker-compose -p CanStaging up -d --build
+
+deploy_to_production:
+    stage: deploy
+    tags:
+        - production
+    environment: production
+    only:
+        refs:
+            - master
+    when: manual
+    script:
+        - sudo docker-compose -p CanStaging up -d --build
