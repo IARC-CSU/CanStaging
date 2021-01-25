@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.7.3 (2021-01-25)
+
+- Updated rules.
+- Fixed typos.
+- Other fixes.
+
 ## 0.7.2 (2021-01-08)
 
 - Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
