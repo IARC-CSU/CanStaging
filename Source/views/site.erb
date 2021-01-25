@@ -110,9 +110,9 @@
         <tr id = "buttons">
           <td></td>
           <td align="right">
-            <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" />
+            <input type="submit" value="<%= R18n.t[:site][:submit] %>" <%= session[:key].nil? ? "disabled title='Please log in to submit records...'" : "" %> />
+            <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" <%= session[:key].nil? ? "disabled title='Please log in to get log of records...'" : "" %> />
             <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
-            <input type="submit" value="<%= R18n.t[:site][:submit] %>" />
           </td>
         </tr>
       </table>
