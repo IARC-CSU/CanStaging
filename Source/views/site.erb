@@ -296,7 +296,7 @@
         }
       }
       var el1  = document.getElementById('TNMwP_result');
-      if (el!=null) {
+      if (el1 != null) {
         var text = data["TNMwP"][0]["Result"];
         // el1.title = data["TNMwP"][0]["All results"].join("\n");
         el1.innerHTML = text;
@@ -316,6 +316,14 @@
 
     function change(part, control) {
       // var term = $('#tnm_form').serializeJSON();
+
+      // clear old result
+      var el   = document.getElementById('TNM_result');
+      if (el != null) { el.innerHTML = ""; }
+ 
+      var el_p = document.getElementById(part+'_result');
+      if (el_p != null) { el_p.innerHTML = ""; }
+
       var term = form_to_data('#tnm_form');
 
       term["data[control]"] = control; 
