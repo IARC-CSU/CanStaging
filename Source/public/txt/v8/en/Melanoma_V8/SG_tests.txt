@@ -1,0 +1,11 @@
+## Guidance for use of clinical or pathological staging for malignant melanoma
+
+| Tumour (T) | Nodes (N) | Metastasis (M) | What to select |
+|------------|-----------|----------------|----------------|
+| pT         | pN        | pM             | Pathological   |
+| pT         | pN        | cM             | Pathological   |
+| pT         | cN        | pM             | Pathological   |
+| pT         | cN        | cM             | Clinical       |
+| cT         | pN        | cM             | Clinical       |
+
+**Please note in the instance where the whole malignant melanoma skin lesion is excised you can only use the pathological stage grouping if regional nodes are also excised. (Unless the tumour is removed, the nodes are clinically accessed, and the metastatic lesion is removed-pM)
