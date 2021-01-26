@@ -1,5 +1,17 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.0 (2021-01-26)
+
+- User no longer need a key to use the tool.
+	- User can not submit cases to their database without being logged in.
+	- Default key is used while in standalone mode.
+
+## 0.7.3 (2021-01-25)
+
+- Updated rules on some sites.
+- Fixed typos.
+- Other fixes.
+
 ## 0.7.2 (2021-01-08)
 
 - Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
