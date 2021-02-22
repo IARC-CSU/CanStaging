@@ -104,7 +104,7 @@ class Site
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
       # Add image paths 
-      if ["T","N","M"].include? part
+      if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
@@ -121,7 +121,7 @@ class Site
         end
       end
       # Add text paths 
-      if ["T","N","M"].include? part
+      if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"

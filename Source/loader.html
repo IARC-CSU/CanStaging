@@ -72,6 +72,7 @@
     <script type="text/javascript">
 
     var server = "http://localhost:9292";
+    var key = 'xyz'
     
     // https://stackoverflow.com/questions/5224197/javascript-check-if-server-is-online
     function ifServerOnline(ifOnline, ifOffline)
@@ -93,7 +94,7 @@
         ifServerOnline(function()
         {
             //  server online code here
-            window.location=server+"/tool";
+            window.location=server+"/tool?key="+key;
         },
         function ()
         {

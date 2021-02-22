@@ -1,4 +1,31 @@
-# Changelog CanStaging+
+# Changelog CanStaging<sup>+</sup>
+
+## 0.8.0 (2021-01-26)
+
+- User no longer need a key to use the tool.
+	- User can not submit cases to their database without being logged in.
+	- Default key is used while in standalone mode.
+
+## 0.7.3 (2021-01-25)
+
+- Updated rules on some sites.
+- Fixed typos.
+- Other fixes.
+
+## 0.7.2 (2021-01-08)
+
+- Images updated for V8 Lung, Pancreas, Cervix, Colorectal.
+- Better handling of missing staging system. (To allow Toronto-guidelines.)
+- Disabled collapse of T, N, M parts of form.
+- Description text of Lung T added.
+- Added support for Markdown in DisplayText field of form.
+- Better cropping of some images.
+- Fixed some table issues:
+	- Prostate SimpG
+	- Removed "Don't know" for Breast P V8 Micromets
+	- FIGO back for TNM7.
+	- Added highlighting.
+- Other fixes.
 
 ## 0.7.1 (2020-12-17)
 
@@ -7,7 +34,7 @@
 
 ## 0.7.0 (2020-12-16)
 - Updated busines logic.
-- Fixed the bug where the ordering of fields on the forms sometimes was wrong.Fixed the bug where the ordering of fields on the forms sometimes was wrong.
+- Fixed the bug where the ordering of fields on the forms sometimes was wrong.
 - Stability improvements.
 
 ## 0.6.9 (2020-12-03)
