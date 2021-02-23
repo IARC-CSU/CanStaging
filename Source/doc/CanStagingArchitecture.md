@@ -75,6 +75,14 @@ To calculate the T of Liver the results of these fields are looked up in a file 
 
 Here we see that each of the fields from the meta file are input columns, followed by the standard output column *Result*. Any column after this will also be treated like output columns and, for example, added to the result part of the form.
 
+This algorithm to calculate the resultsing T-value looks through the table for _all_ matching rows. 
+
+### Xs/Don't know's
+
+Xs are treated differently. The algorithm receives Xs as "Don't know" and does a first pass through the table to see if it matches any lines with explicit Xs in the table. If no possible combination is found we replace the Xs with a default value for each field with an X, before doing another pass to look for possible combinations. These default values are taken from the first line in the respective tables without _any_ X in them. This means that cancers will be _downstaged_ if the first line contains the "least bad" answer, and _upstaged_ if the first line contains the "worst" answer.
+
+---
+
 This pattern is repeated for each of the T, N, M, and SG parts.
 
 To calculate the overall stage group etc there is a file called *Liver_v8_SG.txt*:
