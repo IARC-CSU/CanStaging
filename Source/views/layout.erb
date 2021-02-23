@@ -17,10 +17,9 @@
   <body>
 
 <script type="text/javascript">
-	  function about_alert() {
-	  	bootbox.alert("<%= R18n.t[:layout][:about_text] %>"
-    );
-	  }
+//	  function about_alert() {
+//	  	bootbox.alert("<%= R18n.t[:layout][:about_text] %>");
+//	  }
 	  function help_alert() {
 	  	bootbox.alert("<%= R18n.t[:layout][:help_text] %>");
 	  }
@@ -68,14 +67,16 @@
                 <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
               </li>
 
-            <% if session[:in_memory] %>
-              <li class="nav-item">                
-                <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_temp_log_title] %>" ><%= R18n.t[:layout][:get_temp_log] %></a>
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_log_title] %>" ><%= R18n.t[:layout][:get_log] %></a>
-              </li>
+            <% unless session[:key].nil? %>
+              <% if session[:in_memory] %>
+                <li class="nav-item">                
+                  <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_temp_log_title] %>" ><%= R18n.t[:layout][:get_temp_log] %></a>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/get_log" target = "_blank" title = "<%= R18n.t[:layout][:get_log_title] %>" ><%= R18n.t[:layout][:get_log] %></a>
+                </li>
+              <% end %>
             <% end %>
             </ul>
             <ul class="navbar-nav">

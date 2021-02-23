@@ -146,6 +146,9 @@ before do
     # error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     # session[:key] = params[:key] || session[:key]
   end
+  if request.path_info.start_with?("/get_log")
+    error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
+  end
   session[:key] = params[:key] || session[:key] unless $key_manager.get_user(params[:key] || session[:key]).nil?
 end
 
