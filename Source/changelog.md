@@ -1,5 +1,12 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.1 (2021-02-24)
+
+- Disable get log when not logged in.
+- Added Melanoma SG tests text.
+- Clear TNM result while waiting for new data to avoid sync issues.
+- Various bug fixes.
+
 ## 0.8.0 (2021-01-26)
 
 - User no longer need a key to use the tool.
