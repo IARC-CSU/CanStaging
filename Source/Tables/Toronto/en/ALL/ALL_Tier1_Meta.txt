@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"BlastInCSF","Dictionary","Blast in CSF","",
+"PositiveInvolvement","Dictionary","Positive involvement","",
+"CNPInvolvement","Dictionary","Cranial nerve palsy involvement","",
+"MassInBrainInvolvement","Dictionary","Mass in brain involvement","",
+"OtherClinicalSignsOfCNSInvolvement","Dictionary","Other clinical sign of CNS involvement","",
