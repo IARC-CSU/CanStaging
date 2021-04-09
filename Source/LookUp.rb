@@ -61,7 +61,15 @@ class LookUp
     end
   end
 
+  def add_defaults(defaults)
+    # Of the form {"Nodes"=>"F", "Bone"=>"F", "Other"=>"F", "Result"=>"M0", "Message"=>nil}
+    # merge defaults into @defaults
+    @defaults.merge!(defaults)
+    puts "Defaults after merge: #{@defaults}" # if DEBUG   
+  end
+
   def look_up values
+    puts "Defaults during lookup: #{@defaults}"
     # values is a hash with values
     responses = []
     unless @table.nil?
@@ -76,15 +84,15 @@ class LookUp
   
         values.each { |key, value| new_values[key] = value if values[key] != "X" }
       
-        values = new_values
+        # values = new_values
 
-        keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0) && (values[key] != 'X')}
+        keys = keys.find_all { |key| (!new_values[key].nil?) && (new_values[key].strip.length>0) && (new_values[key] != 'X')}
 
         valid_entries = @table.find_all do |row|
           found = true
           keys.each do |key|
             if @variables_needed.include?(key)
-              found = found && (row[key] == values[key] || row[key]=="ANY")
+              found = found && (row[key] == new_values[key] || row[key]=="ANY")
             end
           end
           found

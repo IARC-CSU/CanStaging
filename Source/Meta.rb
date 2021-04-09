@@ -44,6 +44,7 @@ class Meta
         when :number
           variable.ranges = Ranges.new("#{file_name.sub("Meta.txt", "#{name}_Range.txt")}")
         end
+        variable.default= row["Default"] unless row["Default"].nil? || row["Default"].empty?
         add_field(variable)
       end
     end
@@ -71,4 +72,14 @@ class Meta
     variable.order = @fields.length
     @fields[variable.name] = variable
   end
+
+  def defaults
+    defaults = {}
+    @fields.each do |name, variable|
+      d = variable.default
+      defaults[name] = d unless d.nil? || d.empty?
+    end
+    defaults
+  end
+
 end

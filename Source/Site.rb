@@ -103,6 +103,9 @@ class Site
       else
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
+      # Add defaults from meta to lookups
+      @lookups[part].add_defaults(@metas[part].defaults)
+      
       # Add image paths 
       if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
@@ -142,7 +145,9 @@ class Site
             puts " - Not found" if $DEBUG
           end
         end
+
       end
+
       # Add prefixes to the meta if needed
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
