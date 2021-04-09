@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.2 (2021-04-09)
+
+- Added feedback form.
+- Added a usage tracker.
+- Minor bug fixes.
+
 ## 0.8.1 (2021-02-24)
 
 - Disable get log when not logged in.

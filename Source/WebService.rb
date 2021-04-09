@@ -252,6 +252,10 @@ get '/register' do
   erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
 end
 
+get '/feedback' do 
+  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+end
+
 post '/login/attempt' do
   user = $key_manager.get_user(params['key'])
   if !user.nil?
