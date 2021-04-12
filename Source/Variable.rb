@@ -95,6 +95,6 @@ class Variable
 
   def default=(default)
     @default = default
-  end  
+  end
   
 end

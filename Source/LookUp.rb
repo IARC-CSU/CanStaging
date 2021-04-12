@@ -64,12 +64,12 @@ class LookUp
   def add_defaults(defaults)
     # Of the form {"Nodes"=>"F", "Bone"=>"F", "Other"=>"F", "Result"=>"M0", "Message"=>nil}
     # merge defaults into @defaults
-    @defaults.merge!(defaults)
-    puts "Defaults after merge: #{@defaults}" # if DEBUG   
+    @defaults = @defaults.merge(defaults)
+    puts "#{@part} - Defaults after merge: #{@defaults}" # if DEBUG
   end
 
   def look_up values
-    puts "Defaults during lookup: #{@defaults}"
+    puts "#{@part} - Defaults during lookup: #{@defaults}"
     # values is a hash with values
     responses = []
     unless @table.nil?

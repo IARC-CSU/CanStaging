@@ -1,4 +1,5 @@
 OtherMetastases,HaematogenousMetastases,UncertainOtherMetastases,UncertainHaematogenousMetastases,AbdominalLymphNodes,Peritoneal,NonhaematogenousMetastasesConfinedToAbdomen,CompleteResection,TumourSpill,TreatmentProtocol,BiopsyPriorToResection,NeedleBiopsy,UncertainAbdominalLymphNodes,UncertainPeritoneal,UncertainNonhaematogenousMetastasesConfinedToAbdomen,UncertainCompleteResection,UncertainTumourSpill,UncertainBiopsyPriorToResection,PrimaryExtendsBeyondKidney,UncertainPrimaryExtendsBeyondKidney,PrimaryConfinedToKidney,Result,Message
+T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,4,
 T,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,4,
 ANY,T,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,4,
 F,F,T,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,ANY,X,
