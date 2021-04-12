@@ -69,9 +69,12 @@
                   <a class="dropdown-item" href = "/tool?tnm_version=eTNM" >Essential TNM</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
-              </li>
+              
+              <% unless session[:key].nil? %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
+                </li>
+              <% end %>
 
             <% unless session[:key].nil? %>
               <% if session[:in_memory] %>
