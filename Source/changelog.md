@@ -1,5 +1,10 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.3 (2021-04-12)
+
+- Hide 'Upload' button when not logged in.
+- Minor text tweaks.
+
 ## 0.8.2 (2021-04-09)
 
 - Added feedback form.
