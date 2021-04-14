@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
@@ -38,7 +38,8 @@ class Site
     translated_name = site   
     @default_language = "en"
     @tnm_version = tnm_version
-    @css = @default_name.split("_").first.downcase  
+    @css = @default_name.split("_").first.downcase
+    @notes = ''  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
     # puts tnm_version_root_path if !defined?(settings) || $DEBUG
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
@@ -51,6 +52,7 @@ class Site
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
       @css = yaml["css"] || @default_name
+      @notes = yaml["notes"] || @notes
     end
 
     # Add pdf/png if it is present
