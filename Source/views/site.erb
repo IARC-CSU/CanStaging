@@ -120,6 +120,11 @@
       </table>
     </form>
   <% end %>
+
+  <% unless site.notes.empty? %>
+    <%= "#{site.notes}" %>
+  <% end %>
+  
   </body>
 
   <script type="text/javascript">
