@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/default.css" type="text/css">
+
+<h1>CanStaging<sup>+</sup></h1>
+<hr width="75%" />
+<p class="welcome"><%= R18n.t[:home][:welcome] %></p>
+<hr width="75%" />
+<% 
+
+translations = {
+	'eTNM' => 'Essential TNM',
+	'v7'   => 'TNM version 7',
+	'v8'   => 'TNM version 8',
+	'Toronto' => 'Toronto'
+}
+
+%>
+<h2>Please chose staging system: </h2>
+<br>
+<div class="card-columns">
+  <% systems.each do |system| %>
+  <a href = '/tool?tnm_version=<%= system %>'>
+    <div class="card">
+        <div class="card-header" id = "<%= system %>_menu">
+          <%= translations[system] %>
+        </div>
+        <div class="card-body">
+      	  <%= system %>
+        </div>
+    </div>
+  </a>
+  <% end %>
+</div>

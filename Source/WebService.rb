@@ -100,12 +100,13 @@ R18n.default_places { './i18n' }
 R18n.set("en")
 
 $sites = {}
+$available_staging_systems = []
 
 ##
 def load_sites
   tables_path = "./Tables"
-  available_tnm_versions  = Dir.entries(tables_path).select {|entry| File.directory? File.join(tables_path,entry) and !(entry =='.' || entry == '..') }
-  available_tnm_versions.each do |tnm_version|
+  $available_staging_systems  = Dir.entries(tables_path).select {|entry| File.directory? File.join(tables_path,entry) and !(entry =='.' || entry == '..') }
+  $available_staging_systems.each do |tnm_version|
     tnm_verision_path = "#{tables_path}/#{tnm_version}"
     $sites[tnm_version] = {}
     available_languages = Dir.entries(tnm_verision_path).select {|entry| File.directory? File.join(tnm_verision_path, entry) and !(entry =='.' || entry == '..') }
@@ -117,7 +118,7 @@ def load_sites
       available_sites.each do |site|
         $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
       end
-      $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development
+      $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development      
     end  
   end
 end
@@ -135,7 +136,12 @@ before do
   R18n.set(session[:locale])
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
-  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || "v8"
+  session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
+  if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
+    # redirect
+    error(401, erb(:chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } ))
+  end
+  ## see if URL corresponds to TNM version
   session[:in_memory] = $st_logger.in_memory?
 end
 
@@ -289,6 +295,11 @@ end
 
 get '/' do
   redirect to('/tool')
+end
+
+get '/chooser' do
+  sites = []
+  erb :chooser, :locals => { :sites => sites, :systems => $available_staging_systems , :layout => :layout }
 end
 
 get "/upload" do 
