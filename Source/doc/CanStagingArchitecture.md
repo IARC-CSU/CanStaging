@@ -75,7 +75,9 @@ To calculate the T of Liver the results of these fields are looked up in a file 
 
 Here we see that each of the fields from the meta file are input columns, followed by the standard output column *Result*. Any column after this will also be treated like output columns and, for example, added to the result part of the form.
 
-This algorithm to calculate the resultsing T-value looks through the table for _all_ matching rows. 
+This algorithm looks through the table for _all_ matching rows to calculate the resultsing T-value. 
+
+An important concept is the "ANY" keyword. This matches any value in the correcponding column. So, if we look at last line of the example above we see that if "Visceral" is set to T(rue) it doesn't matter what any of the other values are, the algorithm will always return a T4.
 
 ### Xs/Don't know's
 

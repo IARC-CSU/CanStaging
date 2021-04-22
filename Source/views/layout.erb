@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="/css/default.css" type="text/css">
 	  <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="/vendor/fontawesome/css/solid.min.css">
+    <!-- Panelbear Analytics - We respect your privacy -->
+    <script async src="https://cdn.panelbear.com/analytics.js?site=6JijtXVXyRp"></script>
+    <script>
+        window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+        panelbear('config', { site: '6JijtXVXyRp' });
+    </script>
   </head>
   <body>
 
@@ -63,9 +69,12 @@
                   <a class="dropdown-item" href = "/tool?tnm_version=eTNM" >Essential TNM</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
-              </li>
+              
+              <% unless session[:key].nil? %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/upload" title = "Upload a file for batch processing."><%= R18n.t[:layout][:upload] %></a>
+                </li>
+              <% end %>
 
             <% unless session[:key].nil? %>
               <% if session[:in_memory] %>
@@ -102,6 +111,7 @@
                     <a class="dropdown-item" href="#" role="button" onclick="help_alert()"><%= R18n.t[:layout][:help] %></a>
                     <a class="dropdown-item" href="/about"><%= R18n.t[:layout][:about] %></a>
                     <a class="dropdown-item" href="/register">Register</a>
+                    <a class="dropdown-item" href="/feedback">Feedback</a>
                     <a class="dropdown-item" href="/changelog">Changelog</a>
                 </div>
               </li>
