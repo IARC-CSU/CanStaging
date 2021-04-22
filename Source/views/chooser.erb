@@ -7,10 +7,10 @@
 <% 
 
 translations = {
-	'eTNM' => 'Essential TNM',
-	'v7'   => 'TNM version 7',
-	'v8'   => 'TNM version 8',
-	'Toronto' => 'Toronto'
+	'eTNM' => { label: 'Essential TNM', desc: 'Essential TNM'} ,
+	'v7'   => { label: 'TNM edition 7', desc: 'TNM edition 7'} ,
+	'v8'   => { label: 'TNM edition 8', desc: 'TNM edition 7'} ,
+	'Toronto' => { label: 'Toronto', desc: 'Childhood Cancer Staging'} 
 }
 
 %>
@@ -21,10 +21,10 @@ translations = {
   <a href = '/tool?tnm_version=<%= system %>'>
     <div class="card">
         <div class="card-header" id = "<%= system %>_menu">
-          <%= translations[system] %>
+          <%= translations[system][:label] %>
         </div>
         <div class="card-body">
-      	  <%= system %>
+      	  <%= translations[system][:desc] %>
         </div>
     </div>
   </a>
