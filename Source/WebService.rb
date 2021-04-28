@@ -42,7 +42,9 @@ require "rack/handler/puma"
 
 # first load default config
 
-config_default = { 'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0' } }
+config_default = { 
+  'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
+}
 
 config = YAML.load_file("./data/config.yml")
 
@@ -139,7 +141,8 @@ before do
   session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
   if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
     # redirect
-    error(401, erb(:chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } ))
+    s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
+    error(401, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
   end
   ## see if URL corresponds to TNM version
   session[:in_memory] = $st_logger.in_memory?

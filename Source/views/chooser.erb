@@ -5,14 +5,7 @@
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
 <% 
-
-translations = {
-	'eTNM' => { label: 'Essential TNM', desc: 'Essential TNM'} ,
-	'v7'   => { label: 'TNM edition 7', desc: 'TNM edition 7'} ,
-	'v8'   => { label: 'TNM edition 8', desc: 'TNM edition 7'} ,
-	'Toronto' => { label: 'Toronto', desc: 'Childhood Cancer Staging'} 
-}
-
+  # site = sites.first
 %>
 <h2>Please chose staging system: </h2>
 <br>
@@ -21,10 +14,10 @@ translations = {
   <a href = '/tool?tnm_version=<%= system %>'>
     <div class="card">
         <div class="card-header" id = "<%= system %>_menu">
-          <%= translations[system][:label] %>
+          <%= Site.staging_system_name(system, :label) %>
         </div>
         <div class="card-body">
-      	  <%= translations[system][:desc] %>
+      	  <%= Site.staging_system_name(system, :desc) %>
         </div>
     </div>
   </a>

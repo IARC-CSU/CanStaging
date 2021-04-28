@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
 </head>
 
-  <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
+  <h1><%= site.site %></h1>
+  <h5><%= Site.staging_system_name(site.tnm_version, :long_label) %></h5>
 
   <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
