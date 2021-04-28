@@ -184,7 +184,7 @@ get '/get_log.json' do
 end
 
 get '/get_log' do
-  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} } , :layout => nil
+  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems} , :layout => nil
 end
 
 get '/get_log.csv' do 
@@ -198,18 +198,18 @@ end
 
 get '/tool' do 
   sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site }, :systems => $available_staging_systems}, :layout => :layout
 end
 
 get '/about' do 
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/changelog' do
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   markdown = RDiscount.new(open('./changelog.md').read)
-  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/refresh' do
@@ -249,7 +249,7 @@ get '/site/*' do |site_name|
     session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
     redirect to where_user_came_from 
   else
-    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
+    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
   end
 end
 
@@ -306,7 +306,7 @@ get '/chooser' do
 end
 
 get "/upload" do 
-  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
+  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 post '/upload' do
