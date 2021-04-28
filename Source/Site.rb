@@ -71,8 +71,8 @@ class Site
       @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
     end
 
-    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{png_path}"
-      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{png_path}"
+    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
+      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
     end
 
     @site = translated_name.capitalize
