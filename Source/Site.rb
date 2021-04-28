@@ -33,6 +33,7 @@ class Site
   ## Add some default translations -- to be overridden with meta files
   @@translations = {
     'eTNM' => { label: 'Essential TNM', desc: 'Essential TNM', long_label: 'Essential TNM'} ,
+    'v5'   => { label: 'TNM edition 5', desc: 'TNM edition 5', long_label: 'TNM edition 5'} ,
     'v7'   => { label: 'TNM edition 7', desc: 'TNM edition 7', long_label: 'TNM edition 7'} ,
     'v8'   => { label: 'TNM edition 8', desc: 'TNM edition 8', long_label: 'TNM edition 8'} ,
     'Toronto' => { label: 'Toronto Guidelines', desc: 'Childhood Cancer Staging', long_label: 'Toronto Guidelines'} 
@@ -248,6 +249,10 @@ class Site
     @metas
   end
 
+  def tnm_version= value
+    @tnm_version = value
+  end
+
   private
 
   def get_default_result(part)
@@ -324,7 +329,6 @@ class Site
     [{"Result" => simpg_elements.join(" - ")}]
   end
 
-  private
   def count_chars string, char = "X"
     string.each_char.to_a.inject(0) {|r, c| c==char ? r+1 : r }
   end

@@ -119,9 +119,13 @@ def load_sites
       available_sites = Dir.entries(language_path).select {|entry| File.directory? File.join(language_path,entry) and !(entry =='.' || entry == '..') }
       available_sites.each do |site|
         $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
+        ## Override the tnm version
+        if site.downcase == 'colorectal' && tnm_version == 'v7'      
+          $sites[tnm_version][language][site.downcase.to_sym].tnm_version = 'v5'
+        end
       end
       $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development      
-    end  
+    end
   end
 end
 
