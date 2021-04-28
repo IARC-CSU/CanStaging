@@ -83,8 +83,8 @@ class Site
       @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
     end
 
-    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{png_path}"
-      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{png_path}"
+    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
+      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
     end
 
     @site = translated_name.capitalize
@@ -109,7 +109,7 @@ class Site
       @lookups[part].add_defaults(@metas[part].defaults)
       
       # Add image paths 
-      if ["T","N","M","SG"].include? part
+      # if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
@@ -124,9 +124,9 @@ class Site
             puts " - Not found" if $DEBUG
           end
         end
-      end
+      # end
       # Add text paths 
-      if ["T","N","M","SG"].include? part
+      # if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"
@@ -147,9 +147,7 @@ class Site
             puts " - Not found" if $DEBUG
           end
         end
-
-      end
-
+      # end
       # Add prefixes to the meta if needed
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
