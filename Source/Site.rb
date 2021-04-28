@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes
   
   $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
@@ -38,7 +38,8 @@ class Site
     translated_name = site   
     @default_language = "en"
     @tnm_version = tnm_version
-    @css = @default_name.split("_").first.downcase  
+    @css = @default_name.split("_").first.downcase
+    @notes = ''  
     tnm_version_root_path = "#{TABLES_ROOT_PATH}/#{tnm_version}"
     # puts tnm_version_root_path if !defined?(settings) || $DEBUG
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
@@ -51,6 +52,7 @@ class Site
       @default_language = yaml["default_language"] || @default_language
       @default_site_root_path = "#{default_language_root_path}/#{@default_name}" 
       @css = yaml["css"] || @default_name
+      @notes = yaml["notes"] || @notes
     end
 
     # Add pdf/png if it is present
@@ -69,8 +71,8 @@ class Site
       @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
     end
 
-    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{png_path}"
-      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{png_path}"
+    if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
+      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
     end
 
     @site = translated_name.capitalize
@@ -91,7 +93,7 @@ class Site
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
       # Add image paths 
-      if ["T","N","M","SG"].include? part
+      # if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.png"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.png"
@@ -106,9 +108,9 @@ class Site
             puts " - Not found" if $DEBUG
           end
         end
-      end
+      # end
       # Add text paths 
-      if ["T","N","M","SG"].include? part
+      # if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"
@@ -129,7 +131,7 @@ class Site
             puts " - Not found" if $DEBUG
           end
         end
-      end
+      # end
       # Add prefixes to the meta if needed
       unless part == "SG" || part == "SimpG" || part == "SGrange"
         unless @metas[part].fields.keys.include?("Pathologic") && @metas[part].fields.keys.include?("Posttherapy")
