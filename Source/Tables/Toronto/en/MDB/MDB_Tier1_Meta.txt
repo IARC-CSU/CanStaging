@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastases","Boolean","Metastases","",
+"UncertainMetastases","Boolean","Uncertain metastases","",
+"PrimaryInvolvement","Boolean","Primary involvement in brain or spine","",
