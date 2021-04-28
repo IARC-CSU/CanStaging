@@ -35,7 +35,7 @@ class Site
     'eTNM' => { label: 'Essential TNM', desc: 'Essential TNM', long_label: 'Essential TNM'} ,
     'v7'   => { label: 'TNM edition 7', desc: 'TNM edition 7', long_label: 'TNM edition 7'} ,
     'v8'   => { label: 'TNM edition 8', desc: 'TNM edition 8', long_label: 'TNM edition 8'} ,
-    'Toronto' => { label: 'Toronto', desc: 'Childhood Cancer Staging', long_label: 'Toronto Guidelines'} 
+    'Toronto' => { label: 'Toronto Guidelines', desc: 'Childhood Cancer Staging', long_label: 'Toronto Guidelines'} 
   }
 
   # type can be :label, :desc, or :long_label
