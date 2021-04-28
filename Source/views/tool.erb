@@ -1,12 +1,10 @@
 <link rel="stylesheet" href="/css/default.css" type="text/css">
 
-<% tnm_versions = {'v8' => 'TNM8', 'v7'=> 'TNM7', 'eTNM'=> 'Essential TNM', 'Toronto' => 'Toronto', 'v5' => 'TNM5' }%>
-
 <h1>CanStaging<sup>+</sup></h1>
 <hr width="75%" />
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
-<h4>​Sites <%= tnm_versions[session[:tnm_version]]  %></h4>
+<h4>​Sites <%= Site.staging_system_name(session[:tnm_version], :label)  %></h4>
 
 <%= R18n.t[:home][:no_sites_translated] if sites.nil? || sites.empty? %>
 
@@ -28,11 +26,7 @@
         <!-- <h5 class="card-title"><%= site.site.capitalize%> </h5> -->
         <!-- <p class="card-text">Info?</p> -->
         <!-- <a href="#" class="btn btn-primary">Go</a> -->
-        <% if site.default_name.downcase == 'colorectal' && session[:tnm_version] == 'v7' %>
-          <p class="card-text"><small class="text-muted">TNM edition 5</small></p>
-        <% else %>
-          <p class="card-text"><small class="text-muted"><%= Site.staging_system_name(session[:tnm_version], :desc)  %> </small></p>
-        <% end %>
+        <p class="card-text"><small class="text-muted"><%= Site.staging_system_name(site.tnm_version, :desc)  %> </small></p>
       </div>
     </div>
   </a>
@@ -61,8 +55,11 @@
     <a href= "https://www.uicc.org/" target="_blank"><img src="./media/uicc.png" width="120" title="UICC" /></a>
   </div>
   <div class="col" align = "center">
-    <a href= "http://www.iacr.com.fr/" target="_blank"><img src="./media/iacr.png" width="300" title="IACR" /></a>
+    <a href= "https://www.ukiacr.org/" target="_blank"><img src="./media/UKIACR_logo_v3.png" width="150" title="UKIACR" /></a>
   </div>
+  <div class="col" align = "center">
+    <a href= "http://www.iacr.com.fr/" target="_blank"><img src="./media/iacr.png" width="300" title="IACR" /></a>
+  </div>  
 </div>
 
 <hr width="75%" />
