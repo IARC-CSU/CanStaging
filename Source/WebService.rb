@@ -42,7 +42,9 @@ require "rack/handler/puma"
 
 # first load default config
 
-config_default = { 'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0' } }
+config_default = { 
+  'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
+}
 
 config = YAML.load_file("./data/config.yml")
 
@@ -117,9 +119,13 @@ def load_sites
       available_sites = Dir.entries(language_path).select {|entry| File.directory? File.join(language_path,entry) and !(entry =='.' || entry == '..') }
       available_sites.each do |site|
         $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
+        ## Override the tnm version
+        if site.downcase == 'colorectal' && tnm_version == 'v7'      
+          $sites[tnm_version][language][site.downcase.to_sym].tnm_version = 'v5'
+        end
       end
       $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development      
-    end  
+    end
   end
 end
 
@@ -139,7 +145,8 @@ before do
   session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
   if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
     # redirect
-    error(401, erb(:chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } ))
+    s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
+    error(401, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
   end
   ## see if URL corresponds to TNM version
   session[:in_memory] = $st_logger.in_memory?
@@ -181,7 +188,7 @@ get '/get_log.json' do
 end
 
 get '/get_log' do
-  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} } , :layout => nil
+  erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems} , :layout => nil
 end
 
 get '/get_log.csv' do 
@@ -195,18 +202,18 @@ end
 
 get '/tool' do 
   sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site }, :systems => $available_staging_systems}, :layout => :layout
 end
 
 get '/about' do 
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/changelog' do
   sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   markdown = RDiscount.new(open('./changelog.md').read)
-  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site} }, :layout => :layout
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/refresh' do
@@ -246,7 +253,7 @@ get '/site/*' do |site_name|
     session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
     redirect to where_user_came_from 
   else
-    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
+    erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
   end
 end
 
@@ -303,7 +310,7 @@ get '/chooser' do
 end
 
 get "/upload" do 
-  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }, :layout => :layout
+  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
 end
 
 post '/upload' do

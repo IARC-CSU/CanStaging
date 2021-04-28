@@ -64,9 +64,9 @@
                   <%= R18n.t[:layout][:tnm_version] %>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href = "/tool?tnm_version=v7" >Version 7</a>
-                  <a class="dropdown-item" href = "/tool?tnm_version=v8" >Version 8</a>
-                  <a class="dropdown-item" href = "/tool?tnm_version=eTNM" >Essential TNM</a>
+                  <% systems.each do |system| %>
+                    <a class="dropdown-item" href = "/tool?tnm_version=<%=system%>" > <%= Site.staging_system_name(system, :desc) %> </a>
+                  <% end %>
                 </div>
               </li>
               

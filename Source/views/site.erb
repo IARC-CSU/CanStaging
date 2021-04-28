@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
 </head>
 
-  <h1><%= site.site %> [<%= site.tnm_version %>]</h1>
-
+  <h1><%= site.site %></h1>
+  <h5><%= Site.staging_system_name(site.tnm_version, :label) %></h5>
   <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
     <% if site.png.nil? %> 
@@ -101,7 +101,7 @@
           <th><%= R18n.t[:site][:tnm] %></th>
           <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
         </tr>
-        <% if site.tnm_version == 'v7' %>
+        <% if site.tnm_version == 'v7' || site.tnm_version == 'v5' %>
           <tr id = "result_with_prefixes">
             <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
             <th class = "result" id = "TNMwP_result"></th>
