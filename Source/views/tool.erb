@@ -4,7 +4,8 @@
 <hr width="75%" />
 <p class="welcome"><%= R18n.t[:home][:welcome] %></p>
 <hr width="75%" />
-<h4>​Sites <%= Site.staging_system_name(session[:tnm_version], :label)  %></h4>
+
+<h3><%= Site.staging_system_name(session[:tnm_version], :label) %></h3>
 
 <%= R18n.t[:home][:no_sites_translated] if sites.nil? || sites.empty? %>
 
@@ -58,7 +59,7 @@
     <a href= "https://www.ukiacr.org/" target="_blank"><img src="./media/UKIACR_logo_v3.png" width="150" title="UKIACR" /></a>
   </div>
   <div class="col" align = "center">
-    <a href= "http://www.iacr.com.fr/" target="_blank"><img src="./media/iacr.png" width="300" title="IACR" /></a>
+    <a href= "http://www.iacr.com.fr/" target="_blank"><img src="./media/iacr.png" width="250" title="IACR" /></a>
   </div>  
 </div>
 
