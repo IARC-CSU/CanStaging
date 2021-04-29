@@ -31,7 +31,7 @@ class KeyManager
     end
   end
   def load_users
-    CSV.foreach(KEYFILENAME, {col_sep: "\t", headers: true }) do |row|
+    CSV.foreach(KEYFILENAME, col_sep: "\t", headers: true ) do |row|
       @@users[row["key"]] = User.new(row["username"], row["email"], row["role"], row["key"])
     end
   end
