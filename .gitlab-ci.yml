@@ -7,6 +7,7 @@ variables:
 
 stages:
     - deploy
+    - build-image
 
 before_script:
     - echo "Executing on `hostname`"
@@ -18,6 +19,7 @@ deploy_staging:
     only:
         refs:
             - develop
+    when: manual
     stage: deploy
     script:
         - sudo docker-compose -p CanStaging up -d --build
@@ -34,7 +36,7 @@ deploy_to_production:
     script:
         - sudo docker-compose -p CanStaging up -d --build
 
-build staging image:
+build_staging_image:
   stage: build-image
   image: docker:19.03-git
   tags:
