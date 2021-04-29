@@ -1,11 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    amalgalite (1.7.0)
+      arrayfields (~> 4.9)
     amalgalite (1.7.0-x86-mingw32)
       arrayfields (~> 4.9)
     arrayfields (4.9.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    eventmachine (1.2.7)
     ffi (1.15.0-x86-mingw32)
     http-accept (1.7.0)
     http-cookie (1.0.3)
@@ -25,6 +28,11 @@ GEM
     rack-protection (2.1.0)
       rack
     rdiscount (2.2.0.2)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rest-client (2.1.0-x86-mingw32)
       ffi (~> 1.9)
       http-accept (>= 1.7.0, < 2.0)
@@ -50,14 +58,16 @@ GEM
     tilt (2.0.10)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7-x86-mingw32)
+    unf_ext (0.0.7.7)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   amalgalite
   bundler
+  eventmachine
   puma
   rdiscount
   rest-client
