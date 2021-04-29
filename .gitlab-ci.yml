@@ -51,9 +51,9 @@ build_staging_image:
   before_script:
       # Connect to your Gitlab Registry
       - "echo Registry image: ${CI_REGISTRY_IMAGE} for staging"
-      - "docker login -u gitlab+deploy-token-1 -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
       - "echo docker registry is $CI_REGISTRY"
+      - "sudo docker login -u gitlab+deploy-token-1 -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
   script:
-      - docker pull $STAGE_TAG || true
-      - docker build --cache-from $STAGE_TAG -t $STAGE_TAG .
-      - docker push $STAGE_TAG
+      - sudo docker pull $STAGE_TAG || true
+      - sudo docker build --cache-from $STAGE_TAG -t $STAGE_TAG .
+      - sudo docker push $STAGE_TAG
