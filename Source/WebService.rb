@@ -248,10 +248,12 @@ get '/sites.json' do
 end
 
 get '/site/*' do |site_name|
+  # TODO: Better handling of different staging system in URL
   if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
     # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
     session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
-    redirect to where_user_came_from 
+    where_user_came_from = session[:previous_url] || '/tool'
+    redirect to where_user_came_from
   else
     erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
   end
