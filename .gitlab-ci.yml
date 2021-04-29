@@ -40,7 +40,7 @@ build_staging_image:
   stage: build-image
   image: docker:19.03-git
   tags:
-      - staging
+      - csu-staging
   only:
       - develop
   services:
@@ -52,8 +52,8 @@ build_staging_image:
       # Connect to your Gitlab Registry
       - "echo Registry image: ${CI_REGISTRY_IMAGE} for staging"
       - "echo docker registry is $CI_REGISTRY"
-      - "sudo docker login -u gitlab+deploy-token-1 -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
+      - "docker login -u gitlab+deploy-token-1 -p ${CI_BUILD_TOKEN} ${CI_REGISTRY}"
   script:
-      - sudo docker pull $STAGE_TAG || true
-      - sudo docker build --cache-from $STAGE_TAG -t $STAGE_TAG .
-      - sudo docker push $STAGE_TAG
+      - docker pull $STAGE_TAG || true
+      - docker build --cache-from $STAGE_TAG -t $STAGE_TAG .
+      - docker push $STAGE_TAG
