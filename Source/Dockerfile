@@ -1,6 +1,6 @@
-FROM ruby:2.6
+FROM ruby:3.0
 LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
-EXPOSE 80
+EXPOSE 4567
 
 RUN apt-get update -qq && apt-get install -y build-essential nano
 

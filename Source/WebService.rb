@@ -43,7 +43,7 @@ require "rack/handler/puma"
 # first load default config
 
 config_default = { 
-  'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
+  'system' => {'log_file' => "./data/logg.db", 'port' => 4567, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
 }
 
 config = YAML.load_file("./data/config.yml")
