@@ -258,15 +258,15 @@ get '/site/*' do |site_name|
 end
 
 get '/login/form' do 
-  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 get '/register' do 
-  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 get '/feedback' do 
-  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 post '/login/attempt' do
@@ -281,7 +281,7 @@ post '/login/attempt' do
     redirect to where_user_came_from 
   else
     session[:error] = 'Sorry not a valid key '
-    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
   end
 end
 
