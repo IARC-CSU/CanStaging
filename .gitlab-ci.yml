@@ -19,7 +19,6 @@ deploy_staging:
     only:
         refs:
             - develop
-    when: manual
     stage: deploy
     script:
         - sudo docker-compose -p CanStaging up -d --build
@@ -37,6 +36,7 @@ deploy_to_production:
         - sudo docker-compose -p CanStaging up -d --build
 
 build_staging_image:
+  when: manual
   stage: build-image
   image: docker:18.09-git
   tags:
