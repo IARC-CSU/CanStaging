@@ -1,5 +1,16 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.5 (2021-05-03)
+
+- Updated eTNM cervix flowcharts.
+- Centralized the staging system translations.
+- Added UKIACR logo and link.
+- Added staging system chooser on first load.
+- Tidied landing page(s).
+- Fixed bug in txt field for sites.
+- Default port changed to default Sinatra's 4567.
+- Other bugfixes.
+
 ## 0.8.4 (2021-04-28)
 
 - Bugfixes.
