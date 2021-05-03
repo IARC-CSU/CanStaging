@@ -69,31 +69,40 @@ class LookUp
   end
 
   def look_up values
-    puts "#{@part} - Defaults during lookup: #{@defaults}"
     # values is a hash with values
     responses = []
     unless @table.nil?
       # puts values if $DEBUG
       keys = values.keys
-      # remove keys that have empty fields
-      # puts values if !defined?(settings) || settings.environment == :development
-      ## If all values are X or empty
-      if (values.values + ['X','']).uniq.sort == ['','X']
-        valid_entries = [{'Result'=> Site.get_default_result(@part)}]
-      else ## If some values are X
-        new_values = {}
-  
-        values.each { |key, value| new_values[key] = value if values[key] != "X" }
-      
-        # values = new_values
 
-        keys = keys.find_all { |key| (!new_values[key].nil?) && (new_values[key].strip.length>0) && (new_values[key] != 'X')}
+      # first pass -- matching the exact input, Xs and all.
+      valid_entries = @table.find_all do |row|
+        found = true
+        keys.each do |key|
+          if @variables_needed.include?(key)
+            found = found && (row[key] == values[key] || row[key]=="ANY")
+          end
+        end
+        found
+      end
 
-        valid_entries = @table.find_all do |row|
-          found = true
-          keys.each do |key|
-            if @variables_needed.include?(key)
-              found = found && (row[key] == new_values[key] || row[key]=="ANY")
+      ## second pass, if needed -- remove Xs and try again
+
+      if valid_entries.empty?        
+        if (values.values + ['X','']).uniq.sort == ['','X']
+          ## If all values are X or empty
+          valid_entries = [{'Result'=> Site.get_default_result(@part)}]
+        else 
+          ## If some values are X        
+          keys = values.keys
+          # remove keys that have empty fields
+          keys = keys.find_all { |key| (!values[key].nil?) && (values[key].strip.length>0) && (values[key] != 'X')}
+          valid_entries = @table.find_all do |row|
+            found = true
+            keys.each do |key|
+              if @variables_needed.include?(key)
+                found = found && (row[key] == values[key] || row[key]=="ANY")
+              end
             end
             found
           end
