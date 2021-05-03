@@ -84,7 +84,7 @@ class LookUp
       if valid_entries.empty?        
         if (values.values + ['X','']).uniq.sort == ['','X']
           ## If all values are X or empty
-          valid_entries = [{'Result'=> @part+'X'}]
+          valid_entries = [{'Result'=> Site.get_default_result(@part)}]
         else 
           ## If some values are X        
           keys = values.keys
@@ -126,7 +126,6 @@ class LookUp
         responses << response
       end
     end
-    puts responses if $DEBUG
     responses
   end
 
