@@ -20,7 +20,7 @@ require_relative './Library.rb'
 require 'rdiscount'
 
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order, :default
   def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil, text=nil)
     @name = name
     @type = type
@@ -91,6 +91,10 @@ class Variable
   def self.json_create(o)
     # puts *o['data']
     new(*o['data'])
+  end
+
+  def default=(default)
+    @default = default
   end
   
 end
