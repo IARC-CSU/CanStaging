@@ -1,0 +1,9 @@
+"MetastasesOther","MetastasesSpineOrJunction","MetastasesBrain","MetastasesCSF","UncertainMetastases","PrimaryBrainOrSpine","Result","Message"
+"T","T","T","T","T","T","M4",
+"F","F","F","F","F","F","X",
+"F","F","F","F","T","ANY","X",
+"F","F","F","F","F","T","M0",
+"F","F","F","T","ANY","ANY","M1",
+"F","F","T","ANY","ANY","ANY","M2",
+"F","T","ANY","ANY","ANY","ANY","M3",
+"T","ANY","ANY","ANY","ANY","ANY","M4",

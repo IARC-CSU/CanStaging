@@ -1,0 +1,6 @@
+"Metastases","UncertainMetastases","PrimaryInvolvement","Result","Message"
+"T","T","T","Metastatic",
+"F","F","F","X",
+"F","T","ANY","X",
+"F","F","T","Localised",
+"T","ANY","ANY","Metastatic",
