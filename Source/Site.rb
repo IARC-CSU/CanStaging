@@ -104,7 +104,7 @@ class Site
       @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
     end
 
-    @site = translated_name.capitalize
+    @site = translated_name
     @lookups = {}
     @metas = {}
     @prefixes = {}
