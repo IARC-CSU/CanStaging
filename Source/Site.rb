@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text
 
   def detect_parts(pattern)
     parts = []
@@ -62,6 +62,7 @@ class Site
     @default_name = site
     @pdf = nil
     @png = nil
+    @text = nil
     translated_name = site   
     @default_language = "en"
     @tnm_version = tnm_version
@@ -101,7 +102,15 @@ class Site
     end
 
     if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
-      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
+      
+      html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body>'
+
+      puts " - Found" if $DEBUG
+      # Load it into the variable already
+      html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}").read).to_html
+      html += "</body></html>"
+      @text = html
+
     end
 
     @site = translated_name

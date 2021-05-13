@@ -6,8 +6,14 @@
   <meta charset="UTF-8">
 </head>
 
-  <h1><%= site.site %></h1>
+  <h1><%= site.site %>  
+      <% if !site.text.nil? %>
+        <% html = '"' + site.text.gsub("\n"," ") +'"' %>
+        <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
+    <% end %>
+  </h1>
   <h5><%= Site.staging_system_name(site.tnm_version, :label) %></h5>
+
   <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
     <% if site.png.nil? %> 
