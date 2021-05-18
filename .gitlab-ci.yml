@@ -43,6 +43,7 @@ build_staging_image:
       - staging
   only:
       - develop
+  when: manual
   services:
       - docker:19.03-dind
   variables:
