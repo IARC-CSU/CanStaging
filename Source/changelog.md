@@ -1,5 +1,12 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.6 (2021-05-18)
+
+- Remove 'capitalization' of site names.
+- Sites can now have a popup text for general instructions.
+- Added GRELL logo
+- Other fixes.
+
 ## 0.8.5 (2021-05-03)
 
 - Updated eTNM cervix flowcharts.
