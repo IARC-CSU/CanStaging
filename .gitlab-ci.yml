@@ -15,7 +15,7 @@ before_script:
 
 deploy_staging:
     tags:
-        - csu-staging
+        - staging
     only:
         refs:
             - develop
