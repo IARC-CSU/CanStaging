@@ -43,7 +43,7 @@ require "rack/handler/puma"
 # first load default config
 
 config_default = { 
-  'system' => {'log_file' => "./data/logg.db", 'port' => 80, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
+  'system' => {'log_file' => "./data/logg.db", 'port' => 4567, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
 }
 
 config = YAML.load_file("./data/config.yml")
@@ -248,25 +248,27 @@ get '/sites.json' do
 end
 
 get '/site/*' do |site_name|
+  # TODO: Better handling of different staging system in URL
   if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
     # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
     session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
-    redirect to where_user_came_from 
+    where_user_came_from = session[:previous_url] || '/tool'
+    redirect to where_user_came_from
   else
     erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
   end
 end
 
 get '/login/form' do 
-  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 get '/register' do 
-  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 get '/feedback' do 
-  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
 end
 
 post '/login/attempt' do
@@ -281,7 +283,7 @@ post '/login/attempt' do
     redirect to where_user_came_from 
   else
     session[:error] = 'Sorry not a valid key '
-    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
+    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
   end
 end
 

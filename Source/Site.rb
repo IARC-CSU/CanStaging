@@ -21,9 +21,18 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text
+
+  def detect_parts(pattern)
+    parts = []
+    Dir[pattern + '*'].each do |f| 
+      m = f.match(Regexp.new(pattern + '([^\|\._]*)')) 
+      parts << m[1]
+    end
+    parts.uniq!
+    @candidate_parts.select {|p| parts.include? p }
+  end
   
-  $PARTS = ["T", "N", "M", "SG", "SimpG"]
   TABLES_ROOT_PATH = "./Tables"
   LOCAL_IMAGES_ROOT_PATH = "./public/gfx"
   SERVER_IMAGES_ROOT_PATH = "/gfx/"
@@ -48,10 +57,12 @@ class Site
   end
 
   def initialize site, language, tnm_version
+    @candidate_parts = ["T", "N", "M", "SG", "SimpG", "Tier1", "Tier2"] # mainly used to keep the correct order of parts...
     puts "Loading: #{site}, #{language}, #{tnm_version}"
     @default_name = site
     @pdf = nil
     @png = nil
+    @text = nil
     translated_name = site   
     @default_language = "en"
     @tnm_version = tnm_version
@@ -62,6 +73,8 @@ class Site
     default_language_root_path = "#{tnm_version_root_path}/#{@default_language}"
     language_root_path = "#{tnm_version_root_path}/#{language}"
     site_root_path = "#{language_root_path}/#{site}" 
+    @PARTS = detect_parts("#{site_root_path}/#{site}_")
+    
     if File.exist?("#{site_root_path}/default.yml")
       yaml = YAML.load_file("#{site_root_path}/default.yml")
       @default_name = yaml["default_name"] || @default_name
@@ -89,14 +102,23 @@ class Site
     end
 
     if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
-      @txt = "#{SERVER_TEXTS_ROOT_PATH}/#{txt_path}"
+      
+      html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body>'
+
+      puts " - Found" if $DEBUG
+      # Load it into the variable already
+      html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}").read).to_html
+      html += "</body></html>"
+      @text = html
+
     end
 
-    @site = translated_name.capitalize
+    @site = translated_name
     @lookups = {}
     @metas = {}
     @prefixes = {}
-    $PARTS.each do |part| 
+
+    @PARTS.each do |part| 
       # Load up definitions
       if File.exist? "#{site_root_path}/#{@default_name}_#{part}.txt"
         @lookups[part] = LookUp.new("#{site_root_path}/#{@default_name}_#{part}.txt")
@@ -109,6 +131,9 @@ class Site
       else
         @metas[part] = Meta.new("#{@default_site_root_path}/#{@default_name}_#{part}_Meta.txt")
       end
+      # Add defaults from meta to lookups
+      @lookups[part].add_defaults(@metas[part].defaults)
+      
       # Add image paths 
       # if ["T","N","M","SG"].include? part
         @metas[part].fields.each do |variable_name, variable|
@@ -188,9 +213,9 @@ class Site
     conclusive = true
     error = false
     tnm_message_parts = []
-    $PARTS.each do |part|
+    @PARTS.each do |part|
       unless part == "SG" || part == "SimpG" || part == "SGrange"
-        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => "#{part}X", "Message" => R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
+        result[part] = values[part].nil? || values[part].empty? ? [{"Result" => Site.get_default_result(part), "Message" => R18n.t[:site][:no_data]}] : @lookups[part].look_up(values[part])
         result[part] = keep_unique(result[part])
         values["SG"][part] = result[part][0]["Result"]
         if result[part][0]["Result"] == "ERROR"
@@ -198,9 +223,9 @@ class Site
           result[part] = [{"Result"=> "ERROR", "Message" => R18n.t[:site][:invalid_combination] }]
           tnm_message_parts << R18n.t.site.no_such_combination(part)
         elsif result[part].length>1
-          tnm_result += "#{get_default_result(part)}" 
+          tnm_result += "#{Site.get_default_result(part)}" 
           tnm_message_parts << R18n.t.site.one_of_many_possible(part)
-          result[part] = [{"Result"=> get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
+          result[part] = [{"Result"=> Site.get_default_result(part), "Message" => R18n.t[:site][:many_possible] }] + result[part]
           conclusive = false
         else
           tnm_result += "#{result[part][0]["Result"]}"          
@@ -210,10 +235,10 @@ class Site
       end
     end
     
-    # puts $PARTS 
+    # puts @PARTS 
     
     tnm_message = tnm_message_parts.join(" ")
-    if $PARTS.include? "SG"
+    if @PARTS.include? "SG"
       result["SG"] = values["SG"].nil? ? [{ "TNM" => tnm_result, "Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_sgs(result, values["SG"])
       result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
       result["TNMwP"] = [{"Result" => tnm_with_prefixes_result, "Message" => "", "Conclusive" => conclusive, "All results" => "" } ] 
@@ -222,24 +247,26 @@ class Site
 
     if error
        result["SG"] = [{ "TNM" => "ERROR", "Result" => "", "Message" => R18n.t[:site][:no_data]}]
-       result["SGrange"] = [ { "Result" => get_default_result("SGrange")} ]
-       result["SimpG"] = [ { "Result" => get_default_result("SimpG")} ]
+       result["SGrange"] = [ { "Result" => Site.get_default_result("SGrange")} ]
+       result["SimpG"] = [ { "Result" => Site.get_default_result("SimpG")} ]
     else
-      if $PARTS.include? "SG" && !result["SG"].nil? && result["SG"].length > 0
+      if @PARTS.include? "SG" && !result["SG"].nil? && result["SG"].length > 0
         result["TNM"] = [{"Result" => result["SG"].first["TNM"], "Message" => tnm_message, "Conclusive" => conclusive, "All results" => result["SG"].map{|e| e["TNM"]}.uniq } ] 
       end
       # puts result["TNM"][0]["Result"]
       # calculate SG range
-      range = result["TNM"][0]["Result"] == "TXNXM0" ? [ { "Result" =>  "" } ] : calculate_sg_range(result["SG"])
-      # puts range
+      if @PARTS.include? "T"
+        range = result["TNM"][0]["Result"] == "TXNXM0" ? [ { "Result" =>  "" } ] : calculate_sg_range(result["SG"])
+        # puts range
 
-      result["SGrange"] = [ { "Result" =>  generate_sg_range_string(range)} ]
-      # puts result["SGrange"]
+        result["SGrange"] = [ { "Result" =>  generate_sg_range_string(range)} ]
+        # puts result["SGrange"]
 
-      if $PARTS.include? "SimpG"
-        result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "" || result["TNM"][0]["Result"] == "TXNXM0" ) ? [{"Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_SimpGs(range)
+        if @PARTS.include? "SimpG"
+          result["SimpG"] = (result["SG"].nil? || result["SG"][0]["Result"] == "" || result["TNM"][0]["Result"] == "TXNXM0" ) ? [{"Result" => "", "Message" => R18n.t[:site][:no_data]}] : calculate_SimpGs(range)
+        end
+        # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
       end
-      # result["SG"] = [{"Result" => result["SG"][0]["Result"], "Message" => result["SG"][0]["Message"]}] unless result["SG"].nil?
     end
     # puts result
     result
@@ -255,7 +282,7 @@ class Site
 
   private
 
-  def get_default_result(part)
+  def self.get_default_result(part)
     text = ""
     if(part == "T")
       text = "TX"

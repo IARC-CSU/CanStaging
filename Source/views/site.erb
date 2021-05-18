@@ -6,8 +6,14 @@
   <meta charset="UTF-8">
 </head>
 
-  <h1><%= site.site %></h1>
+  <h1><%= site.site %>  
+      <% if !site.text.nil? %>
+        <% html = '"' + site.text.gsub("\n"," ") +'"' %>
+        <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
+    <% end %>
+  </h1>
   <h5><%= Site.staging_system_name(site.tnm_version, :label) %></h5>
+
   <% # For now we either have a PDF or a form... %>
   <% unless site.pdf.nil? %> 
     <% if site.png.nil? %> 
@@ -93,14 +99,16 @@
         <% end %>
         </tbody>
         <% end %>
-        <tr id = "SGrange">
-          <th><%= R18n.t[:site][:sg_range] %></th>
-          <th class = "result" id = "SGrange_result"></th>
-        </tr>
-        <tr id = "result">
-          <th><%= R18n.t[:site][:tnm] %></th>
-          <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
-        </tr>
+        <% if site.tnm_version != 'Toronto' %>
+          <tr id = "SGrange">
+            <th><%= R18n.t[:site][:sg_range] %></th>
+            <th class = "result" id = "SGrange_result"></th>
+          </tr>
+          <tr id = "result">
+            <th><%= R18n.t[:site][:tnm] %></th>
+            <th class = "result" id = "TNM_result" onclick="copyToClipboard('TNM_result')" onmouseout="outFunc('TNM_result')"></th>
+          </tr>
+        <% end %>
         <% if site.tnm_version == 'v7' || site.tnm_version == 'v5' %>
           <tr id = "result_with_prefixes">
             <th><%= R18n.t[:site][:tnm_with_prefixes] %></th>
@@ -309,12 +317,14 @@
       }
 
       var el   = document.getElementById('TNM_result');
-      var text = results['T']+results['N']+results['M'];
-      tnm_tooltip_text = data["TNM"][0]["All results"].join("\n")
-      el.title = "Copy to clipboard:\n"+ tnm_tooltip_text;
-      el.innerHTML = text;
-      alertText += "<br>TNM: "+ text;
-      tnm_result = text;
+      if (el!=null) {
+        var text = results['T']+results['N']+results['M'];
+        tnm_tooltip_text = data["TNM"][0]["All results"].join("\n")
+        el.title = "Copy to clipboard:\n"+ tnm_tooltip_text;
+        el.innerHTML = text;
+        alertText += "<br>TNM: "+ text;
+        tnm_result = text;
+      }
       return alertText;
     }
 

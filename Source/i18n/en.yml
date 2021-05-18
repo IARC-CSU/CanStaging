@@ -37,7 +37,7 @@ layout:
   log_out: "Log out"
   log_in: "Log in"
   language_select: "Language select"
-  tnm_version: "TNM version"
+  staging_system: "Staging system"
   no_sites_translated: "No sites translated to this language yet."
   shutdown: "Shutdown"
 
