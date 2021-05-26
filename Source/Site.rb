@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text, :image 
 
   def detect_parts(pattern)
     parts = []
@@ -98,12 +98,17 @@ class Site
     end
 
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{png_path}"
-      @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      if @PARTS.empty?
+        ## essential TNM
+        @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      else
+        @image = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      end
     end
 
     if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
       
-      html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body>'
+      html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body style=\"padding:42\">'
 
       puts " - Found" if $DEBUG
       # Load it into the variable already
@@ -157,7 +162,7 @@ class Site
           relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.txt"
           print "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}" if $DEBUG
-          html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body>'
+          html = '<html><head><link rel=\"stylesheet\" href=\"/vendor/bootstrap/css/bootstrap.min.css\"><link rel=\"stylesheet\" href=\"/css/default.css\"></head><body style=\"padding:42\">'
           if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}"
             puts " - Found" if $DEBUG
             # Load it into the variable already
