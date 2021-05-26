@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text, :image 
 
   def detect_parts(pattern)
     parts = []
@@ -98,7 +98,12 @@ class Site
     end
 
     if File.exist? "#{LOCAL_IMAGES_ROOT_PATH}/#{png_path}"
-      @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      if @PARTS.empty?
+        ## essential TNM
+        @png = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      else
+        @image = "#{SERVER_IMAGES_ROOT_PATH}/#{png_path}"
+      end
     end
 
     if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{txt_path}"
