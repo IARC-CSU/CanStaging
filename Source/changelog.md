@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.9 (2021-05-27)
+
+- Bugfixes.
+
 ## 0.8.8 (2021-05-26)
 
 - Images (and PDFs) can now be associated with the cancer site itself to enable pop ups with more information.
