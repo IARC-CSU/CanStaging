@@ -20,12 +20,13 @@
   </h1>
   <h5><%= Site.staging_system_name(site.tnm_version, :label) %></h5>
 
-  <% # For now we either have a PDF or a form... %>
-  <% unless site.pdf.nil? %> 
-    <% if site.png.nil? %> 
-      <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
-    <% else %>
-      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
+  <% if site.get_metas.empty? %> 
+    <% unless site.pdf.nil? %>
+      <% if site.png.nil? %> 
+        <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
+      <% else %>
+        <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
+      <% end %>
     <% end %>
   <% else %> 
     <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
