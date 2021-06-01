@@ -7,19 +7,26 @@
 </head>
 
   <h1><%= site.site %>  
-      <% if !site.text.nil? %>
-        <% html = '"' + site.text.gsub("\n"," ") +'"' %>
+    <% if !site.text.nil? %>
+      <% html = '"' + site.text.gsub("\n"," ") +'"' %>
         <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
+    <% end %>
+    <% if !site.image.nil? %>
+      <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= site.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
+    <% end %>
+    <% if !site.pdf.nil? %>
+      <span class="illustrated-disabled" href="#" title = 'Click for PDF.' onclick="window.open('<%= site.pdf %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-file-pdf"></i></span>
     <% end %>
   </h1>
   <h5><%= Site.staging_system_name(site.tnm_version, :label) %></h5>
 
-  <% # For now we either have a PDF or a form... %>
-  <% unless site.pdf.nil? %> 
-    <% if site.png.nil? %> 
-      <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
-    <% else %>
-      <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
+  <% if site.get_metas.empty? %> 
+    <% unless site.pdf.nil? %>
+      <% if site.png.nil? %> 
+        <%= "<a href='../#{site.pdf}' target='_blank'>PDF</a>" %> 
+      <% else %>
+        <%= "<a href='../#{site.pdf}' target='_blank'><img class='big' src='../#{site.png}' title='PDF-version'></a>" %> 
+      <% end %>
     <% end %>
   <% else %> 
     <form name="tnm_form" action="/tnm" method="post" onsubmit="return validateForm()" id = "tnm_form">
