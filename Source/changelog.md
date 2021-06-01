@@ -1,5 +1,10 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.10 (2021-06-01)
+
+- "T2","N0","M0" -> "IB" corrected.
+- Bugfixes.
+
 ## 0.8.9 (2021-05-27)
 
 - Bugfixes.
