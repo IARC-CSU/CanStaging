@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CanStaging+"
-#define MyAppVersion "0.8.9"
+#define MyAppVersion "0.8.11"
 #define MyAppPublisher "IARC"
 #define MyAppURL "http://canstaging.org"
 #define MyAppExeName "CanStaging.bat"
@@ -43,6 +43,7 @@ Source: "{#CanStagingDir}\CanStaging.bat"; DestDir: "{app}"; Flags: ignoreversio
 Source: "{#CanStagingDir}\changelog.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\i18n\*"; DestDir: "{app}\i18n"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\public\*"; DestDir: "{app}\public\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#CanStagingDir}\views\*"; DestDir: "{app}\views\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; Source: "{#CanStagingDir}\public\gfx\*"; DestDir: "{app}\public\gfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; Source: "{#CanStagingDir}\public\txt\*"; DestDir: "{app}\public\txt\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
