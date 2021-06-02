@@ -25,6 +25,7 @@ REM make zip file
 %zx% a -tzip CanStaging.zip loader.html
 %zx% a "-xr!logg.db" -tzip CanStaging.zip data
 %zx% a -tzip CanStaging.zip i18n
+%zx% a -tzip CanStaging.zip views
 %zx% a -tzip CanStaging.zip public
 %zx% a -tzip CanStaging.zip Tables
 %zx% a -tzip CanStaging.zip changelog.md
