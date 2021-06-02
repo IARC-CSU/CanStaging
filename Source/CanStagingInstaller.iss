@@ -4,8 +4,8 @@
 #define MyAppName "CanStaging+"
 #define MyAppVersion "0.8.10"
 #define MyAppPublisher "IARC"
-#define MyAppURL "http://www.canstaging.org"
-#define MyAppExeName "launch.bat"
+#define MyAppURL "http://canstaging.org"
+#define MyAppExeName "CanStaging.bat"
 #define CanStagingDir "C:\Users\ervikm\Documents\GitLab\CanStaging\Source"
 
 [Setup]
@@ -39,15 +39,16 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#CanStagingDir}\launch.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#CanStagingDir}\CanStaging.bat"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\changelog.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#CanStagingDir}\i18n\*"; DestDir: "{app}\i18n"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#CanStagingDir}\public\gfx\*"; DestDir: "{app}\public\gfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#CanStagingDir}\public\txt\*"; DestDir: "{app}\public\txt\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#CanStagingDir}\public\*"; DestDir: "{app}\public\"; Flags: ignoreversion recursesubdirs createallsubdirs
+; Source: "{#CanStagingDir}\public\gfx\*"; DestDir: "{app}\public\gfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
+; Source: "{#CanStagingDir}\public\txt\*"; DestDir: "{app}\public\txt\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\data\config.yml"; DestDir: "{app}\data"; Flags: ignoreversion
 Source: "{#CanStagingDir}\loader.html"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\CanStaging.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#CanStagingDir}\bin\CanStaging.exe"; DestDir: "{app}\bin\"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
