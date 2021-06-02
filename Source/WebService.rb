@@ -95,7 +95,10 @@ end
 include R18n::Helpers
 
 register Sinatra::R18n
-set :root, File.dirname(__FILE__)
+# If we embed public-folder in exe file we need to set the root of the server to the temporary location of the script
+# set :root, File.dirname(__FILE__)
+# Otherwise we set the root to the current dir...
+set :root, File.dirname('.')
 
 R18n::I18n.default = 'en'
 R18n.default_places { './i18n' }
