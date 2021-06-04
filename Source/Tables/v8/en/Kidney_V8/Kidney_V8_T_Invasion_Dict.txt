@@ -1,8 +1,0 @@
-"Key","DisplayText"
-"1","Tumour is limited to Kidney"
-"2","Tumour extends into major veins or perinephric tissues but not into the ipsilateral adrenal gland and not beyond Gerota fascia"
-"3","Tumour extends into renal vein or its segmental branches, or the pelvical system or perineal and/or renal sinus fat (peripelvic) but not beyond Gerota fascia"
-"4","Tumour extends into vena cava below diaphragm"
-"5","Tumour extends into vena cava above the diaphragm or invades the wall of the vena cava"
-"6","Tumour invades beyond Gerota fascia including continous extension into the ipsilateral adrenal gland"
-"7","Primary tumour cannot be assessed"
