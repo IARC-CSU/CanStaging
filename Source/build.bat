@@ -20,8 +20,8 @@ cd dist
 cd ..
 
 REM make zip file
-%zx% a -tzip CanStaging.zip bin\CanStaging.exe
-%zx% a -tzip CanStaging.zip launch.bat
+%zx% a -tzip CanStaging.zip server.exe
+%zx% a -tzip CanStaging.zip CanStaging.bat
 %zx% a -tzip CanStaging.zip loader.html
 %zx% a "-xr!logg.db" -tzip CanStaging.zip data
 %zx% a -tzip CanStaging.zip i18n
