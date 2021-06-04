@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Greatest dimension of the tumour(s)(cm)","2",
+"Limit","Boolean","Tumour limited to kidney","2"
+"Invasion","Dictionary","Invasion","2",
