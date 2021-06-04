@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CanStaging+"
-#define MyAppVersion "0.8.11"
+#define MyAppVersion "0.8.12"
 #define MyAppPublisher "IARC"
 #define MyAppURL "http://canstaging.org"
 #define MyAppExeName "CanStaging.bat"
@@ -49,7 +49,7 @@ Source: "{#CanStagingDir}\views\*"; DestDir: "{app}\views\"; Flags: ignoreversio
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\data\config.yml"; DestDir: "{app}\data"; Flags: ignoreversion
 Source: "{#CanStagingDir}\loader.html"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\server.exe"; DestDir: "{app}\bin\"; Flags: ignoreversion
+Source: "{#CanStagingDir}\server.exe"; DestDir: "{app}\"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
