@@ -1,5 +1,14 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.12 (2021-06-04)
+
+- Tidied and renamed files in the standalone install to avoid confusion.
+- Bugfixes.
+
+## 0.8.11 (2021-06-02)
+
+- Bugfixes
+
 ## 0.8.10 (2021-06-01)
 
 - "T2","N0","M0" -> "IB" corrected.
