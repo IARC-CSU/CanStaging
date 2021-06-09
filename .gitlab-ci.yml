@@ -24,6 +24,18 @@ deploy_staging:
     script:
         - sudo docker-compose -p CanStaging up -d --build
 
+
+deploy_test_to_staging:
+    tags:
+        - staging
+    only:
+        refs:
+            - feature/new_sites_from_abigail
+    when: manual
+    stage: deploy
+    script:
+        - sudo docker-compose -p CanStaging up -d --build
+
 deploy_to_production:
     stage: deploy
     tags:
