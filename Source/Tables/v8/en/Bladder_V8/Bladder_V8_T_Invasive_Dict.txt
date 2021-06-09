@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Non-invasive papillary carcinoma"
+"4","Carcinoma in situ: 'flat tumour'"
+"5","Invasive tumour"
