@@ -49,7 +49,7 @@ Source: "{#CanStagingDir}\views\*"; DestDir: "{app}\views\"; Flags: ignoreversio
 Source: "{#CanStagingDir}\Tables\*"; DestDir: "{app}\Tables"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#CanStagingDir}\data\config.yml"; DestDir: "{app}\data"; Flags: ignoreversion
 Source: "{#CanStagingDir}\loader.html"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#CanStagingDir}\server.exe"; DestDir: "{app}\bin\"; Flags: ignoreversion
+Source: "{#CanStagingDir}\server.exe"; DestDir: "{app}\"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
