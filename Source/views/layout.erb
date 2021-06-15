@@ -122,7 +122,7 @@
                 <% else %>
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <%= !session[:user].nil? ? session[:user].username : "" %>                      
-                        (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:key].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] :  R18n.t[:layout][:user] %>)
+                        (<%= !session[:key].nil? && session[:key].split("-").length>1 ? session[:key].split("-").last + " - ": "" %><%= !session[:key].nil? && !session[:user].nil? && !session[:user].role.nil? ? R18n.t[:layout][session[:user].role.to_sym] : R18n.t[:layout][:user] %>)
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/logout"><%= R18n.t[:layout][:log_out] %></a>
