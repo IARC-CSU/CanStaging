@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.14 (2021-06-15)
+
+- Fixed potential null pointer error.
+
 ## 0.8.13 (2021-06-04)
 
 - Tidied and renamed files in the standalone install to avoid confusion.
