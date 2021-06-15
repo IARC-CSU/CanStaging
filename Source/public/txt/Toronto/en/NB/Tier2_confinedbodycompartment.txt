@@ -1,0 +1,1 @@
+Localized tumour with no IDRFs. The tumour must be confined within one body compartment, neck, chest, abdomen, or pelvis.<br/>An intraspinal tumour extension that does not fulfil the criteria for an IDRF is consistent with stage L1.

@@ -1,7 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"MetastasesOther","Boolean","Were metastases present in a site other than spine, cervicomedullary junction, brain or cerebrospinal fluid at diagnosis?","",
-"MetastasesSpineOrJunction","Boolean","Were metastases present in the spine or cervicomedullary junction at diagnosis?","",
-"MetastasesBrain","Boolean","Were metastases present in the brain at diagnosis?","",
-"MetastasesCSF","Boolean","Were metastases present in the cerebrospinal fluid at diagnosis?","",
-"UncertainMetastases","Boolean","Was it uncertain whether metastases were present at diagnosis?","",
-"PrimaryBrainOrSpine","Boolean","Was involvement at diagnosis at the primary site only (brain or spine)?","",

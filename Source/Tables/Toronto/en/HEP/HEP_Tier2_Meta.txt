@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Boolean","Metastasis","",
+"CaudateLobe","Boolean","Involvement of caudate lobe only","",
+"LeftLateral","Boolean","Involvement of left lateral segment of liver at diagnosis","",
+"LeftMedial","Boolean","Involvement of left medial segment of liver at diagnosis","",
+"RightAnterior","Boolean","Involvement of right anterior segment of liver at diagnosis","",
+"RightPosterior","Boolean","Involvement of right posterior segment of liver at diagnosis","",

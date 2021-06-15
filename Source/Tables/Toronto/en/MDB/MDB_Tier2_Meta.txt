@@ -1,7 +1,5 @@
 "Field","DataType","DisplayText","Group","Colour"
-"MetastasesOther","Boolean","Metastases in site(s) other than spine, cervicomedullary junction, brain or cerebrospinal fluid","",
-"MetastasesSpineOrJunction","Boolean","Metastases in spine or cervicomedullary junction","",
-"MetastasesBrain","Boolean","Metastases in brain","",
-"MetastasesCSF","Boolean","Metastases in cerebrospinal fluid","",
-"UncertainMetastases","Boolean","Uncertain Metastases","",
-"PrimaryBrainOrSpine","Boolean","Primary involvement in brain or spine","",
+"MetastasisOutsideCNS","Boolean","Metastasis outside of the central nervous system.","",
+"MetastasisSpineOrJunction","Boolean","Metastasis in spine or cervicomedullary junction.","",
+"MetastasisBrain","Boolean","Metastasis in brain.","",
+"TumourCellsInCSF","Boolean","Tumour cells in CSF.","",

@@ -1,6 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour","Default"
-"OtherMetastases","Boolean","Other metastases (spread beyond abdomen)","","","T"
-"HaematogenousMetastases","Boolean","Haematogenous metastases","","","T"
-"UncertainOtherMetastases","Boolean","Uncertain other metastases (spread beyond abdomen)","","","T"
-"UncertainHaematogenousMetastases","Boolean","Uncertain haematogenous metastases","","","T"
-"AnyOtherInvolvement","Boolean","Any other Involvement","","","T"

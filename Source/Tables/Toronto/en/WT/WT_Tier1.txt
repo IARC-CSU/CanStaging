@@ -1,8 +1,0 @@
-"OtherMetastases","HaematogenousMetastases","UncertainOtherMetastases","UncertainHaematogenousMetastases","AnyOtherInvolvement","Result","Message"
-"T","T","T","T","T","Metastatic",
-"ANY","T","ANY","ANY","ANY","Metastatic",
-"T","ANY","ANY","ANY","ANY","Metastatic",
-"F","F","ANY","T","ANY","X",
-"F","F","ANY","ANY","F","X",
-"F","F","T","ANY","ANY","X",
-"F","F","F","F","T","Localised",
