@@ -1,4 +1,4 @@
-image: bentolor/docker-dind-awscli
+image: bentolor/docker-dind-awscli:latest
 
 services:
   - docker:dind
