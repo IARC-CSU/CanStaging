@@ -61,7 +61,7 @@ get_log:
   tnm_version: "TNM - Version"
   sg_result: "Stage Group - Result"
   sg_message: "Stage Group - Message"
-  simpg: "SimpG"
+  simpg: "Simplified Group"
   sg_range: "Stage Group Range"
   site_specific: "Site Specific"
   clear_log: "Clear log"
