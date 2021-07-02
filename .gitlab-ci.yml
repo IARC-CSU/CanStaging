@@ -27,7 +27,7 @@ stages:
     - deploy
     - build
 
-deploy_staging:
+deploy_to_docker_staging:
     tags:
         - staging
     only:
@@ -38,7 +38,7 @@ deploy_staging:
     script:
         - sudo docker-compose -p CanStaging up -d --build
 
-deploy_to_production:
+deploy_to_docker_prod:
     stage: deploy
     tags:
         - production
@@ -67,7 +67,7 @@ build:
   only:
     - master
 
-deploy:
+deploy_to_aws:
   stage: deploy
   tags:
     - csu-staging
