@@ -8,7 +8,8 @@ variables:
   TASK_DEFINITION_NAME: $AWS_TASK_DEFINITION_NAME
   CLUSTER_NAME: $AWS_CLUSTER_NAME
   SERVICE_NAME: $AWS_SERVICE_NAME
-
+  IMAGE_TAG: $CI_COMMIT_SHORT_SHA
+  
 before_script:
   - apk add --no-cache curl jq
   #- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
@@ -18,7 +19,7 @@ before_script:
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
   - aws configure set region $AWS_DEFAULT_REGION
   - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_REPOSITORY_URL
-  - IMAGE_TAG="$(echo $CI_COMMIT_SHA | head -c 8)"
+#  - IMAGE_TAG="MANUALLY"   #"$(echo $CI_COMMIT_SHA | head -c 8)"
 
 stages:
     - deploy
