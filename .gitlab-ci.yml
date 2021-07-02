@@ -52,6 +52,8 @@ deploy_to_production:
         - sudo docker-compose -p CanStaging up -d --build
 
 build:
+  tags:
+    - staging
   stage: build
   script:
     - echo "Building image..."
