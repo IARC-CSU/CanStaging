@@ -53,7 +53,7 @@ deploy_to_production:
 
 build:
   tags:
-    - staging
+    - csu-staging
   stage: build
   script:
     - echo "Building image..."
