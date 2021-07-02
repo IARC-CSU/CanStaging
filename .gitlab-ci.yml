@@ -11,6 +11,8 @@ variables:
   IMAGE_TAG: $CI_COMMIT_SHORT_SHA
   
 before_script:
+  - echo "Executing on `hostname`"
+  - echo "Working directory is `pwd`"
   - apk add --no-cache curl jq
   #- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
   #- unzip awscliv2.zip
@@ -24,10 +26,6 @@ before_script:
 stages:
     - deploy
     - build
-
-before_script:
-    - echo "Executing on `hostname`"
-    - echo "Working directory is `pwd`"
 
 deploy_staging:
     tags:
