@@ -57,7 +57,8 @@ build:
   stage: build
   script:
     - echo "Building image..."
-    - docker build --cache-from $IMAGE_TAG -t iarc -f ./Source/Dockerfile .
+    - echo $IMAGE_TAG
+    - docker build -t iarc -f ./Source/Dockerfile . # --cache-from $IMAGE_TAG
     - echo "Tagging image..."
     - docker tag iarc:latest $AWS_REPOSITORY_URL:latest
     - docker tag iarc:latest $AWS_REPOSITORY_URL:$IMAGE_TAG
