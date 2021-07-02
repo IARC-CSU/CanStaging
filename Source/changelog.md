@@ -1,8 +1,14 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.15 (2021-07-02)
+
+- Implemented a tool to test consistency of the business logic.
+- CI-related work.
+- Bugfixes.
+
 ## 0.8.14 (2021-06-15)
 
-- Fixed potential null pointer error.
+- Bugfixes.
 
 ## 0.8.13 (2021-06-04)
 
@@ -12,7 +18,7 @@
 
 ## 0.8.11 (2021-06-02)
 
-- Bugfixes
+- Bugfixes.
 
 ## 0.8.10 (2021-06-01)
 
