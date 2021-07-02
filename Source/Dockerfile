@@ -8,12 +8,12 @@ ENV APP_HOME /app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD Gemfile* $APP_HOME/
+ADD Source/Gemfile* $APP_HOME/
 RUN gem install bundler
 # RUN bundle config set without 'development test'
 RUN bundle install
 
-ADD . $APP_HOME
+ADD Source/. $APP_HOME
 
 # CMD ["ruby","WebService.rb"]
 # Make sure we load ruby with the gems specified in the Gemfile...
