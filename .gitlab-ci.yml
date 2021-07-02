@@ -18,7 +18,7 @@ before_script:
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
   - aws configure set region $AWS_DEFAULT_REGION
   - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_REPOSITORY_URL
-  - IMAGE_TAG="$(echo $CI_COMMIT_SHA | head -c 8)"
+  - IMAGE_TAG="ABBA" # "$(echo $CI_COMMIT_SHA | head -c 8)"
 
 stages:
     - deploy
