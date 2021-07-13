@@ -87,10 +87,8 @@ set :port, config['system']['port']
 # set :sessions, true
 # set :session_secret, config['system']['session_secret']
 
-use Rack::Session::Cookie, :key => 'rack.session',
-                           :path => '/',
+use Rack::Session::Cookie, :key => 'CanStaging+',
                            :secret => config['system']['session_secret']
-
 
 configure :development do
   $logger = Logger.new(STDOUT)
