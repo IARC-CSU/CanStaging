@@ -84,8 +84,13 @@ puts config if $DEBUG
 set :bind, config['system']['bind']
 set :port, config['system']['port']
 
-set :sessions, true
-set :session_secret, config['system']['session_secret']
+# set :sessions, true
+# set :session_secret, config['system']['session_secret']
+
+use Rack::Session::Cookie, :key => 'rack.session',
+                           :path => '/',
+                           :secret => config['system']['session_secret']
+
 
 configure :development do
   $logger = Logger.new(STDOUT)
