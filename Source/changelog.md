@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.16 (2021-07-13)
+
+- Changed session manager.
+
 ## 0.8.15 (2021-07-02)
 
 - Implemented a tool to test consistency of the business logic.
