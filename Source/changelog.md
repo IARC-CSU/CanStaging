@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.17 (2021-07-13)
+
+- Improved cookies...
+
 ## 0.8.16 (2021-07-13)
 
 - Changed session manager.

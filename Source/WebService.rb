@@ -87,7 +87,7 @@ set :port, config['system']['port']
 # set :sessions, true
 # set :session_secret, config['system']['session_secret']
 
-use Rack::Session::Cookie, :key => 'CanStaging+',
+use Rack::Session::Cookie,
                            :secret => config['system']['session_secret']
 
 configure :development do
