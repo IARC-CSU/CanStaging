@@ -1,16 +1,20 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.20 (2021-07-15)
+
+- Improving redirect html.
+
 ## 0.8.19 (2021-07-15)
 
 - Testing another redirect.
 
 ## 0.8.18 (2021-07-15)
 
-- Improved routing
+- Improved routing.
 
 ## 0.8.17 (2021-07-13)
 
-- Improved cookies
+- Improved cookies.
 
 ## 0.8.16 (2021-07-13)
 
