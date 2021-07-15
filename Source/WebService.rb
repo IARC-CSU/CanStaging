@@ -143,7 +143,6 @@ load_sites
 $key_manager = KeyManager.new
 
 ## Routing rules
-
 before do
   ## load a stored locale or default to english
   session[:locale] = params[:locale] || session[:locale] || "en"
@@ -151,10 +150,18 @@ before do
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
   session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
-  if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
-    # redirect
-    s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
-    error(401, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
+  unless request.path_info.start_with?("/login") ||  
+    request.path_info.start_with?("/about") || 
+    request.path_info.start_with?("/register") || 
+    request.path_info.start_with?("/changelog") ||
+    request.path_info.start_with?("/chooser") ||
+    request.path_info.start_with?("/feedback")
+    if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
+      # redirect
+      redirect to('/chooser')
+      # s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
+      # error(307, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
+    end
   end
   ## see if URL corresponds to TNM version
   session[:in_memory] = $st_logger.in_memory?
@@ -162,7 +169,11 @@ end
 
 # check for valid api key to all calls to the service... 
 before do
-  unless request.path_info.start_with?("/login") || request.path_info.start_with?("/tool") || request.path_info.start_with?("/about") || request.path_info.start_with?("/register")
+  unless request.path_info.start_with?("/login") || 
+    request.path_info.start_with?("/tool") || 
+    request.path_info.start_with?("/about") || 
+    request.path_info.start_with?("/register") || 
+    request.path_info.start_with?("/changelog")
     # disable passkey
     # error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     # session[:key] = params[:key] || session[:key]
