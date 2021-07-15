@@ -158,7 +158,7 @@ before do
     request.path_info.start_with?("/feedback")
     if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
       # redirect
-      redirect to('/chooser')
+      redirect '/chooser', 307
       # s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
       # error(307, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
     end
