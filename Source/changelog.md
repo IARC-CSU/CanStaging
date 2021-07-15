@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.19 (2021-07-15)
+
+- Testing another redirect.
+
 ## 0.8.18 (2021-07-15)
 
 - Improved routing
