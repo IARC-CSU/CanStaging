@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+## 0.8.21 (2021-07-15)
+
+- Fixed a bug in Colorectal v5.
+- Other routing fixes.
+- Cosmetic fixes.
+
 ## 0.8.20 (2021-07-15)
 
 - Improving redirect html.
