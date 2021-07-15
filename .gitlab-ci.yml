@@ -1,8 +1,3 @@
-image: bentolor/docker-dind-awscli
-
-services:
-  - docker:dind
-
 variables:
   REPOSITORY_URL: $AWS_REPOSITORY_URL
   TASK_DEFINITION_NAME: $AWS_TASK_DEFINITION_NAME
@@ -10,54 +5,58 @@ variables:
   SERVICE_NAME: $AWS_SERVICE_NAME
   IMAGE_TAG: $CI_COMMIT_SHORT_SHA
   
-before_script:
-  - echo "Executing on `hostname`"
-  - echo "Working directory is `pwd`"
-  - apk add --no-cache curl jq
-  #- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
-  #- unzip awscliv2.zip
-  #- ./aws/install
-  - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-  - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-  - aws configure set region $AWS_DEFAULT_REGION
-  - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_REPOSITORY_URL
-#  - IMAGE_TAG="MANUALLY"   #"$(echo $CI_COMMIT_SHA | head -c 8)"
-
 stages:
-    - deploy
-    - build
+  - deploy
+  - build
 
 deploy_to_docker_staging:
-    tags:
-        - staging
-    only:
-        refs:
-            - develop
-    when: manual
-    stage: deploy
-    script:
-        - sudo docker-compose -p CanStaging up -d --build
+  tags:
+    - staging
+  only:
+    refs:
+      - develop
+  when: manual
+  stage: deploy
+  script:
+    - sudo docker-compose -p CanStaging up -d --build
 
 deploy_to_docker_prod:
-    stage: deploy
-    tags:
-        - production
-    environment: production
-    only:
-        refs:
-            - master
-    when: manual
-    script:
-        - sudo docker-compose -p CanStaging up -d --build
+  stage: deploy
+  tags:
+    - production
+  environment: production
+  only:
+    refs:
+        - master
+  when: manual
+  script:
+    - sudo docker-compose -p CanStaging up -d --build
 
 build:
+  image: bentolor/docker-dind-awscli
+
+  services:
+    - docker:dind
+
+  before_script:
+    - echo "Executing on `hostname`"
+    - echo "Working directory is `pwd`"
+    - apk add --no-cache curl jq
+    #- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+    #- unzip awscliv2.zip
+    #- ./aws/install
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - aws configure set region $AWS_DEFAULT_REGION
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_REPOSITORY_URL
+  #  - IMAGE_TAG="MANUALLY"   #"$(echo $CI_COMMIT_SHA | head -c 8)"
   tags:
     - csu-staging
   stage: build
   script:
     - echo "Building image..."
     - echo $IMAGE_TAG
-    - docker build --cache-from $IMAGE_TAG -t iarc -f ./Source/Dockerfile .
+    - docker build --cache-from $IMAGE_TAG -t iarc -f ./Dockerfile ./Source
     - echo "Tagging image..."
     - docker tag iarc:latest $AWS_REPOSITORY_URL:latest
     - docker tag iarc:latest $AWS_REPOSITORY_URL:$IMAGE_TAG
@@ -68,6 +67,23 @@ build:
     - master
 
 deploy_to_aws:
+  image: bentolor/docker-dind-awscli
+
+  services:
+    - docker:dind
+
+  before_script:
+    - echo "Executing on `hostname`"
+    - echo "Working directory is `pwd`"
+    - apk add --no-cache curl jq
+    #- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+    #- unzip awscliv2.zip
+    #- ./aws/install
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - aws configure set region $AWS_DEFAULT_REGION
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_REPOSITORY_URL
+  #  - IMAGE_TAG="MANUALLY"   #"$(echo $CI_COMMIT_SHA | head -c 8)"
   stage: deploy
   tags:
     - csu-staging
