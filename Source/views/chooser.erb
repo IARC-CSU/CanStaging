@@ -14,7 +14,9 @@
           <%= Site.staging_system_name(system, :label) %>
         </div>
         <div class="card-body">
-      	  <%= Site.staging_system_name(system, :desc) %>
+          <% if Site.staging_system_name(system, :desc) != Site.staging_system_name(system, :label) %>
+      	    <%= Site.staging_system_name(system, :desc) %>
+          <% end%>
         </div>
     </div>
   </a>
