@@ -8,9 +8,9 @@ ENV APP_HOME /app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-ADD Source/. $APP_HOME
+ADD . $APP_HOME
 
-ADD Source/Gemfile* $APP_HOME/
+ADD ./Gemfile* $APP_HOME/
 RUN gem install bundler
 # RUN bundle config set without 'development test'
 RUN bundle install
