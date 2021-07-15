@@ -209,19 +209,16 @@ get '/clear_log' do
 end
 
 get '/tool' do 
-  sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :tool, :locals => { :sites => sites.values.sort_by {|v| v.site }, :systems => $available_staging_systems}, :layout => :layout
+  erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
 end
 
 get '/about' do 
-  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
-  erb :about, :locals => { :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
+  erb :about, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/changelog' do
-  sites = $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
   markdown = RDiscount.new(open('./changelog.md').read)
-  erb :changelog, :locals => { :text => markdown.to_html, :sites => sites.values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
+  erb :changelog, :locals => { :text => markdown.to_html, :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
 end
 
 get '/refresh' do
@@ -252,7 +249,7 @@ get '/meta/*' do |site_name|
 end
 
 get '/sites.json' do
-  $sites[session[:tnm_version]][session[:sites_locale]].keys.sort.to_json
+  get_sites.to_json
 end
 
 get '/site/*' do |site_name|
@@ -268,15 +265,15 @@ get '/site/*' do |site_name|
 end
 
 get '/login/form' do 
-  erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
+  erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
 end
 
 get '/register' do 
-  erb :registration, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
+  erb :registration, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
 end
 
 get '/feedback' do 
-  erb :feedback, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
+  erb :feedback, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
 end
 
 post '/login/attempt' do
@@ -291,7 +288,7 @@ post '/login/attempt' do
     redirect to where_user_came_from 
   else
     session[:error] = 'Sorry not a valid key '
-    halt erb :login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems  }
+    halt erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
   end
 end
 
@@ -316,11 +313,12 @@ end
 
 get '/chooser' do
   sites = []
+  session[:tnm_version] = nil
   erb :chooser, :locals => { :sites => sites, :systems => $available_staging_systems , :layout => :layout }
 end
 
 get "/upload" do 
-  erb :upload, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
+  erb :upload, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
 end
 
 post '/upload' do
@@ -422,4 +420,9 @@ def data_to_row data
     end 
   end
   row
+end
+
+def get_sites
+  sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]  
+  sites.values.sort_by {|v| v.site }
 end
