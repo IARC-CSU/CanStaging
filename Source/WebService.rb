@@ -150,17 +150,19 @@ before do
   session[:sites_locale] = R18n.t[:sites_locale]
   ## set tnm version
   session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
+
   unless request.path_info.start_with?("/login") ||  
     request.path_info.start_with?("/about") || 
     request.path_info.start_with?("/register") || 
     request.path_info.start_with?("/changelog") ||
     request.path_info.start_with?("/chooser") ||
-    request.path_info.start_with?("/feedback")
+    request.path_info.start_with?("/feedback") ||
+    request.path_info.start_with?("/tnm") ||
+    request.path_info.length == 1
     if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
       # redirect
-      redirect '/chooser', 307
-      # s = $sites[config['system']['staging_system']][session[:sites_locale]].values.sort_by {|v| v.site}
-      # error(307, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
+      redirect '/chooser' #, 302
+      # error(302, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
     end
   end
   ## see if URL corresponds to TNM version
@@ -175,7 +177,7 @@ before do
     request.path_info.start_with?("/register") || 
     request.path_info.start_with?("/changelog")
     # disable passkey
-    # error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
+    # error(401, erb(:login_form, :locals => { :sites => get_sites })) if $key_manager.get_user(params[:key] || session[:key]).nil?
     # session[:key] = params[:key] || session[:key]
   end
   if request.path_info.start_with?("/get_log")
@@ -319,7 +321,7 @@ get '/shutdown' do
 end
 
 get '/' do
-  redirect to('/tool')
+   redirect '/index.html'
 end
 
 get '/chooser' do
@@ -363,6 +365,9 @@ def calculate_tnm params
 
   # TNM Version is pulled from the parameters or the session if unavailable
   tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
+
+  # Override for Colorectal TNM 
+  tnm_version = 'v7' if tnm_version == 'v5'
 
   site = $sites[tnm_version][session[:sites_locale]][site_name] unless !$sites[tnm_version][session[:sites_locale]].keys.include?(site_name)
   if site.nil?
