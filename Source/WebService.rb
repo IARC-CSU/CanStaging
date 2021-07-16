@@ -160,7 +160,6 @@ class CanStaging < Sinatra::Base
       request.path_info.start_with?("/chooser") ||
       request.path_info.start_with?("/feedback") ||
       request.path_info.start_with?("/tnm") ||
-      request.path_info.length == 1
       if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
         # redirect
         # redirect '/chooser' #, 302
