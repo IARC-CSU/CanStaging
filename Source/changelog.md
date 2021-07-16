@@ -1,5 +1,13 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.8.22 (2021-07-16)
+
+- Made CanStaging rackup compatible.
+- Removed debug messages from production.
+- Improved routing.
+- Cosmetic fixes.
+- Bug fixes.
+
 ### 0.8.21 (2021-07-15)
 
 - Fixed a bug in Colorectal v5.
