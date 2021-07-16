@@ -65,14 +65,14 @@ class LookUp
     # Of the form {"Nodes"=>"F", "Bone"=>"F", "Other"=>"F", "Result"=>"M0", "Message"=>nil}
     # merge defaults into @defaults
     @defaults = @defaults.merge(defaults)
-    puts "#{@part} - Defaults after merge: #{@defaults}" # if DEBUG
+    puts "#{@part} - Defaults after merge: #{@defaults}" if $DEBUG
   end
 
   def look_up values
     # values is a hash with values
     responses = []
-    unless @table.nil?
-      # puts values if $DEBUG
+    unless @table.nil? || values.nil? || values.empty?
+      puts values if $DEBUG
       keys = values.keys
 
       # first pass -- matching the exact input, Xs and all.

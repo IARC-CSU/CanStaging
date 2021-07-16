@@ -1,5 +1,4 @@
 <head>
-  <title><%= site.site %></title>
   
   <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
@@ -168,7 +167,6 @@
 
     function getDefaultResult(part) {
       var text = "";
-      // console.log(results[i]);
       if(part == "T"){
         text = "TX";
       } else if (part == "N"){
@@ -265,7 +263,9 @@
     function resultsToForm(data){
       setDefaultResults();
       var keys = Object.keys(data);
-      console.log(data);
+      <% if $DEBUG %>
+        console.log(data);
+      <% end %>
       var results = {};
       var alertText = "<b>Results:</b>";
       for (var i = 0; i<keys.length; i ++) {
@@ -349,8 +349,9 @@
       var term = form_to_data('#tnm_form');
 
       term["data[control]"] = control; 
+      <% if $DEBUG %>
       console.log(term);
-
+      <% end %>
       $.post('/tnm', term, 
         function(data) {
           resultsToForm(data);
@@ -404,7 +405,7 @@
   //update the auto-generate-stuff
   autogenerateUpdated();
 
-  document.title = "CanStaging<sup>+</sup> - <%= site.site %>";
+  document.title = "<%= R18n.t[:layout][:title] %> - <%= site.site %> - <%= site.tnm_version %> ";
   setDefaultResults();
   // this overrides the default...
   // function help_alert() {
@@ -412,7 +413,6 @@
   // }
 
   function reset(selectBoxName, part) {
-    // console.log(selectBoxName);
     $(document.getElementsByName(selectBoxName)).prop('selectedIndex',0);
     change(part, selectBoxName);
   }
