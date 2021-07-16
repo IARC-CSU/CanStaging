@@ -144,6 +144,13 @@ class CanStaging < Sinatra::Base
   load_sites
   $key_manager = KeyManager.new
 
+  before do 
+    cache_control :no_cache
+    headers \
+      "Pragma"   => "no-cache",
+      "Expires" => "0"
+  end
+
   ## Routing rules
   before do
     ## load a stored locale or default to english
