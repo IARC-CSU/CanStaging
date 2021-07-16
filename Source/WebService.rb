@@ -163,8 +163,8 @@ class CanStaging < Sinatra::Base
       request.path_info.length == 1
       if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
         # redirect
-        redirect '/chooser' #, 302
-        # error(302, erb(:chooser, :locals => { :sites => s, :systems => $available_staging_systems , :layout => :layout } ))
+        # redirect '/chooser' #, 302
+        halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } 
       end
     end
     ## see if URL corresponds to TNM version
