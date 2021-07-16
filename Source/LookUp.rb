@@ -65,7 +65,7 @@ class LookUp
     # Of the form {"Nodes"=>"F", "Bone"=>"F", "Other"=>"F", "Result"=>"M0", "Message"=>nil}
     # merge defaults into @defaults
     @defaults = @defaults.merge(defaults)
-    puts "#{@part} - Defaults after merge: #{@defaults}" if DEBUG
+    puts "#{@part} - Defaults after merge: #{@defaults}" if $DEBUG
   end
 
   def look_up values
