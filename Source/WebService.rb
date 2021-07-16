@@ -168,8 +168,7 @@ class CanStaging < Sinatra::Base
       request.path_info.start_with?("/feedback") ||
       request.path_info.start_with?("/tnm")
       if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
-        # redirect
-        # redirect '/chooser' #, 302
+        # halt and show staging system chooser
         halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } 
       end
     end
