@@ -1,5 +1,5 @@
 system:
-  environment:      "development"
+  environment:      "production"
   bind:             "0.0.0.0"
   session_secret:   "b9DNaf74K9dZAlWr6obAExa4JTNiOkBDSLjpQCH4Us3ec1o1JCCoftq4Hjceju6w"
   standalone:       false
