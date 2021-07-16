@@ -227,6 +227,10 @@ class CanStaging < Sinatra::Base
     erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
   end
 
+  get '/' do
+     erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
+  end
+
   get '/about' do 
     erb :about, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
   end
@@ -320,10 +324,6 @@ class CanStaging < Sinatra::Base
       session[:error] = R18n.t.service.invalid_url
       redirect to('/tool')
     end
-  end
-
-  get '/' do
-     redirect '/index.html'
   end
 
   get '/chooser' do
