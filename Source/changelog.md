@@ -1,5 +1,10 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.8.23 (2021-08-10)
+
+- Hide submit and log buttons when not logged in.
+- Updated some text.
+
 ### 0.8.22 (2021-07-16)
 
 - Made CanStaging rackup compatible.
