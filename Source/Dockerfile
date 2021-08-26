@@ -17,4 +17,4 @@ ADD . $APP_HOME
 
 # CMD ["ruby","WebService.rb"]
 # Make sure we load ruby with the gems specified in the Gemfile...
-CMD ["bundle", "exec", "rackup", "WebService.rb"]
+CMD ["bundle", "exec", "rackup", "-p", "4567", "-o", "0.0.0.0"]

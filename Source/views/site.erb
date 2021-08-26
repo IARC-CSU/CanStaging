@@ -124,8 +124,10 @@
         <tr id = "buttons">
           <td></td>
           <td align="right">
+            <% unless session[:key].nil? %>
             <input type="submit" value="<%= R18n.t[:site][:submit] %>" <%= session[:key].nil? ? "disabled title='Please log in to submit records...'" : "" %> />
             <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" <%= session[:key].nil? ? "disabled title='Please log in to get log of records...'" : "" %> />
+            <% end %>
             <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
           </td>
         </tr>
