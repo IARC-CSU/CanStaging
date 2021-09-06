@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Metastasis","Boolean","Metastasis","",
+"Metastasis","Boolean","Metastasis at diagnosis","",
