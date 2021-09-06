@@ -1,5 +1,10 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.1 (2021-09-06)
+
+- Better handling of missing css group in tables.
+- Fixed typo.
+
 ### 0.9.0 (2021-09-06)
 
 - Added the Toronto Paediatric Cancer Staging Guidelines.
