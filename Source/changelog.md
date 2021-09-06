@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.0 (2021-09-06)
+
+- Added the Toronto Paediatric Cancer Staging Guidelines.
+- Updated gems.
+- Other bugfixes.
+
 ### 0.8.23 (2021-08-10)
 
 - Hide submit and log buttons when not logged in.

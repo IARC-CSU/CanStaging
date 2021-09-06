@@ -19,7 +19,7 @@ service:
   invalid_url: "Invalid URL."
 
 layout:
-  title: "CanStaging+ -- the Cancer Staging Tool"
+  title: "CanStaging+ – the Cancer Staging Tool"
   user: "user"
   admin: "admin"
   home: "Home"
@@ -31,9 +31,9 @@ layout:
   get_temp_log_title: "Download the log of submitted cases. Please note that this log will be lost when the staging tool is shut down." 
   help: "Help"
   help_text: "<b>Help</b><br>CanStaging<sup>+</sup> - the Cancer Staging Tool calculates TNM, Stage, Grade, and other site-specific stage scores from raw information entered by the user. <br>Please <a href=\\\"/media/StagingToolHelp.pdf\\\" target=\\\"new\\\">Download a PDF guide</a> with more information."
-  copyright_text: "<h2>COPYRIGHT</h2><ul><li>The source code of CanStaging+ is copyright IARC 2021. Released under an open source GNU/GPL license.</li> <li>The business rules files are copyright NICR 2021 released under a Creative Commons BY-SA license.</li> <li>Illustrations are copyright UICC.</li></ul>"
+  copyright_text: "<h2>COPYRIGHT</h2><ul><li>The source code of CanStaging+ is copyright IARC 2021. Released under an open source GNU/GPL license.</li> <li>The business rules files are copyright NICR 2021 released under a Creative Commons BY-SA license.</li> <li>•  The business rules files for the Toronto Paediatric Cancer Stage Guidelines are copyright CCQ 2021 released under a Creative Commons BY-SA license.</li><li>Illustrations are copyright UICC.</li></ul>"
   about: "About"
-  disclaimer_text: "<h2>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h2> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>THE NICR ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL THE NICR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT THE NICR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, IARC/NICR MAKES NO COMMITMENT TO PROVIDE UPDATES.</p>"
+  disclaimer_text: "<h2>WARRANTIES, DISCLAIMERS AND LIABILITY LIMITATIONS</h2> <p>THIS TOOL IS PROVIDED \\\"AS IS\\\" WITHOUT WARRANTY OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p> <p>IARC, THE NICR, AND CCQ ASSUMES NO RESPONSIBILITY FOR ERRORS OR OMISSIONS IN THIS TOOL.</p> <p>IN NO EVENT SHALL IARC, THE NICR OR CCQ BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER (INCLUDING WITHOUT LIMITATION, THOSE RESULTING FROM: (1) RELIANCE ON THE MATERIALS PRESENTED, (2) COSTS OF REPLACEMENT GOODS, (3) LOSS OF USE, DATA OR PROFITS, (4) DELAYS OR BUSINESS INTERRUPTIONS, (5) AND ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION) WHETHER OR NOT IARC, THE NICR, OR CCQ HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p> <p>THIS TOOL COULD INCLUDE TECHNICAL OR OTHER INACCURACIES. HOWEVER, IARC, NICR, AND CCQ MAKES NO COMMITMENT TO PROVIDE UPDATES.</p>"
   log_out: "Log out"
   log_in: "Log in"
   language_select: "Language select"
@@ -44,7 +44,7 @@ layout:
 home:
   by: "By" 
   and: "and" 
-  welcome: "Welcome to CanStaging<sup>+</sup>, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC) and the Union for International Cancer Control (UICC). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach. Colorectal cancer may be staged using the TNM staging versions 5 and 8. In the future, the tool will be available in several languages, and we are working on adding the Toronto guidelines for staging of childhood cancers."
+  welcome: "Welcome to CanStaging<sup>+</sup>, developed by a collaboration between the Northern Ireland Cancer Registry (NICR), the International Agency for Research on Cancer (IARC), the Union for International Cancer Control (UICC) ), and Cancer Council Queensland (CCQ). The tool is designed to help maximise the availability, standardisation and comparability of cancer staging internationally. The tool provides automatic calculation of the international TNM staging classification versions 7 and 8 for a variety of tumour sites – breast, cervix, liver, lung, oesophagus, ovary, pancreas, prostate and stomach. Colorectal cancer may be staged using the TNM staging versions 5 and 8. The Toronto guidelines for staging of childhood cancers is also available. In the future, the tool will be available in several languages."
   endorsed_by: "Endorsed by"
   log_in: "Log in"
   enter_key: "Enter your key."
