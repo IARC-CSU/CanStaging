@@ -51,7 +51,7 @@
           <tbody id = "<%= part %>">
           <% meta.fields.values.sort_by(&:order).each do |field| %>
             <% unless field.type == :generated %>
-              <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
+              <tr id = "<%= site.css+"_group_" + (field.group.nil? || field.group.empty? ? "1" : field.group) %>">
                 <% if field.type == :output %>
                   <td class = "result_label" >
                 <% else %>
