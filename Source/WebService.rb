@@ -316,7 +316,7 @@ class CanStaging < Sinatra::Base
 
   get '/shutdown' do 
     if config['system']['standalone'] && session[:local] 
-      Sinatra::Application.quit!
+      exit!
     else
       session[:error] = R18n.t.service.invalid_url
       redirect to('/tool')
