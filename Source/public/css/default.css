@@ -364,73 +364,73 @@ form a {
 
 /* Pancreas */
 #pancreas_menu {
-  background-color: #ff949b; }
+  background-color: #ffc7ca; }
 
 #pancreas_form td, #pancreas_form th {
   font-size: 1em;
-  border: 1px solid #fa000f;
+  border: 1px solid #FF2E38;
   padding: 3px 7px 2px 7px; }
 
 #pancreas_form th, #pancreas_form td.result, #pancreas_form td.result_label {
-  background-color: #ff2e3b;
+  background-color: #ff6169;
   color: #ffffff; }
 
 #pancreas_group_0 {
   color: #000000;
-  background-color: #ff4853; }
+  background-color: #ff7b81; }
 
 #pancreas_group_1 {
   color: #000000;
-  background-color: #ff616b; }
+  background-color: #ff9499; }
 
 #pancreas_group_2 {
   color: #000000;
-  background-color: #ff7b83; }
+  background-color: #ffaeb1; }
 
 #pancreas_group_3 {
   color: #000000;
-  background-color: #ff949b; }
+  background-color: #ffc7ca; }
 
 #pancreas_group_4 {
   color: #000000;
-  background-color: #ffaeb2; }
+  background-color: #ffe1e2; }
 
 /* Ovary site*/
 #ovary_menu {
-  background-color: #e7b2fc; }
+  background-color: #f6e4fe; }
 
 #ovary_form td, #ovary_form th {
   font-size: 1em;
-  border: 1px solid #b81ff7;
+  border: 1px solid #C850F9;
   padding: 3px 7px 2px 7px; }
 
 #ovary_form th, #ovary_form td.result, #ovary_form td.result_label {
-  background-color: #c850f9;
+  background-color: #d781fb;
   color: #ffffff; }
 
 #ovary_group_0 {
   color: #000000;
-  background-color: #d068fa; }
+  background-color: #df9afc; }
 
 #ovary_group_1 {
   color: #000000;
-  background-color: #d781fa; }
+  background-color: #e7b3fc; }
 
 #ovary_group_2 {
   color: #000000;
-  background-color: #df9afb; }
+  background-color: #efcbfd; }
 
 #ovary_group_3 {
   color: #000000;
-  background-color: #e7b2fc; }
+  background-color: #f6e4fe; }
 
 #ovary_group_4 {
   color: #000000;
-  background-color: #efcbfd; }
+  background-color: #fefdff; }
 
 #ovary_group_5 {
   color: #000000;
-  background-color: #f6e3fe; }
+  background-color: white; }
 
 /* Melanoma */
 #melanoma_menu {
