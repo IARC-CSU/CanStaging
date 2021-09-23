@@ -444,6 +444,13 @@ class CanStaging < Sinatra::Base
 
 end
 
+# If we are building the exe, we don't start the Sinatra app...
+
+if defined?(Ocra)
+  exit
+end
+
 # start the server if ruby file executed directly
 
 run CanStaging.run! if __FILE__ == $0
+
