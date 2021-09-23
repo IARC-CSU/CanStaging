@@ -3,6 +3,10 @@ GEM
   specs:
     amalgalite (1.7.0)
       arrayfields (~> 4.9)
+    amalgalite (1.7.0-x64-mingw32)
+      arrayfields (~> 4.9)
+    amalgalite (1.7.0-x86-mingw32)
+      arrayfields (~> 4.9)
     arrayfields (4.9.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
@@ -20,7 +24,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     netrc (0.11.0)
     nio4r (2.5.8)
-    puma (5.4.0)
+    puma (5.5.0)
       nio4r (~> 2.0)
     r18n-core (5.0.1)
     rack (2.2.3)
@@ -63,7 +67,9 @@ GEM
     tilt (2.0.10)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
+    unf_ext (0.0.8)
+    unf_ext (0.0.8-x64-mingw32)
+    unf_ext (0.0.8-x86-mingw32)
 
 PLATFORMS
   ruby
@@ -74,6 +80,7 @@ DEPENDENCIES
   amalgalite
   bundler
   eventmachine
+  nio4r
   puma
   rdiscount
   rest-client
