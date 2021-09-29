@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Dictionary","Number of  positive axillary nodes (if path: at least one deposit >2.0mm)","1",
+"Infraclavicular","Dictionary","Metastasis in infraclavicular nodes/level III lymph nodes","2",
+"Mammary","Dictionary","Metastasis in internal mammary nodes","2",
+"Micrometastases","Dictionary","Micrometastases only: none >2.0mm (but: >0.2mm or more than 200 cells)","3",
+"Supraclavicular","Boolean","Metastasis in supraclavicular nodes","4",

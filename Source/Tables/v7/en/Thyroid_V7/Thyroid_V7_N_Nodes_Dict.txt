@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Metastasis in Level VI (pretracheal, para-tracheal, and prelaryngeal/Delphian lymph nodes)"
+"4","Metastasis in other unilateral, bilateral or contralateral cervical (Levels I, II, III, IV, or V) or retropharyngeal or superior mediastinal lymph nodes"

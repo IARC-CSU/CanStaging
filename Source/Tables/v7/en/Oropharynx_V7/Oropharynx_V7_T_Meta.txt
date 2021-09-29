@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Primary Tumour","1",
+"Size","Number","Greatest dimension of tumour (cm)","1",
+"Extension","Boolean","Extension to lingual surface of epiglottis","2",
+"Invasion","Boolean","Tumour invades any of the following: larynx, deep/extrinsic muscle of tongue (genioglossus, hyoglossus, palatoglossus, and styloglossus), medial pterygoid, hard palate, or mandible","2",
+"Invasionn","Boolean","Tumour invades any of the following: lateral pterygoid muscle, pterygoid plates, lateral nasopharynx, skull base; or encases carotid artery","3",

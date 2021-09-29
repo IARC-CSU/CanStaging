@@ -1,0 +1,8 @@
+"Metastasis","Size","Number","Extranodal","Result","Message"
+
+"1","ANY","ANY","ANY","NX",
+"2","ANY","ANY","ANY","N0",
+"3","2","ANY","T","N2",
+"3","2","2","F","N1",
+"3","3","ANY","ANY","N2",
+"3","4","ANY","ANY","N3",

@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Metastasis above the caudal border of cricoid cartilage"
+"2","Extension below the caudal border of cricoid cartilage"

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Papillary and Follicular under 55 years"
+"2","Papillary or Follicular 55 years and older"
+"3","Medullary"
+"4","Anaplastic"

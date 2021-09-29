@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No axillary lymph node metastasis"
+"2","Metastasis in 1 to 3 axillary lymph nodes"
+"3","Metastasis in 4 to 9 axillary lymph nodes"
+"4","Metastasis in 10 or more lymph nodes"

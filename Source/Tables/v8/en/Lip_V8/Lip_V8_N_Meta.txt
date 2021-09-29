@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Pathological test completed","1",
+"Nodes","Dictionary","Regional lymph nodes","1",
+"Size","Number","Greatest dimension of lymph node (cm)","1"
+"Extranodal","Boolean","Presence of extranodal extension","2"

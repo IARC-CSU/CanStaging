@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Carcinoma in situ"
+"4","Tumour confined to nasopharynx, or extends to oropharynx and/or nasal cavity without parapharyngeal involvement"
+"5","Tumour with extension to parapharyngeal space and/or infiltration of the medial pterygoid, lateral pterygoid, and/or prevertebral muscles"
+"6","Tumour invades bony structures of skull base, cervical vertebra, pterygoid structures, and/or paranasal sinuses"
+"7","Tumour with intracranial extension and/or involvement of cranial nerves, hypopharynx, orbit, parotid gland and/or infiltration beyond the lateral surface of the lateral pterygoid muscle"

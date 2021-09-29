@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary tumour","1",
+"Dimension","Number","Greatest dimension of tumour (cm)","1",
+"Depth","Number","Greatest depth of invasion (mm)","1",
+"Lip","Boolean","(Lip) Tumour invades through cortical bone, inferior alveolar nerve, floor of mouth, or skin (of the chin or the nose)","2",
+"Oralcavity","Boolean","(Oral cavity) Tumour more than 4 cm in greatest dimension and more than 10 mm depth of invasion or tumour invades through the cortical bone of the mandible or maxilla or involves the maxillary sinus, or invades the skin of the face","2",
+"Both","Boolean","(Lip and oral cavity) Tumour invades masticator space, pterygoid plates, or skull base, or encases internal carotid artery","2",

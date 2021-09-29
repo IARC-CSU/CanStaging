@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Pathology tests completed","1",
+"Nodes","Dictionary","Regional lymph nodes","1",
+"Size","Number","Greatest dimension of lymph node (cm)","1",
+"Extranodal","Dictionary","Presence of extranodal extension (The presence of skin involvement or soft tissue invasion with deep fixation/tethering to underlying muscle or adjacent structures or clinical signs of nerve involvement is classified as clinical extranodal extension. Midline nodes are considered ipsilateral nodes.)","1"

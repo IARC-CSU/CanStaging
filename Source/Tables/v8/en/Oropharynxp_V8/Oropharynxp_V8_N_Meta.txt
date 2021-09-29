@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Path","Dictionary","(Pathological classification) **ONLY SELECT IF** pathological tests have been carried out"
+"Clin","Dictionary","(Clinical classification) **ONLY SELECT IF** pathological tests have not been carried out"
