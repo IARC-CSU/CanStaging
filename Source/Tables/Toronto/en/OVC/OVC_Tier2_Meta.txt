@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Distant metastasis (excluding peritoneal metastases)","",
+"RetroperitonealNodes","Boolean","Involvement of retroperitoneal lymph nodes","",
+"SpreadPeritoneam","Boolean","Spread to the peritoneum outside the pelvis","",
+"PelvicExtension","Boolean","Pelvic extension (below pelvic brim)","",

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Lymph node mass >5cm"
+"2","Lymph node mass >2cm and ≤5cm"
+"3","Lymph node mass ≤2cm"
+"4","None"
+"5","Don't know"

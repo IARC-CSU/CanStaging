@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","≥2"
+"2","Single (with regional lymph node involvement)"
+"3","Single (without regional lymph node involvement)"
+"4","No"
+"5","Don't know"

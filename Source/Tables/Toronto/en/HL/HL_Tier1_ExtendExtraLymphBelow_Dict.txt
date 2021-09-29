@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Yes (with associated regional lymph node involvement)"
+"2","Yes (without regional lymph node involvement)"
+"3","No"
+"4","Don't know"

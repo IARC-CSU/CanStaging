@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Distant metastasis at diagnosis","",
+"RegionalNodes","Boolean","Involvement of regional lymph nodes","",
+"SizeRegionalNodes","Dictionary","Size of regional lymph node mass (greatest dimension)","",
+"SpermCordScrotum","Boolean","Tumour invades spermatic cord or scrotum","",
+"TunicaVaginalis","Boolean","Tumour extends through the tunica albuginea with involvement of the tunica vaginalis","",
+"VascularLymphInvasion","Boolean","Tumour is limited to the testis and epididymis with vascular/lymphatic invasion","",
+"LDH","Dictionary","Lactate dehydrogenase (ukat/l)","",
+"HCG","Dictionary","Human chorinoic gonadotropin (mIU/ml)","",
+"AFP","Dictionary","Alpha-fetaprotein (ng/ml)","",
