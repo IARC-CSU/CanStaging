@@ -76,15 +76,16 @@ class CanStaging < Sinatra::Base
   ## Merge config overwriting anything in default config...
   config['system'] = config_default['system'].merge(config['system'])
 
-  set :server, %w[puma thin mongrel webrick]
-  set :environment, :production if (config['system']['environment'] != 'development')
-
-  $DEBUG = (settings.environment == :development)
-
   puts config if $DEBUG
 
+  set :server, %w[puma thin mongrel webrick]
+  set :environment, :production if (config['system']['environment'] != 'development')
   set :bind, config['system']['bind']
   set :port, config['system']['port']
+
+  ENV['RACK_ENV'] = 'production' if (config['system']['environment'] != 'development')
+
+  $DEBUG = (settings.environment == :development)
 
   set :sessions, true
   set :session_secret, config['system']['session_secret']
@@ -315,7 +316,7 @@ class CanStaging < Sinatra::Base
 
   get '/shutdown' do 
     if config['system']['standalone'] && session[:local] 
-      Sinatra::Application.quit!
+      exit!
     else
       session[:error] = R18n.t.service.invalid_url
       redirect to('/tool')
@@ -443,4 +444,13 @@ class CanStaging < Sinatra::Base
 
 end
 
-run CanStaging.run!
+# If we are building the exe, we don't start the Sinatra app...
+
+if defined?(Ocra)
+  exit
+end
+
+# start the server if ruby file executed directly
+
+run CanStaging.run! if __FILE__ == $0
+

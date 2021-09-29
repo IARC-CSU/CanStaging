@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Protocol","Dictionary","Treatment protocol","",
+"DistantMetastasis","Boolean","Distant metastasis at diagnosis","",
+"AbdominalMetastasis","Boolean","Non-haematogenous metastasis confined to abdomen","",
+"NeedleBiopsy","Boolean","Needle biopsy prior to resection of tumour","",
+"SurgicalBiopsy","Boolean","Surgical biopsy (not including needle biopsy) prior to resection of tumour","",
+"CompleteResection","Boolean","Complete excision of the tumour","",
+"ConfinedKidney","Boolean","Tumour confined to kidney","",

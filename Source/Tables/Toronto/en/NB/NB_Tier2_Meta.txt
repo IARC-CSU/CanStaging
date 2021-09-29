@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"AgeInMonths","Dictionary","Age (in months)","",
+"Metastasis","Boolean","Distant metastatic disease at diagnosis","",
+"MetsConfinedSLB","Boolean","Metastasis confined to skin, liver and/or bone marrow","",
+"IDRF","Boolean","Tumour involves one or more Image Defined Risk Factors (IDRFs)","",
+"ConfinedBodyCompartment","Boolean","Tumour confined within one body compartment","",

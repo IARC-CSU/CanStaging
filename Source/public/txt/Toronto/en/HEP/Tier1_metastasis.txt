@@ -1,0 +1,1 @@
+A response of “No” should be used if there is no mention of metastases in the medical record, i.e., unless metastases are specifically mentioned, assume there are no metastases.A response of “Don’t know” should only be used if the medical record indicates that there is uncertainty about whether metastases are present or not.

@@ -21,7 +21,7 @@ require_relative './LookUp.rb'
 require_relative './Meta.rb'
 
 class Site
-  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text, :image 
+  attr_reader :site, :lookups, :default_name, :prefixes, :metas, :tnm_version, :pdf, :png, :notes, :text, :image, :link
 
   def detect_parts(pattern)
     parts = []
@@ -45,7 +45,7 @@ class Site
     'v5'   => { label: 'TNM edition 5', desc: 'TNM edition 5', long_label: 'TNM edition 5'} ,
     'v7'   => { label: 'TNM edition 7', desc: 'TNM edition 7', long_label: 'TNM edition 7'} ,
     'v8'   => { label: 'TNM edition 8', desc: 'TNM edition 8', long_label: 'TNM edition 8'} ,
-    'Toronto' => { label: 'Toronto Guidelines', desc: 'Childhood Cancer Staging', long_label: 'Toronto Guidelines'} 
+    'Toronto' => { label: 'Toronto Guidelines', desc: 'Toronto Paediatric Cancer Staging Guidelines', long_label: 'Toronto Guidelines'} 
   }
 
   # type can be :label, :desc, or :long_label
@@ -174,6 +174,20 @@ class Site
             html += RDiscount.new(open("#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}").read).to_html
             html += "</body></html>"
             variable.text = html
+          else 
+            puts " - Not found" if $DEBUG
+          end
+        end
+        @metas[part].fields.each do |variable_name, variable|
+          relative_default_path = "#{tnm_version}/#{@default_language}/#{site}/#{part}_#{variable_name.downcase}.html"
+          relative_path = "#{tnm_version}/#{language}/#{site}/#{part}_#{variable_name.downcase}.html"
+          print "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}" if $DEBUG
+          if File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_path}"
+            puts " - Found" if $DEBUG
+            variable.link = "#{SERVER_TEXTS_ROOT_PATH}/#{relative_path}"
+          elsif File.exist? "#{LOCAL_TEXTS_ROOT_PATH}/#{relative_default_path}"
+            puts " - Found English" if $DEBUG            
+            variable.link = "#{SERVER_TEXTS_ROOT_PATH}/#{relative_default_path}"
           else 
             puts " - Not found" if $DEBUG
           end

@@ -1,5 +1,27 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.2 (TBD)
+
+- Added 10 new sites for the Toronto Paediatric Cancer Staging Guidelines.
+- Pop ups can now be pure pre-made html and contain javascript code etc.
+- Fixed bugs, updated gems.
+
+### 0.9.1 (2021-09-06)
+
+- Better handling of missing css group in tables.
+- Fixed typo.
+
+### 0.9.0 (2021-09-06)
+
+- Added the Toronto Paediatric Cancer Staging Guidelines.
+- Updated gems.
+- Other bugfixes.
+
+### 0.8.23 (2021-08-10)
+
+- Hide submit and log buttons when not logged in.
+- Updated some text.
+
 ### 0.8.22 (2021-07-16)
 
 - Made CanStaging rackup compatible.

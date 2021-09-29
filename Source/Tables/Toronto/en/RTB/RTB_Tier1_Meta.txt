@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Distant metastasis at diagnosis","",
+"InvolveOrbit","Boolean","Involvement of orbit","",
+"RegionalNodes","Boolean","Involvement of regional lymph nodes","",

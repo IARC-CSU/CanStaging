@@ -20,8 +20,8 @@ require_relative './Library.rb'
 require 'rdiscount'
 
 class Variable
-  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order, :default
-  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil, text=nil)
+  attr_reader :name, :type, :display_text, :group, :colour, :ranges, :dictionary, :tooltip, :image, :text, :order, :default, :link
+  def initialize (name, type, display_text, group, colour, tooltip = "", dictionary=nil, ranges=nil, image=nil, text=nil, link=nil)
     @name = name
     @type = type
     @display_text = display_text
@@ -32,6 +32,7 @@ class Variable
     @tooltip = tooltip
     @image = image  # pop up image
     @text = text    # pop up text -- potentially in markdown
+    @link = link    # pop up html file
   end
   
   def dictionary= dictionary
@@ -75,6 +76,10 @@ class Variable
 
   def text= path 
     @text = path
+  end
+
+  def link= path 
+    @link = path
   end
 
   def to_s
