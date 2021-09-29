@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Invasion","Dictionary","Primary Tumour","1",
+"Invasion","Dictionary","Primary tumour","1",

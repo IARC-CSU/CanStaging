@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Nodes","Dictionary","Regional lymph nodes","2",
+"Nodes","Dictionary","Regional lymph nodes","1",

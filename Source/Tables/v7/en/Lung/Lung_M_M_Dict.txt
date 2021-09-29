@@ -1,4 +1,4 @@
 "Key","DisplayText"
-"1","No distant metastases"
-"2","Separate tumour nodule(s) in a contralateral lobe tumour with pleural nodes or malignant pleural (or pericardial) effusion"
-"3","Distant metastases"
+"1","No distant metastasis"
+"2","Separate tumour nodule(s) in a contralateral lobe; tumour with pleural nodules or malignant pleural or pericardial effusion"
+"3","Distant metastasis"

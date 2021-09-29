@@ -2,4 +2,4 @@
 "1","Tumour does not invade perivesical tissue"
 "2","Tumour invades perivesical tissue microscopically"
 "3","Tumour invades perivesical tissue macroscopically (extravesical mass)"
-"4","Do not know"
+"4","Do not know extent of perivesical invasion"
