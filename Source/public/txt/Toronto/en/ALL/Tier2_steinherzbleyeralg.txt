@@ -1,0 +1,1 @@
+Steinherz-Bleyer calculation = (WBC/RBC in cerebrospinal fluid) ÷ (WBC/RBC in blood) <br/>The exact values of WBC and RBC must be known in order to accurately make the Steinherz-Bleyer calculation.

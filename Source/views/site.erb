@@ -10,6 +10,9 @@
       <% html = '"' + site.text.gsub("\n"," ") +'"' %>
         <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
     <% end %>
+    <% if !site.link.nil? %>
+      <span class="illustrated-disabled" href="#" title = 'Click for tool.' onclick="window.open('<%= site.link %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-cog"></i></span>
+    <% end %>
     <% if !site.image.nil? %>
       <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= site.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
     <% end %>
@@ -59,6 +62,10 @@
 
                 <% if !field.image.nil? %>
                     <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
+                <% end %>
+
+                <% if !field.link.nil? %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for tool.' onclick="window.open('<%= field.link %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-cog"></i></span>
                 <% end %>
 
                 <% if !field.text.nil? %>

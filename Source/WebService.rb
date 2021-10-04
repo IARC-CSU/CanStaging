@@ -316,7 +316,7 @@ class CanStaging < Sinatra::Base
 
   get '/shutdown' do 
     if config['system']['standalone'] && session[:local] 
-      Sinatra::Application.quit!
+      exit!
     else
       session[:error] = R18n.t.service.invalid_url
       redirect to('/tool')
@@ -444,6 +444,13 @@ class CanStaging < Sinatra::Base
 
 end
 
+# If we are building the exe, we don't start the Sinatra app...
+
+if defined?(Ocra)
+  exit
+end
+
 # start the server if ruby file executed directly
 
 run CanStaging.run! if __FILE__ == $0
+
