@@ -1,6 +1,6 @@
 # Changelog CanStaging<sup>+</sup>
 
-### 0.9.2 (TBD)
+### 0.9.2 (2021-10-04)
 
 - Added 10 new sites for the Toronto Paediatric Cancer Staging Guidelines.
 - Pop ups can now be pure pre-made html and contain javascript code etc.
