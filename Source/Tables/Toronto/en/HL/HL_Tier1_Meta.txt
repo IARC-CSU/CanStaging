@@ -1,0 +1,13 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Symptoms","Boolean","Constitutional symptoms","",
+"Diffuse","Boolean","Diffuse or disseminated involvement of one or more extra-lymphatic organs","",
+"IsolatedExtraLymph","Boolean","Distant disease: isolated (non-contiguous) extra-lymphatic organ involvement, without regional lymph node involvement, but in conjunction with disease in distant site(s)","",
+"InvolveLivBMLungCSF","Boolean","Any involvement of liver, bone marrow, lungs or CSF","",
+"LymphAbove","Boolean","Involvement of one or more lymph node regions ABOVE the diaphragm","",
+"NumLymphAbove","Dictionary","Number of involved lymph node regions ABOVE the diaphragm","",
+"LymphBelow","Boolean","Involvement of one or more lymph node regions BELOW the diaphragm","",
+"NumLymphBelow","Dictionary","Number of involved lymph node regions BELOW the diaphragm","",
+"ExtraLymphAbove","Boolean","Involvement of a single extra-lymphatic organ or site ABOVE the diaphragm","",
+"ExtendExtraLymphAbove","Dictionary","Extent of involvement of a single extra-lymphatic organ or site ABOVE the diaphragm","",
+"ExtraLymphBelow","Boolean","Involvement of a single extra-lymphatic organ or site BELOW the diaphragm","",
+"ExtendExtraLymphBelow","Dictionary","Extent of involvement of a single extra-lymphatic organ or site BELOW the diaphragm","",

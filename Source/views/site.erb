@@ -1,5 +1,4 @@
 <head>
-  <title><%= site.site %></title>
   
   <script src="/js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
@@ -10,6 +9,9 @@
     <% if !site.text.nil? %>
       <% html = '"' + site.text.gsub("\n"," ") +'"' %>
         <span class="illustrated-disabled" href="#" title = 'Click for description.' onclick='var win = window.open("", "Popup", "scrollbars,resizable,width=900,height=600,addressbar=no"); win.document.write(<%= html %>)'><i class="fas fa-file"></i></span>
+    <% end %>
+    <% if !site.link.nil? %>
+      <span class="illustrated-disabled" href="#" title = 'Click for tool.' onclick="window.open('<%= site.link %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-cog"></i></span>
     <% end %>
     <% if !site.image.nil? %>
       <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= site.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
@@ -49,7 +51,7 @@
           <tbody id = "<%= part %>">
           <% meta.fields.values.sort_by(&:order).each do |field| %>
             <% unless field.type == :generated %>
-              <tr id = "<%= site.css+"_group_" + (field.group.nil? ? "1" : field.group) %>">
+              <tr id = "<%= site.css+"_group_" + (field.group.nil? || field.group.empty? ? "1" : field.group) %>">
                 <% if field.type == :output %>
                   <td class = "result_label" >
                 <% else %>
@@ -60,6 +62,10 @@
 
                 <% if !field.image.nil? %>
                     <span class="illustrated-disabled" href="#" title = 'Click for illustration.' onclick="window.open('<%= field.image %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-eye"></i></span>
+                <% end %>
+
+                <% if !field.link.nil? %>
+                    <span class="illustrated-disabled" href="#" title = 'Click for tool.' onclick="window.open('<%= field.link %>', 'Popup', 'scrollbars,resizable,width=900,height=600');"><i class="fas fa-cog"></i></span>
                 <% end %>
 
                 <% if !field.text.nil? %>
@@ -125,8 +131,10 @@
         <tr id = "buttons">
           <td></td>
           <td align="right">
+            <% unless session[:key].nil? %>
             <input type="submit" value="<%= R18n.t[:site][:submit] %>" <%= session[:key].nil? ? "disabled title='Please log in to submit records...'" : "" %> />
             <input type="button" value="<%= R18n.t[:site][:get_log] %>" onClick="get_log()" <%= session[:key].nil? ? "disabled title='Please log in to get log of records...'" : "" %> />
+            <% end %>
             <input type="button" value="<%= R18n.t[:site][:clear_form] %>" onClick="clear_form(this)" />
           </td>
         </tr>
@@ -168,7 +176,6 @@
 
     function getDefaultResult(part) {
       var text = "";
-      // console.log(results[i]);
       if(part == "T"){
         text = "TX";
       } else if (part == "N"){
@@ -265,7 +272,9 @@
     function resultsToForm(data){
       setDefaultResults();
       var keys = Object.keys(data);
-      console.log(data);
+      <% if $DEBUG %>
+        console.log(data);
+      <% end %>
       var results = {};
       var alertText = "<b>Results:</b>";
       for (var i = 0; i<keys.length; i ++) {
@@ -349,8 +358,9 @@
       var term = form_to_data('#tnm_form');
 
       term["data[control]"] = control; 
+      <% if $DEBUG %>
       console.log(term);
-
+      <% end %>
       $.post('/tnm', term, 
         function(data) {
           resultsToForm(data);
@@ -404,7 +414,7 @@
   //update the auto-generate-stuff
   autogenerateUpdated();
 
-  document.title = "CanStaging<sup>+</sup> - <%= site.site %>";
+  document.title = "<%= R18n.t[:layout][:title] %> - <%= site.site %> - <%= site.tnm_version %> ";
   setDefaultResults();
   // this overrides the default...
   // function help_alert() {
@@ -412,7 +422,6 @@
   // }
 
   function reset(selectBoxName, part) {
-    // console.log(selectBoxName);
     $(document.getElementsByName(selectBoxName)).prop('selectedIndex',0);
     change(part, selectBoxName);
   }

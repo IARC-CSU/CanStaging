@@ -1,0 +1,1 @@
+Grade 1 = low/well differentiated  <br/> Grade 2 = intermediate/moderately differentiated  <br/> Grade 3 = high/poorly/undifferentiated

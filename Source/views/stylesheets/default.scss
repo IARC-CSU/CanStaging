@@ -7,20 +7,33 @@ Palette aligned with: https://gco.iarc.fr/api/globocan/v1/2018/meta/cancers/all/
 TODO: Automate this:
 sass .\views\stylesheets\default.scss > .\public\css\default.css
 */
-                                        //old
-$breast_color: #C74C69;               //#C74C69
-$colon_color: #FFD803;                //
-$rectal_color: #60A561;               //
-$colorectal_color: $rectal_color;     //#C28C40
-$prostate_color: #34A76E;             //#40C28C
-$cervix_color: #FF7500;               //#7644A6
-$lung_color: #1E90FF;                 //#A2EA77
-$oesophagus_color: #DC1341;           //#76F14A
-$stomach_color: #4682B4;              //#FAA277
-$liver_color: #F3A654;                //#BA9277
-$pancreas_color: lighten(#940009,20%);//#B1569A
-$ovary_color: lighten(#8C07C2,15%);   //#C3687E
-$melanoma_color: #894919;		
+
+$cabaret: 			#C74C69;
+$school_bus_yellow: #FFD803;                
+$fern: 				#60A561;                  
+$medium_sea_green: 	#34A76E;             
+$safety_orange: 	#FF7500;               
+$dodger_blue: 		#1E90FF;                 
+$crimson: 			#DC1341;           
+$steel_blue: 		#4682B4;              
+$sandy_brown: 		#F3A654;                
+$red_orange: 		#FF2E38;
+$medium_orchid:		#C850F9;
+$saddle_brown: 		#894919;	
+
+$breast_color: $cabaret;               
+$colon_color: $school_bus_yellow;
+$rectal_color: $fern;               
+$colorectal_color: $rectal_color;     
+$prostate_color: $medium_sea_green;             
+$cervix_color: $safety_orange;               
+$lung_color: $dodger_blue;                 
+$oesophagus_color: $crimson;          
+$stomach_color: $steel_blue;             
+$liver_color:$sandy_brown;               
+$pancreas_color: $red_orange;
+$ovary_color: $medium_orchid;
+$melanoma_color: $saddle_brown;		
 
 $menu_fade: 30%;
 

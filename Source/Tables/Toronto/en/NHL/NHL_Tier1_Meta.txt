@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"InvolveCNSorBM","Boolean","Involvement of central nervous system (CNS) and/or bone marrow at diagnosis","",

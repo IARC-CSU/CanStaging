@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Yes (with microscopic residual disease)"
+"2","Yes (with negative margins)"
+"3","No"
+"4","Don't know"
