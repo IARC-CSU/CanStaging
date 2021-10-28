@@ -1,8 +1,12 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.4 (2021-10-28)
+
+- Updated the landing page.
+
 ### 0.9.3 (2021-10-13)
 
-- Improved stand alone version.
+- Improved stand-alone version.
 
 ### 0.9.2 (2021-10-04)
 
