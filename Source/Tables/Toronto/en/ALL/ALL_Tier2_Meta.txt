@@ -3,4 +3,4 @@
 "BlastsCSF","Boolean","Blasts in CSF","",
 "WBCCSF","Dictionary","White blood cell count in the cerebrospinal fluid (CSF)","",
 "RBCCSF","Dictionary","Red blood cell count in the cerebrospinal fluid (CSF)","",
-"SteinherzBleyerAlg","Dictionary","Value of Steinherz-Bleyer calculation","",
+"SteinherzBleyerAlg","Dictionary","If WBC in CSF is ≥ 5/µL and RBC in CSF is ≥ 10/µL, enter value of Steinherz-Bleyer calculation","",
