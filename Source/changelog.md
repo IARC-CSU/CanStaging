@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.4 (2021-11-08)
+
+- Updated text for Acute Lymphoblastic Leukaemia.
+
 ### 0.9.3 (2021-10-13)
 
 - Improved stand alone version.
