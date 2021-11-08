@@ -1,0 +1,4 @@
+"M","Result"
+"M0","Localised"
+"M1a","Distant"
+"M1b","Distant"

@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Invasion","Dictionary","Extension of the tumour","1",
+"Size","Number","Greatest dimension of tumour (cm)","1",

@@ -1,6 +1,7 @@
 "Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary Tumour","1",
 "Microscopic","Boolean","Microscopic lesion only","1",
-"Stromal","Dictionary","Stromal invasion","2",
+"Stromal","Dictionary","Depth of stromal invasion","2",
 "ExtendedVisible","Dictionary","Clinically visible lesion","3",
 "BeyondUterus","Boolean","Tumour invades beyond uterus","3",
 "Parametrium","Boolean","Parametrial involvement","4",

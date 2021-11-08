@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary tumour","1",
+"Subsite","Boolean","Tumour is limited to **one** anatomical site of the Larynx (e.g., supraglottis, glottis, subglottis)","1",
+"Vocalcord","Dictionary","Vocal cord status","2",
+"Invasion","Boolean","Tumour invades any of the following: postcricoid area, pre-epiglottic space, paraglottic space, and/or inner cortex of thyroid cartilage","2",
+"Limit","Boolean","Tumour invades beyond the larynx (e.g., cricoid, thyroid cartilage, trachea, soft tissues of neck including deep/extrinsic muscle of tongue (genioglossus, hyoglossus, palatoglossus, and styloglossus), strap muscles, thyroid or oesophagus)","3",
+"Prevertebral","Boolean","Tumour invades prevertebral space, encases carotid artery, or mediastinal structures","3",

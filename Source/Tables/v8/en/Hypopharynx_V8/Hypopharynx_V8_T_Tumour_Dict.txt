@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Carcinoma in situ"
+"4","Malignant tumour"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No mitoses"
+"2","Mitosis <1/mm^2"
+"3","Mitosis ≥1mm^2"

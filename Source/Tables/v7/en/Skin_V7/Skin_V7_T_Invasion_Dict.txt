@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No further invasion"
+"2","Invasion of deep structures, e.g., muscle, bone, cartilage, jaws, and orbit"
+"3","Direct or perineural invasion of skull base or axial skeleton"

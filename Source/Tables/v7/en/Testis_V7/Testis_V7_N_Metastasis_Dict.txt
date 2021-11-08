@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Metastasis with a lymph node mass 2 cm or less in greatest dimension"
+"4","Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension"
+"5","Metastasis with a lymph node mass more than 5 cm in greatest dimension"
