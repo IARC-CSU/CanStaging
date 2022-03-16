@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Carcinoma has extended beyond the true pelvis or has involved (biopsy-proven) the mucosa of the bladder or rectum"
+"2","Spread of the growth to adjacent organs"

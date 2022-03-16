@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"3","Carcinoma involves the lower third of the vagina and/or extends to the pelvic wall and/or causes hydronephrosis or non-functioning kidney and/or involves pelvic and/or para-aortic lymph nodes"
+"1","Carcinoma involves the lower third of the vagina with no extension to the pelvic wall"
+"2","Extension to the pelvic wall and/or hydronephrosis or non-functioning kidney (unless known to be another cause)"

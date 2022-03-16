@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","Regional lymph nodes cannot be assessed"
 "2","No regional lymph node metastasis"
-"3","Metastasis in a lymph node"
+"3","Metastasis in lymph node(s)"
