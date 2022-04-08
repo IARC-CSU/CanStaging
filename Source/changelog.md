@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.7 (2021-04-08)
+
+- Updated Testis (TNM8)
+- Updated Breast P (TNM8)
+- Added some colours
+
 ### 0.9.6 (2021-04-07)
 
 - New TNM sites added.
