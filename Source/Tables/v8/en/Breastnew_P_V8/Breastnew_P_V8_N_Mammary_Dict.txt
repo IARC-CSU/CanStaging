@@ -1,5 +1,0 @@
-"Key","DisplayText"
-"1","No internal mammary lymph node metastasis"
-"2","Internal mammary lymph nodes not clinically detected"
-"3","Metastasis in clinically detected internal mammary node(s)"
-"4","Metastasis in internal mammary nodes with metastasis detected by sentinel lymph node biopsy but not clinically detected"
