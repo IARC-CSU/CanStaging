@@ -1,5 +1,23 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.6 (2021-04-07)
+
+- New TNM sites added.
+    - Bladder
+    - Carcinoma of Skin
+    - Cervix (FIGO 2018) (TNM8 only)
+    - Endomitrium
+    - Hypopharynx
+    - Kidney
+    - Larynx
+    - Lip & Oral Cavity
+    - Nasopharynx
+    - Oropharynx
+    - Testis
+    - Thyroid Gland
+    - Unknown Primary - Cervical Nodes (TNM8 only)
+- Other bugfixes.
+
 ### 0.9.5 (2021-11-08)
 
 - Updated text for Acute Lymphoblastic Leukaemia.
