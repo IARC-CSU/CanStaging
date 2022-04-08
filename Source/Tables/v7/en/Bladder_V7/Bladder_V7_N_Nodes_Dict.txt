@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Metastasis in a single lymph node in the true pelvis (hypogastric, obturator, external iliac, or presacral)"
+"4","Metastasis in multiple regional lymph nodes in the true pelvis (hypogastric, obturator, external iliac, or presacral)"
+"5","Metastasis in a common iliac lymph node(s)"

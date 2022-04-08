@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Only microscopic metastasis (clinically occult)"
+"4","Macroscopic metastasis (clinically apparent)"
+"5","Satelite(s) or in-transit metastasis without regional nodal metastasis"
+"6","Satelite(s) or in-transit metastasis with regional nodal metastasis"
+"7","Matted metastatic regional lymph nodes"

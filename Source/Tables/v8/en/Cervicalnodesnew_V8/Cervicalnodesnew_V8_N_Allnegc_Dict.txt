@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Metastasis in a single lymph node, 3cm or less in greatest dimension without extranodal extension"
+"2","Metastasis in a single lymph node, more than 3 cm but not more than 6cm in greatest dimension, without extranodal extension"
+"3","Metastasis in multiple ipsilateral lymph nodes, none more than 6cm in greatest dimension, without extranodal extension"
+"4","Metastasis in bilateral lymph nodes, none more than 6 cm in greatest dimension, without extranodal extension"
+"5","Metastasis in a lymph node more than 6 cm in greatest dimension without extranodal extension"
+"6","Metastasis in a single or multiple lymph nodes with clinical extranodal extension"

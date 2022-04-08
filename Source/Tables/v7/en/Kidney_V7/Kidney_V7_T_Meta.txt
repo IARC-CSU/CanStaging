@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Greatest dimension of the tumour(s) (cm)","1",
+"Limit","Boolean","Tumour limited to the kidney","1",
+"TumourExtension","Boolean","Tumour extends into major veins or perinephric tissues but not into the ipsilateral adrenal gland and not beyond Gerota fascia","2",
+"Extension","Dictionary","Tumour extension","2"
+"Gerota","Boolean","Tumour invades beyond Gerota fascia (including contigous extension into the ipsilateral adrenal gland)","3"

@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Greatest dimension of the tumour(s) (cm)","1",
+"Limit","Boolean","Tumour limited to the kidney","1",
+"Renal","Boolean","Tumour extends into the renal vein or its segmental branches, or tumour invades the pelvicalyceal system","2",
+"Fat","Boolean","Tumour invades perirenal and/or renal sinus fat (peripelvic) fat but not beyond Gerota fascia","2",
+"Venacava","Boolean","Tumour extends into vena cava below diaphragm","2",
+"Diaphragm","Boolean","Tumour extends into vena cava above the diaphragm or invades the wall of the vena cava","2",
+"Gerota","Boolean","Tumour invades beyond Gerota fascia (including contiguous extension into the ipsilateral adrenal gland)","3",

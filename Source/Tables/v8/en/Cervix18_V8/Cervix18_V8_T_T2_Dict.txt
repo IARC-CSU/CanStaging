@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"5","Carcinoma invades beyond the uterus, but has not extended onto the lower third of the vagina or to the pelvic wall"
+"1","Involvement limited to the upper two-thirds of the vagina without parametrial invasion, greatest dimension unknown"
+"2","Invasive carcinoma ≤ 4cm in greatest dimension"
+"3","Invasive carcinoma > 4 cm in greatest dimension"
+"4"," Invasive carcinoma with parametrial involvement but not up to the pelvic wall"

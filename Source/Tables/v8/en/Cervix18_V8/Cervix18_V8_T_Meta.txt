@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"T1","Dictionary","Select **only if** the carcinoma is confined to the cervix (extension to the uterine corpus should be disregarded)","1",
+"T2","Dictionary","Select **only if** the carcinoma invades beyond uterus but not to the pelvic wall or to the lower third of vagina","2",
+"T3","Dictionary","Select **only if** the carcinoma involves the lower third of the vagina and/or extends to the pelvic wall and/or causes hydronephrosis or non-functioning kidney and/or involves pelvic and/or para-aortic lymph nodes","3",
+"T4","Dictionary","Select **only if** the carcinoma has extended beyond the true pelvis or has involved (biopsy proven) the mucosa of the bladder or rectum. (A bullous oedema, as such, does not permit a case to be allotted to Stage IV)","4",

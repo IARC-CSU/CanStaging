@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Metastasis in lymph nodes","1",
+"Size","Number","Greatest dimension of lymph node (cm)","1",

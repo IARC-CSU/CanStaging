@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Unilateral metastasis, in cervical lymph node(s), all 6 cm or less in greatest dimension"
+"2","Contralateral or bilatearl metastasis in cervical lymph node(s), all 6cm or less in greatest dimension"
+"3","Metastasis in cervical lymph node(s) greater than 6 cm in dimension"

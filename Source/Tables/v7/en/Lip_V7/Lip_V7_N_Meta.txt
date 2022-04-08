@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","Regional lymph nodes","1",
+"Size","Number","Greatest dimension of lymph node (cm)"

@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Carcinoma in situ"
+"4","Tumour confined to nasopharynx, or extends to oropharynx and/or nasal cavity"
+"5","Tumour with parapharyngeal extension (Parapharyngeal extension denotes postero-lateral infiltration of tumour)"
+"6","Tumour invades bony structures of skull base and/or paranasal sinuses"
+"7","Tumour with intracranial extension and/or involvement of cranial nerves, hypopharynx, orbit, or with extension to the infratemporal fossa/masticator space"

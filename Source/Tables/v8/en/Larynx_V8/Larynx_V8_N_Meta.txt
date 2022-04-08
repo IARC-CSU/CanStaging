@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Pathological tests completed","1",
+"Metastasis","Dictionary","Metastasis in lymph nodes (Midline nodes are considered ipsilateral nodes)","1",
+"Size","Number","Greatest dimension of lymph node (cm)","1",
+"Extranodal","Boolean","Presence of extranodal extension","2",

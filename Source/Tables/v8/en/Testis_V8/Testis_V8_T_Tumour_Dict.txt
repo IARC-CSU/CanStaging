@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour (e.g., histological scar in testis)"
+"3","Intratubular germ cell neoplasia (carcinoma in situ)"
+"4","Tumour limited to testis and epididymis"
+"7","Tumour invades soft tissue"
+"5","Tumour invades spermatic cord"
+"6","Tumour invades scrotum"

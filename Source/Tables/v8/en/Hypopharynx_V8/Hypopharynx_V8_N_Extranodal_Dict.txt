@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","No extranodal extension"
+"2","Extranodal extension present"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Normal vocal cord mobility"
+"2","Impaired vocal cord mobility"
+"3","Vocal cord fixation/immobility"
