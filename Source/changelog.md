@@ -1,12 +1,17 @@
 # Changelog CanStaging<sup>+</sup>
 
-### 0.9.7 (2021-04-08)
+### 0.9.8 (2022-04-20)
+
+- Fixed typo in Torono staging of ovarian cancer.
+- Fixed typos in dates in changelog.
+
+### 0.9.7 (2022-04-08)
 
 - Updated Testis (TNM8)
 - Updated Breast P (TNM8)
 - Added some colours
 
-### 0.9.6 (2021-04-07)
+### 0.9.6 (2022-04-07)
 
 - New TNM sites added.
     - Bladder
