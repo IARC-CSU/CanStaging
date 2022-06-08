@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary Tumour","1",
+"Size","Number","Thickness of tumour (mm)","1",
+"Ulceration","Boolean","Ulceration present","2",
+"Mitoses","Dictionary","Mitoses present","2",

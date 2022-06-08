@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Metastasis in lymph nodes (Midline nodes are considered ipsilateral nodes)","2",
+"Size","Number","Greatest dimension of lymph node (cm)","2",

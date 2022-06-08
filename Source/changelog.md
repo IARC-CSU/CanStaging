@@ -1,8 +1,45 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.8 (2022-04-20)
+
+- Fixed typo in Torono staging of ovarian cancer.
+- Fixed typos in dates in changelog.
+
+### 0.9.7 (2022-04-08)
+
+- Updated Testis (TNM8)
+- Updated Breast P (TNM8)
+- Added some colours
+
+### 0.9.6 (2022-04-07)
+
+- New TNM sites added.
+    - Bladder
+    - Carcinoma of Skin
+    - Cervix (FIGO 2018) (TNM8 only)
+    - Endomitrium
+    - Hypopharynx
+    - Kidney
+    - Larynx
+    - Lip & Oral Cavity
+    - Nasopharynx
+    - Oropharynx
+    - Testis
+    - Thyroid Gland
+    - Unknown Primary - Cervical Nodes (TNM8 only)
+- Other bugfixes.
+
+### 0.9.5 (2021-11-08)
+
+- Updated text for Acute Lymphoblastic Leukaemia.
+
+### 0.9.4 (2021-10-28)
+
+- Updated the landing page.
+
 ### 0.9.3 (2021-10-13)
 
-- Improved stand alone version.
+- Improved stand-alone version.
 
 ### 0.9.2 (2021-10-04)
 

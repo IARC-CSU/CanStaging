@@ -1,5 +1,5 @@
 "T","N","M","Result","Message"
-"T1a","N0","M0","IA",
+"T0","N0","M0","IA",
 "T1b","N0","M0","IB",
 "T2","N0","M0","II",
 "T3","N0","M0","IIIA",

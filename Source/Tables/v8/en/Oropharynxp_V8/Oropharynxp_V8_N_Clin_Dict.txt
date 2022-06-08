@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Unilateral metastasis, in lymph node(s), all 6cm or less in greatest dimension"
+"4","Contralateral or bilateral metastasis in lymph node(s), all 6cm or less in greatest dimension"
+"5","Metastasis in lymph node(s) greater than 6cm in dimension"

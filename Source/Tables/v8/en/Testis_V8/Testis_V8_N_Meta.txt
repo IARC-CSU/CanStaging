@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Pathology tests completed"
+"Metastasis","Dictionary","Regional lymph nodes","1",
+"Size","Number","Greatest dimension of lymph node","2",
+"Number","Number","Number of positive lymph nodes","2",
+"Extranodal","Boolean","Evidence of extranodal extension of tumour","2",

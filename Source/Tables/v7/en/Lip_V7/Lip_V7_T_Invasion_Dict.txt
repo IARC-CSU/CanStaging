@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No further invasion"
+"2","(Lip) Tumour invades through cortical bone, inferior alveolar nerve, floor of mouth, or skin (chin or nose)"
+"3","(Oral cavity) Tumour invades through cortical bone, into deep/extrinsic muscle of tongue (genioglossus, hyoglossus, palatoglossus, and styloglossus), maxillary sinus, or skin of face"
+"4","(Lip and oral cavity) Tumour invades masticator space, pterygoid plates, or skull base, or encases internal carotid artery"

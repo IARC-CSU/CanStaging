@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary tumour","1",
+"Vascular","Boolean","Presence of vascular/lymphatic invasion","2",
+"Tunica","Boolean","Tumour invades tunica albuginea","2",
+"Vaginalis","Boolean","Involvement of tunica vaginalis","2",

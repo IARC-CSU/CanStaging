@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Melanoma in situ (Clark Level I) atypical melanocytic hyperplasia, severe melanocytic dysplasia, not an invasive malignant lesion)"
+"4","Malignant tumour"

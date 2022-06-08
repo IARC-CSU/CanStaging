@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be assessed"
+"2","No evidence of primary tumour"
+"3","Tumour limited to thyroid"
+"4","Gross extrathyroidal extension invading only strap muscles (sternohyoid, sternothyroid, or omohyoid muscles)"
+"5","Tumour extends beyond the thyroid capsule and invades any of the following: subcutaneous soft tissues, larynx, trachea, oesophagus, recurrent laryngeal nerve"
+"6","Tumour invades prevertebral fascia, mediastinal vessels, or encases carotid artery"

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Metastasis to pelvic lymph nodes"
+"4","Metastasis to para-aortic lymph nodes with or without metastasis to pelvic lymph nodes"

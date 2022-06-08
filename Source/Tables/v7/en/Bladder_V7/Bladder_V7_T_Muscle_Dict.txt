@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumour does not invade muscle"
+"2","Tumour invades superficial muscle (inner half)"
+"3","Tumour invades deep muscle (outer half)"
+"4","Do not know extent of invasion in muscle"

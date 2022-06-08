@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Greatest dimension of tumour (cm)","1",
+"Extension","Boolean","Extension to lingual surface of epiglottis","2",
+"Invasion","Boolean","Tumour invades any of the following: larynx, deep/extrinsic muscle of tongue (genioglossus, hyoglossus, palatoglossus, and styloglossus), medial pterygoid, hard palate, mandible, lateral pterygoid muscle, pterygoid plates, lateral nasopharynx, skull base; or encases carotid artery","3",

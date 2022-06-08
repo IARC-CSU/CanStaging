@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No distant metastasis"
+"2","Non-regional lymph nodes"
+"3","Other distant metastasis"

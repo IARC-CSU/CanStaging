@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Regional lymph nodes cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Unilateral metastasis, in cervical lymph node(s), and/or unilateral or bilateral metastasis in retropharyngeal lymph nodes"
+"4","Bilateral metastasis in cervical lymph nodes"

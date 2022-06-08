@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Primary tumour","1",
+"Subsite","Boolean","Tumour limited to one subsite of hypopharynx","2"
+"Size","Number","Greatest dimension of tumour (cm)","2"
+"Fixation","Dictionary","Presence of fixation of hemilarynx or extension to oesophageal mucosa","2"
+"Invasion4a","Boolean","Tumour invades any of the following: thyroid/cricoid cartilage, hyoid bone, thyroid gland, oesophagus, central compartment soft tissue (Central compartment soft tissue includes prelaryngeal strap muscles and subcutaneous fat)","3",
+"Invasion4b","Boolean","Tumour invades prevertebral fascia, encases carotid artery, or invades mediastinal structures"

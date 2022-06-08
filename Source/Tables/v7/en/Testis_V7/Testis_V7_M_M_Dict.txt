@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No distant metastasis"
+"2","Non‐regional lymph node(s) or lung metastasis"
+"3","Distant metastasis other than non‐regional lymph nodes and lung"

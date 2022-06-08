@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Tumour does not extend into major veins or perinephric tissues"
+"2","Tumour grossly extends into the renal vein or its segmental (muscle containing) branches, or tumour invades perirenal and/or renal sinus fat (peripelvic) fat but not beyond Gerota fascia"
+"3","Tumour grossly extends into vena cava below diaphragm"
+"4","Tumour grossly extends into vena cava above the diaphragm or invades the wall of the vena cava"
+"5","Do not know"

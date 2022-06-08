@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumour does not invade muscularis propria"
+"2","Tumour invades superficial muscularis propria (inner half)"
+"3","Tumour invades deep muscularis propria (outer half)"
+"4","Do not know extent of invasion"

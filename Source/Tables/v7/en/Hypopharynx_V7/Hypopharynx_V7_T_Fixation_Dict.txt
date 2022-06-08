@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No fixation of hemilarynx"
+"2","Fixation of hemilarynx present"
+"3","Extension to oesophageal mucosa present"

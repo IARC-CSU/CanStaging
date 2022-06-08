@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","No distant metastases"
+"2","Metastasis in skin, subcutaneous tissue or lymph node(s) beyond the regional lymph nodes"
+"3","Lung metastases"
+"4","Metastases in other sites, or any site with elevated serum lactic dehydrogenase (LDH)"
+

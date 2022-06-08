@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Regional lymph nodes","1",
+"Number","Number","Number of positive lymph nodes","2",
+"Extranodal","Boolean","Evidence of extranodal extension of tumour","2",

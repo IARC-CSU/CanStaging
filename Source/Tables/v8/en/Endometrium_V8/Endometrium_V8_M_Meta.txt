@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Distant metastasis (**Excluding metastasis to vagina, pelvic serosa, or adnexa, including metastasis to inguinal lymph nodes, intra-abdominal lymph nodes other than para-aortic or pelvic nodes**)","1",
