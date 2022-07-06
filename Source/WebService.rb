@@ -119,6 +119,7 @@ class CanStaging < Sinatra::Base
   def self.load_sites
     tables_path = "./Tables"
     $available_staging_systems  = Dir.entries(tables_path).select {|entry| File.directory? File.join(tables_path,entry) and !(entry =='.' || entry == '..') }
+    $available_staging_systems.sort!
     $available_staging_systems.each do |tnm_version|
       tnm_verision_path = "#{tables_path}/#{tnm_version}"
       $sites[tnm_version] = {}
