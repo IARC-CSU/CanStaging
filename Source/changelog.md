@@ -1,5 +1,12 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.9 (2022-07-06)
+
+- Increased the memory of the virtual server.
+- Fixed a bug in the responsive menus on small screens.
+- Fixed the sorting of the staging systems.
+- Other smaller fixes.
+
 ### 0.9.8 (2022-04-20)
 
 - Fixed typo in Torono staging of ovarian cancer.
