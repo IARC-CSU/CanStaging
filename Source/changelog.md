@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.10 (2022-08-18)
+
+- Fixed some typos.
+
 ### 0.9.9 (2022-07-06)
 
 - Increased the memory of the virtual server.

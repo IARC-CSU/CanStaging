@@ -1,6 +1,6 @@
 "Key","DisplayText"
 "1","Capsule intact, no tumour on ovarian surface or fallopian tube surface"
-"2","Capsule ruptured during surgery(surgical spills)"
+"2","Capsule ruptured during surgery (surgical spills)"
 "3","Capsule ruptured before surgery or tumour on ovarian or fallopian tube surface"
 "4","Pelvic extension and/or implants on uterus and/or fallopian tube(s) and/or ovary(ies)"
 "5","Extension to other pelvic tissues including bowel within pelvis"
