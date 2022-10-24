@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.11 (2022-10-24)
+
+- Added eTNM Liver, Lymphoma, Oesophagus, and Ovary.
+
 ### 0.9.10 (2022-08-18)
 
 - Fixed some typos.
