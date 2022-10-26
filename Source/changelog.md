@@ -1,5 +1,9 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.12 (2022-10-26)
+
+- Updates to the documentation PDFs and some tool tip texts for the Toronto Guidelines.
+
 ### 0.9.11 (2022-10-24)
 
 - Added eTNM Liver, Lymphoma, Oesophagus, and Ovary.
