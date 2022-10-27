@@ -1,5 +1,10 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.13 (2022-10-27)
+
+- Updated about text.
+- Updated Toronto tool tip texts.
+
 ### 0.9.12 (2022-10-26)
 
 - Updates to the documentation PDFs and some tool tip texts for the Toronto Guidelines.

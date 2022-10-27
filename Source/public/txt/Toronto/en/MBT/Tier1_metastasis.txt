@@ -1,1 +1,1 @@
-Disease beyond local site at diagnosis (e.g., other lesions in brain or spine OR tumour cells in cerebrospinal fluid OR distant metastases).
+Distant metastasis present (not including regional lymph nodes). “Skip lesions”, “skip metastases” or “seeding” in the same bone as the primary tumour are considered localised and not metastatic; if in a different bone to the primary tumour these are considered metastatic.
