@@ -1,0 +1,8 @@
+"Solitary","Size","VascularInvasion","HepaticVein","AdjInvasion","Result","Message"
+"1","1","F","F","F","T1",
+"1","ANY","F","F","F","T1",
+"1","ANY","T","F","F","T2",
+"2","2","ANY","F","F","T2",
+"2","3","ANY","F","F","T3a",
+"2","3","ANY","T","F","T3b",
+"ANY","ANY","ANY","ANY","T","T4",

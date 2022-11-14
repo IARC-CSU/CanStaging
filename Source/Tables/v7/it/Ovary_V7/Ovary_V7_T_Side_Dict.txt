@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Confinato ad un ovaio"
+"2","Entrambe le ovaie coinvolte"

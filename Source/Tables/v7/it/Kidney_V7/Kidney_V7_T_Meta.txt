@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Massima dimensione del tumore (cm)","1",
+"Limit","Boolean","Tumore limitato al rene","1",
+"TumourExtension","Boolean","Il tumore si estende alle vene principali o ai tessuti perirenali ma non invade la ghiandola surrenale ipsilaterale o non attraversa la fascia del Gerota","2",
+"Extension","Dictionary","Estensione del tumore","2"
+"Gerota","Boolean","Il tumore si estende oltre la fascia del Gerota (inclusa l'estensione nella ghiandola surrenale ipsilaterale)","3"

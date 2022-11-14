@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Esame patologico effettuato","1",
+"Posttherapy","Boolean","Post terapia neoadiuvante","1",
+"PositiveN","Number","Numero di linfonodi positivi","2",

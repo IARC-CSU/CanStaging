@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"T","generated","T","1",
+"N","generated","N","1",
+"M","generated","M","1",
+"Dukes","output","Dukes","1",

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Il tumore NON invade il bronco principale"
+"2","Il tumore coinvolge il bronco principale >= 2cm distale alla carena"
+"3","Il tumore coinvolge il bronco principale < 2cm distale alla carena"
+"4","Il tumore coinvolge la carena o la trachea"

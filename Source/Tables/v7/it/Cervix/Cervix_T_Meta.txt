@@ -1,0 +1,11 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumore primario","1",
+"Microscopic","Boolean","Carcinoma dignosticato solo con esame microscopico","1",
+"Stromal","Dictionary","Profondità dell'invasione stromale","2",
+"ExtendedVisible","Dictionary","Lesione clinicamente visibile","3",
+"BeyondUterus","Boolean","Tumore che si estende oltre l'utero","3",
+"Parametrium","Boolean","Tumore con invasione parametriale","4",
+"Vagina","Boolean","Tumore che coinvolge il terzo inferiore della vagina ","4",
+"Pelvis","Boolean","Tumore che si estende alla parete pelvica","4",
+"Hydronephrosis","Boolean","Idronefrosi o perdita della funzionalità renale","4",
+"Mucosa","Boolean","Tumore che invade la mucosa della vescica o del retto,"4",

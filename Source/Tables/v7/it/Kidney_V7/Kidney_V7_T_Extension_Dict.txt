@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Il tumore non si estende alle vene principali o ai tessuti perirenali"
+"2","Il tumore si estende macroscopicamente nella vena renale o interessa le succursali, o invade il tessuto adiposo perirenale e/o del seno renale but non oltre la fascia del Gerota"
+"3","Il tumore si estende macroscopicamente nella vena cava al di sotto del diaframma"
+"4","Il tumore si estende macroscopicamente nella vena cava al di sopra del diaframma o invade la parete della vena cava"
+"5","Non noto"

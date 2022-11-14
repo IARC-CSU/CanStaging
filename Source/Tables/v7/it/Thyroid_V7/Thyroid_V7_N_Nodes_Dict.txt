@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","Assenza di metastasi ai linfonodi regionali"
+"3","Metastasi ai linfonodi VI livello (pretracheali, paratracheali, e prelaringei/delfici)"
+"4","Metastasi in altri linfonodi cervicali unilaterali, bilaterali o controlaterali (Levelli I, II, III, IV, o V) o retrofaringei o del mediastino inferiore/superiore"

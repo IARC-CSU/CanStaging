@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Capsula intatta, tumore non presente sulla superficie ovarica o tuba di fallopio"
+"2","Capsula rotta"
+"3","Tumore sulla superficie ovarica"
+"4","Estensione pelvica e/o all'utero e/o alla tuba(e) di fallopio e/o ovaio(e)"
+"5","Estensione pelvica ad altri tessuti pelvici incluso l'intestino intraperitoneale"

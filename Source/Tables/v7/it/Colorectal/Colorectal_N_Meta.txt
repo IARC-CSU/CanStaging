@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour","Tooltip"
+"PositiveN","Number","Numero di linfonodi positivi","1",,
+"TumourDeposit","Boolean","Depositi tumorali satelliti' nella sottosierosa o nei tessuti peritonealizzati pericolici o perirettali","1",,"Applicare solo quando il numero dei linfonodi regionali coinvolti = 0"

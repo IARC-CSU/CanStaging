@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Metastasi sopra la fossa sovraclavicolare"
+"2","Estensione nella fossa sovraclavicolare"

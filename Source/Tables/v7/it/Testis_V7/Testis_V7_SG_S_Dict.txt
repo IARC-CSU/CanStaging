@@ -1,0 +1,6 @@
+﻿"Key","DisplayText"
+"1","(SX) Analisi dei marcatori sierici non dispobile o non effettuata"
+"2","(S0) Analisi dei livelli dei marcatori sierici nei limiti"
+"3","(S1) Livelli di LDH <1.5×N, e livelli di hCG <5000 (mIU/ml), e livelli di AFP <1000 (ng/ml)"
+"4","(S2) Livelli di LDH 1.5–10×N, o livelli di hCG 5000–50 000 (mIU/ml), o livelli di AFP 1000–10 000 (ng/ml)"
+"5","(S3) Livelli di LDH >10×N, o livelli di hCG >50 000 (mIU/ml), o livelli di AFP >10 000 (ng/ml)"

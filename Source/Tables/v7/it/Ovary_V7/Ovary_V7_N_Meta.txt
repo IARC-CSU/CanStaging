@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"NRegional","boolean","Metastasi ai linfonodi regionali","3",

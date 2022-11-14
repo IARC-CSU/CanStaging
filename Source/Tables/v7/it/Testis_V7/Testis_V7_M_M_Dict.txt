@@ -1,0 +1,4 @@
+﻿"Key","DisplayText"
+"1","Nessuna metastasi a distanza"
+"2","Metastasi a linfonodi non regionali o al polmone"
+"3","Metastasi a distanza diversa dai linfonodi non regionali e polmone"

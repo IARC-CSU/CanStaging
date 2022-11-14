@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","Assenza di metastasi ai linfonodi regionali"
+"3","Metatastasi ad un singolo linfonodo"
+"4","Metastasi in linfonodi multipli"

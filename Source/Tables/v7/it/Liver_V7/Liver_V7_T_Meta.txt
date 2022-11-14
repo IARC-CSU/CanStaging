@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Tumore singolo o multiplo","2",
+"Size","Number","Dimensione massima del tumore","2",
+"VascularInvasion","Boolean","Invasione vascolare","2",
+"HepaticVein","Boolean","Tumore che invade il ramo principale della vena portale o epatica","2",
+"AdjInvasion","Boolean","Tumore che invade direttamente gli organi adiacenti oltre la cistifellea o con perforazione del peritoneo viscerale","2",
