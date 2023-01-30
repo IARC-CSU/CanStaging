@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.14 (2022-10-27)
+
+- Added TNM Exclusion Criteria.
+- Updated libraries.
+- Updated app-generator.
+
 ### 0.9.13 (2022-10-27)
 
 - Updated about text.

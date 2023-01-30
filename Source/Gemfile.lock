@@ -6,9 +6,7 @@ GEM
     arrayfields (4.9.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    eventmachine (1.2.7)
     ffi (1.15.5-x64-mingw32)
-    ffi (1.15.5-x86-mingw32)
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
@@ -27,18 +25,7 @@ GEM
     rack-protection (2.2.0)
       rack
     rdiscount (2.2.0.2)
-    rest-client (2.1.0)
-      http-accept (>= 1.7.0, < 2.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
     rest-client (2.1.0-x64-mingw32)
-      ffi (~> 1.9)
-      http-accept (>= 1.7.0, < 2.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
-    rest-client (2.1.0-x86-mingw32)
       ffi (~> 1.9)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -63,9 +50,8 @@ GEM
     tilt (2.0.10)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.1)
     unf_ext (0.0.8.1-x64-mingw32)
-    unf_ext (0.0.8.1-x86-mingw32)
+    webrick (1.7.0)
 
 PLATFORMS
   ruby
@@ -84,6 +70,7 @@ DEPENDENCIES
   sinatra
   sinatra-contrib
   sinatra-r18n
+  webrick
 
 BUNDLED WITH
    2.2.27
