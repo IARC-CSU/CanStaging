@@ -1,0 +1,1 @@
+Fórmula de Steinherz-Bleyer = (Recuento de leucocitos/recuento de hematíes en líquido cefalorraquídeo) ÷ (Recuento de leucocitos/recuento de hematíes en sangre) <br/>Se deben conocer los valores exactos de leucocitos y hematíes para realizar con precisión el cálculo de Steinherz-Bleyer

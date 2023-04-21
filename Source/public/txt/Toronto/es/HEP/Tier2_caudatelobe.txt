@@ -1,0 +1,1 @@
+Incluye solo el lóbulo caudado (subsegmento I).

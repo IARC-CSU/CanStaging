@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metástasis a distancia","",
+"RegionalNodes","Boolean","Afectación de ganglios linfáticos regionales","",
+"TumourSize","Dictionary","Tamaño del tumor en su dimensión mayor","",
+"FavSite","Boolean","Localización anatómica favorable","",

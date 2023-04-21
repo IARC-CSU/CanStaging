@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metástasis a distancia","",
+"RegionalNodes","Boolean","Afectación de ganglios linfáticos regionales","",
+"SizeRegionalNodes","Dictionary","Tamaño de masa de gaglios linfáticos en su mayor dimensión","",
+"SpermCordScrotum","Boolean","Invasión del cordón espermático o escroto","",
+"TunicaVaginalis","Boolean","Extensión a través de la túnica albugínea con afectación de la túnica vaginal","",
+"VascularLymphInvasion","Boolean","Tumor limitado al testículo y al epidídimo sin invasión vascular/linfática","",
+"LDH","Dictionary","Lactato deshidrogenasa (μkat/l)","",
+"HCG","Dictionary","Gonadotropina coriónoica humana (mIU/ml)","",
+"AFP","Dictionary","Alfafetaproteína (ng/ml)","",

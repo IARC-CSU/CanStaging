@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1",">10 veces lo normal"
+"2","1,5 a 10 veces lo normal"
+"3","<1,5 veces lo normal"
+"4","Dentro de los límites normales"
+"5","Desconocido"

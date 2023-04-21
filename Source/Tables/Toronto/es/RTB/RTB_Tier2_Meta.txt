@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metástasis a distancia al diagnóstico","",
+"InvolveOrbit","Boolean","Afectación de la órbita","",
+"RegionalNodes","Boolean","Afectación de ganglios linfáticos regionales","",
+"Enucleation","Dictionary","Enucleación","",

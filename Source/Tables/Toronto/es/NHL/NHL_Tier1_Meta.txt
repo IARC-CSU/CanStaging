@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"InvolveCNSorBM","Boolean","Afectación del sistema nervioso central y/o médula ósea","",

@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Protocol","Dictionary","Protocolo de tratamiento","",
+"DistantMetastasis","Boolean","Metástasis a distancia","",
+"AbdominalMetastasis","Boolean","Metástasis no hematógenas confinadas al abdomen","",
+"NeedleBiopsy","Boolean","Biopsia del tumor (incluyendo aspiración con aguja gruesa) antes de extirpar el riñón","",
+"SurgicalBiopsy","Boolean","Biopsia quirúrgica antes de la resección (no incluye biopsia con aguja)","",
+"CompleteResection","Boolean","Extirpación completa del tumor","",
+"ConfinedKidney","Boolean","Tumor limitado al riñón","",

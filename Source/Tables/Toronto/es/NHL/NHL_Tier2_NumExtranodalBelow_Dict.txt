@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","≥2"
+"2","Un tumor único con afectación de ganglios regionales"
+"3","Un tumor único sin afectación de ganglios regionales"
+"4","Ninguno"
+"5","Desconocido"
