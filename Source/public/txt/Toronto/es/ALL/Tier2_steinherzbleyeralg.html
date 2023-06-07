@@ -1,0 +1,32 @@
+<html>
+  <head>
+        <!--  -->
+	<script>
+        function calculate(){
+			var a,b,c,d,answer;
+			a=Number(document.getElementById('wbc_cf').value);
+			b=Number(document.getElementById('rbc_cf').value);
+			c=Number(document.getElementById('wbc_b').value);
+			d=Number(document.getElementById('rbc_b').value);
+			answer = (a/b)/(c/d)
+			document.getElementById('answer').value= answer;
+		}
+	</script>
+  </head>
+  <body>
+  	Formula: Fórmula de Steinherz-Bleyer = (Recuento de leucocitos/recuento de hematíes en líquido cefalorraquídeo) ÷ (Recuento de leucocitos/recuento de hematíes en sangre)
+	<table>
+		
+		<thead></thead>
+		<tbody>
+			<tr><td>Introduzca recuento de leucocitos en LCR:</td><td> <input id='wbc_cf' /></td></tr>
+			<tr><td>Introduzca recuento de hematíes en LCR:</td><td> <input id='rbc_cf'></td></tr>
+			<tr><td>Introduzca recuento de leucocitos en sangre:</td><td><input id='wbc_b'></td></tr>
+			<tr><td>Introduzca recuento de hematíes en sangre:</td><td><input id='rbc_b'></td></tr>
+			<tr><td /><td><button onclick='calculate()'>Calcular</button></td></tr>
+			<tr><td /><td><input readonly = 'readonly' id='answer'></td></tr>
+		</tbody>
+	</table>
+
+  </body>
+<html>

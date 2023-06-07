@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"MetastasisOutsideCNS","Boolean","Metástasis fuera del sistema nervioso central","",
+"MetastasisSpineOrJunction","Boolean","Metástasis visibles espinales o en la unión cérvico-medular","",
+"MetastasisBrain","Boolean","Metástasis cerebrales visibles","",
+"TumourCellsInCSF","Boolean","Células tumorales en el líquido cefalorraquídeo","",

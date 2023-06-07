@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Sí (con enfermedad residual microscópica)"
+"2","Sí (con márgenes negativos)"
+"3","No"
+"4","Desconocido"

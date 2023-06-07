@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metástasis a distancia excluyendo metástasis peritoneales","",
+"PeritonealNodes","Boolean","Afectación de ganglios linfáticos peritoneales","",
+"SpreadPeritoneam","Boolean","Diseminación al peritoneo fuera de la pelvis","",
+"PelvicExtension","Boolean","Extensión pélvica (por debajo del borde pélvico)","",

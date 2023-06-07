@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ClinicalSignsCNS","Boolean","Signos clínicos de afectación del sistema nervioso central","",
+"BlastsCSF","Boolean","Blastos en el líquido cefalorraquídeo","",
+"WBCCSF","Dictionary","Leucocitos en líquido cefalorraquídeo","",
+"RBCCSF","Dictionary","Hematíes en líquido cefalorraquídeo","",
+"SteinherzBleyerAlg","Dictionary","Valor del cálculo de Steinherz-Bleyer","",

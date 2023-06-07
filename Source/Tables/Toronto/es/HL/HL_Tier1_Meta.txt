@@ -1,0 +1,13 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Symptoms","Boolean","Síntomas constitucionales","",
+"Diffuse","Boolean","Afectación difusa o diseminada de uno o más órganos extralinfáticos con o sin afectación ganglionar asociada","",
+"IsolatedExtraLymph","Boolean","Afectación aislada (no contigua) de órgano extralinfático en ausencia de afectación ganglionar adyacente pero asociada con enfermedad en localización/localizaciones a distancia","",
+"InvolveLivBMLungCSF","Boolean","Cualquier afectación de hígado, médula ósea, pulmones (excepto por extensión directa desde otra localización) o líquido cefalorraquídeo","",
+"LymphAbove","Boolean","Afectación de una o más regiones ganglionares POR ENCIMA del diafragma","",
+"NumLymphAbove","Dictionary","Número de regiones ganglionares POR ENCIMA del diafragma","",
+"LymphBelow","Boolean","Afectación de una o más regiones ganglionares POR DEBAJO del diafragma","",
+"NumLymphBelow","Dictionary","Número de regiones ganglionares POR DEBAJO del diafragma","",
+"ExtraLymphAbove","Boolean","Afectación de un único órgano o localización extralinfática POR ENCIMA del diafragma","",
+"ExtendExtraLymphAbove","Dictionary","Extensión de la afectación de un único órgano o localización extralinfático POR ENCIMA del diafragma","",
+"ExtraLymphBelow","Boolean","Extensión de la afectación de un único órgano o localización extralinfático POR DEBAJO del diafragma","",
+"ExtendExtraLymphBelow","Dictionary","Extensión de la afectación de un único órgano o localización extralinfático POR DEBAJO del diafragma","",

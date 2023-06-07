@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ClinicalSignsCNS","Boolean","Signos clínicos de afectación del sistema nervioso central","",
+"BlastsCSF","Boolean","Blastos en líquido cefalorraquídeo","",

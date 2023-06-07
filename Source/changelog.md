@@ -1,5 +1,35 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.14 (2023-01-30)
+
+- Added TNM Exclusion Criteria.
+- Updated libraries.
+- Updated app-generator.
+
+### 0.9.13 (2022-10-27)
+
+- Updated about text.
+- Updated Toronto tool tip texts.
+
+### 0.9.12 (2022-10-26)
+
+- Updates to the documentation PDFs and some tool tip texts for the Toronto Guidelines.
+
+### 0.9.11 (2022-10-24)
+
+- Added eTNM Liver, Lymphoma, Oesophagus, and Ovary.
+
+### 0.9.10 (2022-08-18)
+
+- Fixed some typos.
+
+### 0.9.9 (2022-07-06)
+
+- Increased the memory of the virtual server.
+- Fixed a bug in the responsive menus on small screens.
+- Fixed the sorting of the staging systems.
+- Other smaller fixes.
+
 ### 0.9.8 (2022-04-20)
 
 - Fixed typo in Torono staging of ovarian cancer.

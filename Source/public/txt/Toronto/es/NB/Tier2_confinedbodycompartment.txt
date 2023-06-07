@@ -1,0 +1,1 @@
+Tumor localizado que no afecta ninguna estructura vital según la definición del listado de FRDI (es decir, no hay FRDI) y el tumor debe estar confinado a un único compartimento corporal: cuello, tórax, abdomen o pelvis.<br/>Un tumor intraespinal cuya extensión no cumple con los criterios de FRDI también se define como estadio L1. 

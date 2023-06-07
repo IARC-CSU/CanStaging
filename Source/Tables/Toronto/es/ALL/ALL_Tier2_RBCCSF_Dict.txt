@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","<10/µL"
+"2","≥10/µL"
+"3","Desconocido"

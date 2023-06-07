@@ -1,0 +1,1 @@
+Se debe responder “No” si no hay mención de metástasis en la historia clínica, es decir, se debe asumir que no hay metástasis sino se mencionan específicamente. Por lo tanto, solo se responderá “Desconocido” si la historia clínica indica que existe incertidumbre sobre la presencia o no de metástasis.

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Sí (con afectación de los ganglios linfáticos regionales asociados)"
+"2","Sí (sin afectación de ganglios linfáticos regionales)"
+"3","No"
+"4","Desconocido"

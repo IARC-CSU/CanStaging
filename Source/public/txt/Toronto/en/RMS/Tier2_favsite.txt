@@ -1,1 +1,64 @@
-Favourable anatomic sites: <br/> •	orbit <br/> •	head and neck (excluding parameningeal tumours) <br/> •	genitourinary sites (excluding bladder and prostate tumours). <br/> <br/>  Unfavourable anatomic sites: <br/> •	bladder <br/> •	prostate <br/> •	extremity <br/> •	cranial <br/> •	parameningial <br/> •	trunk <br/> •	retroperitoneum <br/> •	all other sites not noted as favourable
+<p>
+    Favourable anatomic sites:
+    <br/>
+    • orbit
+    <br/>
+    • head and neck (excluding parameningeal tumours)
+</p>
+<p>
+    - scalp
+    <br/>
+    - parotid
+    <br/>
+    - oral cavity
+    <br/>
+    - larynx
+    <br/>
+    - oropharynx
+    <br/>
+    - cheek
+    <br/>
+    - hypopharynx
+    <br/>
+    - thyroid and parathyroid
+    <br/>
+    - neck
+    <br/>
+    • genitourinary sites (excluding bladder and prostate tumours)
+</p>
+<p>
+    • gallbladder and bile ducts
+</p>
+<p>
+    <br/>
+    Unfavourable anatomic sites:
+    <br/>
+    • bladder
+    <br/>
+    • prostate
+    <br/>
+    • extremity
+    <br/>
+    <br/>
+    • parameningial
+</p>
+<p>
+    - middle ear
+    <br/>
+    - nasal cavity
+    <br/>
+    - paranasal sinuses (including tumours that extend into the paranasal
+    sinus)
+    <br/>
+    - nasopharynx
+    <br/>
+    - infratemporal fossa/pterygopalatine
+    <br/>
+    - parapharyngeal area
+    <br/>
+    • trunk
+    <br/>
+    • retroperitoneum
+    <br/>
+    • <u>all other sites</u> not noted as favourable
+</p>
