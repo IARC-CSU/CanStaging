@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'bundler' # Puma needs this...
+gem 'bundler', "2.4.13" # Puma needs this...
 gem 'eventmachine', :platforms => :ruby 
 gem 'sinatra'
 gem 'sinatra-contrib'
