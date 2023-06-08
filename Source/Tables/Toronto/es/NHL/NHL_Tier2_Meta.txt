@@ -6,7 +6,7 @@
 "ExtensiveIntraAbdominal","Boolean","Enfermedad primaria intraabdominal extensa (no resecable)","",
 "ParaspinalEpidural","Boolean","Cualquier tumor paraespinal o epidural","",
 "ResectedGIT","Boolean","Tumor primario del tracto gastrointestinal completamente resecado","",
-"LymphAbove","Boolean","","Afectación de una o más regiones ganglionares POR ENCIMA del diafragma","",
+"LymphAbove","Boolean","Afectación de una o más regiones ganglionares POR ENCIMA del diafragma","",
 "NumLymphAbove","Dictionary","Número de regiones ganglionares POR ENCIMA del diafragma","",
 "LymphBelow","Boolean","Afectación de una o más regiones ganglionares POR DEBAJO del diafragma","",
 "NumLymphBelow","Dictionary","Número de regiones ganglionares POR DEBAJO del diafragma","",
