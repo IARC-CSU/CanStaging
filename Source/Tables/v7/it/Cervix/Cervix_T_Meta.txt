@@ -8,4 +8,4 @@
 "Vagina","Boolean","Tumore che coinvolge il terzo inferiore della vagina ","4",
 "Pelvis","Boolean","Tumore che si estende alla parete pelvica","4",
 "Hydronephrosis","Boolean","Idronefrosi o perdita della funzionalità renale","4",
-"Mucosa","Boolean","Tumore che invade la mucosa della vescica o del retto,"4",
+"Mucosa","Boolean","Tumore che invade la mucosa della vescica o del retto","4",
