@@ -33,10 +33,10 @@ deploy_to_docker_prod:
     - sudo docker-compose -p CanStaging up -d --build
 
 build:
-  image: bentolor/docker-dind-awscli:2.2.36
-
+  image: bentolor/docker-dind-awscli
+  
   services:
-    - docker:dind
+    - name: docker:dind
 
   before_script:
     - echo "Executing on `hostname`"
