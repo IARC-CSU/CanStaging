@@ -33,7 +33,7 @@ deploy_to_docker_prod:
     - sudo docker-compose -p CanStaging up -d --build
 
 build:
-  image: bentolor/docker-dind-awscli
+  image: bentolor/docker-dind-awscli:latest
 
   services:
     - docker:dind
