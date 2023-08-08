@@ -36,7 +36,7 @@ build:
   image: bentolor/docker-dind-awscli:latest
 
   services:
-    - docker:dind
+    - bentolor/docker-dind-awscli:dind
 
   before_script:
     - echo "Executing on `hostname`"
@@ -70,7 +70,7 @@ deploy_to_aws:
   image: bentolor/docker-dind-awscli
 
   services:
-    - bentolor/docker-dind-awscli:dind
+    - docker:dind
 
   before_script:
     - echo "Executing on `hostname`"
