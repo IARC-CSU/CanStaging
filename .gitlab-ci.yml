@@ -36,7 +36,7 @@ build:
   image: bentolor/docker-dind-awscli
   
   services:
-    - name: docker:dind
+    - name: bentolor/docker-dind-awscli:dind
 
   before_script:
     - echo "Executing on `hostname`"
