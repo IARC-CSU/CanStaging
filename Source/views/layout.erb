@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= session[:locale]%>">
   <head>
   	<title><%= R18n.t[:layout][:title] %></title>
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta name="description" content="CanStaging+ is a tool that automatically calculates the stage classification for a range of tumour sites based on the most recent guidelines.">
+    <meta name="keywords" content="cancer, tumour, tumor, malign, malignancy, malignant, stage, staging, classification, grade, grading, tnm, node, metastasis, calculator, tool, system, application, guide, guideline, assessment, criteria, criterion, surveillance, registry, surveillance, epidemiology, oncology, pathology, radiology, histology">
+    <meta charset="UTF-8">
     <script src="/vendor/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="/vendor/popper.min.js" type="text/javascript"></script>
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
