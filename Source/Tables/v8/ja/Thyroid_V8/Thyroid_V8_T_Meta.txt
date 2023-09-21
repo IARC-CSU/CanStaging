@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","腫瘍の最大径（cm）","1",""
+"Tumour","Dictionary","原発腫瘍 (Including papillary, follicular, poorly differentiated, Hurthle cell and anaplastic carcinomas)","2",""

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","いいえ regional lymph node metastases"
+"2","遠隔転移なしetastases to ipsilateral peribronchial AND/OR ipsilateral hilar nodes AND intrapulmonary nodes"
+"3","遠隔転移なしetastases to ipsilateral mediastinal AND/OR subcarinal nodes"
+"4","遠隔転移なしetastases to contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular nodes"

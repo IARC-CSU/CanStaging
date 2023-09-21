@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","原発腫瘍の評価が不可能 does NOT invade main bronchus"
+"2","原発腫瘍の評価が不可能 involves the main bronchus"
+"3","原発腫瘍の評価が不可能 involves the carina or trachea"

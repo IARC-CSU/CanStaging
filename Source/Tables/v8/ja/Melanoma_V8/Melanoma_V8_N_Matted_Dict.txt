@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","遠隔転移なしatted metastatic regional lymph nodes absent"
+"2","遠隔転移なしatted metastatic regional lymph nodes present"

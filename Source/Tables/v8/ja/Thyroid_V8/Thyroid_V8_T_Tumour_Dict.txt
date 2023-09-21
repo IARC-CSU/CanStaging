@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","原発腫瘍の評価が不可能"
+"2","原発腫瘍を認めない"
+"3","原発腫瘍の評価が不可能 limited to thyroid"
+"4","Gross extrathyroidal extension invading only strap muscles (sternohyoid, sternothyroid, or omohyoid muscles)"
+"5","原発腫瘍の評価が不可能 extends beyond the thyroid capsule and invades any of the following: subcutaneous soft tissues, larynx, trachea, oesophagus, recurrent laryngeal nerve"
+"6","原発腫瘍の評価が不可能 invades prevertebral fascia, mediastinal vessels, or encases carotid artery"

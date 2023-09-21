@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","いいえ 衛星結節転移またはIn-transit転移なし or in-transit metastasis"
+"2","衛星結節転移またはIn-transit転移なし metastasis"
+"3","In-transit metastasis"

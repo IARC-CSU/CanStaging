@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","領域リンパ節 cannot be assessed"
+"2","No regional lymph node metastasis"
+"3","Metastasis in lymph node(s)"

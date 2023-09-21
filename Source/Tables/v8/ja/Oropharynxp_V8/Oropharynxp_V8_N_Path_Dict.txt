@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","領域リンパ節の評価が不可能"
+"2","領域リンパ節転移なし"
+"3","遠隔転移なしetastasis in 1 to 4 lymph node(s)"
+"4","遠隔転移なしetastasis in 5 or more lymph node(s)"

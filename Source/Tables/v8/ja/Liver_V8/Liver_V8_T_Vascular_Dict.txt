@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","いいえ vascular invasion"
+"2","血管侵襲を伴う"
+"3","門脈もしくは肝静脈の大分枝への浸潤"

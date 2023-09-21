@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","原発腫瘍の評価が不可能 clinically inapparent (not palpable or visible by imaging)"
+"2","原発腫瘍の評価が不可能 clinically apparent"

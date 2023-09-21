@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","原発腫瘍の評価が不可能 incidental histological  finding in = 5% resected tissue"
+"2","原発腫瘍の評価が不可能 incidental histological finding  >5% resected tissue"
+"3","原発腫瘍の評価が不可能 identified by needle biopsy"
+"4","原発腫瘍の評価が不可能 involves one 1/2 of one lobe or less (領域リンパ節の評価が不可能ically Detected)"
+"5","原発腫瘍の評価が不可能 involves more than  half of one lobe (領域リンパ節の評価が不可能ically Detected)"
+"6","原発腫瘍の評価が不可能 involves both lobes (領域リンパ節の評価が不可能ically Detected)"

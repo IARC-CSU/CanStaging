@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","原発腫瘍の評価が不可能"
+"2","原発腫瘍を認めない"
+"3","上皮内癌"
+"4","原発腫瘍の評価が不可能 confined to nasopharynx, or extends to oropharynx and/or nasal cavity without parapharyngeal involvement"
+"5","原発腫瘍の評価が不可能 with extension to parapharyngeal space and/or infiltration of the medial pterygoid, lateral pterygoid, and/or prevertebral muscles"
+"6","原発腫瘍の評価が不可能 invades bony structures of skull base, cervical vertebra, pterygoid structures, and/or paranasal sinuses"
+"7","原発腫瘍の評価が不可能 with intracranial extension and/or involvement of cranial nerves, hypopharynx, orbit, parotid gland and/or infiltration beyond the lateral surface of the lateral pterygoid muscle"

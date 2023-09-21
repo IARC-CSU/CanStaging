@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","遠隔転移なしetastasis in a single lymph node, 3cm or less in greatest dimension without extranodal extension"
+"2","遠隔転移なしetastasis in a single lymph node, more than 3 cm but not more than 6cm in greatest dimension, without extranodal extension"
+"3","同側の多発性リンパ節転移, none more than 6cm in greatest dimension, without extranodal extension"
+"4","遠隔転移なしetastasis in bilateral lymph nodes, none more than 6 cm in greatest dimension, without extranodal extension"
+"5","遠隔転移なしetastasis in a lymph node more than 6 cm in greatest dimension without extranodal extension"
+"6","遠隔転移なしetastasis in a single or multiple lymph nodes with clinical extranodal extension"

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","いいえ extrapelvic involvement"
+"2","遠隔転移なしicroscopic extrapelvic peritoneal involvement"
+"3","遠隔転移なしacroscopic peritoneal metastasis beyond pelvic brim (≤2cm in greatest dimension)"
+"4","遠隔転移なしacroscopic peritoneal metastasis beyond pelvic brim (>2cm in greatest dimension)"
+"5","Retroperitoneal node involvement only"

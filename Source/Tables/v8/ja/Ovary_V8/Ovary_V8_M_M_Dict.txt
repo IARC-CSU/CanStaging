@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","遠隔転移なし"
+"2","Pleural effusion with positive cytology"
+"3","Parenchymal metastasis and metastasis to extra-abdominal organs"

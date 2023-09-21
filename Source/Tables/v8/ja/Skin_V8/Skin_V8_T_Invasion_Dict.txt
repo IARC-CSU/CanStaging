@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","いいえ further invasion"
+"2","遠隔転移なしinor bone erosion or perineural invasion or deep invasion"
+"3","Gross cortical bone/marrow invasion"
+"4","Axial skeleton invasion including foraminal involvement and/or vertebral foramen involvement to the epidural space"

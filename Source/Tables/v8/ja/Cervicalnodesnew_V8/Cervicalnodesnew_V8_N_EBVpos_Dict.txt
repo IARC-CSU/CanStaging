@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Unilateral metastasis in cervical lymph nodes and/or unilateral or bilateral metastasis in retropharyngeal lymph nodes, 6 cm or less in greatest dimension, above the caudal border of cricoid cartilage"
+"2","Bilateral metastasis in cervical lymph node(s), 6 cm or less in greatest dimension, above the caudal border of cricoid cartilage"
+"3","遠隔転移なしetastasis in cervical lymph node(s) greater than 6 cm in dimension and/or extension below the caudal border of cricoid cartilage"

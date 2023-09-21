@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","領域リンパ節の評価が不可能"
+"2","領域リンパ節転移なし"
+"3","Unilateral metastasis, in lymph node(s), all 6cm or less in greatest dimension"
+"4","Contralateral or bilateral metastasis in lymph node(s), all 6cm or less in greatest dimension"
+"5","遠隔転移なしetastasis in lymph node(s) greater than 6cm in dimension"

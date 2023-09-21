@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","領域リンパ節の評価が不可能"
+"2","領域リンパ節転移なし"
+"3","Unilateral metastasis, in cervical lymph node(s), and/or unilateral or bilateral metastasis in retropharyngeal lymph nodes"
+"4","Bilateral metastasis in cervical lymph nodes"

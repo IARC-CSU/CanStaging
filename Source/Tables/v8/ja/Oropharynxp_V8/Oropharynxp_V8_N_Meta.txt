@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Path","Dictionary","（病理学的分類）***病理学的検査が実施された場合のみ選択する．","",""
+"Clin","Dictionary","（臨床分類）***病理学的検査が実施されていない場合のみ選択する．","",""

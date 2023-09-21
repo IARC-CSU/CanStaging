@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","遠隔転移なしetastasis above the caudal border of cricoid cartilage"
+"2","組織学的に切除組織の5%以下の偶発的に発見される腫瘍 below the caudal border of cricoid cartilage"

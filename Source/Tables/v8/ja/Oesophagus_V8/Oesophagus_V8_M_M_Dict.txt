@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","いいえ Distant 遠隔転移なしetastasis"
+"2","Distant 遠隔転移なしetastasis"

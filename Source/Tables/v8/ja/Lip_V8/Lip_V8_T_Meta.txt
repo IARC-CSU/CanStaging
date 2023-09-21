@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","原発腫瘍","1",""
+"Dimension","Number","腫瘍の最大径（cm）","1",""
+"Depth","Number","深達度 (mm)","1",""
+"Lip","Boolean","（口唇）下顎骨皮質の貰通，下歯槽神経，口腔底，皮膚（オトガイ部または外鼻の）への貫通","2",""
+"Oralcavity","Boolean","（口腔）最大径＞4cmかつ深達度＞10mm，または下顎もしくは上顎洞の骨皮質の貰通または顔面皮膚への貫通","2",""
+"Both","Boolean","（口唇および口腔）咀哨筋間隙，翼状突起，頭蓋底への浸潤，または内頸動脈を全周性に包囲","2",""

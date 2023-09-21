@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"a","Adenocarcinoma"
+"s","Squamous cell carcinoma"

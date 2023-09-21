@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","領域リンパ節","1",""
+"Size","Number","領域リンパ節転移の最大径（cm）","",""
+"Caudal","Dictionary","尾側縁への進展","",""

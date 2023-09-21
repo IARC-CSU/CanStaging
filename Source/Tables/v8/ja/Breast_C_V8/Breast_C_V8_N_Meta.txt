@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Ipsilateral","Boolean","同側腋窩レベルI/IIリンパ節転移","3",""
+"Matted","Boolean","相互に固定（癒合）した，もしくは周囲構造に固定している腋窩リンパ節転移","4",""
+"InternalMammary","Boolean","臨床的に検出された内胸リンパ節転移","4",""
+"Infraclavicular","Boolean","鎖骨下リンパ節転移","4",""
+"Supraclavicular","Boolean","鎖骨上リンパ節転移","4",""

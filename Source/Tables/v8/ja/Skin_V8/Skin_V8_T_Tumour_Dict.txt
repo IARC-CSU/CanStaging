@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Primary tumour cannot be identified"
+"2","原発腫瘍を認めない"
+"3","上皮内癌"
+"4","悪性腫瘍"
