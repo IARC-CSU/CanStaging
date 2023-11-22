@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumor primario","1",
+"Size","Number","Mayor dimensión del tumor (cm)","1",
+"Invasion","Dictionary","Nueva invasión","2",

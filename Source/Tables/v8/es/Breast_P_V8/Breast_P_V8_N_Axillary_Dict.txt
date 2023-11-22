@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Sin metástasis en ganglios linfáticos axilares"
+"2","Metástasis en 1 a 3 ganglios linfáticos axilares"
+"3","Metástasis en 4 a 9 ganglios linfáticos axilares"
+"4","Metástasis en 10 o más ganglios linfáticos"

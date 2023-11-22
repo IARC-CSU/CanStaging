@@ -1,0 +1,16 @@
+# Ganglios linfáticos regionales de melanoma maligno de la piel
+
+|    <br>Localización del tumor primario <br>   <br>                              |    <br>Ganglios linfáticos regionales<br>   <br>                                                                                                             |
+|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <br>Cabeza y cuello                                                |    <br>Ganglios cervicales                                                                                                                              |
+|    <br>Labio                                                          |    <br>Facial <br>   <br>Preauricular <br>   <br>Submandibular<br>   <br>Submental                                                                 |
+|    <br>Párpado/Canto                                               |    <br>Facial <br>   <br>Infraauricular<br>   <br>Preauricular <br>   <br>Submandibular                                                           |
+|    <br>Oído externo/Conducto auditivo                                  |    <br>Preauricular y Postauricular (Mastoides)                                                                                                  |
+|    <br>Cara, otros (mejilla, mentón, frente, mandíbula, nariz y sien)    |    <br>Facial <br>   <br>Preauricular <br>   <br>Submandibular<br>   <br>Submental                                                                 |
+|    <br>Cuero cabelludo                                                        |    <br>Occipital<br>   <br>Preauricular<br>   <br>Postauricular (Mastoides)<br>   <br>Espinal accesorio (cervical posterior)                         |
+|    <br>Cuello                                                         |    <br>Axilar<br>   <br>Espinal accesorio occipital (cervical posterior) <br>   <br>Preauricular<br>   <br>Submental<br>   <br>Supraclavicular    |
+|    <br>Tronco superior                                                  |    <br>Axilar<br>   <br>Cervical<br>   <br>Mamario interno<br>   <br>Supraclavicular                                                            |
+|    <br>Tronco inferior                                                  |    <br>Femoral (inguinal superficial)                                                                                                              |
+|    <br>Brazo/Hombro                                                 |    <br>Axilar<br>   <br>Epitroclear (para mano/brazo)<br>   <br>Espinal accesorio (para hombro)                                                    |
+|    <br>Pierna/Cadera                                                      |    <br>Femoral (Inguinal superficial) <br>   <br>Poplíteo (para talón y pantorrilla)                                                                     |
+|    <br>Vulva/Pene/Escroto                                          |    <br>Inguinal profundo<br>   <br>Femoral (Inguinal superficial)                                                                                      |

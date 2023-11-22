@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Regional","Boolean","Compromiso de los ganglios regionales (incluido el ganglio retroperitoneal)","2",
+"RegionalN","Number","Tamaño de metástasis de ganglios regionales (mm)","3",

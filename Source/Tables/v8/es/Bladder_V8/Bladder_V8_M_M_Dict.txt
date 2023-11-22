@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Sin metástasis a distancia"
+"2","Ganglios linfáticos no regionales"
+"3","Otras metástais a distancia"

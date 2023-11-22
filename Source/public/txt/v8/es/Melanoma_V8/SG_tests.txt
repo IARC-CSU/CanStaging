@@ -1,0 +1,11 @@
+## para el uso de la estadificación clínica o patológica del melanoma maligno
+
+| Tumor (T) | Ganglios (N) | Metástasis (M) | Qué seleccionar |
+|------------|-----------|----------------|----------------|
+| pT         | pN        | pM             | Patológico   |
+| pT         | pN        | cM             | Pathological   |
+| pT         | cN        | pM             | Patológico   |
+| pT         | cN        | cM             | Clinical       |
+| cT         | pN        | cM             | Clínico       |
+
+**Tenga en cuenta que, en el caso de que se extirpe toda la lesión cutánea del melanoma maligno, solo puede utilizar la agrupación por estadio patológico si los ganglios regionales también se extirpan. (A menos que el tumor se extirpe, se acceda clínicamente a los ganglios y se extirpe la lesión metastásica-pM)

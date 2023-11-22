@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"5","El carcinoma invade más allá del útero, pero no se ha extendido al tercio inferior de la vagina ni a la pared pélvica"
+"1","Compromiso limitado a los dos tercios superiores de la vagina sin invasión parametrial, dimensión mayor desconocida"
+"2","Carcinoma invasivo ≤ 4 cm en su mayor dimensión"
+"3","Carcinoma invasivo > 4 cm en su mayor dimensión"
+"4","Carcinoma invasivo con compromiso parametrial pero no hasta la pared pélvica"

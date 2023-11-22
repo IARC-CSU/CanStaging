@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Metástasis a distancia (**excluidas las metástasis en la vagina, la serosa pélvica o los anexos, incluidas las metástasis en los ganglios linfáticos inguinales, los ganglios linfáticos intraabdominales distintos de los ganglios paraaórticos o pélvicos**)","1",

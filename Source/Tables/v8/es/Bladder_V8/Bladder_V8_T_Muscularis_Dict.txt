@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","El tumor no invade la muscular propia"
+"2","El tumor invade la muscular propia superficial(inner half)"
+"3","El tumor invade la muscular propia profunda (outer half)"
+"4","No se sabe el alcance de la invasión"

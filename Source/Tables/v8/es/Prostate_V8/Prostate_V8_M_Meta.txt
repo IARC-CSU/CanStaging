@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Boolean","Metástasis a ganglios no regionales","3",
+"Bone","Boolean","Metástasis en hueso","3",
+"Other","Boolean","Metástasis a otros sitios","3",

@@ -1,0 +1,9 @@
+"Ipsilateral","Matted","InternalMammary","Infraclavicular","Supraclavicular","Result","Message"
+"F","F","F","F","F","N0",
+"T","F","F","F","F","N1",
+"T","T","F","F","F","N2a",
+"F","F","T","F","F","N2b",
+"ANY","ANY","F","T","F","N3a",
+"T","ANY","T","F","F","N3b",
+"T","ANY","T","T","F","N3b",
+"ANY","ANY","ANY","ANY","T","N3c",

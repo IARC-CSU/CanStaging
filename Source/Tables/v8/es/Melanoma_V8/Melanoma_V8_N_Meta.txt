@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Número de ganglios linfáticos regionales positivos","2",
+"Metastasis","Dictionary","Metástasis microscópica o macroscópica","2",
+"Satellite","Dictionary","Metástasis satélite o en tránsito","2",
+"Matted","Dictionary","Metástasis en ganglios linfáticos regionales enmarañados","2",

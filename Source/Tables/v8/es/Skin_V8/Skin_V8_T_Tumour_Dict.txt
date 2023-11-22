@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","No se puede identificar el tumor primario"
+"2","Sin evidencia de tumor primario"
+"3","Carcinoma in situ"
+"4","Tumor maligno"

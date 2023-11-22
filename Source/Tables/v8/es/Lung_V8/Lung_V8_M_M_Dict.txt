@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Sin metástasis a distancia"
+"2","Nódulo(s) tumoral(es) separado(s) en un lóbulo contralateral con nódulos pleurales o derrame pleural (o pericárdico) maligno"
+"3","Metástasis extratorácica única en un solo órgano"
+"4","Múltiples metástasis extratorácicas en uno o múltiples órganos"

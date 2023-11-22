@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","El tumor primario no se puede evalaur"
+"2","Sin evidencia de tumor primario"
+"3","Tumor limitado a tiroides"
+"4","Extensión extratiroidea macroscópica que invade solo los músculos de la correa (músculos esternohioideo, esternotiroideo u omohioideo)"
+"5","El tumor se extiende más allá de la cápsula tiroidea e invade cualquiera de los siguientes: tejidos blandos subcutáneos, laringe, tráquea, esófago, nervio laríngeo recurrente"
+"6","El tumor invade la fascia prevertebral, los vasos mediastínicos o encierra la arteria carótida"

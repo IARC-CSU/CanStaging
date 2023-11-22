@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Hallazgo histológico incidental tumoral en = 5% tejido resecado"
+"2","Hallazgo histológico incidental tumoral >5% tejido resecado"
+"3","Tumor identificado por biopsia por punción"
+"4","El tumor involucra la mitad de un lóbulo o menos (detectado clínicamente)"
+"5","El tumor involucra más de la mitad de un lóbulo (detectado clínicamente)"
+"6","El tumor afecta a ambos lóbulos (detectado clínicamente)"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Sin metástasis a distancia"
+"2","Derrame pleural con citología positiva"
+"3","Metástasis parenquimatosa y metástasis a órganos extraabdominales"

@@ -1,0 +1,4 @@
+"M","Result"
+"M0","Localizado"
+"M1","A distancia"
+"Not Known","Desconocido"

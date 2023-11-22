@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Sin más invasiones"
+"2","Erosión ósea menor o invasión perineural o invasión profunda"
+"3","Invasión macroscópica de hueso/médula cortical"
+"4","Invasión del esqueleto axial que incluye afectación del foramen y/o afectación del foramen vertebral al espacio epidural"

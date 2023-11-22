@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Tumor(es) solitario o múltiple(s)","2",
+"Size","Number","Dimensión máxima del tumor(es)(cm)","2",
+"Vascular","Dictionary","Invasión vascular","2",
+"Invasion","Boolean","El tumor invade directamente órganos adyacentes a excepción de la vesícula biliar","2",
+"Visceral","Boolean","Tumor perfora peritoneo visceral","2",

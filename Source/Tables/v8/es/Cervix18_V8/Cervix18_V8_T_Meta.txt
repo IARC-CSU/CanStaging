@@ -1,0 +1,5 @@
+﻿"Field","DataType","DisplayText","Group","Colour"
+"T1","Dictionary","Seleccionar **solo si** el carcinoma está confinado al cuello uterino (la extensión al cuerpo uterino debe descartarse)","1",
+"T2","Dictionary","Seleccionar **solo si** el carcinoma invade más allá del útero pero no a la pared pélvica o al tercio inferior de la vagina","2",
+"T3","Dictionary","Seleccionar **solo si** el carcinoma involucra el tercio inferior de la vagina y/o se extiende a la pared pélvica y/o causa hidronefrosis o insuficiencia renal y/o involucra los ganglios linfáticos pélvicos y/o paraaórticos","3",
+"T4","Dictionary","Seleccionar **solo si** el carcinoma se ha extendido más allá de la pelvis verdadera o ha afectado (probado por biopsia) la mucosa de la vejiga o el recto. (Un edema ampolloso, como tal, no permite asignar un caso a un estadio IV)","4",

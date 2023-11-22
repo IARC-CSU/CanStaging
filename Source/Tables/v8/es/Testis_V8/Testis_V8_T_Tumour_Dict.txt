@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","El tumor primario no se puede evaluar"
+"2","Sin evidencia de tumor primario (p. ej., cicatriz histológica en el testículo)"
+"3","Sin evidencia de tumor primario (p. ej., cicatriz histológica en el testículo)"
+"4","Tumor limitado a testículo y epidídimo"
+"7","El tumor invade tejidos blandos"
+"5","Tumor invade cordón espermático"
+"6","El tumor invade el escroto"

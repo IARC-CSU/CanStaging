@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Sin propagación a órganos distantes"
+"2","Propagación a órganos distantes"

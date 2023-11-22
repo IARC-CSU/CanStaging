@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Nódulos linfáticos regionales no evaluables"
+"2","Sin metástasis en ganglios linfáticos regionales"
+"3","Metástasis en los ganglios linfáticos pélvicos (incluidas las micrometástasis)"
+"4","Metástasis en los ganglios linfáticos para-aórticos (incluidas las micrometástasis)"
