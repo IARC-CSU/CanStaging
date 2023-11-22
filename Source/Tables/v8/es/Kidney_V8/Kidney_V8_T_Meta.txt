@@ -1,8 +1,8 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Size","Number","Dimensión máxima del tumor(es) (cm)","1",
-"Limit","Boolean","Tumor limitado al riñón","1",
-"Renal","Boolean","El tumor se extiende a la vena renal o sus ramas segmentarias, o el tumor invade el sistema pielocalicial","2",
-"Fat","Boolean","El tumor invade la grasa perirrenal y/o del seno renal (peripélvica) pero no más allá de la fascia de Gerota","2",
-"Venacava","Boolean","El tumor se extiende a la vena cava por debajo del diafragma","2",
-"Diaphragm","Boolean","El tumor se extiende a la vena cava por encima del diafragma o invade la pared de la vena cava","2",
-"Gerota","Boolean","El tumor invade más allá de la fascia de Gerota (incluida la extensión contigua a la glándula suprarrenal ipsilateral)","3",
+Field,DataType,DisplayText,Group,Colour
+Size,Number,Dimensión máxima del tumor(es) (cm),1,
+Limit,Boolean,Tumor limitado al riñón,1,
+Renal,Boolean,"El tumor se extiende a la vena renal o sus ramas segmentarias, o el tumor invade el sistema pielocalicial",2,
+Fat,Boolean,El tumor invade la grasa perirrenal y/o del seno renal (peripélvica) pero no más allá de la fascia de Gerota,2,
+Venacava,Boolean,El tumor se extiende a la vena cava por debajo del diafragma,2,
+Diaphragm,Boolean,El tumor se extiende a la vena cava por encima del diafragma o invade la pared de la vena cava,2,
+Gerota,Boolean,El tumor invade más allá de la fascia de Gerota (incluida la extensión contigua a la glándula suprarrenal ipsilateral),3,

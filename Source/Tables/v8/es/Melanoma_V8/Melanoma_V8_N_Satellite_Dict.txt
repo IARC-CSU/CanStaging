@@ -1,4 +1,4 @@
-"Key","DisplayText"
-"1","Sin metástasis satélite o en tránsito"
-"2","Metástasis satélite"
-"3","Metástasis en tránsito"
+Key,DisplayText
+1,Sin metÃ¡stasis satÃ©lite o en trÃ¡nsito
+2,MetÃ¡stasis satÃ©lite
+3,MetÃ¡stasis en trÃ¡nsito

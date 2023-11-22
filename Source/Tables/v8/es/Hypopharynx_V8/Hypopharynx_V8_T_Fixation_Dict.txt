@@ -1,4 +1,4 @@
-"Key","DisplayText"
-"1","Sin fijación de hemilaringe"
-"2","Fijación de hemilaringe presente"
-"3","Extensión a la mucosa esofágica presente"
+Key,DisplayText
+1,Sin fijación de hemilaringe
+2,Fijación de hemilaringe presente
+3,Extensión a la mucosa esofágica presente

@@ -1,3 +1,3 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Nodes","Dictionary","Ganglios linf·ticos regionales","1",
-"Size","Number","Mayor dimensiÛn del ganglio linf·tico (cm)","1",
+Field,DataType,DisplayText,Group,Colour
+Nodes,Dictionary,Ganglios linf√°ticos regionales,1,
+Size,Number,Mayor dimensi√≥n del ganglio linf√°tico (cm),1,

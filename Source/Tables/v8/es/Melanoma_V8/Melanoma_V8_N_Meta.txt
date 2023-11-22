@@ -1,5 +1,5 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","N˙mero de ganglios linf·ticos regionales positivos","2",
-"Metastasis","Dictionary","Met·stasis microscÛpica o macroscÛpica","2",
-"Satellite","Dictionary","Met·stasis satÈlite o en tr·nsito","2",
-"Matted","Dictionary","Met·stasis en ganglios linf·ticos regionales enmaraÒados","2",
+Field,DataType,DisplayText,Group,Colour
+PositiveN,Number,N√∫mero de ganglios linf√°ticos regionales positivos,2,
+Metastasis,Dictionary,Met√°stasis microsc√≥pica o macrosc√≥pica,2,
+Satellite,Dictionary,Met√°stasis sat√©lite o en tr√°nsito,2,
+Matted,Dictionary,Met√°stasis en ganglios linf√°ticos regionales enmara√±ados,2,

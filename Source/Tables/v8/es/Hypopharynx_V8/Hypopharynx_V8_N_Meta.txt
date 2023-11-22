@@ -1,5 +1,5 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Pathology","Dictionary","Pruebas de patológicas completadas","1",
-"Nodes","Dictionary","Ganglios linfáticos regionales","1",
-"Size","Number","Mayor dimensión del ganglio linfático (cm)","1",
-"Extranodal","Dictionary","Presencia de extensión extraganglionar (La presencia de afectación de la piel o invasión de tejidos blandos con fijación/anclaje profundo al músculo subyacente o a la estructura adyacente o los signos clínicos de afectación nerviosa se clasifican como extensión clínica extraganglionar. Los ganglios de la línea media se consideran ganglios homolaterales.)","1"
+Field,DataType,DisplayText,Group,Colour
+Pathology,Dictionary,Pruebas de patológicas completadas,1,
+Nodes,Dictionary,Ganglios linfáticos regionales,1,
+Size,Number,Mayor dimensión del ganglio linfático (cm),1,
+Extranodal,Dictionary,Presencia de extensión extraganglionar (La presencia de afectación de la piel o invasión de tejidos blandos con fijación/anclaje profundo al músculo subyacente o a la estructura adyacente o los signos clínicos de afectación nerviosa se clasifican como extensión clínica extraganglionar. Los ganglios de la línea media se consideran ganglios homolaterales.),1,

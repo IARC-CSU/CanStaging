@@ -1,6 +1,6 @@
-"Key","DisplayText"
-"1","Los ganglios linfáticos regionales no se pueden evaluar"
-"2","Sin metástasis en ganglios linfáticos regionales"
-"3","Metástasis en un solo ganglio linfático en la pelvis verdadera (hipogástrico, obturador, ilíaco externo o presacro)"
-"4","Metástasis en múltiples ganglios linfáticos regionales en la pelvis verdadera (hipogástrico, obturador, ilíaco externo o presacro)"
-"5","Metástasis en uno o más ganglios linfáticos ilíacos comunes"
+Key,DisplayText
+1,Los ganglios linfáticos regionales no se pueden evaluar
+2,Sin metástasis en ganglios linfáticos regionales
+3,"Metástasis en un solo ganglio linfático en la pelvis verdadera (hipogástrico, obturador, ilíaco externo o presacro)"
+4,"Metástasis en múltiples ganglios linfáticos regionales en la pelvis verdadera (hipogástrico, obturador, ilíaco externo o presacro)"
+5,Metástasis en uno o más ganglios linfáticos ilíacos comunes

@@ -1,8 +1,8 @@
-"SG","M","Result"
-"I","M0","Localizado"
-"II","M0","Localizado"
-"III","M0","Regional"
-"IV","M0","Regional"
-"IV","M1a","A distancia"
-"IV","M1b","A distancia"
-"IV","M1c","A distancia"
+SG,M,Result
+I,M0,Localizado
+II,M0,Localizado
+III,M0,Regional
+IV,M0,Regional
+IV,M1a,A distancia
+IV,M1b,A distancia
+IV,M1c,A distancia

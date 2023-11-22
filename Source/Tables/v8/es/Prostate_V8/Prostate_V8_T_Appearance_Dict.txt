@@ -1,3 +1,3 @@
-"Key","DisplayText"
-"1","Tumor clÌnicamente inaparente (no palpable o visible por im·genes)"
-"2","Tumor clÌnicamente aparente"
+Key,DisplayText
+1,Tumor cl√≠nicamente inaparente (no palpable o visible por im√°genes)
+2,Tumor cl√≠nicamente aparente

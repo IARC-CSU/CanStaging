@@ -1,6 +1,6 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Axillary","Dictionary","Número de ganglios axilares positivos (al menos un depósito >2,0 mm)","1",
-"Infraclavicular","Dictionary","Metástasis en ganglios infraclaviculares/ganglios nivel III","2",
-"Mammary","Dictionary","Metástasis en ganglios mamarios internos","2",
-"Micrometastases","Dictionary","Solo micrometástasis: ninguna >2,0 mm (pero: >0,2 mm o más de 200 células)","3",
-"Supraclavicular","Boolean","Metástasis en ganglios supraclaviculares","4",
+Field,DataType,DisplayText,Group,Colour
+Axillary,Dictionary,"Número de ganglios axilares positivos (al menos un depósito >2,0 mm)",1,
+Infraclavicular,Dictionary,Metástasis en ganglios infraclaviculares/ganglios nivel III,2,
+Mammary,Dictionary,Metástasis en ganglios mamarios internos,2,
+Micrometastases,Dictionary,"Solo micrometástasis: ninguna >2,0 mm (pero: >0,2 mm o más de 200 células)",3,
+Supraclavicular,Boolean,Metástasis en ganglios supraclaviculares,4,

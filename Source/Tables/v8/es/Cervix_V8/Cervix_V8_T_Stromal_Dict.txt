@@ -1,4 +1,4 @@
-"Key","DisplayText"
-"1","<=3 mm de profundidad Y <=7 mm de extensión horizontal"
-"2",">3 mm pero <=5 mm de profundidad Y <=7 mm de extensión horizontal"
-"3",">5 mm de profundidad O >7 mm de extensión horizontal"
+Key,DisplayText
+1,<=3 mm de profundidad Y <=7 mm de extensión horizontal
+2,>3 mm pero <=5 mm de profundidad Y <=7 mm de extensión horizontal
+3,>5 mm de profundidad O >7 mm de extensión horizontal

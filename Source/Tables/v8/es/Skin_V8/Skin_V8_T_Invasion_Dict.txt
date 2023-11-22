@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Sin m醩 invasiones"
-"2","Erosi髇 髎ea menor o invasi髇 perineural o invasi髇 profunda"
-"3","Invasi髇 macrosc髉ica de hueso/m閐ula cortical"
-"4","Invasi髇 del esqueleto axial que incluye afectaci髇 del foramen y/o afectaci髇 del foramen vertebral al espacio epidural"
+Key,DisplayText
+1,Sin m谩s invasiones
+2,Erosi贸n 贸sea menor o invasi贸n perineural o invasi贸n profunda
+3,Invasi贸n macrosc贸pica de hueso/m茅dula cortical
+4,Invasi贸n del esqueleto axial que incluye afectaci贸n del foramen y/o afectaci贸n del foramen vertebral al espacio epidural

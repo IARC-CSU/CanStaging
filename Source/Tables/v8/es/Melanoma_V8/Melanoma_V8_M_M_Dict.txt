@@ -1,6 +1,6 @@
-"Key","DisplayText"
-"1","Sin met·stasis a distancia"
-"2","Met·stasis en la piel, el tejido subcut·neo o los ganglios linf·ticos m·s all· de los ganglios linf·ticos regionales"
-"3","Met·stasis pulmonares"
-"4","Met·stasis en otras localizaciones ajenas al sistema nervioso central"
-"5","Met·stasis en sistema nervioso central"
+Key,DisplayText
+1,Sin met√°stasis a distancia
+2,"Met√°stasis en la piel, el tejido subcut√°neo o los ganglios linf√°ticos m√°s all√° de los ganglios linf√°ticos regionales"
+3,Met√°stasis pulmonares
+4,Met√°stasis en otras localizaciones ajenas al sistema nervioso central
+5,Met√°stasis en sistema nervioso central

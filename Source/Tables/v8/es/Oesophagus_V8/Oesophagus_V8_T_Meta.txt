@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Invasion","Dictionary","Nivel de invasión","2",
+Field,DataType,DisplayText,Group,Colour
+Invasion,Dictionary,Nivel de invasiÃ³n,2,

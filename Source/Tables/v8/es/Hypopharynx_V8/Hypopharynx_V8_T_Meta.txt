@@ -1,7 +1,7 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Tumour","Dictionary","Tumor primario","1",
-"Subsite","Boolean","Tumor limitado a una sublocalización de hipofaringe","2"
-"Size","Number","Mayor dimensión del tumor (cm)","2"
-"Fixation","Dictionary","Presencia de fijación de hemilaringe o extensión a mucosa esofágica","2"
-"Invasion4a","Boolean","El tumor invade cualquiera de los siguientes: cartílago tiroides/cricoides, hueso hioides, glándula tiroides, esófago, tejido blando del compartimiento central (el tejido blando del compartimiento central incluye los músculos prelaríngeos y la grasa subcutánea)","3",
-"Invasion4b","Boolean","El tumor invade la fascia prevertebral, encierra la arteria carótida o invade las estructuras mediastínicas"
+Field,DataType,DisplayText,Group,Colour
+Tumour,Dictionary,Tumor primario,1.0,
+Subsite,Boolean,Tumor limitado a una sublocalización de hipofaringe,2.0,
+Size,Number,Mayor dimensión del tumor (cm),2.0,
+Fixation,Dictionary,Presencia de fijación de hemilaringe o extensión a mucosa esofágica,2.0,
+Invasion4a,Boolean,"El tumor invade cualquiera de los siguientes: cartílago tiroides/cricoides, hueso hioides, glándula tiroides, esófago, tejido blando del compartimiento central (el tejido blando del compartimiento central incluye los músculos prelaríngeos y la grasa subcutánea)",3.0,
+Invasion4b,Boolean,"El tumor invade la fascia prevertebral, encierra la arteria carótida o invade las estructuras mediastínicas",,

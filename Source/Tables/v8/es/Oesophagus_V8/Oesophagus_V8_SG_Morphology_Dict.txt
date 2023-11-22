@@ -1,3 +1,3 @@
-"Key","DisplayText"
-"a","Adenocarcinoma"
-"s","Carcinoma de células escamosas"
+Key,DisplayText
+a,Adenocarcinoma
+s,Carcinoma de cÃ©lulas escamosas

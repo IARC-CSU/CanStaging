@@ -1,7 +1,7 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Tumour","Dictionary","Tumor primario","1",
-"Dimension","Number","Mayor dimensión del tumor (cm)","1",
-"Depth","Number","Mayor profundidad de invasión (mm)","1",
-"Lip","Boolean","(Labio) El tumor invade a través del hueso cortical, el nervio alveolar inferior, el piso de la boca o la piel (del mentón o la nariz)","2",
-"Oralcavity","Boolean","(Cavidad oral) Tumor de más de 4 cm en su mayor dimensión y más de 10 mm de profundidad de invasión o el tumor invade a través del hueso cortical de la mandíbula o maxilar o compromete el seno maxilar, o invade la piel de la cara","2",
-"Both","Boolean","(Labio y cavidad bucal) El tumor invade el espacio masticador, las placas pterigoides o la base del cráneo, o encierra la arteria carótida interna","2",
+Field,DataType,DisplayText,Group,Colour
+Tumour,Dictionary,Tumor primario,1,
+Dimension,Number,Mayor dimensión del tumor (cm),1,
+Depth,Number,Mayor profundidad de invasión (mm),1,
+Lip,Boolean,"(Labio) El tumor invade a través del hueso cortical, el nervio alveolar inferior, el piso de la boca o la piel (del mentón o la nariz)",2,
+Oralcavity,Boolean,"(Cavidad oral) Tumor de más de 4 cm en su mayor dimensión y más de 10 mm de profundidad de invasión o el tumor invade a través del hueso cortical de la mandíbula o maxilar o compromete el seno maxilar, o invade la piel de la cara",2,
+Both,Boolean,"(Labio y cavidad bucal) El tumor invade el espacio masticador, las placas pterigoides o la base del cráneo, o encierra la arteria carótida interna",2,

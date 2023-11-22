@@ -1,7 +1,7 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Tumour","Dictionary","Tumor primario","1",
-"Subsite","Boolean","El tumor se limita a **un** sitio anatómico de la laringe (p. ej., supraglotis, glotis, subglotis)","1",
-"Vocalcord","Dictionary","Estado de las cuerdas vocales","2",
-"Invasion","Boolean","El tumor invade cualquiera de los siguientes: área poscricoidea, espacio preepiglótico, espacio paraglótico y/o corteza interna del cartílago tiroides","2",
-"Limit","Boolean","El tumor invade más allá de la laringe (p. ej., cricoides, cartílago tiroides, tráquea, tejidos blandos del cuello, incluido el músculo profundo/extrínseco de la lengua (geniogloso, hiogloso, pags. palatogloso y estilogloso), músculos de la correa, tiroides o esófago)","3",
-"Prevertebral","Boolean","El tumor invade el espacio prevertebral, compromete la arteria carótida o estructuras mediastínicas","3",
+Field,DataType,DisplayText,Group,Colour
+Tumour,Dictionary,Tumor primario,1,
+Subsite,Boolean,"El tumor se limita a **un** sitio anatómico de la laringe (p. ej., supraglotis, glotis, subglotis)",1,
+Vocalcord,Dictionary,Estado de las cuerdas vocales,2,
+Invasion,Boolean,"El tumor invade cualquiera de los siguientes: área poscricoidea, espacio preepiglótico, espacio paraglótico y/o corteza interna del cartílago tiroides",2,
+Limit,Boolean,"El tumor invade más allá de la laringe (p. ej., cricoides, cartílago tiroides, tráquea, tejidos blandos del cuello, incluido el músculo profundo/extrínseco de la lengua (geniogloso, hiogloso, pags. palatogloso y estilogloso), músculos de la correa, tiroides o esófago)",3,
+Prevertebral,Boolean,"El tumor invade el espacio prevertebral, compromete la arteria carótida o estructuras mediastínicas",3,

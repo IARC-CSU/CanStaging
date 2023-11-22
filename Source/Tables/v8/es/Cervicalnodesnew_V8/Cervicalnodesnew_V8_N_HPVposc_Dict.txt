@@ -1,4 +1,4 @@
-"Key","DisplayText"
-"1","Metástasis unilateral, en ganglio(s) linfático(s) cervical(es), todas de 6 cm o menos en su mayor dimensión"
-"2","Metástasis contralateral o bilateral en los ganglios linfáticos, todas de 6 cm o menos en su mayor dimensión"
-"3","Metástasis en ganglio(s) linfático(s) cervical(es) de más de 6 cm de dimensión"
+Key,DisplayText
+1,"Metástasis unilateral, en ganglio(s) linfático(s) cervical(es), todas de 6 cm o menos en su mayor dimensión"
+2,"Metástasis contralateral o bilateral en los ganglios linfáticos, todas de 6 cm o menos en su mayor dimensión"
+3,Metástasis en ganglio(s) linfático(s) cervical(es) de más de 6 cm de dimensión

@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Papilar y Folicular menores de 55 aÒos"
-"2","Papilar o folicular de 55 aÒos en adelante"
-"3","Medular"
-"4","Anapl·sico"
+Key,DisplayText
+1,Papilar y Folicular menores de 55 a√±os
+2,Papilar o folicular de 55 a√±os en adelante
+3,Medular
+4,Anapl√°sico

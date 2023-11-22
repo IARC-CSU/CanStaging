@@ -1,7 +1,7 @@
-"Key","DisplayText"
-"1","Hallazgo histol骻ico incidental tumoral en = 5% tejido resecado"
-"2","Hallazgo histol骻ico incidental tumoral >5% tejido resecado"
-"3","Tumor identificado por biopsia por punci髇"
-"4","El tumor involucra la mitad de un l骲ulo o menos (detectado cl韓icamente)"
-"5","El tumor involucra m醩 de la mitad de un l骲ulo (detectado cl韓icamente)"
-"6","El tumor afecta a ambos l骲ulos (detectado cl韓icamente)"
+Key,DisplayText
+1,Hallazgo histol贸gico incidental tumoral en = 5% tejido resecado
+2,Hallazgo histol贸gico incidental tumoral >5% tejido resecado
+3,Tumor identificado por biopsia por punci贸n
+4,El tumor involucra la mitad de un l贸bulo o menos (detectado cl铆nicamente)
+5,El tumor involucra m谩s de la mitad de un l贸bulo (detectado cl铆nicamente)
+6,El tumor afecta a ambos l贸bulos (detectado cl铆nicamente)

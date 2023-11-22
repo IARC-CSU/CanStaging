@@ -1,3 +1,3 @@
-"M","Result"
-"M0","Localizado",
-"M1","A distancia",
+M,Result
+Localizado,
+A distancia,

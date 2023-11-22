@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Nodes","Dictionary","Ganglios linfáticos regionales","1",
+Field,DataType,DisplayText,Group,Colour
+Nodes,Dictionary,Ganglios linfáticos regionales,1,

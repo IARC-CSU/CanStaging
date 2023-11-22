@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Sin metástasis a distancia"
-"2","Metástasis confinadas a un órgano o sitio (por ejemplo, hígado, pulmón, ovario, ganglio(s) no regional(es)) sin metástasis peritoneales"
-"3","Metástasis en más de un órgano"
-"4","Metástasis en el peritoneo con o sin afectación de otros órganos"
+Key,DisplayText
+1,Sin metástasis a distancia
+2,"Metástasis confinadas a un órgano o sitio (por ejemplo, hígado, pulmón, ovario, ganglio(s) no regional(es)) sin metástasis peritoneales"
+3,Metástasis en más de un órgano
+4,Metástasis en el peritoneo con o sin afectación de otros órganos

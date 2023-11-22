@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Sin metástasis en ganglios linfáticos regionales"
-"2","Metástasis a ganglios peribronquiales ipsilaterales Y/O hiliares ipsilaterales Y ganglios intrapulmonares"
-"3","Metástasis al mediastino ipsilateral Y/O ganglios subcarinales"
-"4","Metástasis en ganglios mediastínicos contralaterales, hiliares contralaterales, escalenos ipsilaterales o contralaterales o supraclaviculares"
+Key,DisplayText
+1,Sin metÃ¡stasis en ganglios linfÃ¡ticos regionales
+2,MetÃ¡stasis a ganglios peribronquiales ipsilaterales Y/O hiliares ipsilaterales Y ganglios intrapulmonares
+3,MetÃ¡stasis al mediastino ipsilateral Y/O ganglios subcarinales
+4,"MetÃ¡stasis en ganglios mediastÃ­nicos contralaterales, hiliares contralaterales, escalenos ipsilaterales o contralaterales o supraclaviculares"

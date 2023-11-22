@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Nregion","Dictionary","Ganglios linf·ticos regionales","1",
+Field,DataType,DisplayText,Group,Colour
+Nregion,Dictionary,Ganglios linf√°ticos regionales,1,

@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","Número de ganglios positivos","1",
+Field,DataType,DisplayText,Group,Colour
+PositiveN,Number,Número de ganglios positivos,1,

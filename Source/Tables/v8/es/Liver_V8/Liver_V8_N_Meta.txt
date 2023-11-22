@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","Número de ganglios linfáticos regionales positivos","2",
+Field,DataType,DisplayText,Group,Colour
+PositiveN,Number,Número de ganglios linfáticos regionales positivos,2,

@@ -1,7 +1,7 @@
-"Key","DisplayText"
-"1","El tumor primario no se puede evalaur"
-"2","Sin evidencia de tumor primario"
-"3","Tumor limitado a tiroides"
-"4","ExtensiÛn extratiroidea macroscÛpica que invade solo los m˙sculos de la correa (m˙sculos esternohioideo, esternotiroideo u omohioideo)"
-"5","El tumor se extiende m·s all· de la c·psula tiroidea e invade cualquiera de los siguientes: tejidos blandos subcut·neos, laringe, tr·quea, esÛfago, nervio larÌngeo recurrente"
-"6","El tumor invade la fascia prevertebral, los vasos mediastÌnicos o encierra la arteria carÛtida"
+Key,DisplayText
+1,El tumor primario no se puede evalaur
+2,Sin evidencia de tumor primario
+3,Tumor limitado a tiroides
+4,"Extensi√≥n extratiroidea macrosc√≥pica que invade solo los m√∫sculos de la correa (m√∫sculos esternohioideo, esternotiroideo u omohioideo)"
+5,"El tumor se extiende m√°s all√° de la c√°psula tiroidea e invade cualquiera de los siguientes: tejidos blandos subcut√°neos, laringe, tr√°quea, es√≥fago, nervio lar√≠ngeo recurrente"
+6,"El tumor invade la fascia prevertebral, los vasos mediast√≠nicos o encierra la arteria car√≥tida"

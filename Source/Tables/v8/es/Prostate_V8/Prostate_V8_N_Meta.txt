@@ -1,2 +1,2 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","Número de ganglios positivos regionales","2",
+Field,DataType,DisplayText,Group,Colour
+PositiveN,Number,NÃºmero de ganglios positivos regionales,2,

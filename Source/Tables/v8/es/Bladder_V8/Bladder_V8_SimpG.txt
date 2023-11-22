@@ -1,4 +1,4 @@
-"M","Result"
-"M0","Localizado"
-"M1a","Distancia"
-"M1b","Distancia"
+M,Result
+M0,Localizado
+M1a,Distancia
+M1b,Distancia

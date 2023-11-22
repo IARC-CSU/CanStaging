@@ -1,4 +1,4 @@
-"Key","DisplayText"
-"1","Metástasis unilateral en los ganglios linfáticos cervicales y/o metástasis unilateral o bilateral en los ganglios linfáticos retrofaríngeos, de 6 cm o menos en su mayor dimensión, por encima del borde caudal del cartílago cricoides"
-"2","Metástasis bilateral en ganglio(s) linfático(s) cervical(es), de 6 cm o menos en su mayor dimensión, por encima del borde caudal del cartílago cricoides"
-"3","Metástasis en ganglio(s) linfático(s) cervical(es) de más de 6 cm de dimensión y/o extensión por debajo del borde caudal del cartílago cricoides"
+Key,DisplayText
+1,"Metástasis unilateral en los ganglios linfáticos cervicales y/o metástasis unilateral o bilateral en los ganglios linfáticos retrofaríngeos, de 6 cm o menos en su mayor dimensión, por encima del borde caudal del cartílago cricoides"
+2,"Metástasis bilateral en ganglio(s) linfático(s) cervical(es), de 6 cm o menos en su mayor dimensión, por encima del borde caudal del cartílago cricoides"
+3,Metástasis en ganglio(s) linfático(s) cervical(es) de más de 6 cm de dimensión y/o extensión por debajo del borde caudal del cartílago cricoides

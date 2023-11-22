@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Los ganglios linfáticos regionales no se pueden evaluar"
-"2","Sin metástasis en ganglios linfáticos regionales"
-"3","Metástasis en 1 a 4 ganglio(s) linfático(s)"
-"4","Metástasis en 5 o más ganglios linfáticos"
+Key,DisplayText
+1,Los ganglios linfÃ¡ticos regionales no se pueden evaluar
+2,Sin metÃ¡stasis en ganglios linfÃ¡ticos regionales
+3,MetÃ¡stasis en 1 a 4 ganglio(s) linfÃ¡tico(s)
+4,MetÃ¡stasis en 5 o mÃ¡s ganglios linfÃ¡ticos

@@ -1,5 +1,5 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Size","Number","Mayor dimensi髇 del tumor (cm)","1",
-"Extension","Boolean","Extensi髇 a la superficie lingual de la epiglotis","2",
-"Invasion","Boolean","El tumor invade cualquiera de los siguientes: laringe, m鷖culo profundo/extr韓seco de la lengua (geniogloso, hiogloso, palatogloso y estilogloso), pterigoideo medial, paladar duro o mand韇ula","3",
-"Invasionn","Boolean","El tumor invade cualquiera de los siguientes: m鷖culo pterigoideo lateral, ap骹isis pterigoides, nasofaringe lateral, base del cr醤eo; o encierra la arteria car髏ida","3",
+Field,DataType,DisplayText,Group,Colour
+Size,Number,Mayor dimensi贸n del tumor (cm),1,
+Extension,Boolean,Extensi贸n a la superficie lingual de la epiglotis,2,
+Invasion,Boolean,"El tumor invade cualquiera de los siguientes: laringe, m煤sculo profundo/extr铆nseco de la lengua (geniogloso, hiogloso, palatogloso y estilogloso), pterigoideo medial, paladar duro o mand铆bula",3,
+Invasionn,Boolean,"El tumor invade cualquiera de los siguientes: m煤sculo pterigoideo lateral, ap贸fisis pterigoides, nasofaringe lateral, base del cr谩neo; o encierra la arteria car贸tida",3,

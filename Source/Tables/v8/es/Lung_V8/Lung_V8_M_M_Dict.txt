@@ -1,5 +1,5 @@
-"Key","DisplayText"
-"1","Sin met醩tasis a distancia"
-"2","N骴ulo(s) tumoral(es) separado(s) en un l骲ulo contralateral con n骴ulos pleurales o derrame pleural (o peric醨dico) maligno"
-"3","Met醩tasis extrator醕ica 鷑ica en un solo 髍gano"
-"4","M鷏tiples met醩tasis extrator醕icas en uno o m鷏tiples 髍ganos"
+Key,DisplayText
+1,Sin met谩stasis a distancia
+2,N贸dulo(s) tumoral(es) separado(s) en un l贸bulo contralateral con n贸dulos pleurales o derrame pleural (o peric谩rdico) maligno
+3,Met谩stasis extrator谩cica 煤nica en un solo 贸rgano
+4,M煤ltiples met谩stasis extrator谩cicas en uno o m煤ltiples 贸rganos

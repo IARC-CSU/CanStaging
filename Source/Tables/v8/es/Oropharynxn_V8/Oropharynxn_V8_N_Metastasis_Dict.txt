@@ -1,6 +1,6 @@
-"Key","DisplayText"
-"1","Los ganglios linf·ticos regionales no se pueden evaluar"
-"2","Sin met·stasis en ganglios linf·ticos regionales"
-"3","Met·stasis en un solo ganglio linf·tico ipsilateral"
-"4","Met·stasis en m˙ltiples ganglios linf·ticos ipsilaterales"
-"5","Met·stasis en ganglios linf·ticos bilaterales o contralaterales"
+Key,DisplayText
+1,Los ganglios linf√°ticos regionales no se pueden evaluar
+2,Sin met√°stasis en ganglios linf√°ticos regionales
+3,Met√°stasis en un solo ganglio linf√°tico ipsilateral
+4,Met√°stasis en m√∫ltiples ganglios linf√°ticos ipsilaterales
+5,Met√°stasis en ganglios linf√°ticos bilaterales o contralaterales

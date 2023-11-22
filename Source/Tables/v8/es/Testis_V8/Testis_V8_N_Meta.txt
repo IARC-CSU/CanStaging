@@ -1,6 +1,6 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Pathology","Dictionary","Pathology tests completed"
-"Metastasis","Dictionary","Ganglios linf·ticos regionales","1",
-"Size","Number","Mayor dimensiÛn del ganglio linf·tico","2",
-"Number","Number","N˙mero de ganglios linf·ticos positivos","2",
-"Extranodal","Boolean","Evidencia de extensiÛn extraganglionar del tumor","2",
+Field,DataType,DisplayText,Group,Colour
+Pathology,Dictionary,Pathology tests completed,,
+Metastasis,Dictionary,Ganglios linf√°ticos regionales,1.0,
+Size,Number,Mayor dimensi√≥n del ganglio linf√°tico,2.0,
+Number,Number,N√∫mero de ganglios linf√°ticos positivos,2.0,
+Extranodal,Boolean,Evidencia de extensi√≥n extraganglionar del tumor,2.0,
