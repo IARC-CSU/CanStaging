@@ -1,5 +1,5 @@
 Key,DisplayText
 1,Los ganglios linfáticos regionales no se pueden evaluar
-2,Sin metástasis en ganglios linfáticos regionales
-3,"Metástasis en el nivel VI (ganglios linfáticos pretraqueales, paratraqueales y prelaríngeos/delfianos) o mediastino superior"
+2,Sin metástasis en los ganglios linfáticos regionales
+3,"Metástasis en el Nivel VI (ganglios linfáticos pretraqueales, paratraqueales y prelaríngeos/delfianos) o mediastino superior"
 4,"Metástasis en otras cervicales unilaterales, bilaterales o contralaterales (Niveles I, II, III, IV o V) o retrofaríngeas"

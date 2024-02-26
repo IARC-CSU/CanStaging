@@ -3,4 +3,4 @@ Key,DisplayText
 2,(S0) Niveles de estudio de marcadores séricos dentro de los límites normales
 3,(S1) Niveles de LDH de <1.5×N y niveles de hCG de <5000 (mUI/ml) y niveles de AFP de <1000 (ng/ml)
 4,"(S2) Niveles de LDH de 1,5–10×N, o niveles de hCG de 5000–50 000 (mUI/ml), o niveles de AFP de 1000–10 000 (ng/ml)"
-5,"(S3) Niveles de LDH >10×N, o niveles de hCG >50 000 (mIU/ml), o niveles de AFP >10 000 (ng/ml)"
+5,"(S3) Niveles de LDH >10×N, o niveles de hCG >50 000 (mUI/ml), o niveles de AFP >10 000 (ng/ml)"

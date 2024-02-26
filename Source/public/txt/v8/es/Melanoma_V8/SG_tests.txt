@@ -1,11 +1,11 @@
-## para el uso de la estadificaciÛn clÌnica o patolÛgica del melanoma maligno
+## Gu√≠a para el uso de la estadificaci√≥n cl√≠nica o patol√≥gica del melanoma maligno
 
-| Tumor (T) | Ganglios (N) | Met·stasis (M) | QuÈ seleccionar |
+| Tumor (T) | Ganglios (N) | Met√°stasis (M) | Qu√© seleccionar |
 |------------|-----------|----------------|----------------|
-| pT         | pN        | pM             | PatolÛgico   |
-| pT         | pN        | cM             | Pathological   |
-| pT         | cN        | pM             | PatolÛgico   |
-| pT         | cN        | cM             | Clinical       |
-| cT         | pN        | cM             | ClÌnico       |
+| pT         | pN        | pM             | Patol√≥gico   |
+| pT         | pN        | cM             | Patol√≥gico   |
+| pT         | cN        | pM             | Patol√≥gico   |
+| pT         | cN        | cM             | Cl√≠nico       |
+| cT         | pN        | cM             | Cl√≠nico       |
 
-**Tenga en cuenta que, en el caso de que se extirpe toda la lesiÛn cut·nea del melanoma maligno, solo puede utilizar la agrupaciÛn por estadio patolÛgico si los ganglios regionales tambiÈn se extirpan. (A menos que el tumor se extirpe, se acceda clÌnicamente a los ganglios y se extirpe la lesiÛn metast·sica-pM)
+**Tenga en cuenta que, en el caso de que se extirpe toda la lesi√≥n cut√°nea del melanoma maligno, solo puede utilizar la agrupaci√≥n por estadio patol√≥gico si los ganglios regionales tambi√©n se extirpan. (A menos que el tumor se extirpe, se acceda cl√≠nicamente a los ganglios y se extirpe la lesi√≥n metast√°sica-pM)

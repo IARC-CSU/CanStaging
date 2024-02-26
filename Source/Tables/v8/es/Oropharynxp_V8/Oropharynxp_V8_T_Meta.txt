@@ -1,4 +1,4 @@
 Field,DataType,DisplayText,Group,Colour
 Size,Number,Mayor dimensión del tumor (cm),1,
 Extension,Boolean,Extensión a la superficie lingual de la epiglotis,2,
-Invasion,Boolean,"El tumor invade cualquiera de los siguientes: laringe, músculo profundo/extrínseco de la lengua (geniogloso, hiogloso, palatogloso y estilogloso), pterigoideo medial, paladar duro, mandíbula, músculo pterigoideo lateral, placas pterigoides, nasofaringe lateral, base del cráneo; o encierra la arteria carótida",3,
+Invasion,Boolean,"El tumor invade cualquiera de los siguientes: laringe, músculo profundo/extrínseco de la lengua (geniogloso, hiogloso, palatogloso y estilogloso), pterigoideo medial, paladar duro, mandíbula, músculo pterigoideo lateral, apófisis pterigoides, nasofaringe lateral, base del cráneo; o encierra la arteria carótida",3,

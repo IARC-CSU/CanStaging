@@ -1,9 +1,9 @@
 Key,DisplayText
 8,Carcinoma limitado estrictamente al cuello uterino (debe descartarse la extensión al cuerpo uterino)
 1,"Carcinoma invasivo diagnosticado solo por microscopía. Invasión del estroma con una profundidad máxima de 5,0 mm (profundidad exacta desconocida)"
-2,Invasión estromal ≤ 3 mm de profundidad
-3,Invasión estromal >3 mm y ≤5 mm de profundidad
+2,Invasión estromal de ≤ 3 mm de profundidad
+3,Invasión estromal de >3 mm y ≤5 mm de profundidad
 4,Lesión confinada al cuello uterino con una profundidad de invasión superior a 5 mm (se desconoce la profundidad exacta)
-5,Carcinoma invasivo > 5 mm de profundidad de invasión estromal y ≤ 2 cm en su mayor dimensión
-6,Carcinoma invasivo > 2 cm y ≤ 4 cm en su mayor dimensión
-7,Carcinoma invasivo > 4 cm en su mayor dimensión
+5,Carcinoma invasivo de > 5 mm de profundidad de invasión estromal y ≤ 2 cm en su mayor dimensión
+6,Carcinoma invasivo de > 2 cm y ≤ 4 cm en su mayor dimensión
+7,Carcinoma invasivo de > 4 cm en su mayor dimensión

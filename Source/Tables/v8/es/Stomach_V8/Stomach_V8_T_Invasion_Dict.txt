@@ -6,4 +6,4 @@ Key,DisplayText
 5,El tumor invade la subserosa
 6,El tumor perfora la serosa
 7,El tumor invade estructuras adyacentes
-8,No se puede evaluar la invasión
+8,La invasión no se puede evaluar

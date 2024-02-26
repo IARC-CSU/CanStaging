@@ -1,10 +1,10 @@
 Field,DataType,DisplayText,Group,Colour
 Appearance,Dictionary,Apariencia,2,
 Extension,Dictionary,Extensión,3,
-Capsule,Boolean,El tumor se extiende a través de la cápsula prostática,4,
-Neck,Boolean,El tumor invade cuello vesical (microscópicamente),4,
+Capsule,Boolean,El tumor atraviesa la cápsula prostática,4,
+Neck,Boolean,El tumor invade el cuello vesical (microscópicamente),4,
 Vescicles,Boolean,El tumor invade las vesículas seminales,4,
 Bladder,Boolean,El tumor invade la vejiga,5,
 Sphincter,Boolean,El tumor invade el esfínter externo,5,
 Rectum,Boolean,El tumor invade el recto o los músculos elevadores,5,
-Wall,Boolean,El tumor invade la pared pélvica,5,
+Wall,Boolean,El tumor invade la pared de la pelvis,5,

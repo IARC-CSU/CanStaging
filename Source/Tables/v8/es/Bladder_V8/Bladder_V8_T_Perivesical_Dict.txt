@@ -2,4 +2,4 @@ Key,DisplayText
 1,El tumor no invade el tejido perivesical
 2,El tumor invade microscópicamente el tejido perivesical
 3,El tumor invade macroscópicamente el tejido perivesical (masa extravesical)
-4,Desconoce la extensión de la invasión perivesical
+4,La extensión de la invasión perivesical es desconocida

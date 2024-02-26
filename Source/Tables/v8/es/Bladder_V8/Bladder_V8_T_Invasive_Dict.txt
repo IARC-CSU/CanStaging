@@ -1,6 +1,6 @@
 Key,DisplayText
 1,El tumor primario no se puede evaluar
-2,Sin evidencia de tumor primario
+2,No hay evidencia de tumor primario
 3,Carcinoma papilar no invasivo
 4,Carcinoma in situ: 'tumor plano'
 5,Tumor maligno

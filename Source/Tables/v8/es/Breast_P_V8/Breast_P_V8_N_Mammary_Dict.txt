@@ -1,5 +1,5 @@
 Key,DisplayText
 1,Sin metástasis en ganglios linfáticos mamarios internos
 2,Metástasis en ganglios linfáticos mamarios internos no detectados clínicamente
-3,Metástasis en ganglios mamarios internos detectados clínicamente
-4,Metástasis en ganglios mamarios internos con metástasis detectada por biopsia de ganglio centinela pero no detectada clínicamente
+3,Metástasis en ganglios linfáticos mamarios internos detectados clínicamente
+4,Metástasis en ganglios linfáticos mamarios internos con metástasis detectadas por biopsia de ganglio centinela, pero no detectadas clínicamente

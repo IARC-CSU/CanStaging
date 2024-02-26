@@ -1,4 +1,4 @@
 Key,DisplayText
 1,Sin metástasis en ganglios linfáticos regionales
 2,Solo metástasis microscópicas (clínicamente ocultas)
-3,Metástasis macroscópica (clínicamente aparente)
+3,Metástasis macroscópica (clínicamente evidente)

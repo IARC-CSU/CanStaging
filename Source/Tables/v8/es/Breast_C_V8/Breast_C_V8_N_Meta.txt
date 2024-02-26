@@ -1,6 +1,6 @@
 Field,DataType,DisplayText,Group,Colour
-Ipsilateral,Boolean,Metástasis en niveles axilares ipsilaterales I o II,3,
-Matted,Boolean,Metástasis en ganglios linfáticos axilares fijados o apelmazados entre sí o con otras estructuras,4,
-InternalMammary,Boolean,Metástasis en ganglios mamarios internos detectadas clínicamente,4,
+Ipsilateral,Boolean,Metástasis en ganglios axilares ipsilaterales de nivel I o II,3,
+Matted,Boolean,Metástasis en ganglio(s) linfáticos axilar(es) fijos o enmarañados entre sí o a otras estructuras,4,
+InternalMammary,Boolean,Metástasis en ganglios linfáticos mamarios internos detectados clínicamente,4,
 Infraclavicular,Boolean,Metástasis en ganglios linfáticos infraclaviculares,4,
 Supraclavicular,Boolean,Metástasis en ganglios linfáticos supraclaviculares,4,
