@@ -1,4 +1,4 @@
 "Key","DisplayText"
-"1","領域リンパ節 cannot be assessed"
-"2","No regional lymph node metastasis"
-"3","Metastasis in lymph node(s)"
+"1","領域リンパ節の評価が不可能"
+"2","領域リンパ節転移なし"
+"3","リンパ節転移"

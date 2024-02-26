@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","遠隔転移なし"
-"2","Pleural effusion with positive cytology"
-"3","Parenchymal metastasis and metastasis to extra-abdominal organs"
+"2","細胞診陽性の胸水"
+"3","実質転移および腹部外臓器への転移"

@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Invasion","Dictionary","腫瘍の進展","1",""
+"Size","Number","腫瘍の最大径（cm）","1",""

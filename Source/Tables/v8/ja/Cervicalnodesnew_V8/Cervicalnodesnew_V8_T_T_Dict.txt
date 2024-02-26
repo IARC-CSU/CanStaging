@@ -1,2 +1,2 @@
 "Key","DisplayText"
-"1","Cancer of unknown primary tumour"
+"1","原発不明のがん"

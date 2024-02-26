@@ -1,5 +1,5 @@
 "Key","DisplayText"
 "1","領域リンパ節の評価が不可能"
 "2","領域リンパ節転移なし"
-"3","遠隔転移なしetastasis in Level VI (pretracheal, paratracheal, and prelaryngeal/Delphian lymph nodes) or upper/superior mediastinum"
-"4","遠隔転移なしetastasis in other unilateral, bilateral or contralateral cervical (Levels I, II, III, IV, or V) or retropharyngeal"
+"3","レベルⅥ（気管前および気管傍リンパ節，喉頭前／Delphianリンパ節）または上縦隔リンパ節への転移"
+"4","その他の同側頸部リンパ節，両側または対側の頸部リンパ節（レベルⅠ，Ⅱ，Ⅲ，Ⅳ，Ⅴ）または咽頭後リンパ節への転移"

@@ -11,4 +11,4 @@
 "IVA","遠隔転移"
 "IVB","遠隔転移"
 "IVC","遠隔転移"
-"Not Known","Not Known"
+"Not Known","不明"

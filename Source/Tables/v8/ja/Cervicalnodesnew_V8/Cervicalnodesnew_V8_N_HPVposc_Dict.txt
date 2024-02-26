@@ -1,4 +1,4 @@
 "Key","DisplayText"
-"1","Unilateral metastasis, in cervical lymph node(s), all 6 cm or less in greatest dimension"
-"2","Contralateral or bilateral metastasis in cervical lymph node(s), all 6cm or less in greatest dimension"
-"3","遠隔転移なしetastasis in cervical lymph node(s) greater than 6 cm in dimension"
+"1","ー側の頸部リンパ節転移で最大径がすべて6cm以下"
+"2","対側または両側の頸部リンパ節転移で最大径がすべて6cm以下"
+"3","最大径が6cmをこえる頸部リンパ節転移"

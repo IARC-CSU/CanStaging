@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"NRegional","boolean","領域リンパ節","3",""

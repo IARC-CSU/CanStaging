@@ -1,3 +1,3 @@
 "Key","DisplayText"
-"1","いいえ spread to distant organs"
+"1","遠隔転移なし"
 "2","遠隔転移あり"

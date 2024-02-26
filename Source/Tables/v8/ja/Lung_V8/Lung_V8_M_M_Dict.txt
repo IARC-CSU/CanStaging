@@ -1,5 +1,5 @@
 "Key","DisplayText"
 "1","遠隔転移なし"
-"2","Separate tumour nodule(s) in a contralateral lobe tumour with pleural nodes or malignant pleural (or pericardial) effusion"
-"3","Single extrathoracic metastasis in a single organ"
-"4","遠隔転移なしultiple extrathoracic metastasis in a single or multiple organs"
+"2","対側肺葉の副腫瘍結節；胸膜または心膜の結節，悪性胸水，悪性心嚢水を伴う腫瘍"
+"3","１臓器への単発胸郭外転移"
+"4","１臓器または多臓器への多発胸郭外転移"

@@ -1,4 +1,4 @@
 "M","Result"
 "M0","限局"
 "M1","遠隔転移"
-"Not Known","Not Known"
+"Not Known","不明"

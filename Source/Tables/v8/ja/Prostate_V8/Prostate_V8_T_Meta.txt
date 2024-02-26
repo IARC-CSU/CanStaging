@@ -1,7 +1,7 @@
 "Field","DataType","DisplayText","Group","Colour"
 "Appearance","Dictionary","外観","2",""
 "Extension","Dictionary","進展","3",""
-"Capsule","Boolean","前立腺被膜をこえて進展する腫瘍","4",""
+"Capsule","Boolean","前立腺被膜をこえる進展","4",""
 "Neck","Boolean","（顕微鏡的な）膀胱頚部への浸潤","4",""
 "Vescicles","Boolean","精嚢への浸潤","4",""
 "Bladder","Boolean","膀胱への浸潤","5",""

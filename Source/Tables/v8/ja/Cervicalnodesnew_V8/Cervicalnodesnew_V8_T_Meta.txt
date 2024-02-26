@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"T","Dictionary","原発腫瘍 not seen","1",""
+"T","Dictionary","原発腫瘍を認めない","1",""

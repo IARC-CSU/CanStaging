@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","遠隔転移なし"
-"2","いいえn‐regional lymph node(s) or lung metastasis"
-"3","遠隔転移あり other than non‐regional lymph nodes and lung"
+"2","領域リンパ節以外のリンパ節転移，または肺転移"
+"3","領域リンパ節以外のリンパ節転移と肺転移を除く遠隔転移"
