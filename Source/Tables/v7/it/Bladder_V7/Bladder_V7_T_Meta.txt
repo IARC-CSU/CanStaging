@@ -4,6 +4,6 @@
 "MuscleInvasion","Boolean","Tumore che invade la parete muscolare","2"
 "Muscle","Dictionary","Invasione muscolare","2"
 "PerivesicalTissue","Boolean","Tumore che invade i tessuti perivescicali","3"
-"Perivesical","Dictionary","Invasivit‡ perivescicale","3"
+"Perivesical","Dictionary","Invasivit√† perivescicale","3"
 "Prostate","Boolean","Tumore  che  invade prostata, vescicole seminali, utero o vagina","4"
 "Pelvic","Boolean","Tumore che invade la parete pelvica o addominale","4"
