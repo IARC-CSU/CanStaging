@@ -64,7 +64,11 @@ class LookUp
   def add_defaults(defaults)
     # Of the form {"Nodes"=>"F", "Bone"=>"F", "Other"=>"F", "Result"=>"M0", "Message"=>nil}
     # merge defaults into @defaults
-    @defaults = @defaults.merge(defaults)
+    if !@defaults.nil?
+      @defaults = @defaults.merge(defaults)
+    else
+      @defaults = defaults
+    end
     puts "#{@part} - Defaults after merge: #{@defaults}" if $DEBUG
   end
 

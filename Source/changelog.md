@@ -1,5 +1,14 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.15 (2024-04-29)
+
+- Search engine optimization. (Hüseyin)
+- Better handling of defaults.
+- Updated libraries.
+- Activated translations.
+    - Spanish.
+- Bugfixes
+
 ### 0.9.14 (2023-01-30)
 
 - Added TNM Exclusion Criteria.
