@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour","Tooltip"
+"PositiveN","Number","Liczba zajętych węzłów chłonnych","1",,
+"TumourDeposit","Boolean","Depozyt nowotworowy, tj. guzek satelitarny w warstwie podsurowiczej lub w niepokrytych otrzewną tkankach miękkich okołookrężniczych lub okołoodbytniczych","1",,"Ma zastosowanie tylko wtedy, gdy liczba zajętych węzłów regionalnych = 0"

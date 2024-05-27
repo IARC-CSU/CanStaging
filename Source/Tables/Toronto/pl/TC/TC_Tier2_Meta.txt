@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Przerzuty odległe wykryte na etapie rozpoznania choroby","",
+"RegionalNodes","Boolean","Zajęcie regionalnych węzłów chłonnych","",
+"SizeRegionalNodes","Dictionary","Wielkość przerzutu do regionalnych węzłów chłonnych (największy wymiar)","",
+"SpermCordScrotum","Boolean","Guz nacieka powrózek nasienny lub mosznę","",
+"TunicaVaginalis","Boolean","Guz nacieka osłonkę białawą z zajęciem osłonki pochwowej","",
+"VascularLymphInvasion","Boolean","Guz jest ograniczony do jądra i najądrza, nacieka naczynia chłonne/krwionośne","",
+"LDH","Dictionary","LDH - Dehydrogenaza mleczanowa (ukat/l)","",
+"HCG","Dictionary","HCG - Ludzka gonadotropina kosmówkowa (mIU/ml)","",
+"AFP","Dictionary","AFP - Alfa-fetaproteina (ng/ml)","",

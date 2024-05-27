@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Bez unieruchomienia połowy krtani"
+"2","Guz powoduje unieruchomienie połowy krtani"
+"3","Guz szerzy się do przełyku "

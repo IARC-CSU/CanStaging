@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Protocol","Dictionary","Treatment protocol","",
+"DistantMetastasis","Boolean","Przerzuty odległe wykryte na etapie rozpoznania choroby","",
+"AbdominalMetastasis","Boolean","Przerzuty ograniczone do jamy brzusznej, nie krwiopochodne","",
+"NeedleBiopsy","Boolean","Biopsja igłowa wykonana przed resekcją guza","",
+"SurgicalBiopsy","Boolean","Biopsja chirurgiczna (nie dotyczy biopsji igłowej) wykonana przed resekcją guza","",
+"CompleteResection","Boolean","Guz wycięty całkowicie","",
+"ConfinedKidney","Boolean","Guz ograniczony do nerki","",

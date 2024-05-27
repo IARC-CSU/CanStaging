@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ClinicalSignsCNS","Boolean","Objawy kliniczne zajęcia OUN","",
+"BlastsCSF","Boolean","Blasty w płynie mózgowo-rdzeniowym","",
+"WBCCSF","Dictionary","Liczba białych krwinek w płynie mózgowo-rdzeniowym (PMR)","",
+"RBCCSF","Dictionary","Liczba czerwonych krwinek w płynie mózgowo-rdzeniowym (PMR)","",
+"SteinherzBleyerAlg","Dictionary","Jeśli liczba białych krwinek w płynie mózgowo-rdzeniowym wynosi ≥ 5/µl, a liczba czerwonych krwinek w płynie mózgowo-rdzeniowym wynosi ≥ 10/µl, należy wprowadzić wartość obliczenia Steinherza-Bleyera","",

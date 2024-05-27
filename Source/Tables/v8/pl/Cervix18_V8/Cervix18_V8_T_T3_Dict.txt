@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"3","Rak zajmuje dolną jedną trzecią pochwy i/lub nacieka ścianę miednicy i/lub powoduje wodonercze lub brak czynności nerki i/lub zajmuje węzły chłonne miednicy i/lub okołoaortalne"
+"1","Rak zajmuje dolną jedną trzecią pochwy i nie nacieka ściany miednicy"
+"2","Naciekanie ściany miednicy i/lub wodonercze lub brak czynności nerki (bez innej, zdiagnozowanej przyczyny)"

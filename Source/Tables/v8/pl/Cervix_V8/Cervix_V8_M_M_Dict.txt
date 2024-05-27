@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Brak przerzutów odległych"
+"2","Przerzuty odległe"
+

@@ -1,0 +1,8 @@
+"PositiveN","TumourDeposit","Result","Message"
+"F","F","N0",
+"1","F","N0",
+"1","T","N1c",
+"2","ANY","N1a",
+"3","ANY","N1b",
+"4","ANY","N2a",
+"5","ANY","N2b",

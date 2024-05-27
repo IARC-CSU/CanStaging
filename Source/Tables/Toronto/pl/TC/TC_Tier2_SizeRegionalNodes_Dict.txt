@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Największy wymiar przerzutu >5cm"
+"2","Największy wymiar przerzutu >2cm i ≤5cm"
+"3","Największy wymiar przerzutu ≤2cm"
+"4","Brak"
+"5","Brak danych"

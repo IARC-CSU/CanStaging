@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Guz pierwotny nie może być oceniony"
+"2","Brak cech guza pierwotnego"
+"3","Rak in situ"
+"4","Guz ograniczony do nosowej części gardła lub szerzący się do ustnej części gardła i/lub jamy nosowej, bez naciekania przestrzeni przygardłowej"
+"5","Guz szerzy się do przestrzeni przygardłowej i/lub nacieka mięsień skrzydłowy przyśrodkowy, mięsień skrzydłowy boczny i/lub mięśnie przedkręgowe"
+"6","Guz nacieka struktury kostne podstawy czaszki, kręgi szyjne, struktury skrzydłowe i/lub zatoki przynosowe"
+"7","Guz szerzy się do wnętrza czaszki i/lub nacieka nerwy czaszkowe, krtaniową część gardła, oczodół, śliniankę przyuszną i/lub nacieka poza powierzchnię boczną mięśnia skrzydłowego bocznego"
