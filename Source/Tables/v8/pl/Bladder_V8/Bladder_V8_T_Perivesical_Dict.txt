@@ -1,5 +1,5 @@
 "Key","DisplayText"
 "1","Guz nie nacieka tkanek okołopęcherzowych"
-"2","Guz nacieka tkanki okołopęcherzowe mikroskopowo"
-"3","Guz nacieka tkanki okołopęcherzowe makroskopowo (masy pozapęcherzowe)"
+"2","Guz nacieka tkanki okołopęcherzowe - ocena mikroskopowa"
+"3","Guz nacieka tkanki okołopęcherzowe (masy pozapęcherzowe) - ocena mikroskopowa"
 "4","Nieznany stopień nacieku tkanek okołopęcherzowych"

@@ -1,0 +1,8 @@
+"SG","M","Result"
+"I","M0","Miejscowe"
+"II","M0","Miejscowe"
+"III","M0","Regionalne"
+"IV","M0","Regionalne"
+"IV","M1a","Uogólnione"
+"IV","M1b","Uogólnione"
+"IV","M1c","Uogólnione"

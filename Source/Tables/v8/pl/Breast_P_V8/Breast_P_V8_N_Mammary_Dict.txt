@@ -1,5 +1,5 @@
 "Key","DisplayText"
-"1","Brak przerzutów do węzłów piersiowych wewnętrznych"
+"1","Brak przerzutu do węzłów piersiowych wewnętrznych"
 "2","Węzły piersiowe wewnętrzne nie wykryte w badaniu klinicznym"
 "3","Przerzuty do węzłów piersiowych wewnętrznych wykrytych w badaniu klinicznym"
 "4","Przerzuty do węzłów piersiowych wewnętrznych wykryte w biopsji węzła wartowniczego (SNB), ale niewykrytymi w badaniu klinicznym"

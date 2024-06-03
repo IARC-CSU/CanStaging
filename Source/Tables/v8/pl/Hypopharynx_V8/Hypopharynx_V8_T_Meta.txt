@@ -1,7 +1,7 @@
 "Field","DataType","DisplayText","Group","Colour"
 "Tumour","Dictionary","Guz pierwotny","1",
-"Subsite","Boolean","Guz ograniczony do jednego obszaru anatomicznego krtaniowej części gardła","2",
-"Size","Number","Największy wymiar guza (cm)","2",
-"Fixation","Dictionary","Guz powoduje unieruchomienie połowy krtani lub szerzy się do przełyku","2",
+"Subsite","Boolean","Guz ograniczony do jednego obszaru anatomicznego krtaniowej części gardła","2"
+"Size","Number","Największy wymiar guza (cm)","2"
+"Fixation","Dictionary","Guz powoduje unieruchomienie połowy krtani lub szerzy się do przełyku,"2"
 "Invasion4a","Boolean","Guz nacieka którąkolwiek z następujących struktur: chrząstkę tarczowatą / pierścieniowatą, kość gnykową, gruczoł tarczowy, przełyk, środkowy przedział tkanek miękkich (przedział środkowy tkanek miękkich obejmuje mięśnie przedkrtaniowe i tłuszcz podskórny)","3",
-"Invasion4b","Boolean","Guz nacieka powięź przedkręgową, obejmuje tętnice szyjną lub nacieka struktury śródpiersia","3",
+"Invasion4b","Boolean","Guz nacieka powięź przedkręgową, obejmuje tętnice szyjną lub nacieka struktury śródpiersia"

@@ -1,5 +1,5 @@
 "Field","DataType","DisplayText","Group","Colour"
-"T1","Dictionary","Wybierz **tylko jeżeli** rak jest ograniczony do szyjki macicy (należy pominąć naciek trzonu macicy)","1",
-"T2","Dictionary","Wybierz **tylko jeżeli** rak nacieka poza macicę, ale nie nacieka ściany miednicy ani dolnej jednej trzeciej pochwy","2",
-"T3","Dictionary","Wybierz **tylko jeżeli** rak nacieka dolną jedną trzecią pochwy i/lub dochodzi do ściany miednicy i/lub powoduje wodonercze lub powoduje brak czynności nerki i/lub zajmuje węzły chłonne miednicy i/lub węzły okołoaortalne","3",
-"T4","Dictionary","Wybierz **tylko jeżeli** rak szerzy się poza miednicę mniejszą lub nacieka (potwierdzone w biopsji) błonę śluzową pęcherza lub odbytnicy. (Obrzęk pęcherza jako taki nie pozwala na zaliczenie przypadku do stopnia IV)","4",
+"T1","Dictionary","Wybierz **tylko w przypadku, gdy** rak jest ograniczony do szyjki macicy (należy pominąć naciek trzonu macicy)","1",
+"T2","Dictionary","Wybierz **tylko w przypadku, gdy** rak nacieka poza macicę, ale nie nacieka ściany miednicy ani dolnej jednej trzeciej pochwy","2",
+"T3","Dictionary","Wybierz **tylko w przypadku, gdy** rak nacieka dolną jedną trzecią pochwy i/lub dochodzi do ściany miednicy i/lub powoduje wodonercze lub powoduje brak czynności nerki i/lub zajmuje węzły chłonne miednicy i/lub węzły okołoaortalne","3",
+"T4","Dictionary","Wybierz **tylko w przypadku, gdy** rak szerzy się poza miednicę mniejszą lub nacieka (potwierdzone w biopsji) błonę śluzową pęcherza lub odbytnicy. (Obrzęk pęcherza jako taki nie pozwala na zaliczenie przypadku do stopnia IV)","4",

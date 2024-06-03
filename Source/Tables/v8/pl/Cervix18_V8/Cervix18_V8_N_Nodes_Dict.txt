@@ -1,5 +1,5 @@
 "Key","DisplayText"
 "1","Regionalne węzły chłonne nie mogą być ocenione"
-"2","Brak przerzutów do regionalnych węzłów chlonnych"
+"2","Brak przerzutu do regionalnych węzłów chlonnych"
 "3","Przerzuty do węzłów chłonnych miednicy (w tym mikroprzerzuty)"
 "4","Przerzuty do węzłów chłonnych okołoaortalnych (w tym mikroprzerzuty)"

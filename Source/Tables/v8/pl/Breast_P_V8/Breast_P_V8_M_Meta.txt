@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Przerzuty odległe","2",
+"M","Dictionary","Przerzut odległy","2",

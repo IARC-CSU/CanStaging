@@ -1,2 +1,2 @@
 "Field","DataType","DisplayText","Group","Colour"
-"DistantMetastasis","Boolean","Przerzuty odległe wykryte na etapie rozpoznania choroby","",
+"DistantMetastasis","Boolean","Przerzut odległy wykryty na etapie rozpoznania choroby","",

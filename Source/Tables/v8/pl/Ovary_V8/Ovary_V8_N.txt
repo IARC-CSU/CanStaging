@@ -1,0 +1,5 @@
+"Regional","RegionalN","Result","Message"
+"X","X","NX",
+"F","1","N0",
+"T","2","N1a",
+"T","3","N1b",

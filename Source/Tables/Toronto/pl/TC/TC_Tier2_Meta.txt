@@ -1,5 +1,5 @@
 "Field","DataType","DisplayText","Group","Colour"
-"DistantMetastasis","Boolean","Przerzuty odległe wykryte na etapie rozpoznania choroby","",
+"DistantMetastasis","Boolean","Przerzut odległy wykryty na etapie rozpoznania choroby","",
 "RegionalNodes","Boolean","Zajęcie regionalnych węzłów chłonnych","",
 "SizeRegionalNodes","Dictionary","Wielkość przerzutu do regionalnych węzłów chłonnych (największy wymiar)","",
 "SpermCordScrotum","Boolean","Guz nacieka powrózek nasienny lub mosznę","",

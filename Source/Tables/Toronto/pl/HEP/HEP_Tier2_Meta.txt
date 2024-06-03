@@ -1,5 +1,5 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Metastasis","Boolean","Przerzuty odległe obecne","",
+"Metastasis","Boolean","Przerzuty odległe obecne na etapie rozpoznania choroby","",
 "CaudateLobe","Boolean","Zajęcie płata ogoniastego","",
 "LeftLateral","Boolean","Zajęcie lewego bocznego segmentu wątroby","",
 "LeftMedial","Boolean","Zajęcie lewego przyśrodkowego segmentu wątroby","",
