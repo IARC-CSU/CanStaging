@@ -1,4 +1,4 @@
-"Key","DisplayText"
+﻿"Key","DisplayText"
 "1","Brak przerzutu odległego"
 "2","Pozaregionalne węzły chłonne"
 "3","Inne przerzuty odległe"
