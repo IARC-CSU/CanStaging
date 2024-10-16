@@ -1,4 +1,4 @@
 default_language: en
-default_name: Breast (clinical)
-translated_name: Pierś (klasyfikacja kliniczna)
+default_name: Breast_C_V8
+translated_name: Pierś (C50, D05) - klasyfikacja kliniczna
 css: Breast

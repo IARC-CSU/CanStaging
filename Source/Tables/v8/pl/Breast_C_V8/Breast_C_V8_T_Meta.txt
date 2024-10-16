@@ -2,4 +2,4 @@
 "Size","Number","Podaj największy wymiar guza (cm)","2",
 "ChestInvasion","Boolean","Naciekanie ściany klatki piersiowej (nie dotyczy wyłącznego nacieku mięśnia piersiowego)","3",
 "Inflammation","Boolean","Rak zapalny","3",
-"Ulceration","Boolean","Owrzodzenie/guzki satelitarne po stronie guza lub obrzęk skóry (w tym objaw skórki pomarańczy _peau d'orange_)","3",
+"Ulceration","Boolean","Owrzodzenie/guzki satelitarne po stronie guza lub obrzęk skóry (w tym objaw skórki pomarańczy 'peau d'orange')","3",

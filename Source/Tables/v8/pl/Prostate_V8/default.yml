@@ -1,4 +1,4 @@
 default_language: en
-default_name: Prostate
-translated_name: Gruczoł krokowy (dotyczy tylko raków gruczołowych)
+default_name: Prostate_V8
+translated_name: Gruczoł krokowy (C61) - dotyczy tylko raków gruczołowych
 css: Prostate

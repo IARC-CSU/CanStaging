@@ -1,6 +1,6 @@
 "Key","DisplayText"
-"1","Nie można ocenić guza pierwotnego"
-"2","Brak cech guza pierwotnego"
-"3","Nieinwazyjny rak brodawkowaty"
-"4","Rak in situ: 'rak płaski'"
-"5","Guz złośliwy"
+"1”, "Nie można ocenić guza pierwotnego”
+"2”, "Brak cech guza pierwotnego”
+"3”, "Nieinwazyjny rak brodawkowaty”
+"4”, "Rak in situ: «rak płaski»”
+"5”, "Guz złośliwy”
