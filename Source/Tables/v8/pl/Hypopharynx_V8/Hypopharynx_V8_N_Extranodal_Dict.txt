@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Bez naciekania poza torebkę węzła"
+"2","Z naciekaniem poza torebkę węzła"

@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"InvolveCNSorBM","Boolean","Zajęcie szpiku kostnego i/lub ośrodkowego układu nerwowego na etapie rozpoznania choroby","",

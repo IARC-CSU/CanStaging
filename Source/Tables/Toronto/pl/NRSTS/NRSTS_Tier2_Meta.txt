@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Przerzut odległy wykryty na etapie rozpoznania choroby","",
+"RegionalNodes","Boolean","Zajęcie regionalnych węzłów chłonnych","",
+"TumourSize","Dictionary","Rozmiar guza (największy wymiar)","",
+"TumourGrade","Dictionary","Stopień złośliwości histologicznej","",

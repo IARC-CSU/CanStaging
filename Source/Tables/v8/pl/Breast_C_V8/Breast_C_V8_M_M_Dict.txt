@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Brak przerzutu odległego"
+"2","Przerzut odległy"

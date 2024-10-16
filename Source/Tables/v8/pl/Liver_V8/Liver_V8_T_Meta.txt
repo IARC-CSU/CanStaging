@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Pojedynczy guz lub mnogie guzy","2",
+"Size","Number","Największy wymiar guza (cm)","2",
+"Vascular","Dictionary","Naciekanie naczyń","2",
+"Invasion","Boolean","Guz nacieka bezpośrednio sąsiadujące narządy (w tym przeponę) inne niż pęcherzyk żółciowy","2",
+"Visceral","Boolean","Guz powoduje perforację otrzewnej trzewnej","2",

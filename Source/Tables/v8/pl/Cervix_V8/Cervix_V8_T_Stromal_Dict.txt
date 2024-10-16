@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Głębokość nacieku podścieliska <=3mm I <=7mm nacieku w poziomie"
+"2","Naciek podścieliska >3mm ale <=5mm głębokości <=7mm nacieku w poziomie"
+"3","Naciek podścieliska >5mm LUB >7mm nacieku w poziomie"

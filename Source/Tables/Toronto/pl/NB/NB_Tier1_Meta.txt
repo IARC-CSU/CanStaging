@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"AgeInMonths","Dictionary","Wiek (w miesiącach)","",
+"Metastasis","Boolean","Przerzut odległy wykryty na etapie rozpoznania choroby","",
+"MetsConfinedSLB","Boolean","Przerzuty ograniczone do skóry, wątroby i/lub szpiku kostnego","",
+"Locoregional","Boolean","Guz miejscowo-regionalny","",

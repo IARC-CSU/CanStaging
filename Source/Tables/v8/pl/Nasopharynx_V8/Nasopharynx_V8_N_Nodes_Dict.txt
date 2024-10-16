@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Regionalne węzły chłonne nie mogą być ocenione"
+"2","Brak przerzutu w regionalnych węzłach chłonnych"
+"3","Przerzut lub przerzuty po jednej stronie, w węźle chłonnym szyjnym / węzłach chłonnych szyjnych i/lub przerzuty po jednej stronie lub po obu stronach w węzłach chłonnych zagardłowych"
+"4","Przerzuty obustronnie w węzłach chłonnych szyjnych"

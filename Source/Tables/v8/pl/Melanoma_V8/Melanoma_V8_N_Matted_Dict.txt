@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Pakiet węzłów chłonnych przerzutowych nieobecny"
+"2","Pakiet węzłów chłonnych przerzutowych obecny"

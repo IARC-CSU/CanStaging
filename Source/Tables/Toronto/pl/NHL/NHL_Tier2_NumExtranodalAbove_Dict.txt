@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","≥2"
+"2","Pojedynczy (z zajęciem regionalnych węzłów chłonnych)"
+"3","Pojedynczy (bez zajęcia regionalnych węzłów chłonnych)"
+"4","Nie"
+"5","Nieznany"

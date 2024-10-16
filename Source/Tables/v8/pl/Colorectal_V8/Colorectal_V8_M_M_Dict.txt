@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Brak przerzutów odległych"
+"2","Przerzuty ograniczone do jednego narządu lub miejsca (np. wątroba, płuca, jajnik, pozaregionalne węzły chłonne) bez przerzutów do otrzewnej"
+"3","Przerzuty do więcej niż jednego narządu"
+"4","Przerzuty do otrzewnej z towarzyszącymi przerzutami do innych narządów lub bez nich"

@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Guz pierwotny","1",
+"Vascular","Boolean","Obecne naciakenie naczyń chłonnych/krwionośnych","2",
+"Tunica","Boolean","Guz nacieka osłonkę białawą","2",
+"Vaginalis","Boolean","Zajęcie osłonki pochwowej jądra","2",

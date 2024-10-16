@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Największy wymiar guza (cm)","1",
+"Limit","Boolean","Guz ograniczony do nerki","1",
+"Renal","Boolean","Guz wrasta w żyłę nerkową lub jej gałęzie albo nacieka układ miedniczkowo-kielichowy","2",
+"Fat","Boolean","Guz nacieka tłuszcz okołonerkowy i/lub tłuszcz zatoki nerkowej (okołomiedniczkowy), ale nie nacieka poza powięź Geroty","2",
+"Venacava","Boolean","Guz wrasta w żyłę główną dolną, nie przekraczając poziomu przepony","2",
+"Diaphragm","Boolean","Guz wrasta w żyłę główną dolną, sięgając powyżej poziomu przepony, lub nacieka ścianę żyły głównej dolnej","2",
+"Gerota","Boolean","Guz nacieka poza powięź Geroty (w tym bezpośrednio szerzy się na nadnercze, po stronie guza pierwotnego)","3",

@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Wykonano badanie patomorfologiczne"
+"Metastasis","Dictionary","Regionalne węzły chłonne","1",
+"Size","Number","Największy wymiar przerzutu do węzła chłonnego","2",
+"Number","Number","Liczba zajętych węzłów chłonnych","2",
+"Extranodal","Boolean","Dowody na pozawęzłowe szerzenie się guza","2",
