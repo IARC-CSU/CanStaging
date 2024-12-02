@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Guz nie nacieka błony mięśniowej właściwej"
+"2","Powierzchowny naciek guza na tkankę mięśniową (wewnętrzna połowa)"
+"3","Głęboki naciek guza na tkankę mięśniową (zewnętrzna połowa)"
+"4","Nie znam stopnia nacieku"

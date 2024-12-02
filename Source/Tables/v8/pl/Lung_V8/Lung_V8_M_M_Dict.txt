@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Przerzut odległy nieobecny"
+"2","Oddzielny guz lub guzki w płacie drugiego płuca. Guz, któremu towarzyszą guzki opłucnej lub w osierdziu, lub wysięk w opłucnej lub w osierdziu, w którym są obecne komórki nowotworowe"
+"3","Pojedynczy przerzut do jednego narządu poza klatką piersiową"
+"4","Mnogie przerzuty do jednego lub wielu narządów poza klatką piersiową"

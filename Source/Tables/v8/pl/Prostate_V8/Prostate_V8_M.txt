@@ -1,0 +1,8 @@
+"Nodes","Bone","Other","Result","Message"
+"F","F","F","M0",
+"T","F","F","M1a",
+"F","T","F","M1b",
+"F","F","T","M1c",
+"T","T","F","M1c",
+"F","T","T","M1c",
+"T","F","T","M1c",

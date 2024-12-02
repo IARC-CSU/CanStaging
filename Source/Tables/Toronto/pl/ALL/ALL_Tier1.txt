@@ -1,0 +1,10 @@
+"ClinicalSignsCNS","BlastsCSF","Result","Message"
+"T","T","CNS+",
+"T","F","CNS+",
+"T","X","CNS+",
+"F","T","CNS+",
+"F","F","CNS-",
+"F","X","X",
+"X","T","CNS+",
+"X","F","X",
+"X","X","X",

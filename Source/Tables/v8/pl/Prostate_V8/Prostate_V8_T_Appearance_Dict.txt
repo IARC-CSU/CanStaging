@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Guz niejawny klinicznie (niewyczuwalny w badaniu palpacyjnym lub niewidoczny w badaniu obrazowym)"
+"2","Guz jawny klinicznie"

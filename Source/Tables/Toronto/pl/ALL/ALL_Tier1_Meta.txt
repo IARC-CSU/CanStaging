@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ClinicalSignsCNS","Boolean","Objawy kliniczne zajęcia OUN","",
+"BlastsCSF","Boolean","Blasty w płynie mózgowo-rdzeniowym","",

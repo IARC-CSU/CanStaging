@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Guz pierwotny","1",
+"Dimension","Number","Największy wymiar guza (cm)","1",
+"Depth","Number","Największa głębokość naciekania (mm)","1",
+"Lip","Boolean","(Warga) Guz nacieka przez warstwę korową kości, nerw zębodołowy dolny, dno jamy ustnej lub skórę (podbródka bądź nosa)","2",
+"Oralcavity","Boolean","(Jama ustna) Guz nacieka przez warstwę korową żuchwy lub nacieka zatokę szczękową lub skórę twarzy","2",
+"Both","Boolean","(Warga i jama ustna) Guz nacieka przestrzeń żwaczy, wyrostki skrzydłowe lub podstawę czaszki, lub obejmuje tętnicę szyjną wewnętrzną","2",

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Przerzut odległy nieobecny"
+"2","Skóra, tkanka podskórna lub pozaregionalny węzeł chłonny lub pozaregionalne węzły chłonne"
+"3","Płuco"
+"4","Inne umiejscowienia za wyjątkiem ośrodkowego układu nerwowego"
+"5","Ośrodkowy układ nerwowy"

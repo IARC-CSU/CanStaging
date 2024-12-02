@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Regionalne węzły chłonne nie mogą być ocenione"
+"2","Brak przerzutu w węzłach chłonnych"
+"3","Przerzut do przedziału VI (węzłów przedtchwiczych, przytchawiczych, przedkrtaniowych/delfickich) lub węzłów śródpiersiowych górnych"
+"4","Przerzut do innych węzłów chłonnych szyjnych, jednostronnie, obustronnie lub po stronie przeciwnej do guza (przedziały I, II, III, IV, lub V), lub węzłów chłonnych zagardłowych"

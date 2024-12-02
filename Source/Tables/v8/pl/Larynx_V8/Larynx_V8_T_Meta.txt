@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Guz pierwotny","1",
+"Subsite","Boolean","Guz jest ograniczony do **jednego** obszaru anatomicznego krtani (np. nadgłośnia, głośnia, podgłośnia)","1",
+"Vocalcord","Dictionary","Ruchomość fałdów głosowych","2",
+"Invasion","Boolean","Guz nacieka którąkolwiek z następujących struktur: okolicę zapierścienną, przestrzeń przed nagłośnią, przestrzeń okołogłośniową i/lub korę wewnętrzną chrząstki tarczowatej","2",
+"Limit","Boolean","Guz nacieka przez chrząstkę tarczowatą i/lub nacieka tkanki położone poza krtanią (na przykład tchawicę, tkanki miękkie szyi, w tym głębokie/ zewnętrzne mięsnie języka (bródkowo-językowy, gnykowo-językowy, podniebienno-językowy i rylcowo-językowy), mięśnie przedkrtaniowe, tarczycę, przełyk)","3",
+"Prevertebral","Boolean","Guz nacieka przestrzeń przedkręgową, obejmuje tętnicę szyjną lub nacieka struktury śródpiersia","3",

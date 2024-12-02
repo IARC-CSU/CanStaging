@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Naciekanie dodatkowych struktur anatomicznych nieobecne"
+"2","Niewielka nadżerka kości lub naciakanie okołonerwowo, lub naciekanie głębokie"
+"3","Znaczne naciekanie na warstę korową/szpik kości"
+"4","Naciekanie szkieletu osiowego, w tym zajęcie otworów międzykręgowych i/lub zajęcie przestrzeni nadtwardówkowej przez otwór międzykręgowy"

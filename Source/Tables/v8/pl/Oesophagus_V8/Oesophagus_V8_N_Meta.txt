@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Liczba węzłów chłonnych z obecnością przerzutu","2",

@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Guz wykryty przypadkowo w badaniu histologicznym i stanowi nie więcej niż 5% wyciętej tkanki"
+"2","Guz wykryty przypadkowo w badaniu histologicznym i stanowi więcej niż 5% wyciętej tkanki"
+"3","Guz stwierdzony w wyniku biopsji igłowej"
+"4","Guz zajmuje nie więcej niż połowę jednego płata (wykryty klinicznie)"
+"5","Guz zajmuje więcej niż połowę jednego płata (wykryty klinicznie)"
+"6","Guz zajmuje oba płaty (wykryty klinicznie)"

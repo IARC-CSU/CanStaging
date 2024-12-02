@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Brak przerzutu poza miednicą"
+"2","Mikroprzerzuty do otrzewnej poza miednicą"
+"3","Makroprzerzuty do otrzewnej poza obrębem miednicy (≤2 cm w największym wymiarze)"
+"4","Makroprzerzuty do otrzewnej poza obrębem miednicy (>2 cm w największym wymiarze)"
+"5","Przerzuty tylko do węzłów zaotrzewnowych"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Guz nie nacieka oskrzela głównego"
+"2","Guz nacieka oskrzele główne"
+"3","Guz nacieka ostrogę główną lub tchawicę"

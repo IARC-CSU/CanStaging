@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Jednostronne przerzuty do węzłów chłonnych szyjnych i/lub jednostronne lub obustronne przerzuty do węzłów chłonnych zagardłowych, 6 cm lub mniej w największym wymiarze, powyżej kaudalnej (dolnej) granicy chrząstki pierścieniowatej"
+"2","Obustronne przerzuty do węzłów chłonnych szyjnych, 6 cm lub mniej w największym wymiarze, powyżej kaudalnej (dolnej) granicy chrząstki pierścieniowatej"
+"3","Przerzuty do węzłów chłonnych szyjnych większe niż 6 cm i/lub przerzuty do węzłów poniżej kaudalnej (dolnej) granicy chrząstki pierścieniowatej"

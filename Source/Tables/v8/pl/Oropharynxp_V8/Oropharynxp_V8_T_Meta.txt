@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Największy wymiar guza (cm)","1",
+"Extension","Boolean","Naciekanie powierzchni językowej nagłośni","2",
+"Invasion","Boolean","Guz nacieka którąkolwiek z następujących struktur: krtań, głębokie/zewnętrzne mięśnie języka (bródkowo-językowy, gnykowo-językowy, podniebienno-językowy i rylcowo-językowy), mięsień skrzydłowo przyśrodkowy, podniebienie twarde, żuchwę, mięsień skrzydłowy boczny, wyrostki skrzydłowe, boczne nosogardło, podstawę czaszki; lub obejmuje tętnicę szyjną","3",

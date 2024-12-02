@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Regionalne węzły chłonne nie mogą być ocenione"
+"2","Brak przerzutów w regionalnych węzłach chłonnych"
+"3","Przerzuty w węźle lub węzłach chłonnych po jednej stronie, których największy wymiar nie przekracza 6cm"
+"4","Przerzuty w węźle lub węzłach chłonnych po jednej lub po obu stronach, których największy wymiar nie przekracza 6cm"
+"5","Przerzuty w węźle lub węzłach chłonnych o wymiarze większym niż 6cm"

@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Tak (mikroskopowo stwierdzona choroba resztkowa) R1","",
+"InvolveOrbit","Boolean","Zajęcie oczodołu","",
+"RegionalNodes","Boolean","Zajęcie regionalnych węzłów chłonnych","",
+"Enucleation","Dictionary","Enukleacja","",
