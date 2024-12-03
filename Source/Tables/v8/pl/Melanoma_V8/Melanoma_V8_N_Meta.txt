@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Liczba węzłów chłonnych z obecnością przerzutu","2",
+"Metastasis","Dictionary","Mikroprzerzuty lub makroprzerzuty","2",
+"Satellite","Dictionary","Guzki satelitarne lub przerzut in-transit","2",
+"Matted","Dictionary","Pakiet regionalnych węzłów chłonnych przerzutowych","2",

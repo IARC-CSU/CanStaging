@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Tak"
+"2","Nie"

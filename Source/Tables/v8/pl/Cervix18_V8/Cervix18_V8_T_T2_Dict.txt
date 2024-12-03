@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"5","Rak nacieka poza macicę, ale nie nacieka dolnej jednej trzeciej części pochwy ani ściany miednicy"
+"1","Zajęcie ograniczone do górnych dwóch trzecich pochwy, bez nacieku przymacicza, największy wymiar nieznany"
+"2","Rak o wielkości ≤ 4 cm"
+"3","Rak o wielkości > 4 cm "
+"4","Rak nacieka przymacicza, ale nie sięgającym do ściany miednicy"

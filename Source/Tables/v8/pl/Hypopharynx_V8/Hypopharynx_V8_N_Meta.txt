@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Wykonano badanie patomorfologiczne","1",
+"Nodes","Dictionary","Regionalne węzły chłonne","1",
+"Size","Number","Największy wymiar przerzutu (cm)","1",
+"Extranodal","Dictionary","Klinicznie jawne naciekanie poza torebkę węzła (jest rozpoznawane, gdy występuje naciekanie skóry lub naciekanie tkanek miękkich powodujące unieruchomienie w stosunku do znajdujących się poniżej mięśni lub przylegających struktur albo gdy występują objawy kliniczne naciekania nerwów;  węzły chłonne położone w linii pośrodkowej są uważane za węzły znajdujące się po stronie guza)","1"

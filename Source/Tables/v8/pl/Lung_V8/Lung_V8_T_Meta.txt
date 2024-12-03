@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Minimal","Boolean","Minimalnie inwazyjny gruczolakorak","1",
+"Size","Number","Największy wymiar guza inwazyjnego (cm)","1",
+"Bronchus","Dictionary","Zajęcie oskrzeli","1",
+"Pleura","Boolean","Zajęcie opłucnej płucnej","1",
+"Atelectasis","Boolean","Niedodma lub zapalenie płuca (dochodzące do wnęki, obejmujące część płuca lub całe płuco)","1",
+"T3invasion","Boolean","Guz nacieka bezpośrednio którąkolwiek z następujących struktur: ścianę klatki piersiowej (w tym guzy rowka górnego), nerw przeponowy, opłucną ścienną, osierdzie ścienne","3",
+"NodulesT3","Boolean","Oddzielny guzek w tym samym płacie co guz pierwotny","3",
+"NodulesT4","Boolean","Oddzielny guzek w innym płacie tego samego płuca co guz pierwotny","4",
+"T4invasion","Boolean","Guz nacieka bezpośrednio którąkolwiek z następujących struktur: przeponę, śródpiersie, serce, duże naczynia, nerw krtaniowy wsteczny, przełyk, trzon kręgu","4",

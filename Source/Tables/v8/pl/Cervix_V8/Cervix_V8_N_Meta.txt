@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Liczba zajętych węzłów chłonnych","1",

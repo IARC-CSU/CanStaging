@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Microscopic","Boolean","Zmiana potwierdzona jedynie mikroskopowo","1",
+"Stromal","Dictionary","Naciek podścieliska","2",
+"ExtendedVisible","Dictionary","Zmiana widoczna klinicznie","3",
+"BeyondUterus","Boolean","Guz nacieka poza macicę","3",
+"Parametrium","Boolean","Naciekanie przymacicz","4",
+"Vagina","Boolean","Rak zajmuje dolną 1/3 pochwy","4",
+"Pelvis","Boolean","Naciekanie ściany miednicy","4",
+"Hydronephrosis","Boolean","Wodonercze lub brak czynności nerki","4",
+"Mucosa","Boolean","Guz nacieka błonę śluzową pęcherza lub odbytnicy i/lub przekracza granice miednicy mniejszej","4",

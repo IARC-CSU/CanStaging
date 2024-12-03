@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Rak przekracza granice miednicy mniejszej lub zajmuje (potwierdzone w biopsji) błonę śluzową pęcherza lub odbytnicy"
+"2","Naciekanie sąsiednich narządów (przekracza granice miednicy mniejszej)"

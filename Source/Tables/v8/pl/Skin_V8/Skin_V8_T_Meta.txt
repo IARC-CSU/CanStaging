@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Guz pierwotny","1",
+"Size","Number","Największy wymiar guza (cm)","1",
+"Invasion","Dictionary","Dalsze naciekanie","2",

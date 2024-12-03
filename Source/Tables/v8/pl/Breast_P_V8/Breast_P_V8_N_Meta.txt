@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Dictionary","Liczba zajętych węzłów chłonnych (co najmniej jeden z nich >2.0mm)","1",
+"Infraclavicular","Dictionary","Przerzuty w węzłach podobojczykowych/węzłach chłonnych III piętra","2",
+"Mammary","Dictionary","Przerzuty do węzłów piersiowych wewnętrznych","2",
+"Micrometastases","Dictionary","Wyłącznie mikroprzerzuty: nie większe niż >2.0mm (większy niż 0.2mm i/lub ponad 200 komórek)","3",
+"Supraclavicular","Boolean","Przerzuty w węzłach nadobojczykowych","4",
