@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CanStaging+"
-#define MyAppVersion "0.9.15"
+#define MyAppVersion "0.9.16"
 #define MyAppPublisher "IARC"
 #define MyAppURL "http://canstaging.org"
 #define MyAppExeName "CanStaging.bat"
