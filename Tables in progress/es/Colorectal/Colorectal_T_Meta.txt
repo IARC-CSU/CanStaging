@@ -1,2 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"Invasion" = Invasión,"Dictionary","Level of invasion","1", =Nivel de invasión

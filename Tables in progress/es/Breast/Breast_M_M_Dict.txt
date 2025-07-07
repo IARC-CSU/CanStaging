@@ -1,3 +1,0 @@
-"Key","DisplayText"
-"1","No evidencia de metástasis a distancia"
-"2","Metástasis a distancia"
