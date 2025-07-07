@@ -1,2 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN","Number","Número de linfonodos positivos","1",

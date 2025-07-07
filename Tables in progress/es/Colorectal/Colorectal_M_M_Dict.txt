@@ -1,4 +1,0 @@
-"Key","DisplayText"
-"1","No distant metastases"= No evidencia de metástasis a distancia
-"2","Metastases confined to one organ or site (e.g. liver, lung, ovary, non-regional node)" = Metástasis limitadas a un órgano o localizacón (ej.: hígado, pulmón, ovario, ganglio no-regional)
-"3","Metastases in more than one organ/site or the peritoneum"= Metástasis en mas de un órgano/localización o en el peritoneo
