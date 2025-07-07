@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Prawidłowa ruchomość fałdów głosowych"
+"2","Zaburzona ruchomość fałdów głosowych "
+"3","Unieruchomienie fałdów głosowych "

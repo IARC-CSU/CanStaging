@@ -1,0 +1,1 @@
+Grado 1 = bajo/bien diferenciado  <br/> Grade 2 = intermedio/moderadamente diferenciado <br/> Grade 3 = alto/pobremente/indiferenciado

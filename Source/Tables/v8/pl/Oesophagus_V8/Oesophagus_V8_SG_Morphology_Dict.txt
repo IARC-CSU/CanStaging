@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"a","Gruczolakorak"
+"s","Rak płaskonabłonkowy"

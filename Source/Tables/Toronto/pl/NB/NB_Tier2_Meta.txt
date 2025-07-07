@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"AgeInMonths","Dictionary","Age (in months)","",
+"Metastasis","Boolean","Przerzut odległy wykryty na etapie rozpoznania choroby","",
+"MetsConfinedSLB","Boolean","Przerzuty ograniczone do skóry, wątroby i/lub szpiku kostnego","",
+"IDRF","Boolean","Guz obejmuje jeden lub więcej czynnik ryzyka zdefiniowany badaniem obrazowym (Image Defined Risk Factors, IDRFs)","",
+"ConfinedBodyCompartment","Boolean","Guz ograniczony do jednego umiejscowienia","",

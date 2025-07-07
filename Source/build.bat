@@ -7,7 +7,7 @@ REM Delete old stuff
 rm dist\*.*
 
 REM Build installer
-set isxpath="C:\Program Files (x86)\Inno Setup 5"
+set isxpath="C:\Program Files (x86)\Inno Setup 6"
 set isx=%isxpath%\iscc.exe
 set iwz=CanStagingInstaller.iss
 set zippath="C:\Program Files\7-Zip"

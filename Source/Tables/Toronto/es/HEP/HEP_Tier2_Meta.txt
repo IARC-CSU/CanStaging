@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Boolean","Metástasis presentes a distancia","",
+"CaudateLobe","Boolean","Afectación del lóbulo caudado","",
+"LeftLateral","Boolean","Afectación del segmento lateral izquierdo del hígado al diagnóstico","",
+"LeftMedial","Boolean","Afectación del segmento lateral medio del hígado al diagnóstico","",
+"RightAnterior","Boolean","Afectación del segmento anterior derecho del hígado al diagnóstico","",
+"RightPosterior","Boolean","Afectación del segmento posterior derecho del hígado al diagnóstico","",

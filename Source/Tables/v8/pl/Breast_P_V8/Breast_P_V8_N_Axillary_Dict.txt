@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Brak przerzutów do regionalnych węzłów chłonnych pachowych"
+"2","Przerzuty w 1–3 węzłach chłonnych pachowych"
+"3","Przerzuty w 4 do 9 węzłach chłonnych pachowych"
+"4","Przerzuty w 10 lub więcej węzłach chłonnych"

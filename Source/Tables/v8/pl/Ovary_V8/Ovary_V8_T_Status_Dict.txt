@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Torebka nienaruszona, brak guza na powierzchni jajnika lub jajowodu"
+"2","Pęknięcie torebki podczas zabiegu operacyjnego (wycieki chirurgiczne)"
+"3","Pęknięcie torebki przed zabiegiem operacyjnym albo guz na powierzchni jajnika lub jajowodu"
+"4","Rozsiew w miednicy i/lub wszczepy nowotworu na macicy, i/lub jajowodzie (jajowodach), i/lub jajniku (jajnikach)"
+"5","Szerzenie się na inne tkanki miednicy, w tym naciek na jelito w obrębie miednicy"
+"6","Pierwotny rak otrzewnej"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Brak przerzutu w regionalnych węzłach chłonnych"
+"2","Tylko mikroprzerzut (niejawny klinicznie)"
+"3","Makroprzerzut (jawny klinicznie)"

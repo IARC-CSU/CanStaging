@@ -1,0 +1,10 @@
+"DistantMetastasis","RegionalNodes","Result","Message"
+"T","T","M",
+"T","F","M",
+"T","X","M",
+"F","T","R",
+"F","F","L",
+"F","X","X",
+"X","T","X",
+"X","F","X",
+"X","X","X",

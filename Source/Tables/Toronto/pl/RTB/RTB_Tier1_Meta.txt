@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Przerzuty odległe wykryte na etapie rozpoznania choroby","",
+"InvolveOrbit","Boolean","Zajęcie oczodołu","",
+"RegionalNodes","Boolean","Zajęcie regionalnych węzłów chłonnych","",

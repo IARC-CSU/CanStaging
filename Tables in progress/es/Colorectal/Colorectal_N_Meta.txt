@@ -1,3 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN" = N positivo,"Number"= Número ,"Number of positive nodes","1", = Número de ganglios positivos
-"TumourDeposit","Boolean","Tumour deposit in subserosa, mesentery, nonperitonealized pericolic or perirectal tissues","1", = Depósito tumoral en la subserosa, mesenterio, tejidos pericólicos no peritoneales o tejidos perirrectales 

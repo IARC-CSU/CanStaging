@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Masa de ganglios linfáticos >5cm"
+"2","Masa de ganglios linfáticos >2cm y ≤5cm"
+"3","Masa de ganglios linfáticos ≤2cm"
+"4","Ninguna"
+"5","Desconocido"

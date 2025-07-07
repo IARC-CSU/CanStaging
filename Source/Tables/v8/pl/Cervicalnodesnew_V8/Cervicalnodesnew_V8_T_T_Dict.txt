@@ -1,0 +1,2 @@
+"Key","DisplayText"
+"1","Rak o nieznanym punkcie wyjścia - węzły chłonne szyjne C77.0"

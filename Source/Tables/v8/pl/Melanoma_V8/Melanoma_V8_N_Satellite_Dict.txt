@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Bez guzków satelitarnych lub przerzutów in-transit"
+"2","Guzki satelitarne "
+"3","Przerzut in-transit"

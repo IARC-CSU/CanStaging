@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metástasis a distancia al diagnóstico","",
+"RegionalNodes","Boolean","Ganglios linfáticos regionales afectados","",
+"TumourSize","Dictionary","Tamaño del tumor en su dimensión mayor","",
+"TumourGrade","Dictionary","Grado del tumor","",

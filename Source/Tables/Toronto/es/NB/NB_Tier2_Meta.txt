@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"AgeInMonths","Dictionary","Edad (en meses)","",
+"Metastasis","Boolean","Metástasis a distancia","",
+"MetsConfinedSLB","Boolean","Metástasis confinada a la piel, hígado y/o medula ósea","",
+"IDRF","Boolean","Tumor con uno o más Factores de Riesgo definidos por Imagen (FRDIs)","",
+"ConfinedBodyCompartment","Boolean","Tumor confinado a un único compartimento corporal","",

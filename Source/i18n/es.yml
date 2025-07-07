@@ -74,6 +74,7 @@ site:
   field_must_be_checked: "'%1' debe ser revisado."
   field_outside_of_scope: "'%1' Fuera de los valores. (%2)"
   results: "Resultados"
+  dontknow: "Desconocido"
 
 upload:
   upload_header: "Cargar"
