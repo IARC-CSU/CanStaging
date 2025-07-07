@@ -1,2 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"PositiveN" =N positivo,"Number" = Número,"Number of positive nodes","1",=Número de ganglios positivos
