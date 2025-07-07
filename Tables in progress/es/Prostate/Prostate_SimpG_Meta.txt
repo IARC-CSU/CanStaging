@@ -1,3 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"SG","generated","SG","1",
-"M","generated","M","1",

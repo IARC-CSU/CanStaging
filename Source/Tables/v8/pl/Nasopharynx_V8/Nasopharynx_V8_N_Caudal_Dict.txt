@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Przerzuty umiejscowione są powyżej kaudalnej granicy chrząstki pierścieniowatej"
+"2","Przerzuty umiejscowione są poniżej kaudalnej granicy chrząstki pierścieniowatej"

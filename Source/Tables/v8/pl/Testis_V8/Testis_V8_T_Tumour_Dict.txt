@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Guz pierwotny nie może być oceniony"
+"2","Brak cech guza pierwotnego (np. blizna w jądrze)"
+"3","Wewnątrzprzewodowa neoplazja komórek zarodkowych (IGCN, Intratubular germ cell neoplasia) (rak in situ)"
+"4","Guz ograniczony do jądra i najądrza"
+"7","Guz nacieka tkanki miękkie"
+"5","Guz nacieka powrózek nasienny"
+"6","Guz nacieka mosznę"

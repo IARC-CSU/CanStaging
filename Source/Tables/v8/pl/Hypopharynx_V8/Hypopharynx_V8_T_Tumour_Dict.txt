@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Guz pierwotny nie może być oceniony"
+"2","Brak cech guza pierwotnego"
+"3","Rak in situ"
+"4","Nowotwór złośliwy"

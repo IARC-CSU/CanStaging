@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Przerzuty w 1 do 4 węzłach chłonnych"
+"2","Przerzuty w co najmniej 5 węzłach chłonnych"

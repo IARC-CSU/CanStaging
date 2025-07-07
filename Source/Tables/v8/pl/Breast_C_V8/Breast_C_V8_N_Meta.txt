@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Ipsilateral","Boolean","Przerzuty w ruchomych węzłach chłonnych pachowych I i II poziomu po stronie guza","3",""
+"Matted","Boolean","Przerzuty w węzłach chłonnych nieruchomych względem siebie (pakiet węzłów chłonnych) lub nieruchomych względem innych struktur","4",""
+"InternalMammary","Boolean","Potwierdzone klinicznie przerzuty w węzłach chłonnych piersiowych wewnętrznych","4",""
+"Infraclavicular","Boolean","Przerzuty w węzłach chłonnych podobojczykowych","4",""
+"Supraclavicular","Boolean","Przerzuty w nadobojczykowych węzłach chłonnych","4",""

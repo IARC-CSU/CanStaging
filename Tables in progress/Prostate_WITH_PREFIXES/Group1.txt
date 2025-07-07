@@ -1,5 +1,0 @@
-"Pathologic","Posttherapy","Result","Message"
-"F","F","c",
-"T","F","p",
-"F","T","yc",
-"T","T","yp",

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Nie można ocenić regionalnych węzłów chłonnych"
+"2","Brak przerzutów do regionalnych węzłów chłonnych"
+"3","Przerzut w pojedynczym węźle chłonnym miednicy mniejszej (podbrzusznym, zasłonowym, biodrowym zewnętrznym, lub przedkrzyżowym)"
+"4","Przerzuty w wielu regionalnych węzłach chłonnych miednicy mniejszej (podbrzusznym, zasłonowym, biodrowym zewnętrznym lub przedkrzyżowych)"
+"5","Obecność przerzutów w węźle chłonnym biodrowym wspólnym"

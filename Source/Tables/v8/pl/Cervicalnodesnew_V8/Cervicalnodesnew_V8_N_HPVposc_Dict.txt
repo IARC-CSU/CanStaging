@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Przerzuty w węzłach chłonnych szyjnych po stronie guza, o wymiarach nie przekraczających 6 cm"
+"2","Przerzuty po stronie przeciwnej do guza lub obustronne w węzłach chłonnych szyjnych, o wymiarach nie przekraczających 6 cm"
+"3","Przerzuty w węzłach chłonnych szyjnych większe niż 6 cm"

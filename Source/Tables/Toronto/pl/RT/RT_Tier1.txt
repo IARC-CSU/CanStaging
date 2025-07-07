@@ -1,0 +1,4 @@
+"DistantMetastasis","Result","Message"
+"T","M",
+"F","L",
+"X","X",

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Przerzut odległy nieobecny"
+"2","Przerzut do pozaregionalnego węzła chłonnego (1 lub więcej) lub płuca"
+"3","Przerzut odległy do innego umiejscowienia niż pozaregionalne węzły chłonne i innego niż płuco"

@@ -1,0 +1,4 @@
+"M","Result","Message"
+"M0","Miejscowe",
+"M1a","Uogólnione",
+"M1b","Uogólnione",

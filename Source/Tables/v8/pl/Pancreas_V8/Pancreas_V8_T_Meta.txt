@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Największy wymiar guza (cm)","3",
+"T4invasion","Boolean","Obejmuje pień trzewny, tętnicę krezkową górną i/lub tętnicę wątrobową wspólną","2",

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Przerzut odległy nieobecny"
+"2","Wysięk w opłucnej z potwierdzeniem cytologicznym"
+"3","Przerzuty do narządów miąższowych i przerzuty do narządów poza jamą brzuszną"

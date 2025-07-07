@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Guz nacieka warstwę podśluzową"
+"2","Guza nacieka błonę mięśniową właściwą"
+"3","Guz nacieka warstwę podsurowiczą lub nie pokrytą otrzewną tkankę okołoodbytniczą lub okołookrężniczą"
+"4","Guz perforuje otrzewną trzewną"
+"5","Guz bezpośrednio nacieka inne narządy lub struktury anatomiczne lub przylega do nich"
+"6","Guz pierwotny nie może być oceniony"

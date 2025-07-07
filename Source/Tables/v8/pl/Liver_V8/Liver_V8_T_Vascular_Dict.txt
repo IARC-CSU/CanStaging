@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","No vascular invasion"
+"2","Vascular invasion"
+"3","Guz nacieka dużą gałąź żyły wrotnej lub dużą gałąź żyły wątrobowej"

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","(SX) Oznaczenie stężeń markerów nowotworowych niedostępne lub niewykonane"
+"2","(S0) Stężenia markerów nowotworowych w surowicy w granicach normy"
+"3","(S1) poziom LDH <1.5×N, i poziom hCG <5000 (mIU/ml), i poziom AFP <1000 (ng/ml)"
+"4","(S2) poziom LDH 1.5–10×N, lub poziom hCG 5000–50 000 (mIU/ml), lub poziom AFP 1000–10 000 (ng/ml)"
+"5","(S3) poziom LDH >10×N, lub poziom hCG >50 000 (mIU/ml), lub poziom AFP >10 000 (ng/ml)"

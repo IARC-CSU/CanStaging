@@ -1,3 +1,0 @@
-"Pathologic","Posttherapy","PositiveN","Result","Message"
-"ANY","ANY","1","N0",
-"ANY","ANY","2","N1",

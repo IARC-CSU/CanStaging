@@ -1,0 +1,13 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Symptoms","Boolean","Objawy ogólne","",
+"Diffuse","Boolean","Rozlane (wieloogniskowe) zajęcie jednego lub większej liczby narządów pozalimfatycznych","",
+"IsolatedExtraLymph","Boolean","Choroba odległa: izolowane (nieciągłe) zajęcie narządów pozalimfatycznych, bez zajęcia regionalnych węzłów chłonnych, ale w połączeniu z chorobą w odległych lokalizacjach","",
+"InvolveLivBMLungCSF","Boolean","Jakiekolwiek zajęcie wątroby, szpiku kostnego, płuc lub płynu mózgowo-rdzeniowego","",
+"LymphAbove","Boolean","Zajęcie jednej lub więcej grup węzłów chłonnych POWYŻEJ przepony","",
+"NumLymphAbove","Dictionary","Liczba zajętych grup węzłów chłonnych POWYŻEJ przepony","",
+"LymphBelow","Boolean","Zajęcie jednej lub więcej grup węzłów chłonnych PONIŻEJ przepony","",
+"NumLymphBelow","Dictionary","Liczba zajętych grup węzłów chłonnych PONIŻEJ przepony","",
+"ExtraLymphAbove","Boolean","Zajęcie pojedynczego narządu pozalimfatycznego lub okolicy pozalimfatycznej POWYŻEJ przepony","",
+"ExtendExtraLymphAbove","Dictionary","Stopień zajęcia pojedynczego narządu pozalimfatycznego lub okolicy pozalimfatycznej POWYŻEJ przepony","",
+"ExtraLymphBelow","Boolean","Zajęcie pojedynczego narządu pozalimfatycznego lub okolicy pozalimfatycznej PONIŻEJ przepony","",
+"ExtendExtraLymphBelow","Dictionary","Stopień zajęcia pojedynczego narządu pozalimfatycznego lub okolicy pozalimfatycznej PONIŻEJ przepony","",

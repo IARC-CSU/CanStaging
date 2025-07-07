@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Guz ograniczony do jednego jajnika"
+"2","Guz obejmuje oba jajniki"

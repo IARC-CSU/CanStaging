@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1",">10 ponad normę"
+"2","od 1.5 do 10 ponad normę"
+"3","<1.5 ponad normę"
+"4","W normie"
+"5","Brak danych"

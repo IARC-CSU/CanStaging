@@ -1,2 +1,0 @@
-"Field","DataType","DisplayText","Group","Colour"
-"M","Dictionary","Distant metastases","1", = Metástasis a distancia

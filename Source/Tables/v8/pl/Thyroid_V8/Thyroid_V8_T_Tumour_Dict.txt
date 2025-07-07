@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Guz pierwotny nie może być oceniony"
+"2","Brak cech guza pierwotnego"
+"3","Guz ograniczony do tarczycy"
+"4","Guz szwrzący się poza gruczoł tarczowy z naciekaniem jedynie mięśni pasowych (mostkowo-gnykowych, mostkowo-tarczycowych, lub łoaptkowo-gnykowych)"
+"5","Guz szerzy się poza torebkę tarczycy i nacieka którąkolwiek z następujących struktur: tkanki miękkie podskórne, krtań, tchawicę, przełyk, nerw krtaniowy wsteczny"
+"6","Guz nacieka powięź przedkręgową, naczynia śródpiersia lub obejmuje tętnicę szyjną"

@@ -44,7 +44,7 @@ class CanStaging < Sinatra::Base
 
   # first load default config
 
-  config_default = { 
+  config_default = {
     'system' => {'log_file' => "./data/logg.db", 'port' => 4567, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
   }
 
@@ -57,7 +57,7 @@ class CanStaging < Sinatra::Base
     config_default['system']['port'] = 9292
     config_default['system']['bind'] = 'localhost'
 
-    if config['system']['log_file'].nil? 
+    if config['system']['log_file'].nil?
 
       if File.directory?(Dir.home)
         # first create necessary directory
@@ -90,7 +90,7 @@ class CanStaging < Sinatra::Base
   set :sessions, true
   set :session_secret, config['system']['session_secret']
 
-  # use Rack::Session::Cookie, 
+  # use Rack::Session::Cookie,
   #         :key => 'CanStaging+',
   #         :same_site => :lax,
   #         :secret => config['system']['session_secret']
@@ -127,16 +127,18 @@ class CanStaging < Sinatra::Base
       available_languages.each do |language|
         $sites[tnm_version][language] = {}
         language_path    = "#{tnm_verision_path}/#{language}"
-        # available_sites = Dir.entries().delete_if {|e| e.start_with?('.') || e.ends_with?('txt')}   
+        # available_sites = Dir.entries().delete_if {|e| e.start_with?('.') || e.ends_with?('txt')}
         available_sites = Dir.entries(language_path).select {|entry| File.directory? File.join(language_path,entry) and !(entry =='.' || entry == '..') }
         available_sites.each do |site|
-          $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
-          ## Override the tnm version
-          if site.downcase == 'colorectal' && tnm_version == 'v7'      
-            $sites[tnm_version][language][site.downcase.to_sym].tnm_version = 'v5'
+          unless Dir.entries("#{tnm_verision_path}/#{language}/#{site}").include?(".skip")
+            $sites[tnm_version][language][site.downcase.to_sym] = Site.new(site,language,tnm_version)
+            ## Override the tnm version
+            if site.downcase == 'colorectal' && tnm_version == 'v7'
+              $sites[tnm_version][language][site.downcase.to_sym].tnm_version = 'v5'
+            end
           end
         end
-        $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development      
+        $sites[tnm_version][language].delete_if {|key, elem| elem.default_name.downcase == "test"} unless settings.environment == :development
       end
     end
   end
@@ -146,7 +148,7 @@ class CanStaging < Sinatra::Base
   load_sites
   $key_manager = KeyManager.new
 
-  before do 
+  before do
     cache_control :no_cache
     headers \
       "Pragma"   => "no-cache",
@@ -162,23 +164,23 @@ class CanStaging < Sinatra::Base
     ## set tnm version
     session[:tnm_version] = params[:tnm_version] || session[:tnm_version] || nil
 
-    unless request.path_info.start_with?("/login") ||  
-      request.path_info.start_with?("/about") || 
-      request.path_info.start_with?("/register") || 
+    unless request.path_info.start_with?("/login") ||
+      request.path_info.start_with?("/about") ||
+      request.path_info.start_with?("/register") ||
       request.path_info.start_with?("/changelog") ||
       request.path_info.start_with?("/chooser") ||
       request.path_info.start_with?("/feedback") ||
       request.path_info.start_with?("/tnm")
       if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
         # halt and show staging system chooser
-        halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout } 
+        halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout }
       end
     end
     ## see if URL corresponds to TNM version
     session[:in_memory] = $st_logger.in_memory?
   end
 
-  # check for valid api key to all calls to the service... 
+  # check for valid api key to all calls to the service...
   before do
     if request.path_info.start_with?("/get_log")
       error(401, erb(:login_form, :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} })) if $key_manager.get_user(params[:key] || session[:key]).nil?
@@ -192,7 +194,7 @@ class CanStaging < Sinatra::Base
     return JSON.pretty_generate(result)
   end
 
-  post '/tnm_submit' do 
+  post '/tnm_submit' do
     result = calculate_tnm(params)
     $st_logger.log(session[:key], params["tumour_id"], params["tnm_version"], params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
     # puts JSON.pretty_generate(result) if settings.environment == :development
@@ -212,7 +214,7 @@ class CanStaging < Sinatra::Base
     erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems} , :layout => nil
   end
 
-  get '/get_log.csv' do 
+  get '/get_log.csv' do
     content_type 'application/csv'
     $st_logger.get_csv(session[:key], request.ip.to_s, true)
   end
@@ -221,7 +223,7 @@ class CanStaging < Sinatra::Base
     $st_logger.clear(session[:key], request.ip.to_s).to_s
   end
 
-  get '/tool' do 
+  get '/tool' do
     erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
   end
 
@@ -229,7 +231,7 @@ class CanStaging < Sinatra::Base
      erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
   end
 
-  get '/about' do 
+  get '/about' do
     erb :about, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
   end
 
@@ -252,7 +254,7 @@ class CanStaging < Sinatra::Base
     R18n.set(session[:locale])
     # session[:message] = "#{R18n.t[:service][:locale_changed_to]} #{r18n.locale.title}." # +"(#{t[:service][:available]}: #{r18n.available_locales.map { |i| "#{i.title} (#{i.code})" }.join(', ')})"
     where_user_came_from = session[:previous_url] || '/tool'
-    redirect to where_user_came_from 
+    redirect to where_user_came_from
   end
 
   get '/meta/*' do |site_name|
@@ -271,7 +273,7 @@ class CanStaging < Sinatra::Base
 
   get '/site/*' do |site_name|
     # TODO: Better handling of different staging system in URL
-    if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil? 
+    if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil?
       # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
       session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
       where_user_came_from = session[:previous_url] || '/tool'
@@ -281,15 +283,15 @@ class CanStaging < Sinatra::Base
     end
   end
 
-  get '/login/form' do 
+  get '/login/form' do
     erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
   end
 
-  get '/register' do 
+  get '/register' do
     erb :registration, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
   end
 
-  get '/feedback' do 
+  get '/feedback' do
     erb :feedback, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
   end
 
@@ -302,7 +304,7 @@ class CanStaging < Sinatra::Base
       $st_logger.log_access(session[:key], request.ip.to_s)
       where_user_came_from = session[:previous_url] || '/tool'
       session[:message] = R18n.t.service.logged_in
-      redirect to where_user_came_from 
+      redirect to where_user_came_from
     else
       session[:error] = 'Sorry not a valid key '
       halt erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
@@ -315,8 +317,8 @@ class CanStaging < Sinatra::Base
     redirect to('/tool')
   end
 
-  get '/shutdown' do 
-    if config['system']['standalone'] && session[:local] 
+  get '/shutdown' do
+    if config['system']['standalone'] && session[:local]
       exit!
     else
       session[:error] = R18n.t.service.invalid_url
@@ -330,7 +332,7 @@ class CanStaging < Sinatra::Base
     erb :chooser, :locals => { :sites => sites, :systems => $available_staging_systems , :layout => :layout }
   end
 
-  get "/upload" do 
+  get "/upload" do
     erb :upload, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
   end
 
@@ -366,14 +368,14 @@ class CanStaging < Sinatra::Base
     # TNM Version is pulled from the parameters or the session if unavailable
     tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
 
-    # Override for Colorectal TNM 
+    # Override for Colorectal TNM
     tnm_version = 'v7' if tnm_version == 'v5'
 
     site = $sites[tnm_version][session[:sites_locale]][site_name] unless !$sites[tnm_version][session[:sites_locale]].keys.include?(site_name)
     if site.nil?
       return {"Error"=> R18n.t.service.unknown_site(params["site"])}.to_json
     else
-      site.get_metas.each do |part, meta| 
+      site.get_metas.each do |part, meta|
         meta.fields.keys.each do |key|
           unless params["data"][part].nil?
             if params["data"][part].include?("#{key}-number")
@@ -409,7 +411,7 @@ class CanStaging < Sinatra::Base
         if result["Error"] == nil
           params["tumour_id"] = (row["tumourid"].nil? || row["tumourid"].length == 0) ? $st_logger.get_next_numeric_id(session[:key], ip).to_s : row["tumourid"]
           tnm_version = params["tnm_version"].nil? ? session[:tnm_version] : params["tnm_version"]
-          $st_logger.log(session[:key], params["tumour_id"], tnm_version, params["site"], params["data"].to_json, result.to_json, request.ip.to_s)  
+          $st_logger.log(session[:key], params["tumour_id"], tnm_version, params["site"], params["data"].to_json, result.to_json, request.ip.to_s)
           number_ok += 1
         else
           number_failed += 1
@@ -430,16 +432,16 @@ class CanStaging < Sinatra::Base
 
   def data_to_row data
     row = {}
-    data.each do |part, list| 
-      list.each do |variable, value| 
-        row["#{part}_#{variable}"] = value  
-      end 
+    data.each do |part, list|
+      list.each do |variable, value|
+        row["#{part}_#{variable}"] = value
+      end
     end
     row
   end
 
   def get_sites
-    sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]  
+    sites = $sites[session[:tnm_version]].nil? || $sites[session[:tnm_version]][session[:sites_locale]].nil? ? {} : $sites[session[:tnm_version]][session[:sites_locale]]
     sites.values.sort_by {|v| v.site }
   end
 

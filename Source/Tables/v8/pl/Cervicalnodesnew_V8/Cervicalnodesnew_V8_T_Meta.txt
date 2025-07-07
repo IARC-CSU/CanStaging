@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"T","Dictionary","Brak cech guza pierwotnego","1",

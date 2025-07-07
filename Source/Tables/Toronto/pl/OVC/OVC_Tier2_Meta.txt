@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Przerzut odległy (z wyłączeniem przerzutu do otrzewnej)","",
+"RetroperitonealNodes","Boolean","Zajęcie zaotrzewnowych węzłów chłonnych","",
+"SpreadPeritoneam","Boolean","Rozsiew do otrzewnej poza miednicą","",
+"PelvicExtension","Boolean","Nowotwór szerzy się poza miednicę (poniżej krawędzi miednicy)","",

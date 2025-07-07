@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","Przerzut do regionalnych węzłów chłonnych","1",
