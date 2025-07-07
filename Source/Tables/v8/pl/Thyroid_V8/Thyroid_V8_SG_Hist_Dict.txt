@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Brodawkowaty lub pęcherzykowy w wieku poniżej 55 lat"
+"2","Brodawkowaty lub pęcherzykowy w wieku 55 lat i wyższym"
+"3","Rdzeniasty"
+"4","Anaplastyczny"

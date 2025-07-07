@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Brak przerzutu w regionalnych węzłach chłonnych"
+"2","Przerzut w węzłach chłonnych okołooskrzelowych po stronie guza pierwotnego oraz w węzłach chłonnych wewnątrzpłucnych, w tym z zajęciem węzła chłonnego przez bezpośrednie naciekanie"
+"3","Przerzut w węźle chłonnym lub węzłach chłonnych śródpiersia po stronie guza pierwotnego i/lub w węźle chłonnym lub węzłach chłonnych podostrogowych"
+"4","Przerzut w węźle chłonnym lub w węzłach chłonnych śródpiersia po stronie przeciwnej do guza pierwotnego, w węźle chłonnym lub węzłach chłonnych wnęki po stronie przeciwnej, w węźle chłonnym pod mięśniem pochyłym po stronie guza lub po stronie przeciwnej, lub w węźle chłonnym nadobojczykowym (po stronie guza lub po stronie przeciwnej)"

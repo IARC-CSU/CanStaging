@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Regionalne węzły chłonne nie mogą być ocenione"
+"2","Brak przerzutu w regionalnych węzłach chłonnych"
+"3","Przerzut w regionalnym węźle chłonnym (1 lub więcej)"

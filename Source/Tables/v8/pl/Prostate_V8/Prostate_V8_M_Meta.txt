@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Boolean","Przerzuty w pozaregionalnych węzłach chłonnych","3",
+"Bone","Boolean","Przerzuty do kości","3",
+"Other","Boolean","Przerzuty do innych lokalizacji","3",

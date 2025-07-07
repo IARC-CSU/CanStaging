@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Appearance","Dictionary","Występowanie","2",
+"Extension","Dictionary","Rozległość","3",
+"Capsule","Boolean","Guz nacieka poza torebkę stercza","4",
+"Neck","Boolean","Guz nacieka szyję pęcherza (mikroskopowo)","4",
+"Vescicles","Boolean","Guz nacieka pęcherzyk nasienny (pęcherzyki nasienne)","4",
+"Bladder","Boolean","Guz nacieka pęcherz moczowy","5",
+"Sphincter","Boolean","Guz nacieka zwieracz zewnętrzny","5",
+"Rectum","Boolean","Guz nacieka odbytnicę lub mięsień dźwigacz","5",
+"Wall","Boolean","Guz nacieka ścianę miednicy","5",

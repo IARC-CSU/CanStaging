@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Przerzut do pojedynczego węzła chłonnego po stronie guza, o największym wymiarze 3 cm lub mniejszym, bez nacieku poza torebkę węzła"
+"2","Przerzut do pojedynczego węzła chłonnego po stronie guza, o największym wymiarze powyżej 3 cm, ale nie większym niż 6 cm, bez nacieku poza torebkę węzła"
+"3","Przerzuty do wielu węzłów chłonnych po stronie guza, z których żaden nie ma wymiaru większego niż 6 cm, bez nacieku poza torebkę węzła"
+"4","Przerzuty do węzłów chłonnych po obu stronach ciała, z których żaden nie ma wymiaru większego niż 6 cm, bez nacieku poza torebkę węzła"
+"5","Przerzut do węzła chłonnego o wymiarze większym niż 6 cm, bez nacieku poza torebkę węzła"
+"6","Przerzuty do jednego lub wielu węzłów chłonnych z klinicznie jawnym naciekiem poza torebkę węzła"

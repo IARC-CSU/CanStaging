@@ -1,3 +1,0 @@
-"Key","DisplayText"
-"1","Ausência de metástases à distância ou em linfonodos para-aórticos"
-"2","Com metástases à distância ou em linfonodos para-aórticos"

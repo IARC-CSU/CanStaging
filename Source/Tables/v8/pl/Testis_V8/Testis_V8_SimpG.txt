@@ -1,0 +1,4 @@
+"M","Result"
+"M0","Regionalne"
+"M1a","Uogólnione"
+"M1b","Uogólnione"

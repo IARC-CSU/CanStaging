@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"MetastasisOutsideCNS","Boolean","Przerzut poza centralnym układem nerwowym","",
+"MetastasisSpineOrJunction","Boolean","Przerzut widoczny w badaniach obrazowych w rdzeniu kręgowym lub połączeniu szyjno-rdzeniowym","",
+"MetastasisBrain","Boolean","Przerzut widoczny w badaniach obrazowych w mózgu","",
+"TumourCellsInCSF","Boolean","Komórki nowotworowe w płynie mózgowo-rdzeniowym","",

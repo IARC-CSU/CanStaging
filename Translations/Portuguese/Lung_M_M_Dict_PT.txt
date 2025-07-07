@@ -1,4 +1,0 @@
-"Key","DisplayText"
-"1","Ausência de metástases à distância"
-"2","Nódulo(s) tumoral(is) distinto(s) num lobo contralateral com nódulos pleurais ou derrame pleural (ou pericárdico) maligno"
-"3","Com metástases à distância"
