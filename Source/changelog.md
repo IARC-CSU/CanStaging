@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.17 (2025-08-29)
+
+- Improved menu structure.
+- Polish translation updated.
+- Logos updated.
+
 ### 0.9.16 (2024-10-16)
 
 - Polish translation added.
