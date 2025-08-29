@@ -61,16 +61,6 @@
                 <a class="nav-link" href="/tool"><%= R18n.t[:layout][:home] %> <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <%= R18n.t[:layout][:sites] %>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <% sites.each do |site| %>
-                  <a class="dropdown-item" id="<%= site.css %>_menu" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site %></a>
-                 <% end %>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
 
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= R18n.t[:layout][:staging_system] %>
@@ -81,6 +71,17 @@
                   <% end %>
                 </div>
               </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <%= R18n.t[:layout][:sites] %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <% sites.each do |site| %>
+                  <a class="dropdown-item" id="<%= site.css %>_menu" href="/site/<%= "#{site.default_name.downcase}" %>"><%= site.site %></a>
+                 <% end %>
+                </div>
+              </li>
+
               
               <% unless session[:key].nil? %>
                 <li class="nav-item">

@@ -1,4 +1,4 @@
 "Field","DataType","DisplayText","Group","Colour"
 "Nodes","Dictionary","Regionalne węzły chłonne","1",
-"Size","Number","Największy wymiar przerzutu (cm)"
-"Caudal","Dictionary","Przekraczanie kaudalnej granicy chrząstki pierścieniowatej"
+"Size","Number","Największy wymiar przerzutu (cm)","1",
+"Caudal","Dictionary","Przekraczanie kaudalnej granicy chrząstki pierścieniowatej","1",
