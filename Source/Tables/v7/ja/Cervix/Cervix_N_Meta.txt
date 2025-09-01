@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","リンパ節転移の数","1",""

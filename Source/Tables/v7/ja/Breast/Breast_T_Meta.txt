@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","病理検査の実施","1",""
+"Posttherapy","Boolean","術前補助療法後","1",""
+"Size","Number","浸潤腫瘍のサイズ（cm）","2",""
+"ChestInvasion","Boolean","胸壁への進展（胸筋浸潤のみは含まない）","3",""
+"Inflammation","Boolean","炎症性乳癌","3",""
+"Ulceration","Boolean","潰瘍形成，同側乳房の衛星皮膚結節，または皮膚の浮腫〔橙皮状皮膚（peau d'orange）を含む〕","3",""

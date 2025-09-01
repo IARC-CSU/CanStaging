@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","腫瘍の最大径（cm）","1",""
+"Limit","Boolean","腎に限局","1",""
+"TumourExtension","Boolean","主静脈または腎周囲組織への進展（同側の副腎への進展がなくGerota筋膜をこえない）","2",""
+"Extension","Dictionary","進展","2",""
+"Gerota","Boolean","Gerota筋膜をこえる浸潤（同側副腎への連続的進展を含む）","3",""

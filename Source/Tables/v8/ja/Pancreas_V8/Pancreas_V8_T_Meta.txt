@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","腫瘍の最大径（cm）","3",""
+"T4invasion","Boolean","腹腔動脈，上腸間膜動脈，および／または総肝動脈への浸潤","2",""

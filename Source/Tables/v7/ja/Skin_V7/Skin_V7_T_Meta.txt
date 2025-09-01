@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","原発腫瘍","1",""
+"Size","Number","腫瘍の最大径（cm）","1",""
+"Invasion","Dictionary","それ以上の浸潤","2",""
