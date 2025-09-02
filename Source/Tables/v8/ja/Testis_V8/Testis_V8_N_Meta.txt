@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","血清腫瘍マーカ―検査の実施","",""
+"Metastasis","Dictionary","領域リンパ節","1",""
+"Size","Number","領域リンパ節転移の最大径（cm）","2",""
+"Number","Number","領域リンパ節転移の数","2",""
+"Extranodal","Boolean","腫瘍の節外進展","2",""

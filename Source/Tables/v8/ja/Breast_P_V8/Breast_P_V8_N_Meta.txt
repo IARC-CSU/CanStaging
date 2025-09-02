@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Dictionary","腋窩リンパ節転移の数（少なくとも1個は＞2mm）","1",""
+"Infraclavicular","Dictionary","鎖骨下レベルⅢリンパ節転移","2",""
+"Mammary","Dictionary","内胸リンパ節転移","2",""
+"Micrometastases","Dictionary","微小転移（最大径＞0.2mm，かつ／または細胞数200個をこえるが＜＝2.0mm）","3",""
+"Supraclavicular","Boolean","鎖骨上リンパ節転移","4",""

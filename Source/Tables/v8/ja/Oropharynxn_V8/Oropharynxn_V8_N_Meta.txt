@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","p16免疫組織化学検査の実施","1",""
+"Metastasis","Dictionary","領域リンパ節","1",""
+"Size","Number","リンパ節の最大径（cm）","1",""
+"Extranodal","Boolean","腫瘍の節外進展","1",""

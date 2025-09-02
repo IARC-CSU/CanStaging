@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"M","Dictionary","遠隔転移","1",""

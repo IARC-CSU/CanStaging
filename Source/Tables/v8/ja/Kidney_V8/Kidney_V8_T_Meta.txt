@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","腫瘍の最大径（cm）","1",""
+"Limit","Boolean","腎に限局","1",""
+"Renal","Boolean","腎静脈やその区域静脈への進展，または腎孟腎杯システムへの浸潤","2",""
+"Fat","Boolean","Gerota筋膜をこえない，腎周囲および／または腎洞（腎孟周囲）脂肪組織への浸潤","2",""
+"Venacava","Boolean","横隔膜下の大静脈内への進展","2",""
+"Diaphragm","Boolean","横隔膜上の大静脈内への進展，または大静脈壁への浸潤","2",""
+"Gerota","Boolean","Gerota筋膜をこえる浸潤（同側副腎への連続的進展を含む）","3",""

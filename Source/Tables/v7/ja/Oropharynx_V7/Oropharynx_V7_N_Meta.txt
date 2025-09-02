@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","領域リンパ節への転移","1",""
+"Size","Number","領域リンパ節転移の最大径（cm）","1",""

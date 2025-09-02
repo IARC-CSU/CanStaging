@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","原発腫瘍","1",""
+"Size","Number","腫瘍の厚さ（mm）","1",""
+"Ulceration","Boolean","潰瘍の有無","2",""
+"Mitoses","Dictionary","核分裂像","2",""

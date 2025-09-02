@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Side","Dictionary","患部卵巣","2",""
+"Status","Dictionary","腫瘍の状態","2",""
+"Ascites","Dictionary","腹水または腹腔洗浄液中の悪性細胞","2",""
+"Extrapelvic","Dictionary","骨盤外の転移（後腹膜リンパ節を含む）","2",""

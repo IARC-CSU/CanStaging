@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","病理検査の実施","1",""
+"Posttherapy","Boolean","術前補助療法後","1",""
+"PositiveN","Number","リンパ節転移の数","2",""

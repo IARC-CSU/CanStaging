@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","遠隔転移（腟，骨盤漿膜，付属器への転移は除外し，鼠径リンパ節への転移と，傍大動脈リンパ節と骨盤リンパ節以外の腹腔内リンパ節への転移を含む）","1",""

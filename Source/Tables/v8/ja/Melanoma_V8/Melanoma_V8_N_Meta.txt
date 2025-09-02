@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","領域リンパ節転移の数","2",""
+"Metastasis","Dictionary","顕微鏡的または肉眼的なリンパ節転移","2",""
+"Satellite","Dictionary","衛星結節またはin-transit転移","2",""
+"Matted","Dictionary","癒着したリンパ節転移","2",""
