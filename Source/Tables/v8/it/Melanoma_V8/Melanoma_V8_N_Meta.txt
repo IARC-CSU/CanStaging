@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"PositiveN","Number","Numero di linfonodi regionali positivi","2",
+"Metastasis","Dictionary","Metastasi microscopiche o macroscopiche","2",
+"Satellite","Dictionary","Metastasi satelliti o in transit","2",
+"Matted","Dictionary","Linfonodi confluenti regionali metastatici","2",

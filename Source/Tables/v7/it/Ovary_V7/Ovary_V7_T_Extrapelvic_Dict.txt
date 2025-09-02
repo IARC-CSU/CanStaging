@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Nessun coinvolgimento extrapelvico"
+"2","Coinvolgimento extrapelvico peritoneale microscopico"
+"3","Metastasi peritoneale macroscopica oltre l'orlo pelvico (&#x2264;2cm dimensione massima)"
+"4","Metastasi peritoneale macroscopica oltre l'orlo pelvico (>2cm dimensione massima)"

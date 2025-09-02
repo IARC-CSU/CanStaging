@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Esame patologico effettuato","1",
+"Metastasis","Dictionary","Linfonodi regionali","1",
+"Size","Number","Dimensione massima del linfonodo","1",
+"Extranodal","Boolean","Presenza di estensione extranodale","1",

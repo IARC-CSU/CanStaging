@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","原発腫瘍","1",""
+"Size","Number","腫瘍の最大径（cm）","1",""
+"Extension","Boolean","喉頭外舌面への進展","2",""
+"Invasion","Boolean","次のいずれかへの浸潤：喉頭、舌深層の筋肉/外舌筋（オトガイ舌筋、舌骨舌筋、口蓋舌筋、茎突舌筋）、内側翼突筋、硬口蓋、または下顎骨","2",""
+"Invasionn","Boolean","次のいずれかへの浸潤：外側翼突筋、翼状突起、上咽頭側壁、頭蓋底、または頸動脈を取り囲む","3",""

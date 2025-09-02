@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","腫瘍の深達度（mm）","2",""
+"Ulceration","Dictionary","潰瘍形成","2",""

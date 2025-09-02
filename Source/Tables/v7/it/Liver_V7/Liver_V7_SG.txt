@@ -1,0 +1,8 @@
+"T","N","M","Result","Message"
+"T1","N0","M0","I",
+"T2","N0","M0","II",
+"T3a","N0","M0","IIIA",
+"T3b","N0","M0","IIIB",
+"T4","N0","M0","IIIC",
+"ANY","N1","M0","IVA",
+"ANY","ANY","M1","IVB",

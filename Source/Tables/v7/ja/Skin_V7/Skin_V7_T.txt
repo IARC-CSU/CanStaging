@@ -1,0 +1,8 @@
+"Tumour","Size","Invasion","Result","Message"
+"1","ANY","ANY","TX",""
+"2","ANY","ANY","T0",""
+"3","ANY","ANY","Tis",""
+"4","2","1","T1",""
+"4","3","1","T2",""
+"4","ANY","2","T3",""
+"4","ANY","3","T4",""

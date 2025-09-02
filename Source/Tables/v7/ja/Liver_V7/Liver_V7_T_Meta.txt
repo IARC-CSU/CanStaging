@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","単発腫瘍または多発性腫瘍","2",""
+"Size","Number","腫瘍の最大径（cm）","2",""
+"VascularInvasion","Boolean","血管浸潤","2",""
+"HepaticVein","Boolean","門脈または肝静脈の大分枝への浸潤","2",""
+"AdjInvasion","Boolean","胆襄以外の隣接臓器への直接浸潤，または肝癌破裂","2",""

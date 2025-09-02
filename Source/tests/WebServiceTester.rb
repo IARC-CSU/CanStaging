@@ -1,4 +1,4 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CIN/IARC
+# Author: Morten Ervik, ervikm@iarc.who.int, CIN/IARC
 
 require 'rest-client'
 require 'json'

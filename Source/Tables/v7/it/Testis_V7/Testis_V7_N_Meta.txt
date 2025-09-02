@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Linfonodi regionali","1",
+"Number","Number","Numero di linfonodi positivi","2",
+"Extranodal","Boolean","Evidenza di estensione extranodale del tumore","2",

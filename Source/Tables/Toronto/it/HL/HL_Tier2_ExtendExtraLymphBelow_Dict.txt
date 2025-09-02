@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","S&#236; (con interessamento linfonodale)"
+"2","S&#236; (senza interessamento linfonodale)"
+"3","No"
+"4","Sconosciuto"

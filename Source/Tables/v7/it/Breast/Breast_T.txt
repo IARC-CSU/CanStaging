@@ -1,0 +1,13 @@
+"Pathologic","Posttherapy","Size","ChestInvasion","Ulceration","Inflammation","Result","Message"
+"F","F","1","F","F","F","T0",
+"ANY","ANY","1","F","F","F","T0",
+"ANY","ANY","2","F","F","F","T1a",
+"ANY","ANY","3","F","F","F","T1b",
+"ANY","ANY","4","F","F","F","T1c",
+"ANY","ANY","5","F","F","F","T1mi",
+"ANY","ANY","6","F","F","F","T2",
+"ANY","ANY","7","F","F","F","T3",
+"ANY","ANY","ANY","T","F","F","T4a",
+"ANY","ANY","ANY","F","T","F","T4b",
+"ANY","ANY","ANY","T","T","F","T4c",
+"ANY","ANY","ANY","ANY","ANY","T","T4d",

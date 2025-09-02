@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Metastasi unilaterale, dimensioni < 6 cm"
+"2","Metastasi bilaterali o controlaterali, dimensioni < 6 cm"
+"3","Metastasi in uno o pi&#249; linfonodi di dimensioni > 6 cm"

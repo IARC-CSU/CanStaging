@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Invasion","Dictionary","Estensione del tumore","1",
+"Size","Number","Dimensione massima del tumore (cm)","1",

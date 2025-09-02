@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Invasion","Dictionary","浸潤のレベル","1",""

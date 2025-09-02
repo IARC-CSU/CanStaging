@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Presenza di metastasi a distanza alla diagnosi","",
+"InvolveOrbit","Boolean","Coinvolgimento dell'orbita","",
+"RegionalNodes","Boolean","Coinvolgimento dei linfonodi regionali","",

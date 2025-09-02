@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","&#x2264;2"
+"2",">2"
+"3","Non noto"

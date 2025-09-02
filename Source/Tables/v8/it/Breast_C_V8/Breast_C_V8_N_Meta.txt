@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Ipsilateral","Boolean","Linfonodi ascellari omolaterali del I e II livello metastatici e mobili","3",""
+"Matted","Boolean","Linfonodi ascellari omolaterali metastatici e fissi tra di loro o ad altre strutture","4",""
+"InternalMammary","Boolean","Metastasi nei linfonodi mammari interni omolaterali clinicamente rilevabili e in assenza di metastasi clinicamente evidenti nei linfonodi ascellari","4",""
+"Infraclavicular","Boolean","Metastasi nei linfonodi sottoclaveari omolaterali","4",""
+"Supraclavicular","Boolean","Metastasi nei linfonodi sovraclaveari","4",""

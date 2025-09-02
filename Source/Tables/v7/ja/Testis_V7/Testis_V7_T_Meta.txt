@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","原発腫瘍","1",""
+"Vascular","Boolean","脈管侵襲","2",""
+"Tunica","Boolean","白膜への浸潤","2",""
+"Vaginalis","Boolean","鞘膜への浸潤","2",""

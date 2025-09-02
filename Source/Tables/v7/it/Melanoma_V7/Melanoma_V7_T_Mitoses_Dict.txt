@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di mitosi"
+"2","Mitosi <1/mm^2"
+"3","Mitosi &#x2265;1mm^2"

@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Massima dimensione del tumore (cm)","1",
+"Extension","Boolean","Estensione alla superficie linguale dell'epiglottide","2",
+"Invasion","Boolean","Il tumore invade una delle seguenti: laringe, muscoli profondi/estrinseci della lingua (genioglosso, ioglosso, palatoglosso, estiloglosso), muscolo pterigoide mediale, palato duro, mandibola, muscolo pterigoideo laterale, lamine pterigoidee, parete laterale del rinofaringe, base cranica o che ingloba l'arteria carotide","3",

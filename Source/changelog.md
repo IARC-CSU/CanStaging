@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.18 (2025-09-02)
+
+- Improved handling of locales.
+- Added Japanese translation.
+- Added Italian translation.
+
 ### 0.9.17 (2025-08-29)
 
 - Improved menu structure.

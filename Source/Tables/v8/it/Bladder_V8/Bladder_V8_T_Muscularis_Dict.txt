@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Il tumore non invade la tonaca muscolare"
+"2","Il tumore invade la prima met&#224; della tonaca muscolare"
+"3","Il tumore invade la seconda met&#224; della tonaca muscolare"
+"4","Non si conosce l'estensione dell'invasione"

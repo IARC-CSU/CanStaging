@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Nessuna evidenza del tumore primitivo"
+"3","Carcinoma in situ"
+"4","Tumore nella sovraglottide (sopra la corda vocale)"
+"5","Tumore nella glottide (che coinvolge una corda vocale)"
+"6","Tumore nella glottide (che coinvolge entrambe le corde vocali)"
+"7","Tumore nella sottoglottide (sotto la corda vocale)"

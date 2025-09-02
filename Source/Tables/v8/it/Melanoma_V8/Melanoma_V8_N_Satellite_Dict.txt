@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di metastasi satelliti o in transit"
+"2","Metastasi satelliti"
+"3","Metastasi in transit"

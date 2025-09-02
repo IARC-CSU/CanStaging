@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Invasione stromale &#x2264;  3 mm in profondit&#224; E con estensione orizzontale &#x2264;  7 mm"
+"2","Invasione stromale > 3 mm ma non > 5 mm E con estensione orizzontale &#x2264;  7 mm"
+"3","Invasione stromale > 5 mm in profondit&#224; O estensione  orizzontale > 7 mm"

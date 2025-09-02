@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Metastasi ai linfonodi (I linfonodi della linea mediana sono considerati ipsilaterali)","2",
+"Size","Number","Massima dimensione del linfonodo (cm)","2",

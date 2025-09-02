@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","Linfonodi regionali","1",,

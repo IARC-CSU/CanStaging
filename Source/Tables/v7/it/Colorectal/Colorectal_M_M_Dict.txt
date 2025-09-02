@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Metastasi confinate a un solo organo (es. fegato, polmone, ovaio, linfonodo extraregionale)"
+"3","Metastasi in pi&#249; di un organo o al peritoneo"

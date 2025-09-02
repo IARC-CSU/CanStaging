@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Nessuna diffusione agli organi distanti"
+"2","Diffusione a organi distanti"

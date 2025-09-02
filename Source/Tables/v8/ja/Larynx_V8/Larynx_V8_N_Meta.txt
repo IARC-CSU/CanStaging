@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","病理検査の実施","1",""
+"Metastasis","Dictionary","リンパ節転移（正中リンパ節は同側リンパ節）","1",""
+"Size","Number","リンパ節の最大径（cm）","1",""
+"Extranodal","Boolean","腫瘍の節外進展","2",""

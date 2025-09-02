@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","病理検査の実施","1",""
+"Posttherapy","Boolean","術前補助療法後","1",""
+"M","Dictionary","遠隔転移","2",""
+"Nodes","Boolean","領域リンパ節以外のリンパ節転移","3",""
+"Bone","Boolean","骨転移","3",""
+"Other","Boolean","リンパ節、骨以外の転移","3",""

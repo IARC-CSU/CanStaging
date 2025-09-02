@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","原発腫瘍","1",""
+"Subsite","Boolean","下咽頭の1亜部位に限局","2",""
+"Size","Number","腫瘍の最大径（cm）","2",""
+"Fixation","Dictionary","片側喉頭の固定，または食道粘膜に進展","2",""
+"Invasion4a","Boolean","次のいずれかへの浸潤：甲状軟骨，輪状軟骨，舌骨，甲状腺，食道頸部正中軟部組織（頸部正中軟部組織には，前喉頭筋群および皮下脂肪組織が含まれる）","3",""
+"Invasion4b","Boolean","椎前筋膜への浸潤，頸動脈の全周性に包囲，または縦隔への浸潤","",""

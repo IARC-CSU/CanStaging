@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"5","Estensione oltre l'utero, ma non alla parete pelvica o al terzo inferiore della vagina"
+"1","Limitato ai 2/3 superiori della vagina senza evidente coinvolgimento del parametrio, dimensione maggiore sconosciuta"
+"2","Carcinoma invasivo &#224; 4cm nella dimensione maggiore"
+"3","Carcinoma invasivo > 4 cm nella dimensione maggiore"
+"4","Coinvolgimento parametrico, ma non fino alla parete pelvica"

@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di linfonodi regionali metastatici"
+"2","Metastasi microscopica (clinicamente occulta)"
+"3","Metastasi macroscopica (dimostrata clinicamente)"

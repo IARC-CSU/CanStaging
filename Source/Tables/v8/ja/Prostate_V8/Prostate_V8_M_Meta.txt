@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Boolean","領域リンパ節以外のリンパ節転移","3",""
+"Bone","Boolean","骨転移","3",""
+"Other","Boolean","リンパ節，骨以外の転移","3",""

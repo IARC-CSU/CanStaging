@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathology","Dictionary","Esame patologico effettuato","1",
+"Nodes","Dictionary","Linfonodi regionali","1",
+"Size","Number","Dimensione massima del linfonodo (cm)","1",
+"Extranodal","Dictionary","Presenza di estensione extranodale (la presenza di coinvolgimento cutaneo o delle parti molli con fissazione sui piani profondi o la presenza di segni clinici di coinvolgimento delle strutture nervose &#232; classificato come estensione clinica extranodale. I linfonodi sulla linea mediana sono considerati linfonodi ipsilaterali.)","1"

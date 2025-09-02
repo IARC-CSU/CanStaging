@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","領域リンパ節","1",""

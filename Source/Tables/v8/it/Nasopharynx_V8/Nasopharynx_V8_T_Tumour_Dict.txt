@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Nessuna evidenza di tumore primitivo"
+"3","Carcinoma in situ"
+"4","Tumore limitato alla rinofaringe, o esteso all'orofaringe e/o alla cavit&#224; nasale senza estensione parafaringea"
+"5","Tumore con estensione allo spazio parafaringeo e/o infiltrazione del muscolo pterigoideo mediale, laterale o dei muscoli paravertebrali"
+"6","Tumore che interessa strutture ossee della base cranica, vertebre cervicali, strutture pterigoidee, e/o seni paranasali"
+"7","Tumore con estensione intracranica e/o interessamento dei nervi cranici, dell'ipofaringe, dell'orbita, della ghiandola parotide e/o infiltrazione oltre la superficie laterale del muscolo pterigoideo laterale"

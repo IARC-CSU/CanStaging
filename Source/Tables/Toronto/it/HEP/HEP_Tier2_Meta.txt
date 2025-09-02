@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Boolean","Sono presenti metastasi a distanza","",
+"CaudateLobe","Boolean","Coinvolgimento del lobo caudato","",
+"LeftLateral","Boolean","Coinvolgimento della sezione laterale sinistra alla diagnosi","",
+"LeftMedial","Boolean","Coinvolgimento della sezione mediale sinistra alla diagnosi","",
+"RightAnterior","Boolean","Coinvolgimento della sezione anteriore destra alla diagnosi","",
+"RightPosterior","Boolean","Coinvolgimento della sezione posteriore destra alla diagnosi","",

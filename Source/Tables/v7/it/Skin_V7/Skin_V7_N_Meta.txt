@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","Linfonodi regionali","1",
+"Size","Number","Dimensione massima del linfonodo (cm)","1",

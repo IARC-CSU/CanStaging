@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Dimensione massima del tumore (cm)","3",
+"T4invasion","Boolean","Tumore che interessa l'asse celiaco o l'arteria mesenterica e/o l'arteria epatica comune","2",
