@@ -1,0 +1,13 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Symptoms","Boolean","Sintomi sistemici","",
+"Diffuse","Boolean","Interessamento diffuso o disseminato di uno o pi&#249; organi extra-linfatici","",
+"IsolatedExtraLymph","Boolean","Interessamento di un organo extra-linfatico isolato senza coinvolgimento di linfonodi regionali, ma in concomitanza con malattia in sede distante","",
+"InvolveLivBMLungCSF","Boolean","Ogni interessamento di fegato, midollo osseo, polmoni o liquor","",
+"LymphAbove","Boolean","Interessamento di una o pi&#249; regioni linfonodali SOPRA il diaframma","",
+"NumLymphAbove","Dictionary","Numero di regioni linfonodali SOPRA  il diaframma","",
+"LymphBelow","Boolean","Interessamento di una o pi&#249; regioni linfonodali SOTTO il diaframma","",
+"NumLymphBelow","Dictionary","Numero di regioni linfonodali SOTTO il diaframma","",
+"ExtraLymphAbove","Boolean","Interessamento di un solo organo o sede extra-linfatica SOPRA il diaframma","",
+"ExtendExtraLymphAbove","Dictionary","Estensione dell'interessamento di un solo organo o sede extra-linfatica SOPRA il diaframma","",
+"ExtraLymphBelow","Boolean","Interessamento di un solo organo o sede extra-linfatica SOTTO il diaframma","",
+"ExtendExtraLymphBelow","Dictionary","Estensione dell'interessamento di un solo organo o sede extra-linfatica SOTTO il diaframma","",

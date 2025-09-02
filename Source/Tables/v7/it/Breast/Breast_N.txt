@@ -50,6 +50,6 @@
 "ANY","T","F","2","ANY","F","T","ANY","F","N3b",
 "ANY","T","F","3","ANY","F","T","ANY","F","N3b",
 "ANY","T","F","4","ANY","F","T","ANY","F","N3b",
-"ANY","ANY","T","2","ANY","ANY","F","F","NX","Error: micrometases and positive axillary nodes selected!"
-"ANY","ANY","T","3","ANY","ANY","F","F","NX","Error: micrometases and positive axillary nodes selected!"
-"ANY","ANY","T","4","ANY","ANY","F","F","NX","Error: micrometases and positive axillary nodes selected!"
+"ANY","ANY","T","2","ANY","ANY","F","F","NX","Errore: micrometastasi e linfonodi ascellari positivi selezionati!"
+"ANY","ANY","T","3","ANY","ANY","F","F","NX","Errore: micrometastasi e linfonodi ascellari positivi selezionati!"
+"ANY","ANY","T","4","ANY","ANY","F","F","NX","Errore: micrometastasi e linfonodi ascellari positivi selezionati!"

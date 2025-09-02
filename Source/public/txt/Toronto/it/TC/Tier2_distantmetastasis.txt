@@ -1,0 +1,1 @@
+La risposta “No” deve essere usata se non ci sono menzioni di metastasi nella cartella clinica, se la metastasi non è specificamente menzionata, considerare che non ci sono metastasi. Una risposta “Sconosciuto” deve essere usata solo se nella cartella clinica è indicata incertezza se siano presenti o meno metastasi.

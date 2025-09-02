@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Massima dimensione del tumore (cm)","1",
+"Limit","Boolean","Tumore limitato al rene","1",
+"Renal","Boolean","Il tumore si estende alle vene renali o alle loro arterie segmentali, o invade il sistema pelvico","2",
+"Fat","Boolean","Il tumore invade il tessuto perirenale, o il seno renale, ma non va oltre la fascia di Gerota","2",
+"Venacava","Boolean","Il tumore si estende nella vena cava al di sotto del diaframma","2",
+"Diaphragm","Boolean","Il tumore si estende nella vena cava al di sopra del diaframma o invade la parete della vena cava","2",
+"Gerota","Boolean","Il tumore si &#232; diffuso oltre la fascia di Gerota (inclusa l'estensione nella ghiandola surrenale ipsilaterale)","3",

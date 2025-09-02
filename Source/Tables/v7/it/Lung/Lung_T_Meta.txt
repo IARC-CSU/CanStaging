@@ -1,5 +1,5 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Size","Number","EDimensione del tumore invasivo (cm)","1",
+"Size","Number","Dimensione del tumore invasivo (cm)","1",
 "Bronchus","Dictionary","Invasione bronchiale","2",
 "Pleura","Boolean","Invasione della pleura viscerale","2",
 "Atelectasis","Boolean","Associazione ad atelettasia o polmonite ostruttiva (NON interessa il polmone in toto)","2",

@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Senza ulcerazione"
+"2","Con ulcerazione"

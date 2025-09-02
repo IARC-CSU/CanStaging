@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Tumore clinicamente non apprezzabile (non palpabile o visibile tramite imaging)"
+"2","Tumore clinicamente apprezzabile"

@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Metastasi in un singolo linfonodo, dimensioni &#x2264; 3 cm senza estensione extranodale"
+"2","Metastasi in un singolo linfonodo, dimensioni > 3 cm ma < 6 cm, senza estensione extranodale"
+"3","Metastasi in multipli linfonodi ipsilaterali, nessuno di dimensione > 6 cm, senza estensione extranodale"
+"4","Metastasi bilaterali, nessuno di dimensioni > 6 cm, senza estensione extranodale"
+"5","Metastasi in un linfonodo di dimensioni > 6 cm, senza estensione extranodale"
+"6","Metastasi in un linfondo singolo o multiplo con estensione clinica extranodale"

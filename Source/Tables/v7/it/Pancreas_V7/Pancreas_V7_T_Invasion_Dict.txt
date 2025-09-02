@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","Nessuna invasione"
-"2","Tumore che si estende oltre il pancreas ma senza coinvolgimento dell'asse celiaco o dell'arteria mesenterica superiore"
+"2","Tumore che si estende oltre il pancreas, ma senza coinvolgimento dell'asse celiaco o dell'arteria mesenterica superiore"
 "3","Tumore che coinvolge l'asse celiaco o l'arteria mesenterica superiore"

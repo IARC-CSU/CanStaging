@@ -1,0 +1,4 @@
+"M","Result"
+"M0","Assenza di metastasi a distanza"
+"M1a","Metastasi a distanza nei linfonodi non regionali"
+"M1b","Metastasi a distanza in altre sedi"

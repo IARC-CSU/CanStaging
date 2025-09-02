@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","Nessuna metastasi ai linfonodi regionali"
+"3","Metastasi ai linfonodi"

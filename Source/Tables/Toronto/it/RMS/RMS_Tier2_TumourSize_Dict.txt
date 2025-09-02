@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","&#x2264;5cm"
+"2",">5cm"
+"3","Non noto"

@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Metastasi a distanza (escluse quelle peritoneali)","",
+"PeritonealNodes","Boolean","Interessamento dei linfonodi retroperitoneali","",
+"SpreadPeritoneam","Boolean","Tumore diffuso al peritoneo extrapelvico","",
+"PelvicExtension","Boolean","Estensione pelvica (sotto il bacino)","",

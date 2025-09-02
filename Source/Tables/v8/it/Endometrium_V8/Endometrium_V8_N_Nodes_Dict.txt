@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Metastasi linfonodali non valutabili"
+"2","Assenza di metastasi nei linfonodi regionali"
+"3","Metastasi ai linfonodi pelvici"
+"4","Metastasi ai linfonodi regionali paraortici, con o senza positivit&#224; dei linfonodi pelvici"

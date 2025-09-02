@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Diffusione pleurica con citologia positiva"
+"3","Metastasi parenchimali e metastasi a organi extra-addominali"

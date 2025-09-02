@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Microscopic","Boolean","Solo lesione microscopica","1",
+"Stromal","Dictionary","Invasione stromale","2",
+"ExtendedVisible","Dictionary","Lesione clinicamente visibile","3",
+"BeyondUterus","Boolean","Il tumore si estende oltre l'utero","3",
+"Parametrium","Boolean","Tumore con invasione dei parametri","4",
+"Vagina","Boolean","Il tumore coinvolge il terzo inferiore della vagina","4",
+"Pelvis","Boolean","Il tumore si estende alla parete pelvica","4",
+"Hydronephrosis","Boolean","Idronefrosi  o rene non funzionante","4",
+"Mucosa","Boolean","Il tumore infiltra la mucosa della vescica o del retto e/o  si estende oltre la vera pelvi (l'edema bolloso non &#232; sufficiente per classificare un tumore come T4)","4",

@@ -1,10 +1,10 @@
 "Field","DataType","DisplayText","Group","Colour"
 "Pathologic","Boolean","Esame patologico effettuato","1",
 "Posttherapy","Boolean","Post terapia neoadiuvante","1",
-"Axillary","Number","Numero di linfonodi ascellari positvi (se pat: almeno una localizzazione >2.0mm)","4",
+"Axillary","Number","Numero di linfonodi ascellari positivi (se pat: almeno una localizzazione >2.0mm)","4",
 "Matted","Boolean","Linfonodi ascellari positivi fissi o fissi tra loro","4",
-"Infraclavicular","Boolean","Metastasi nei linfondi infraclavicolari","3",
+"Infraclavicular","Boolean","Metastasi nei linfonodi infraclavicolari","3",
 "MammaryClinical","Boolean","Metastasi nei linfonodi mammari interni clinicamente osservati","3",
 "MammaryMicro","Boolean","Metastasi nei linfonodi mammari interni con metastasi nel linfonodo sentinella (non clinicamente osservati)","3",
-"Micrometastases","Boolean","Solo micrometastasi: nessuna >2.0mm (ma: >0.2mm o più di 200 cellule)","2",
+"Micrometastases","Boolean","Solo micormetastasi: nessuna >2.0mm (ma: >0.2mm o pi&#249; di 200 cellule)","2",
 "Supraclavicular","Boolean","Metastasi nei linfonodi sopraclavicolari","5",

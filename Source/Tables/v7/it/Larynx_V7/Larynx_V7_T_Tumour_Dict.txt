@@ -4,5 +4,5 @@
 "3","Carcinoma in situ"
 "4","Tumore nella sovraglottide (sopra la corda vocale)"
 "5","Tumore nella glottide (che coinvolge una corda vocale)"
-"6","Tumore nella glottide (che coinvolge entrambre le corde vocali)"
+"6","Tumore nella glottide (che coinvolge entrambe le corde vocali)"
 "7","Tumore nella sottoglottide (sotto la corda vocale)"

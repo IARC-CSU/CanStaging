@@ -1,4 +1,4 @@
 "Key","DisplayText"
 "1","Nessuna ulteriore invasione"
-"2","Invasione delle strutture profondo, es, muscolo, osso, cartilagine, mascella e orbita"
+"2","Invasione delle strutture profonde, es. muscolo, osso, cartilagine, mascella e orbita"
 "3","Invasione diretta o perineurale della base cranica o dello scheletro assiale"

@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Noduli tumorali in un lobo controlaterale rispetto al tumore primitivo con noduli pleurici/pericardici o versamento neoplastico pleurico o pericardico"
+"3","Singola metastasi extratoracica"
+"4","Multiple metastasi extratoraciche in uno o pi&#249; organi"

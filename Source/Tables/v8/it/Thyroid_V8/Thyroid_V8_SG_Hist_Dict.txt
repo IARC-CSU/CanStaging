@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Papillare o follicolare < 55 anni"
+"2","Papillare o follicolare &#x2265; 55 anni"
+"3","Midollare"
+"4","Anaplastico"

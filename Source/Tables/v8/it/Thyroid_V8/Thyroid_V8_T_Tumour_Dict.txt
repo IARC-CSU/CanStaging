@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Nessuna evidenza di tumore primitivo"
+"3","Tumore limitato alla tiroide"
+"4","Grossolana invasione extratiroidea dei soli muscoli (sternoioideo, sternotiroideo, o omoioideo)"
+"5","Tumore esteso oltre la capsula tiroidea e che invade una delle seguenti: tessuti molli, laringe, trachea, esofago, nervo laringeo ricorrente"
+"6","Tumore esteso alla fascia prevertebrale, vasi mediastinici o arteria carotide"

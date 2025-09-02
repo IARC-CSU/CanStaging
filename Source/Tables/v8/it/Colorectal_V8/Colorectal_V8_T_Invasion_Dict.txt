@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumore che invade la sottomucosa"
+"2","Tumore che invade la muscolare propria"
+"3","Tumore con invasione della sottosierosa o nei tessuti pericolici e perirettali"
+"4","Tumore che perfora il peritoneo viscerale"
+"5","Tumore che invade direttamente altri organi o strutture"
+"6","Tumore primitivo non definibile"

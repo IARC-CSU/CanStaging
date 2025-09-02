@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Minimal","Boolean","Adenocarcinoma minimamente invasivo","1",
+"Size","Number","Dimensione del tumore invasivo (cm)","1",
+"Bronchus","Dictionary","Invasione bronchiale","1",
+"Pleura","Boolean","Invasione della pleura viscerale","1",
+"Atelectasis","Boolean","Associazione ad atelettasia o polmonite ostruttiva che si estende alla regione ilare, che coinvolge in parte o tutto il polmone","1",
+"T3invasion","Boolean","Tumore che invade direttamente una delle seguenti: parete toracica (inclusi i tumori del solco superiore); nervo frenico, pericardio parietale; pleura parietale","3",
+"NodulesT3","Boolean","Tumore associato a noduli separati nello stesso lobo","3",
+"NodulesT4","Boolean","Tumore associato a noduli separati in un lobo ipsilaterale","4",
+"T4invasion","Boolean","Tumore che invade una delle seguenti: diaframma, mediastino, cuore, grandi vasi, trachea, nervo laringeo ricorrente, esofago, corpo vertebrale, carena","4",

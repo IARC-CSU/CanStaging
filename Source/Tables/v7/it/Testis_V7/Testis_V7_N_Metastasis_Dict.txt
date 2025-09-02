@@ -2,5 +2,5 @@
 "1","Linfonodi regionali non valutabili"
 "2","Assenza di metastasi ai linfonodi regionali"
 "3","Metastasi con una massa linfonodale di 2 cm o meno in dimensione massima"
-"4","Metastasi con una massa linfonodale > 2 cm ma < 5 in dimensione massima"
+"4","Metastasi con una massa linfonodale > 2 cm, ma < 5 in dimensione massima"
 "5","Metastasi con una massa linfonodale > 5 cm in dimensione massima"

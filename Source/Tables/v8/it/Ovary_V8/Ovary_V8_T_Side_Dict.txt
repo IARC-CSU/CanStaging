@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Limitato ad un ovaio"
+"2","Entrambe le ovaie coinvolte"

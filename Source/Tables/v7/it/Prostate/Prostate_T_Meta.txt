@@ -1,7 +1,7 @@
 "Field","DataType","DisplayText","Group","Colour"
-"Pathologic","Boolean","Pathology performed","1",
+"Pathologic","Boolean","Esame patologico effettuato","1",
 "Posttherapy","Boolean","Post terapia neoadiuvante","1",
-"Appearance","Dictionary","Apprezzabilità","2",
+"Appearance","Dictionary","Apprezzabilit&#224;","2",
 "Extension","Dictionary","Estensione","3",
 "Capsule","Boolean","Esteso oltre la capsula","4",
 "Neck","Boolean","Invasione collo vescicale (solo microscopica)","4",

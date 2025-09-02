@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"3","Si estende alla parete pelvica e/o coinvolge il terzo inferiore della vagina e/o causa idronefrosi o un rene non funzionante e/o coinvolge linfonodi pelvici e/o para-aortici"
+"1","Estensione al terzo inferiore della vagina, ma non alla parete pelvica"
+"2","Estensione alla parete pelvica e/o causa idronefrosi, o un rene non funzionante (a meno che non si sappia essere dovuto a un'altra causa)"

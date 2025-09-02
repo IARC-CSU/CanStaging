@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Dimensione del tumore (cm)","2",
+"ChestInvasion","Boolean","Estensione alla parete toracica esclusa la sola aderenza/invasione del muscolo pettorale","3",
+"Inflammation","Boolean","Carcinoma infiammatorio","3",
+"Ulceration","Boolean","Ulcerazione della cute e/o noduli cutanei satelliti ipsilaterali e/o edema della cute (inclusa cute a buccia d'arancia) che non presenta i criteri per definire il carcinoma infiammatorio","3",

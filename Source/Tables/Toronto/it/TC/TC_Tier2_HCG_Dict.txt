@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1",">50000"
+"2","da 5000 a 50000"
+"3","<5000"
+"4","Entro i normali limiti"
+"5","Sconosciuto"

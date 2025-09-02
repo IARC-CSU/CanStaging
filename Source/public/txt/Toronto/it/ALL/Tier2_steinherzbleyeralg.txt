@@ -1,0 +1,1 @@
+Calcolo di Steinherz-Bleyer = (GB/GR nel liquor) ÷ (GB/GR nel sangue) <br/> Il valore esatto dei GB e dei GR deve essere noto per calcolare correttamente il valore di Steinherz-Bleyer.
