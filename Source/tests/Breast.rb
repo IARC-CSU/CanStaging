@@ -1,4 +1,4 @@
-# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+# Author: Morten Ervik, ervikm@iarc.who.int, CSU/IARC
 
 require '..\Site.rb'
 
