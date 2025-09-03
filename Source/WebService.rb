@@ -124,6 +124,11 @@ class CanStaging < Sinatra::Base
       tnm_verision_path = "#{tables_path}/#{tnm_version}"
       $sites[tnm_version] = {}
       available_languages = Dir.entries(tnm_verision_path).select {|entry| File.directory? File.join(tnm_verision_path, entry) and !(entry =='.' || entry == '..') }
+
+      # Only load the tables that are relevant based on defined locales
+      available_locales = R18n.available_locales.map(&:code)
+      available_languages = available_languages & available_locales
+
       available_languages.each do |language|
         $sites[tnm_version][language] = {}
         language_path    = "#{tnm_verision_path}/#{language}"
