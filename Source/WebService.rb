@@ -452,7 +452,7 @@ end
 
 # If we are building the exe, we don't start the Sinatra app...
 
-if defined?(Ocra)
+if defined?(Ocra) or defined?(Aibika)
   exit
 end
 
