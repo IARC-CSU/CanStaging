@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Mobilit&#224; normale delle corde vocali"
+"2","Compromissione della mobilit&#224; delle corde vocali"
+"3","Fissazione/immobilit&#224; delle corde vocali"

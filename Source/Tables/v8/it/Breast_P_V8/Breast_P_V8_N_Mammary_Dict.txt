@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Assenza di metastasi nei linfonodi regionali"
+"2","Linfonodi mammari interni con metastasi macroscopica  rilevata  valutando  il  linfonodo  sentinella, ma non clinicamente rilevabile"
+"3","Metastasi in linfonodi mammari interni clinicamente rilevabili"
+"4","Metastasi in linfonodi mammari  interni  con  metastasi  microscopica rilevata  valutando  il  linfonodo  sentinella,  ma non clinicamente rilevabile"

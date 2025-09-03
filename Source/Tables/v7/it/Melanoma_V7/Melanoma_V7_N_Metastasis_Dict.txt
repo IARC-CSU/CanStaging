@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","Assenza di metastasi nei linfonodi regionali"
+"3","Solo metastasi microscopiche (clinicamente occulte)"
+"4","Metastasi macroscopiche (clinicamente evidenti)"
+"5","Metastasi satelliti o in-transit metastasis senza metastasi ai linfonodi regionali"
+"6","Metastasi satelliti o in-transit metastasis con metastasi ai linfonodi regionali"
+"7","Metastasi ai linfonodi regionali confluenti"

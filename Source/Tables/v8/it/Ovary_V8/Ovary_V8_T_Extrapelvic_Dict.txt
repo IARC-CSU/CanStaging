@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Nessun coinvolgimento extrapelvico"
+"2","Coinvolgimento microscopico extrapelvico peritoneale"
+"3","Metastasi peritoneali macroscopiche extrapelviche (&#x2264;2cm in dimensione massima)"
+"4","Metastasi peritoneali macroscopiche extrapelviche (>2cm in dimensione massima)"
+"5","Soltanto linfonodi retroperitoneali positivi"

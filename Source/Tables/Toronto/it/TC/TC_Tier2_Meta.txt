@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Presenza di metastasi a distanza alla diagnosi","",
+"RegionalNodes","Boolean","Coinvolgimento dei linfonodi regionali","",
+"SizeRegionalNodes","Dictionary","Dimensione della massa regionale linfonodale (massima dimensione)","",
+"SpermCordScrotum","Boolean","Tumore che invade il funicolo spermatico o scroto","",
+"TunicaVaginalis","Boolean","Tumore che si estende attraverso la tunica albuginea con interessamento della vaginale","",
+"VascularLymphInvasion","Boolean","Tumore limitato a testicolo e epididimo con invasione vascolare/linfatica","",
+"LDH","Dictionary","Lattato deidrogenasi (ukat/l)","",
+"HCG","Dictionary","Gonadrotopina corionica umana (mIU/ml)","",
+"AFP","Dictionary","Alfa-fetoproteina (ng/ml)","",

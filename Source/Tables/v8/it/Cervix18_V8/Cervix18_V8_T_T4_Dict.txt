@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Estensione oltre la pelvi vera o coinvolgimento della vescica o della mucosa rettale confermato dalla biopsia"
+"2","Diffusione agli organi pelvici adiacenti"

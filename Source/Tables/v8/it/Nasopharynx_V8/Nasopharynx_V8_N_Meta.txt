@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Dictionary","Linfonodi regionali","1",
+"Size","Number","Dimensione massima del linfonodo (cm)"
+"Caudal","Dictionary","Estensione del bordo caudale"

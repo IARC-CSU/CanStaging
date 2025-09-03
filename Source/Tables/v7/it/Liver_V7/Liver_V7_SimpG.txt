@@ -1,0 +1,8 @@
+"SG","Result"
+"I","Localizzato"
+"II","Localizzato"
+"IIIA","Localizzato"
+"IIIB","Localizzato"
+"IIIC","Localizzato"
+"IVA","Regionale"
+"IVB","A distanza"

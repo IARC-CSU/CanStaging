@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Assenza di cellule maligne nell'ascite o nel liquido di lavaggio peritoneale"
+"2","Cellule maligne nell'ascite o nel liquido di lavaggio peritoneale"

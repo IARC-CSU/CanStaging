@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Nessuna invasione"
+"2","(Labbra) Tumore che invade l'osso corticale, il nervo alveolare inferiore, la pelvi orale o la cute (mento o naso)"
+"3","(Cavo orale) Tumore che invade l'osso corticale, i muscoli estrinseci della lingua (genioglosso, ioglosso, palatoglosso, e stiloglosso), seno mascellare, cute"
+"4","(Labbra e cavo orale) Tumore che invade lo spazio masticatorio, processi pterogoidei o la base cranica e/o inglobante l'arteria carotide interna"

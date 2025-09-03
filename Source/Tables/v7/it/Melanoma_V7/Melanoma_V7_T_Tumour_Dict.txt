@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Non evidenza di tumore primitivo"
+"3","Melanoma in situ (Livello di Clark 1) iperplasia melanocitica atipica, displasia melanocitica severa, lesione maligna non invasiva)"
+"4","Tumore maligno"

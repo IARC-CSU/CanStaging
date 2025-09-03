@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"ClinicalSignsCNS","Boolean","Segni clinici di conivolgimento del SNC","",
+"BlastsCSF","Boolean","Blasti nel liquor","",
+"WBCCSF","Dictionary","Conta dei globuli bianchi (GB) nel liquor","",
+"RBCCSF","Dictionary","Conta dei globuli rossi (GR) nel liquor","",
+"SteinherzBleyerAlg","Dictionary","Se GB &#x2265; 5/&mu;L nel liquor e GR &#x2265; 10/&mu;L nel liquor, inserire valore del calcolo di Steinherz-Bleyer","",

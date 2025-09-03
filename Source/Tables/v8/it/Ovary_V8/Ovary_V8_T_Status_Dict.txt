@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Capsula  integra,  assenza  di  tumore sulla superficie dell'ovaio o della tuba di Falloppio"
+"2","Rottura intraoperatoria (spilling) della capsula "
+"3","Capsula rotta prima dell'intervento o presenza di tumore sulla superficie dell'ovaio o della tuba"
+"4","Estensione pelvica e/o metastasi all'utero e/o alle tube e/o alle ovaie "
+"5","Estensione ad altri tessuti pelvici intraperitoneali"
+"6","Carcinoma peritoneale primitivo"

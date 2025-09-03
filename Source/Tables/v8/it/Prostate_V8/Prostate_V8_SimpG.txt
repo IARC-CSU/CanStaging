@@ -1,0 +1,8 @@
+"SG","M","Result"
+"I","M0","Localizzato"
+"II","M0","Localizzato"
+"III","M0","Regionale"
+"IV","M0","Regionale"
+"IV","M1a","A distanza"
+"IV","M1b","A distanza"
+"IV","M1c","A distanza"

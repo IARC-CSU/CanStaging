@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Metastasi unilaterale nei linfonodi cervicali e/o unilaterale o bilaterale nei linfonodi retrofaringei, dimensioni &#x2264; 6 cm, sopra il margine caudale della cartilagine cricoide"
+"2","Metastasi bilaterali nei linfonodi cervicali, dimensioni &#x2264; 6 cm, sopra il margine caudale della cartilagine cricoide"
+"3","Metastasi nei linfonodi cervicali, dimensioni > 6 cm e/o con estensione sotto il margine caudale della cartilagine cricoide"

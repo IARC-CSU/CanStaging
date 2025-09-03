@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"DistantMetastasis","Boolean","Presenza di metastasi a distanza alla diagnosi","",

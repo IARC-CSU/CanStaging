@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Presenza  di  metastasi  a  distanza"

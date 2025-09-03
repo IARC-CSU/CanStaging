@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Noduli tumorali in un lobo controlaterale; tumore con noduli pleurici o versamento neoplastico pleurico o pericardico"
+"3","Metastasi a distanza"

@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumore primitivo","1",
+"Dimension","Number","Massima dimensione del tumore (cm)","1",
+"Depth","Number","Massima profondit&#224; di invasione (mm)","1",
+"Lip","Boolean","(Labbro) Il tumore invade l'osso corticale o coinvolge il nervo alveolare inferiore, il pavimento della bocca o la cute del viso (mento o naso)","2",
+"Oralcavity","Boolean","(Cavit&#224; orale) Tumore > 4 cm con profondit&#224; di invasione > 10 mm o tumore che invade attraverso l'osso corticale della mandibola o della mascella, o che coinvolge il seno mascellare o la cute del viso","2",
+"Both","Boolean","(Labbro e cavit&#224; orale) Il tumore invade lo spazio masticatorio, le placche pterigoidee o la base cranica e/o avvolge l'arteria carotide interna","2",

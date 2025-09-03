@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Tumore primitivo","1",
+"Size","Number","Dimensione massima del tumore (cm)","1",
+"Extension","Boolean","Estensione alla faccia linguale dell'epiglottide","2",
+"Invasion","Boolean","Tumore che invade una delle seguenti: laringe, muscoli estrinseci della lingua (genioglosso, ioglosso, palatoglosso e stiloglosso), muscolo pterigoideo mediale, palato duro o mandibola","2",
+"Invasionn","Boolean","Tumore che invade una delle seguenti: muscolo pterigoideo laterale, lamine pterigoidee, rinofaringe laterale, base cranica o che ingloba l'arteria carotide","3",

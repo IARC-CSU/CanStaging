@@ -1,0 +1,4 @@
+"M","Result"
+"M0","Regionale"
+"M1a","A distanza"
+"M1b","A distanza"

@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumore primitivo","1",
+"Size","Number","Spessore del tumore (mm)","1",
+"Ulceration","Boolean","Ulcerazione presente","2",
+"Mitoses","Dictionary","Mitosi presente","2",

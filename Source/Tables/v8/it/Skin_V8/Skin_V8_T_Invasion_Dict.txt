@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Nessuna ulteriore invasione"
+"2","Erosione minore dell'osso o invasione perineurale o invasione profonda"
+"3","Invasione macroscopica dell'osso/cavit&#224; midollare"
+"4","Invasione dello scheletro assiale con interessamento foraminale e/o coinvolgimento dei forami vertebrali verso lo spazio epidurale"

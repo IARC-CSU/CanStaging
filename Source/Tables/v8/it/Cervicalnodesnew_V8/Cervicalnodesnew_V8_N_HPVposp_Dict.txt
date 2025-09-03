@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Metastasi da 1 a 4 linfonodi"
+"2","Metastasi in 5 o pi&#249; linfonodi"

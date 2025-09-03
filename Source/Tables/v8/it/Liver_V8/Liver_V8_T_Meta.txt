@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","Tumore singolo o multiplo","2",
+"Size","Number","Dimensione massima del tumore","2",
+"Vascular","Dictionary","Invasione vascolare","2",
+"Invasion","Boolean","Tumore che invade direttamente gli organi adiacenti oltre la cistifellea","2",
+"Visceral","Boolean","Tumore che perfora il peritoneo viscerale","2",

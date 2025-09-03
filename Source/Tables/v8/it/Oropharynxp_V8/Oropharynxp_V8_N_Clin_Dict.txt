@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","Assenza di metastasi ai linfonodi regionali"
+"3","Metastasi in un solo linfonodo omolaterale di dimensione massima &#x2264; a 6 cm"
+"4","Metastasi in linfonodi bilaterali o controlaterali, nessuno dei quali di dimensione massima < 6 cm"
+"5","Metastasi in qualsiasi linfonodo di dimensione massima > 6 cm"

@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Assenza di metastasi a distanza"
+"2","Metastasi a distanza alla  cute, tessuti molli e/o linfonodi non regionali"
+"3","Metastasi a distanza al polmone"
+"4","Metastasi a distanza in sedi diverse dal SNC"
+"5","Metastasi a distanza al SNC"

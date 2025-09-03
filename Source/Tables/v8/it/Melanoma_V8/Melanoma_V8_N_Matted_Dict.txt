@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Linfonodi confluenti regionali metastatici assenti"
+"2","Linfonodi confluenti regionali metastatici presenti"

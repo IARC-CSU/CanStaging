@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumore primitivo","1",
+"Subsite","Boolean","Tumore limitato a una sottosede dell'ipofaringe","2"
+"Size","Number","Massima dimensione del tumore (cm)","2"
+"Fixation","Dictionary","Presenza di fissazione dell'emilaringe o estensione alla mucosa esofagea","2"
+"Invasion4a","Boolean","Tumore che invade una delle seguenti: cartilagine tiroidea/cricoidea, osso ioide, ghiandola tiroidea, esofago, tessuti molli del comparto centrale (muscoli paralaringei e grasso sottocutaneo)","3",
+"Invasion4b","Boolean","Tumore che invade la fascia paravertebrale, ingloba l'arteria carotide o invade le strutture mediastiniche"

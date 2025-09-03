@@ -1,0 +1,4 @@
+"M","Result","Message"
+"M0","Localizzato",
+"M1a","A distanza",
+"M1b","A distanza",

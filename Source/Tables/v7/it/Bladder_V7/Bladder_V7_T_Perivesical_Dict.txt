@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Il tumore non invade il tessuto perivescicale"
+"2","Il tumore invade il tessuto perivescicale microscopicamente"
+"3","Il tumore invade il tessuto perivescicale macroscopicamente (massa extravescicale)"
+"4","Non si conosce l'estensione dell'invasione nel tessuto perivescicale"

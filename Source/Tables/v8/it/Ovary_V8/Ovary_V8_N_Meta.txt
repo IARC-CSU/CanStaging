@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Regional","Boolean","Coinvolgimento dei linfonodi regionali (inclusi i retroperitoneali)","2",
+"RegionalN","Number","Dimensioni della metastasi dei linfonodi regionali (mm)","3",

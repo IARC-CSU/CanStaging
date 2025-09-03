@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Nessuna invasione"
+"2","Tumore che invade la lamina propria o muscularis mucosae"
+"3","Tumore che invade la sottomucosa"
+"4","Tumore che invade la muscularis propria"
+"5","Tumore che invade la sottosierosa"
+"6","Tumore che perfora la sierosa"
+"7","Tumore che invade le strutture adiacenti"

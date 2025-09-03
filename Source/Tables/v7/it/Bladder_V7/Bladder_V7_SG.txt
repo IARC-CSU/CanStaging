@@ -1,0 +1,15 @@
+"T","N","M","Result","Message"
+"Ta","N0","M0","0A",
+"Tis","N0","M0","0is",
+"T1","N0","M0","I",
+"T2","N0","M0","II",
+"T2a","N0","M0","II",
+"T2b","N0","M0","II",
+"T3a","N0","M0","III",
+"T3b","N0","M0","III",
+"T4a","N0","M0","III",
+"T4b","N0","M0","IV",
+"ANY","N1","M0","IV",
+"ANY","N2","M0","IV",
+"ANY","N3","M0","IV",
+"ANY","ANY","M1","IV"

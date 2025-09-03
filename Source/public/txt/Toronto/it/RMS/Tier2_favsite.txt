@@ -1,0 +1,63 @@
+<p>
+    Localizzazioni favorevoli:
+    <br/>
+    • orbita
+    <br/>
+    •testa e collo (ad esclusione dei tumori parameningei)
+</p>
+<p>
+    - cranio
+    <br/>
+    - parotide
+    <br/>
+    - cavità orale
+    <br/>
+    - laringe
+    <br/>
+    - orofaringe
+    <br/>
+    - guancia
+    <br/>
+    - ipofaringe
+    <br/>
+    - tiroide e paratiroidi
+    <br/>
+    - collo
+    <br/>
+    • localizzazioni genito-urinarie (ad esclusione dei tumori di vescica e prostata)
+</p>
+<p>
+    • cistifellea e dotti epatici
+</p>
+<p>
+    <br/>
+    Localizzazioni non favorevoli:
+    <br/>
+    • vescica
+    <br/>
+    • prostata
+    <br/>
+    • estremità (arti)
+    <br/>
+    <br/>
+    • parameningei
+</p>
+<p>
+    - orecchio medio
+    <br/>
+    - cavità nasale
+    <br/>
+    - seni paranasali (inclusi tumori che si estendono nei seni paranasali)
+    <br/>
+    - rinofaringe
+    <br/>
+    - fossa infratemporale/pterigopalatina
+    <br/>
+    - area parafaringea
+    <br/>
+    • tronco
+    <br/>
+    • retroperitoneo
+    <br/>
+    • <u>tutte le altre sedi</u> non classificate come favorevoli
+</p>
