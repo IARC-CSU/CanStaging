@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Axillary","Dictionary","Numero dei linfonodi positivi ascellari (se pat: con almeno una localizzazione tumorale delle dimensioni massime > 2.0 mm )","1",
+"Infraclavicular","Dictionary","Metastasi in linfonodi sottoclavicolari (livello III ascellare)","2",
+"Mammary","Dictionary","Metastasi in linfonodi mammari interni","2",
+"Micrometastases","Dictionary","Micrometastasi non pi&#249; grandi di 2 mm (ma >0.2mm e/o pi&#249; di 200 cellule)","3",
+"Supraclavicular","Boolean","Metastasi nei linfonodi sovraclaveari","4",

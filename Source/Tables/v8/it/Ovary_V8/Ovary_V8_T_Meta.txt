@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Side","Dictionary","Ovaio/e coinvolto/e","2",
+"Status","Dictionary","Stato del tumore","2",
+"Ascites","Dictionary","Cellule maligne nell'ascite o nel liquido di lavaggio peritoneale","2",
+"Extrapelvic","Dictionary","Coinvolgimento extrapelvico (inclusi i linfonodi peritoneali)","2",

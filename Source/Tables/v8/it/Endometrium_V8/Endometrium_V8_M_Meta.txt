@@ -1,0 +1,2 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Metastasi a distanza (**Escluse le metastasi ai linfonodi para-aortici, vagina, sierosa pelvica, o annessi, include  metastasi  ai  linfonodi  inguinali,  intraperitoneo e altri linfonodi diversi dai para-aortici o pelvici**)","1",

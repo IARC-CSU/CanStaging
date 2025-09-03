@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Linfonodi non valutabili"
+"2","Assenza di metastasi ai linfonodi regionali"
+"3","Metastasi in un singolo linfonodo nella vera pelvi (ipogastriche, otturatori, iliaci interni, iliaci esterni, presacrali)"
+"4","Metastasi nei linfonodi regionali multipli nella vera pelvi (ipogastriche, otturatori, iliaci esterni o presacrali)"
+"5","Metastasi multiple di stazioni iliache comuni"

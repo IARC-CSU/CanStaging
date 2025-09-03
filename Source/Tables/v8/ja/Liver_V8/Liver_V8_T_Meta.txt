@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Solitary","Dictionary","単発腫瘍または多発性腫瘍","2",""
+"Size","Number","腫瘍の最大径（cm）","2",""
+"Vascular","Dictionary","血管浸潤","2",""
+"Invasion","Boolean","胆嚢以外の隣接臓器への直接浸潤","2",""
+"Visceral","Boolean","臓側腹膜の貫通","2",""

@@ -1,0 +1,10 @@
+"Metastasis","Size","Extension","Invasion","Invasionn","Result","Message"
+"1","ANY","F","F","F","TX",
+"2","ANY","F","F","F","T0",
+"3","ANY","F","F","F","Tis",
+"4","2","F","F","F","T1",
+"4","3","F","F","F","T2",
+"4","4","ANY","F","F","T3",
+"4","ANY","T","F","F","T3",
+"4","ANY","ANY","T","F","T4a",
+"4","ANY","ANY","ANY","T","T4b",

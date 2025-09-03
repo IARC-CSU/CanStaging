@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Assenza di metastasi nei linfonodi ascellari"
+"2","Metastasi in 1 fino a 3 linfonodi ascellari"
+"3","Metastasi in 4 fino a 9 linfonodi ascellari"
+"4","Metastasi in 10 o  pi&#249; linfonodi"

@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Tumore singolo"
+"2","Tumore multiplo"

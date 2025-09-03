@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Il tumore non invade la parete muscolare"
+"2","Il tumore invade il muscolo (met&#224; interna)"
+"3","Il tumore invade il muscolo (met&#224; esterna)"
+"4","Non si conosce la dimensione dell'invasione della parete muscolare"

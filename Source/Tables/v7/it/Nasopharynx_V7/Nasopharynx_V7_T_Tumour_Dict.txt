@@ -1,0 +1,8 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Nessuna evidenza di tumore primitivo"
+"3","Carcinoma in situ"
+"4","Tumore confinato alla rinofaringe o esteso all'orofaringe e/o cavit&#224; nasale"
+"5","Tumore con estensione allo spazio parafaringeo (L'estensione parafaringea indica un'infiltrazione postero laterale del tumore)"
+"6","Tumore che invade strutture ossee alla base cranica e/o i seni paranasali"
+"7","Tumore con estensione intranica e/o interessamento dei nervi cranici dell'ipofaringe dell'orbita o della fosse infratemporale/spazio masticatore"

@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Dimensione del tumore invasivo (cm)","1",
+"Bronchus","Dictionary","Invasione bronchiale","2",
+"Pleura","Boolean","Invasione della pleura viscerale","2",
+"Atelectasis","Boolean","Associazione ad atelettasia o polmonite ostruttiva (NON interessa il polmone in toto)","2",
+"T3invasion","Boolean","Tumore che invade direttamente una delle seguenti: parete toracica o coste; diaframma; nervo frenico; pleura mediastinica; pericardio parietale","3",
+"AtelectasisAll","Boolean","Associazione ad atelettasia o polmonite ostruttiva che interessa il polmone in toto","3",
+"NodulesT3","Boolean","Noduli tumorali separati nello stesso lobo","3",
+"NodulesT4","Boolean","Noduli tumorali separati in diversi lobi ipsilaterali","4",
+"T4invasion","Boolean","Tumore che invade una delle seguenti: mediastino; cuore o grandi vasi; nervo laringeo ricorrente; corpo vertebrale; esofago","4",

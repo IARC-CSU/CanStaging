@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"T","S&#236;"
+"F","No"

@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Tumour","Dictionary","Tumore primitivo","1",
+"Subsite","Boolean","Tumore limitato ad una **sola** sede anatomica della laringe (sovraglottide, glottide e sottoglottide)","1",
+"Vocalcord","Dictionary","Stato delle corde vocali","2",
+"Invasion","Boolean","Il tumore invade una delle seguenti: area  post-cricoidea,  tessuti  pre-epiglottici,  spazio  paraglottico, e/o corteccia interna della cartilagine tiroidea","2",
+"Limit","Boolean","Il tumore invade oltre la laringe (cricoide, cartilagine della tiroide, trachea, tessuti molli del collo inclusi muscoli estrinseci  della lingua (genioglosso, ioglosso, palatoglosso e stiloglosso), fascia muscolare, tiroide o esofago)","3",
+"Prevertebral","Boolean","Il tumore invade lo spazio prevertebrale, ingloba la carotide o invade le strutture mediastiniche","3",

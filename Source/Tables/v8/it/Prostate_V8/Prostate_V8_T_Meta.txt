@@ -1,0 +1,10 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Appearance","Dictionary","Aspetto","2",
+"Extension","Dictionary","Estensione","3",
+"Capsule","Boolean","Tumore esteso al di fuori della prostata (extracapsulare)","4",
+"Neck","Boolean","Tumore esteso al collo vescicale (microscopicamente)","4",
+"Vescicles","Boolean","Tumore che invade una o entrambe le vescichette seminali","4",
+"Bladder","Boolean","Tumore esteso alla vescica","5",
+"Sphincter","Boolean","Tumore esteso allo sfintere esterno","5",
+"Rectum","Boolean","Tumore esteso al retto e muscoli elevatori","5",
+"Wall","Boolean","Tumore esteso alla parete pelvica","5",

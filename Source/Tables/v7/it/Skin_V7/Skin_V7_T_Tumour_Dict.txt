@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Tumore primario non valutabile"
+"2","Non evidenza di tumore primitivo"
+"3","Carcinoma in situ"
+"4","Tumore maligno"

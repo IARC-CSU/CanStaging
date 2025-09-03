@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di fissazione dell'emilaringe"
+"2","Presenza di fissazione dell'emilaringe"
+"3","Presenza di estensione alla mucosa esofagea"

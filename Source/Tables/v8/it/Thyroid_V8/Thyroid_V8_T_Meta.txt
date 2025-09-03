@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Size","Number","Dimensione massima del tumore (cm)","1",
+"Tumour","Dictionary","Tumore primario (Incluso papillare, follicolare, scarsamente differenziato, a cellule di Hurthle e carcinoma anaplastico)","2",

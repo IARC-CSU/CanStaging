@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","&#x2265;18"
+"2","<18"
+"3","Non indicato"

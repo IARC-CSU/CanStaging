@@ -1,0 +1,11 @@
+## Guida per l&#39;uso della classificazione clinica o patologica per il melanoma maligno 
+
+| Tumore (T) | Linfonodi (N) | Metastasi (M)  | Cosa selezionare |
+|------------|---------------|----------------|------------------|
+| pT         | pN            | pM             | Patologica       |
+| pT         | pN            | cM             | Patologica       |
+| pT         | cN            | pM             | Patologica       |
+| pT         | cN            | cM             | Clinica          |
+| cT         | pN            | cM             | Clinica          |
+
+**Nota bene: nel caso in cui l&#39;intera lesione del melanoma sia stata escissa è possibile usare solo la classificazione patologica se i linfonodi regionali sono stati anche&#39;ssi escissi. (A meno che il tumore sia rimosso, i linfonodi valutati clinicamente e la lesione metastatica sia rimossa - pM)

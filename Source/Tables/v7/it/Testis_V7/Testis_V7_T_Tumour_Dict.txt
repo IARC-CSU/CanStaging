@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Tumore primitivo non valutabile"
+"2","Nessuna evidenza di tumore primitvo (es. cicatrice istologica nel testicolo)"
+"3","Neoplasia a cellule germinali intratubulare (carcinoma in situ)"
+"4","Tumore confinato al testicolo e all'epididimo"
+"5","Tumore infiltrante il cordone spermatico"
+"6","Tumore infiltrante lo scroto"

@@ -1,0 +1,7 @@
+"Key","DisplayText"
+"1","Riscontro incidentale &#x2264;5% dopo intervento disostruttivo"
+"2","Riscontro incidentale >5% dopo intervento disostruttivo"
+"3","Tumore diagnosticato mediante biopsia prostatica"
+"4","Tumore che interessa la met&#224; o meno di un lobo (esaminato clinicamente)"
+"5","Tumore che interessa pi&#249; della met&#224; di un lobo (esaminato clinicamente)"
+"6","Tumore che interessa entrambi i lobi (esaminato clinicamente)"

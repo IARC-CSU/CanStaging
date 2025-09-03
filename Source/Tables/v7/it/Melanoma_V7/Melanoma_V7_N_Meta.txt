@@ -1,0 +1,3 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Metastasis","Dictionary","Linfonodi regionali (I satelliti sono noduli tumorali (macro o micro) entro 2 cm dal tumore primitivo. Le metastasi in-transit coinvolgono la cute o il tessuto sottocutaneo a una distanza > 2 cm dal tumore primitivo ma non oltre i linfonodi regionali)","1",
+"Number","Number","Number of positive regional lymph nodes","2",

@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Esame patologico effettuato","1",
+"Posttherapy","Boolean","Post terapia neoadiuvante","1",
+"M","Dictionary","Metastasi a distanza","2",
+"Nodes","Boolean","Metastasi ai linfonodi non-regionali","3",
+"Bone","Boolean","Metastasi ossee","3",
+"Other","Boolean","Metastasi in altre sedi","3",

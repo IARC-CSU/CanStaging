@@ -1,0 +1,3 @@
+"M","Result"
+"M0","Localizzato",
+"M1","A distanza",

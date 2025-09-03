@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
 
-# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+# Author: Morten Ervik, ervikm@iarc.who.int, CSU/IARC
 
 $:.unshift File.dirname($0) # Ref: https://github.com/larsch/ocra
 
@@ -249,12 +249,15 @@ class CanStaging < Sinatra::Base
     # erb "<div class='alert alert-message'>OK - sites reloaded - users reloaded... <br>BTW: Your IP address is: #{request.ip}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
   end
 
-  get '/locale/*' do |locale|
-    session[:locale] = locale.downcase
-    R18n.set(session[:locale])
-    # session[:message] = "#{R18n.t[:service][:locale_changed_to]} #{r18n.locale.title}." # +"(#{t[:service][:available]}: #{r18n.available_locales.map { |i| "#{i.title} (#{i.code})" }.join(', ')})"
-    where_user_came_from = session[:previous_url] || '/tool'
-    redirect to where_user_came_from
+  get '/locale/:locale' do |locale|
+    available_locales = R18n.available_locales.map(&:code)
+    
+    if available_locales.include?(locale.downcase)
+      session[:locale] = locale.downcase
+    end
+
+    # Redirect back to the page the user came from, with a fallback
+    redirect back
   end
 
   get '/meta/*' do |site_name|

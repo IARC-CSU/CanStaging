@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","&#x2264;3mm in profondit&#224; e <=7mm in diffusione orizzontale"
+"2",">3mm ma <=5mm in profondit&#224; e <=7mm in diffusione orizzontale"
+"3",">5mm in profondit&#224; o >7mm in diffusione orizzontale"

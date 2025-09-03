@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"T1","Dictionary","Selezionare **solo se** carcinoma confinato alla cervice (l'estensione al corpo uterino dev'essere trascurata)","1",
+"T2","Dictionary","Selezionare **solo se** l'estensione &#232; oltre l'utero, ma non alla parete pelvica o al terzo inferiore della vagina","2",
+"T3","Dictionary","Selezionare **solo se** si estende alla parete pelvica e/o coinvolge il terzo inferiore della vagina e/o causa idronefrosi o un rene non funzionante e/o coinvolge linfonodi pelvici e/o para-aortici","3",
+"T4","Dictionary","Selezionare **solo se** il carcinoma si estende oltre la pelvi vera o coinvolgimento della vescica o della mucosa rettale confermato dalla biopsia (un edema bolloso, in quanto tale, non consente di attribuire un caso allo stadio IV)","4",

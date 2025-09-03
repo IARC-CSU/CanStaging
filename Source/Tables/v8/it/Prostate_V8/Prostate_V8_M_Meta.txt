@@ -1,0 +1,4 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Nodes","Boolean","Metastasi ai linfonodi non regionali","3",
+"Bone","Boolean","Metastasi ossee","3",
+"Other","Boolean","Metastasi in altre sedi","3",

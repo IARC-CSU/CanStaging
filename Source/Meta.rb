@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with CanStaging.  If not, see <https://www.gnu.org/licenses/>.
 
-# Author: Morten Ervik, ervikm@iarc.fr, CSU/IARC
+# Author: Morten Ervik, ervikm@iarc.who.int, CSU/IARC
 
 require 'csv'
 require 'json'

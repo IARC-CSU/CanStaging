@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"AgeInMonths","Dictionary","Et&#224; (in mesi)","",
+"Metastasis","Boolean","Presenza di metastasi a distanza alla diagnosi","",
+"MetsConfinedSLB","Boolean","Metastasi limitate a cute, fegato e/o midollo osseo","",
+"Locoregional","Boolean","Tumore locoregionale","",

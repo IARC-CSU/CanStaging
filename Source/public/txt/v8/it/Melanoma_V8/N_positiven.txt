@@ -1,0 +1,17 @@
+# Melanoma maligno della cute linfonodi regionali
+
+|    <br>Sede tumore primario <br>   <br>                             |    <br>Linfonodi regionali<br>   <br>                                                                                                                   |
+|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <br>Testa e collo                                                |    <br>Linfonodi cervicali                                                                                                                              |
+|    <br>Labbro                                                       |    <br>Facciali <br>   <br>Preauricolari <br>   <br>Sottomandibolari<br>   <br>Sottomentali                                                             |
+|    <br>Palpebra                                                     |    <br>Facciali <br>   <br>Infra-auricolari<br>   <br>Preauricolari <br>   <br>Sottomandibolari                                                         |
+|    <br>Orecchio esterno/canale uditivo                              |    <br>Pre-auricolari and Post-auricolari (Mastoidi)                                                                                                    |
+|    <br>Altre sedi faccia (guancia, mento, fronte, mascella, naso e  |                                                                                                                                                         | 
+|          tempia)                                                    |    <br>Facciali <br>   <br>Preauricolari <br>   <br>Sottomandibolari<br>   <br>Sottomentali                                                             |
+|    <br>Cuio capelluto                                               |    <br>Occipitali<br>   <br>Preauricolari<br>   <br>Post-auricolari (Mastoidi)<br>   <br>Accessorio spinale (Cervicali Posteriori)                      |
+|    <br>Collo                                                        |    <br>Ascellari <br>   <br>Accessorio spinale occipitale (Cervicali Posteriori) <br>   <br>Preauricolari<br>   <br>Sottomentali<br>   <br>Sovraclaveari|
+|    <br>Tronco superiore                                             |    <br>Ascellari<br>   <br>Cervicali<br>   <br>Mammari interni<br>   <br>Sovraclaveari                                                                  |
+|    <br>Tronco inferiore                                             |    <br>Femorali (Inguinali superficiali)                                                                                                                |
+|    <br>Braccio/Spalla                                               |    <br>Ascellari<br>   <br>Epitrocleari (per mano/braccio)<br>   <br>Accessorio spinale (per spalla)                                                    |
+|    <br>Gamba/Anca                                                   |    <br>Femorali (Inguinali superficiali) <br>   <br>Poplitei (per tallone/polpaccio)                                                                    |
+|    <br>Vulva/Pene/Scroto                                            |    <br>Inguinali profondi<br>   <br>Femorali (Inguinali superficiali)                                                                                   |

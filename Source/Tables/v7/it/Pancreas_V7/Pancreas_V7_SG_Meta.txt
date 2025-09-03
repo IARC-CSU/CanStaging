@@ -1,0 +1,4 @@
+"Field","DataType","Group","Colour"
+"T","generated","T","1",
+"N","generated","N","1",
+"M","generated","M","1",

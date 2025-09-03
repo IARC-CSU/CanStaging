@@ -1,0 +1,5 @@
+"Field","DataType","DisplayText","Group","Colour"
+"MetastasisOutsideCNS","Boolean","Presenza di metastasi al di fuori del sistema nervoso centrale","",
+"MetastasisSpineOrJunction","Boolean","Metastasi evidenziabili nell'imaging nel midollo o nella giunzione cervicomidollare","",
+"MetastasisBrain","Boolean","Metastasi evidenziabili nell'imaging nell'encefalo","",
+"TumourCellsInCSF","Boolean","Presenza di cellule neoplastiche nel liquor","",

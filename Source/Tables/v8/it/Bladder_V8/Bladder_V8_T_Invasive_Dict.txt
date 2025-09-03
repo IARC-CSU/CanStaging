@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Materiale non sufficiente"
+"2","Non evidenza di malattia"
+"3","Carcinoma papillare non invasivo"
+"4","Carcinoma in situ: 'tumore piatto'"
+"5","Tumore maligno"

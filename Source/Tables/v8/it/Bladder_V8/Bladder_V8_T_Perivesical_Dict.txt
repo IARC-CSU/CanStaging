@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Il tumore non invade il tessuto periviscerale"
+"2","Invasione microscopica del tessuto periviscerale"
+"3","Invasione macroscopica del tessuto periviscerale"
+"4","Non si conosce l'estensione dell'invasione periviscerale"

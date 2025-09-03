@@ -1,0 +1,8 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Protocol","Dictionary","Protocollo terapeutico","",
+"DistantMetastasis","Boolean","Presenza di metastasi a distanza alla diagnosi","",
+"AbdominalMetastasis","Boolean","Metastasi non ematogene confinate nell'addome","",
+"NeedleBiopsy","Boolean","Agobiopsia prima dell'asportazione del tumore","",
+"SurgicalBiopsy","Boolean","Biopsia chirurgica (esclusa agobiopsia) prima dell'asportazione del tumore","",
+"CompleteResection","Boolean","Completa escissione del tumore","",
+"ConfinedKidney","Boolean","Tumore confinato al rene","",

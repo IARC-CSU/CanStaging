@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","Massa linfonodale >5cm"
+"2","Massa linfonodale >2cm e &#x2264;5cm"
+"3","Massa linfonodale &#x2264;2cm"
+"4","Nessuna"
+"5","Sconosciuto"

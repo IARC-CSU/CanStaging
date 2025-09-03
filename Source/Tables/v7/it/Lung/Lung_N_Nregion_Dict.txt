@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Assenza di metastasi ai linfonodi regionali"
+"2","Metastasi nei linfonodi peribronchiali E/O ilari ipsilaterali E intrapolmonari, incluso il coinvolgimento per l'estensione diretta"
+"3","Metastasi nei linfonodi mediastinici E/O sottocarenali ipsilaterali"
+"4","Metastasi nei linfonodi mediastinici controlaterali, ilari controlaterali, scaleni o sovraclaveari ipsi o controlaterali"

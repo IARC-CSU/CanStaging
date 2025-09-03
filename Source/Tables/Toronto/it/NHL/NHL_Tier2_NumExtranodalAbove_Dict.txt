@@ -1,0 +1,6 @@
+"Key","DisplayText"
+"1","&#x2265;2"
+"2","Singolo (con interessamento della regione linfonodale)"
+"3","Singolo (senza interessamento della regione linfonodale)"
+"4","No"
+"5","Sconosciuto"

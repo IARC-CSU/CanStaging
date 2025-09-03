@@ -1,0 +1,7 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Pathologic","Boolean","Esame patologico effettuato","1",
+"Posttherapy","Boolean","Post terapia neoadiuvante","1",
+"Size","Number","Dimensione del tumore invasivo (cm)","2",
+"ChestInvasion","Boolean","Estensione alla parete toracica (non inclusi i muscoli pettorali)","3",
+"Inflammation","Boolean","Carcinoma infiammatorio","3",
+"Ulceration","Boolean","Ulcerazione/noduli satellite ipsilaterali/edema (incl. pelle a buccia d'arancia) della cute","3",

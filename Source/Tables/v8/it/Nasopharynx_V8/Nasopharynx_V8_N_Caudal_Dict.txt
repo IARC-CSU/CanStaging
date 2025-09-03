@@ -1,0 +1,3 @@
+"Key","DisplayText"
+"1","Metastasi al di sopra del bordo caudale della cartilagine cricoidea"
+"2","Estensione sotto al bordo caudale della cartilagine cricoidea"

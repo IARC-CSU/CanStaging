@@ -1,0 +1,5 @@
+"Key","DisplayText"
+"1","Linfonodi regionali non valutabili"
+"2","No metastasi ai linfonodi regionali"
+"3","Metastasi in un singolo linfonodo ipsilaterale"
+"4","Metastasi in linfonodi ipsilaterali multipli"

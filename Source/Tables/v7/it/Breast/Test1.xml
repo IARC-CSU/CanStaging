@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Test NICR Staging Tool for IARC
+    Created on : 07/11/2012
+    Author     : Giulio Napolitano
+    Description: Test description for NICR Staging Tool rendering
+-->
+
+<FORM>
+	<TGROUP text="T calculation">
+		<CONTROL name="Size"/>
+		<GROUP name="Tsub" baseColour="f9bdf4" progressiveColour="True">
+			<CONTROL name="ChestInvasion"/>
+			<CONTROL name="Ulceration"/>
+			<CONTROL name="Inflammation"/>
+		</GROUP>
+	</TGROUP>
+
+    	<NGROUP text="N calculation">
+		<CONTROL name="Micrometastases" controlledGroup="AxMam" hideValue="True"/>
+		<GROUP name="AxMam">
+			<CONTROL name="Axillary"/>
+			<CONTROL name="MammaryMicro"/>
+			<CONTROL name="MammaryClinical"/>
+		</GROUP>
+		<CONTROL name="Infraclavicular"/>
+		<CONTROL name="Supraclavicular"/>
+	</NGROUP>
+
+    	<MGROUP text="M calculation" >
+		<CONTROL name="M"/>
+	</MGROUP>
+</FORM>

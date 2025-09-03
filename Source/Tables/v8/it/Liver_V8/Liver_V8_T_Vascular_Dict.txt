@@ -1,0 +1,4 @@
+"Key","DisplayText"
+"1","Assenza di invasione vascolare"
+"2","Invasione vascolare"
+"3","Coinvolgimento del ramo maggiore della vena porta o epatica"

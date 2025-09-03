@@ -1,0 +1,6 @@
+"Field","DataType","DisplayText","Group","Colour"
+"Side","Dictionary","Ovaio coinvolto","2",
+"Status","Dictionary","Stato del tumore","2",
+"Ascites","Dictionary","Cellule maligne nell'ascite o nel liquido di lavaggio peritoneale","2",
+"Extrapelvic","Dictionary","Coinvolgimento extrapelvico","2",
+"Retroperitoneal","Boolean","Coinvolgimento nodale regionale","2",
