@@ -1,5 +1,5 @@
 FROM ruby:3.0
-LABEL maintainer="Morten Ervik <ervikm@iarc.who.int>"
+LABEL maintainer="Morten Ervik <ervikm@iarc.fr>"
 EXPOSE 4567
 
 RUN apt-get update -qq && apt-get install -y build-essential nano
