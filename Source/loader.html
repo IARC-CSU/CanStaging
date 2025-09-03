@@ -1,147 +1,122 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>CanStaging<sup>+</sup>Loader</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    /* https://www.w3schools.com/howto/howto_css_loader.asp */
-    /* Center the loader */
-    #loader {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      z-index: 1;
-      width: 150px;
-      height: 150px;
-      margin: -75px 0 0 -75px;
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      width: 120px;
-      height: 120px;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Add animation to "page content" */
-    .animate-bottom {
-      position: relative;
-      -webkit-animation-name: animatebottom;
-      -webkit-animation-duration: 3s;
-      animation-name: animatebottom;
-      animation-duration: 3s
-    }
-
-    @-webkit-keyframes animatebottom {
-      from {
-        bottom: -100px;
-        opacity: 0
-      }
-
-      to {
-        bottom: 0px;
-        opacity: 1
-      }
-    }
-
-    @keyframes animatebottom {
-      from {
-        bottom: -100px;
-        opacity: 0
-      }
-
-      to {
-        bottom: 0;
-        opacity: 1
-      }
-    }
-
-    body {
-      font-family: sans-serif;
-    }
-
-    h2 {
-      font-family: sans-serif;
-    }
-
-    #myDiv {
-      display: block;
-      text-align: center;
-    }
-
-    img {
-      display: none;
-    }
-  </style>
-  <script type="text/javascript">
-
-    var server = "http://127.0.0.1:9292";
-    var key = 'xyz'
-
-    // https://stackoverflow.com/questions/5224197/javascript-check-if-server-is-online
-    function ifServerOnline(ifOnline, ifOffline) {
-      var img = document.body.appendChild(document.createElement("img"));
-      img.onload = function () {
-        if (typeof ifOnline === "function") {
-          ifOnline();
+    <title>CanStaging+ Loader</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Setup */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
         }
-      };
-      img.onerror = function () {
-        if (typeof ifOffline === "function") {
-          ifOffline();
-        }
-      };
-      img.src = server + "/media/ping.gif?" + performance.now();
-    }
 
-    async function check() {
-      ifServerOnline(
-        function () {
-          // Server online code here
-          window.location = server + "/tool?key=" + key;
-        },
-        function () {
-          // Server offline code here
-          setTimeout(check, 1000);
+        /* Centering container for all content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
-      );
-    }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      check();
-    });
-  </script>
+        /* CSS Loader styles */
+        #loader {
+            width: 80px;
+            height: 80px;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Content styles */
+        #content {
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        #timeout-message {
+            display: none; /* Hidden by default */
+            color: #d9534f;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
-
 <body>
-  <div id="loader"></div>
 
-  <div style="display:block;" id="myDiv" class="animate-bottom">
-    <h2>CanStaging<sup>+</sup></h2>
-    <p>Loading, please wait...</p>
-  </div>
+    <div class="container">
+        <div id="loader"></div>
+        <main id="content">
+            <h2>CanStaging<sup>+</sup></h2>
+            <p>Loading, please wait...</p>
+        </main>
+        <div id="timeout-message">
+            <p>The local service is taking a long time to start.</p>
+            <p>Please ensure the service is running correctly and then refresh this page.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- Configuration ---
+            const SERVER_URL = "http://127.0.0.1:9292";
+            const KEY = 'xyz';
+            const REDIRECT_URL = `${SERVER_URL}/tool?key=${KEY}`;
+            const PING_RESOURCE = `${SERVER_URL}/media/ping.gif`;
+            const PING_INTERVAL_MS = 1000; // Check every 1 second
+            const OVERALL_TIMEOUT_MS = 45000; // Give up after 45 seconds
+
+            /**
+             * Checks if the server is online by making a lightweight network request.
+             * Returns true if online, false otherwise.
+             */
+            async function checkServerStatus() {
+                try {
+                    // Use fetch with 'no-cors' as we only need to know if the endpoint is reachable,
+                    // not read the response. 'no-store' prevents caching.
+                    await fetch(PING_RESOURCE, { mode: 'no-cors', cache: 'no-store' });
+                    return true;
+                } catch (error) {
+                    // A TypeError indicates a network error (e.g., server is down)
+                    return false;
+                }
+            }
+
+            // Set a timeout to show an error message if the server doesn't start in time.
+            const timeoutId = setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'none';
+                document.getElementById('timeout-message').style.display = 'block';
+                // Stop polling after timeout
+                clearInterval(pollingInterval); 
+            }, OVERALL_TIMEOUT_MS);
+
+            // Start polling the server
+            const pollingInterval = setInterval(async () => {
+                const isOnline = await checkServerStatus();
+                if (isOnline) {
+                    // Server is up! Clear timers and redirect.
+                    clearInterval(pollingInterval);
+                    clearTimeout(timeoutId);
+                    window.location.href = REDIRECT_URL;
+                }
+            }, PING_INTERVAL_MS);
+        });
+    </script>
 </body>
-
 </html>
