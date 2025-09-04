@@ -90,7 +90,22 @@ deploy_to_aws:
   script:
     - echo $AWS_REPOSITORY_URL:latest
     - TASK_DEFINITION=$(aws ecs describe-task-definition --task-definition "$AWS_TASK_DEFINITION_NAME" --region "${AWS_DEFAULT_REGION}")
-    - NEW_CONTAINER_DEFINTIION=$(echo $TASK_DEFINITION | jq --arg IMAGE "$AWS_REPOSITORY_URL:latest" --argjson TIMEOUT "${HEALTH_CHECK_START_PERIOD:-90}" '(.taskDefinition.containerDefinitions[0].image = $IMAGE | .taskDefinition.containerDefinitions[0].healthCheck.startPeriod = $TIMEOUT) | .taskDefinition.containerDefinitions[0]')
+    - NEW_CONTAINER_DEFINTIION=$(echo $TASK_DEFINITION | jq \
+      --arg IMAGE "$AWS_REPOSITORY_URL:latest" \
+      --argjson TIMEOUT "${HEALTH_CHECK_START_PERIOD:-60}" \
+      --argjson CMD "${HEALTH_CHECK_COMMAND}" '
+      (
+        .taskDefinition.containerDefinitions[0].image = $IMAGE |
+        .taskDefinition.containerDefinitions[0] += {
+          "healthCheck": {
+            "command": $CMD,
+            "interval": 30,
+            "timeout": 5,
+            "retries": 3,
+            "startPeriod": $TIMEOUT
+          }
+        }
+      ) | .taskDefinition.containerDefinitions[0]')
     - echo "Registering new container definition..."
     - aws ecs register-task-definition --network-mode awsvpc --requires-compatibilities FARGATE --region "${AWS_DEFAULT_REGION}" --family "${AWS_TASK_DEFINITION_NAME}" --container-definitions "${NEW_CONTAINER_DEFINTIION}" --memory 1024 --cpu 256 --execution-role-arn ecsTaskExecutionRole
     - echo "Updating the service..."
