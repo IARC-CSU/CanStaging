@@ -1,0 +1,109 @@
+sites_locale: "ja"
+
+service:
+  locale_changed_to: "ロケールが以下に変更されました"
+  available: "利用可能"
+  no_such_site: "申し訳ありませんが、そのようなサイトはありません"
+  not_found: "ここには何もありません..."
+  upload_failed_no_records: "アップロードに失敗しました。レコードがインポートされませんでした。(ファイルに問題がありますか？)"
+  uploaded_successfully_n: !!pl
+    1: "1件のレコードが正常にアップロードされました。"
+    n: "%1件のレコードが正常にアップロードされました。"
+  failed_to_import_n: !!pl
+    1: "1件のレコードのインポートに失敗しました。"
+    n: "%1件のレコードのインポートに失敗しました。"
+  upload_failed: "アップロードに失敗しました。"
+  unknown_site: "不明なサイト: %1"
+  logged_out: "ログアウトしました。"
+  logged_in: "ログインしました。"
+  invalid_url: "無効なURLです。"
+
+layout:
+  title: "CanStaging+ – がん病期分類ツール"
+  user: "ユーザー"
+  admin: "管理者"
+  home: "ホーム"
+  sites: "部位"
+  upload: "アップロード"
+  get_log: "ログの取得"
+  get_log_title: "提出された症例のログをダウンロードします。"
+  get_temp_log: "<i>一時</i>ログの取得"
+  get_temp_log_title: "提出された症例のログをダウンロードします。このログはがん病期分類ツールがシャットダウンされると失われますのでご注意ください。"
+  help: "ヘルプ"
+  help_text: |
+    <b>ヘルプ</b><br>CanStaging<sup>+</sup> - がん病期分類ツールは、ユーザーが入力した生情報からTNM、ステージ、悪性度、およびその他の部位特異的なステージスコアを計算します。<br>詳細については、<a href=\"/media/StagingToolHelp.pdf\" target=\"new\">PDFガイドをダウンロード</a>してください。
+  copyright_text: |
+    <h2>著作権</h2><ul><li>CanStaging+のソースコードはIARC（2021年）の著作物です。オープンソースのGNU/GPLライセンスで公開されています。</li> <li>ビジネスルールファイルはNICR（2021年）の著作物であり、クリエイティブ・コモンズ BY-SAライセンスで公開されています。</li> <li>トロント小児がんステージガイドラインのビジネスルールファイルはCCQ（2021年）の著作物であり、クリエイティブ・コモンズ BY-SAライセンスで公開されています。</li><li>イラストはUICCの著作物です。</li></ul>
+  about: "概要"
+  disclaimer_text: |
+    <h2>保証、免責事項、および責任制限</h2> <p>本ツールは、明示的または黙示的を問わず、商品性、特定目的への適合性、または非侵害の黙示的な保証または条件を含むがこれらに限定されない、いかなる種類の保証または条件もなく、「現状有姿で」提供されます。</p> <p>IARC、NICR、およびCCQは、本ツールにおける誤りや脱漏について一切の責任を負いません。</p> <p>いかなる場合においても、IARC、NICR、またはCCQは、情報の使用または性能に起因または関連して生じる、いかなる種類の特別、偶発的、間接的または結果的な損害、あるいは（1）提示された資料への信頼、（2）代替品の費用、（3）使用、データまたは利益の損失、（4）遅延または業務の中断、（5）およびいかなる責任理論から生じるものを含むがこれに限定されない、いかなる損害についても責任を負わないものとします。たとえIARC、NICR、またはCCQがそのような損害の可能性について知らされていたとしても同様です。</p> <p>本ツールには、技術的またはその他の不正確さが含まれる可能性があります。しかし、IARC、NICR、およびCCQは、更新を提供する義務を負いません。</p>
+  log_out: "ログアウト"
+  log_in: "ログイン"
+  language_select: "言語選択"
+  staging_system: "病期分類システム"
+  no_sites_translated: "この言語に翻訳された部位はまだありません。"
+  shutdown: "シャットダウン"
+
+home:
+  by: "による"
+  and: "と"
+  welcome: |
+    Northern Ireland Cancer Registry (NICR)、国際がん研究機関 (IARC)、国際対がん連合 (UICC)、およびCancer Council Queensland (CCQ)の協力により開発されたCanStaging<sup>+</sup>へようこそ。このツールは、がん病期分類の国際的な利用可能性、標準化、および比較可能性を最大限に高めることを目的としています。このツールは、乳房、子宮頸部、肝臓、肺、食道、卵巣、膵臓、前立腺、胃など、さまざまながん部位に対して、国際的なTNM病期分類第7版および第8版の自動計算を提供します。大腸がんは、TNM病期分類第5版および第8版を使用して分類できます。また、このツールは、トロント小児がん病期分類ガイドラインのために開発されたビジネスルールを使用して、小児がんの病期分類を自動計算します。将来的には、このツールは複数の言語で利用可能になる予定です。<br /> <br /> このツールで使用されている病期分類ガイドラインの詳細については、<a href='https://www.uicc.org/resources/tnm' target='blank'>国際対がん連合 (UICC) のTNMリソース</a>を、小児の病期分類については<a href='https://cancerqld.blob.core.windows.net/content/docs/childhood-cancer-staging-for-population-registries.pdf' target='blank'>トロント小児がん病期分類ガイドライン</a>を参照してください。
+  endorsed_by: "推奨"
+  log_in: "ログイン"
+  enter_key: "キーを入力してください。"
+
+get_log:
+  tumour_ID: "腫瘍ID"
+  date_created: "作成日"
+  site: "部位"
+  t: "T"
+  n: "N"
+  m: "M"
+  tnm_result: "TNM - 結果"
+  tnm_message: "TNM - メッセージ"
+  tnm_version: "TNM - バージョン"
+  sg_result: "ステージグループ - 結果"
+  sg_message: "ステージグループ - メッセージ"
+  simpg: "簡易グループ"
+  sg_range: "ステージグループ範囲"
+  site_specific: "部位特異的"
+  clear_log: "ログを消去"
+  download_log: "詳細ログをダウンロード"
+
+site:
+  please_choose: "選択してください"
+  no_data: "データがありません"
+  no_such_combination: "%1の組み合わせは見つかりません..."
+  no_possible_combination: "可能な組み合わせがありません。"
+  invalid_combination: "無効な組み合わせです。"
+  many_possible: "多数の可能性があります。"
+  one_of_many_possible: "多数の可能な%1のうちの1つ..."
+  reset: "リセット"
+  get_log: "ログの取得"
+  clear_form: "フォームをリセット"
+  submit: "送信"
+  sg_range: "ステージグループ範囲"
+  tnm: "TNM"
+  auto: "自動"
+  auto_tooltip: "腫瘍IDを自動生成しますか？"
+  tumour_ID: "腫瘍ID:"
+  field_must_be_filled: "'%1'を入力する必要があります。"
+  field_must_be_checked: "'%1'にチェックを入れる必要があります。"
+  field_outside_of_scope: "'%1'は範囲外です。(%2)"
+  results: "結果"
+  tnm_with_prefixes: "プレフィックス付きTNM"
+  dontknow: "不明"
+
+upload:
+  upload_header: "アップロード"
+  description: "このツールでは、バッチモードで病期分類するデータを含むファイルをアップロードできます。"
+  upload_button: "アップロード"
+  separating_character: "区切り文字:"
+  quoting_character: "引用符:"
+
+look_up:
+  no_valid_code_found: "有効なコードが見つかりませんでした..."
+
+about:
+  by: "開発、設計、保守担当"
