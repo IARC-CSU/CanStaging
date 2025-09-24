@@ -1,5 +1,11 @@
 # Changelog CanStaging<sup>+</sup>
 
+### 0.9.19 (2025-09-24)
+
+- Improved memory handling of the online demo version by disabling all languages but English.
+- Updated the Ruby libraries.
+- Various fixes
+
 ### 0.9.18 (2025-09-02)
 
 - Improved handling of locales.
