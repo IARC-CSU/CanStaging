@@ -45,7 +45,7 @@ class CanStaging < Sinatra::Base
   # first load default config
 
   config_default = {
-    'system' => {'log_file' => "./data/logg.db", 'port' => 4567, 'bind' => '0.0.0.0', 'staging_system' => 'v8'}
+    'system' => {'log_file' => "./data/logg.db", 'port' => 4567, 'bind' => '0.0.0.0', 'staging_system' => 'v8', 'force_languages' => false }
   }
 
   config = YAML.load_file("./data/config.yml")
@@ -110,10 +110,17 @@ class CanStaging < Sinatra::Base
 
   R18n::I18n.default = 'en'
   R18n.default_places { './i18n' }
+
   R18n.set("en")
 
   $sites = {}
   $available_staging_systems = []
+  $available_locales = R18n.available_locales.map(&:code)
+
+  if config['system']['force_languages']
+    $available_locales = config['system']['force_languages']
+    R18n.set(config['system']['force_languages'][0])
+  end
 
   ##
   def self.load_sites
@@ -126,8 +133,8 @@ class CanStaging < Sinatra::Base
       available_languages = Dir.entries(tnm_verision_path).select {|entry| File.directory? File.join(tnm_verision_path, entry) and !(entry =='.' || entry == '..') }
 
       # Only load the tables that are relevant based on defined locales
-      available_locales = R18n.available_locales.map(&:code)
-      available_languages = available_languages & available_locales
+      
+      available_languages = available_languages & $available_locales
 
       available_languages.each do |language|
         $sites[tnm_version][language] = {}
@@ -164,6 +171,9 @@ class CanStaging < Sinatra::Base
   before do
     ## load a stored locale or default to english
     session[:locale] = params[:locale] || session[:locale] || "en"
+    if config['system']['force_languages']
+      session[:locale] = config['system']['force_languages'][0]
+    end
     R18n.set(session[:locale])
     session[:sites_locale] = R18n.t[:sites_locale]
     ## set tnm version
@@ -178,7 +188,7 @@ class CanStaging < Sinatra::Base
       request.path_info.start_with?("/tnm")
       if session[:tnm_version].nil? || $available_staging_systems.index(session[:tnm_version]).nil?
         # halt and show staging system chooser
-        halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :layout => :layout }
+        halt erb :chooser, :locals => { :sites => [], :systems => $available_staging_systems , :locales => $available_locales, :layout => :layout }
       end
     end
     ## see if URL corresponds to TNM version
@@ -216,7 +226,7 @@ class CanStaging < Sinatra::Base
   end
 
   get '/get_log' do
-    erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems} , :layout => nil
+    erb :log, :locals => {:log => $st_logger.report(session[:key], request.ip.to_s, true), :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems, :locales => $available_locales} , :layout => nil
   end
 
   get '/get_log.csv' do
@@ -229,20 +239,20 @@ class CanStaging < Sinatra::Base
   end
 
   get '/tool' do
-    erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
+    erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales}, :layout => :layout
   end
 
   get '/' do
-     erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems}, :layout => :layout
+     erb :tool, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales}, :layout => :layout
   end
 
   get '/about' do
-    erb :about, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
+    erb :about, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales}, :layout => :layout
   end
 
   get '/changelog' do
     markdown = RDiscount.new(open('./changelog.md').read)
-    erb :changelog, :locals => { :text => markdown.to_html, :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
+    erb :changelog, :locals => { :text => markdown.to_html, :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales}, :layout => :layout
   end
 
   get '/refresh' do
@@ -287,20 +297,20 @@ class CanStaging < Sinatra::Base
       where_user_came_from = session[:previous_url] || '/tool'
       redirect to where_user_came_from
     else
-      erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }, :layout => :layout
+      erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems, :locales => $available_locales }, :layout => :layout
     end
   end
 
   get '/login/form' do
-    erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
+    erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales  }
   end
 
   get '/register' do
-    erb :registration, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
+    erb :registration, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales  }
   end
 
   get '/feedback' do
-    erb :feedback, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
+    erb :feedback, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales  }
   end
 
   post '/login/attempt' do
@@ -315,7 +325,7 @@ class CanStaging < Sinatra::Base
       redirect to where_user_came_from
     else
       session[:error] = 'Sorry not a valid key '
-      halt erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems  }
+      halt erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales  }
     end
   end
 
@@ -337,11 +347,11 @@ class CanStaging < Sinatra::Base
   get '/chooser' do
     sites = []
     session[:tnm_version] = nil
-    erb :chooser, :locals => { :sites => sites, :systems => $available_staging_systems , :layout => :layout }
+    erb :chooser, :locals => { :sites => sites, :systems => $available_staging_systems , :layout => :layout, :locales => $available_locales }
   end
 
   get "/upload" do
-    erb :upload, :locals => { :sites => get_sites, :systems => $available_staging_systems }, :layout => :layout
+    erb :upload, :locals => { :sites => get_sites, :systems => $available_staging_systems , :locales => $available_locales}, :layout => :layout
   end
 
   post '/upload' do
@@ -365,7 +375,7 @@ class CanStaging < Sinatra::Base
   end
 
   not_found do
-    erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems }
+    erb "<div class='alert alert-message'>#{R18n.t[:service][:not_found]}</div>", :locals => { :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems, :locales => $available_locales }
   end
 
   ## Helper functions
