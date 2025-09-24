@@ -2,3 +2,5 @@ system:
   environment:      "production"
   session_secret:   "b9DNaf74K9dZAlWr6obAExa4JTNiOkBDSLjpQCH4Us3ec1o1JCCoftq4Hjceju6w"
   standalone:       false
+  force_languages:  
+    - en
