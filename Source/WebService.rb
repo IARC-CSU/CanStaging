@@ -294,8 +294,7 @@ class CanStaging < Sinatra::Base
     if $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym].nil?
       # erb "<div class='alert alert-message'>#{t[:service][:no_such_site]}: #{site_name}</div>", :locals => { :sites =>$sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site} }
       session[:error] = "#{t[:service][:no_such_site]}: #{site_name}"
-      where_user_came_from = session[:previous_url] || '/tool'
-      redirect to where_user_came_from
+      redirect back
     else
       erb :site, :locals => {:site => $sites[session[:tnm_version]][session[:sites_locale]][site_name.downcase.to_sym], :sites => $sites[session[:tnm_version]][session[:sites_locale]].values.sort_by {|v| v.site}, :systems => $available_staging_systems, :locales => $available_locales }, :layout => :layout
     end
@@ -320,9 +319,8 @@ class CanStaging < Sinatra::Base
       session[:user] = user
       session[:local] = (request.ip.to_s == "127.0.0.1")
       $st_logger.log_access(session[:key], request.ip.to_s)
-      where_user_came_from = session[:previous_url] || '/tool'
       session[:message] = R18n.t.service.logged_in
-      redirect to where_user_came_from
+      redirect to('/tool')
     else
       session[:error] = 'Sorry not a valid key '
       halt erb :login_form, :locals => { :sites => get_sites, :systems => $available_staging_systems, :locales => $available_locales  }
