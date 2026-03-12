@@ -8,7 +8,7 @@ GEM
     bigdecimal (3.2.2)
     csv (3.3.5)
     domain_name (0.6.20240107)
-    ffi (1.17.2-x86-mingw32)
+    eventmachine (1.2.7)
     http-accept (1.7.0)
     http-cookie (1.0.8)
       domain_name (~> 0.5)
@@ -25,17 +25,11 @@ GEM
     puma (6.6.1)
       nio4r (~> 2.0)
     r18n-core (5.0.1)
-    rack (2.2.17)
+    rack (2.2.22)
     rack-protection (2.2.4)
       rack
     rdiscount (2.2.7.3)
     rest-client (2.1.0)
-      http-accept (>= 1.7.0, < 2.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
-    rest-client (2.1.0-x86-mingw32)
-      ffi (~> 1.9)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -61,8 +55,7 @@ GEM
     webrick (1.9.1)
 
 PLATFORMS
-  x64-mingw-ucrt
-  x86-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   amalgalite
