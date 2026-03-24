@@ -1,0 +1,8 @@
+Key,DisplayText
+1,El tumor primario no se puede evaluar
+2,No hay evidencia de tumor primario
+3,Carcinoma in situ
+4,"Tumor confinado a la nasofaringe, o que se extiende a la orofaringe y/o cavidad nasal sin afectación parafaríngea"
+5,"Tumor con extensión al espacio parafaríngeo y/o infiltración de los músculos pterigoideo medial, pterigoideo lateral y/o prevertebral"
+6,"El tumor invade estructuras óseas de la base del cráneo, vértebras cervicales, estructuras del pterigoideo y/o senos paranasales"
+7,"Tumor con extensión intracraneal y/o afectación de nervios craneales, hipofaringe, órbita, glándula parótida y/o infiltración más allá de la superficie lateral del músculo pterigoideo lateral"

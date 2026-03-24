@@ -1,0 +1,5 @@
+Key,DisplayText
+1,Sin metástasis a distancia
+2,Nódulo(s) tumoral(es) separado(s) en el lóbulo contralateral; tumor con nódulos pleurales o pericárdicos, o derrame maligno pleural o pericárdico
+3,Metástasis extratorácica única en un solo órgano
+4,Metástasis extratorácica múltiple en uno o varios órganos

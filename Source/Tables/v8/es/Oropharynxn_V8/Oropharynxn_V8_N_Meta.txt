@@ -1,0 +1,5 @@
+Field,DataType,DisplayText,Group,Colour
+Pathology,Dictionary,Prueba patológica completada,1,
+Metastasis,Dictionary,Ganglio linfático regional,1,
+Size,Number,Mayor dimensión del ganglio linfático (cm),1,
+Extranodal,Boolean,Presencia de extensión extraganglionar,1,

@@ -1,0 +1,5 @@
+Key,DisplayText
+1,Sin metástasis en ganglios linfáticos regionales
+2,Metástasis en ganglios linfáticos peribronquiales ipsilaterales y/o hiliares ipsilaterales, y en ganglios intrapulmonares, incluido el compromiso por extensión directa
+3,Metástasis en ganglios linfáticos ipsilaterales mediastínicos y/o subcarinales
+4,Metástasis en ganglios linfáticos mediastínicos contralaterales, hiliares contralaterales, escalenos ipsilaterales o contralaterales o supraclaviculares

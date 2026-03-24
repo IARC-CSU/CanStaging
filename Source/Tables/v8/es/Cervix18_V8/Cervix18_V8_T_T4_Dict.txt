@@ -1,0 +1,3 @@
+Key,DisplayText
+1,El carcinoma se ha extendido más allá de la pelvis verdadera o ha afectado (probado por biopsia) la mucosa de la vejiga o el recto
+2,Propagación del crecimiento a órganos adyacentes

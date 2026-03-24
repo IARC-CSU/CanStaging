@@ -1,0 +1,10 @@
+Size,Tumour,Result,Message
+ANY,1,TX,
+ANY,2,T0,
+2,3,T1a,
+3,3,T1b,
+4,3,T2,
+5,3,T3a,
+ANY,4,T3b,
+ANY,5,T4a,
+ANY,6,T4b,

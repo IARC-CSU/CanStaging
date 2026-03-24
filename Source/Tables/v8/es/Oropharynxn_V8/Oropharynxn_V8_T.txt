@@ -1,0 +1,10 @@
+Size,Extension,Invasion,Invasionn,Result,Message
+2,F,F,F,T1,
+3,F,F,F,T2,
+1,T,F,F,T3,
+2,T,F,F,T3,
+3,T,F,F,T3,
+4,T,F,F,T3,
+4,F,F,F,T3,
+ANY,ANY,T,F,T4a,
+ANY,ANY,ANY,T,T4b,

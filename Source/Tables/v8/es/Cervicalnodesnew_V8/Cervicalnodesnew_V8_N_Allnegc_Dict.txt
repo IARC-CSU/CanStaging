@@ -1,0 +1,7 @@
+Key,DisplayText
+1,"Metástasis en un solo ganglio linfático, de 3 cm o menos en su mayor dimensión sin extensión extranodal"
+2,"Metástasis en un solo ganglio linfático, de más de 3 cm, pero no más de 6 cm en su mayor dimensión sin extensión extraganglionar"
+3,"Metástasis en múltiples ganglios linfáticos ipsilaterales, ninguno de más de 6 cm en su mayor dimensión, sin extensión extraganglionar"
+4,"Metástasis en ganglios linfáticos bilaterales, ninguno de más de 6 cm en su mayor dimensión, sin extensión extraganglionar"
+5,Metástasis en un ganglio linfático de más de 6 cm en su mayor dimensión sin extensión extraganglionar
+6,Metástasis en un único ganglio linfático o múltiple con extensión clínica extraganglionar 

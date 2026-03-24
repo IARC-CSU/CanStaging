@@ -1,0 +1,3 @@
+Field,DataType,DisplayText,Group,Colour
+Size,Number,Profundidad del tumor (mm),2,
+Ulceration,Dictionary,Ulceración Tumoral,2,

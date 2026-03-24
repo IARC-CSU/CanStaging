@@ -1,0 +1,3 @@
+Field,DataType,DisplayText,Group,Colour,Tooltip
+PositiveN,Number,Número de ganglios positivos,1,,
+TumourDeposit,Boolean,"Depósito(s) tumoral(es), es decir, 'satélites', en la subserosa, o en tejido blando pericólico no peritonealizado o tejido blando perirrectal",1,,Only applies when number of involved regional nodes = 0

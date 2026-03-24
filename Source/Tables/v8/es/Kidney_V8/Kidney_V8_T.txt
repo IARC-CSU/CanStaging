@@ -1,0 +1,9 @@
+Size,Limit,Renal,Fat,Venacava,Diaphragm,Gerota,Result,Message
+2,T,F,F,F,F,F,T1a,
+3,T,F,F,F,F,F,T1b,
+4,T,F,F,F,F,F,T2a,
+5,T,F,F,F,F,F,T2b,
+ANY,F,ANY,ANY,F,F,F,T3a,
+ANY,F,T,ANY,T,F,F,T3b,
+ANY,F,ANY,ANY,T,T,F,T3c,
+ANY,F,ANY,ANY,ANY,ANY,T,T4,

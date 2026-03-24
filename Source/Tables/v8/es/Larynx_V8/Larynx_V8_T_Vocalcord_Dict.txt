@@ -1,0 +1,4 @@
+Key,DisplayText
+1,Movilidad normal de las cuerdas vocales
+2,Deterioro de la movilidad de las cuerdas vocales
+3,Fijación/inmovilidad de las cuerdas vocales

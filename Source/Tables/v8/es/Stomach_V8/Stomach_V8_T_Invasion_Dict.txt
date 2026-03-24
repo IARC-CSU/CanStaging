@@ -1,0 +1,9 @@
+Key,DisplayText
+1,Sin invasión
+2,El tumor invade la lámina propia o la muscular de la mucosa
+3,El tumor invade submucosa
+4,El tumor invade la muscular propia
+5,El tumor invade la subserosa
+6,El tumor perfora la serosa
+7,El tumor invade estructuras adyacentes
+8,La invasión no se puede evaluar

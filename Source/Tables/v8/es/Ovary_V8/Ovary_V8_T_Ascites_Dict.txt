@@ -1,0 +1,3 @@
+Key,DisplayText
+1,Ausencia de células malignas en ascitis o lavados peritoneales
+2,Células malignas en ascitis o lavados peritoneales

@@ -1,0 +1,6 @@
+Key,DisplayText
+1,Sin afectación extrapélvica
+2,Compromiso peritoneal extrapélvico microscópico
+3,Metástasis peritoneal macroscópica más allá del borde pélvico (≤2 cm en su mayor dimensión)
+4,Metástasis peritoneal macroscópica más allá del borde pélvico (>2 cm en su mayor dimensión)
+5,Solo afectación de ganglios retroperitoneales

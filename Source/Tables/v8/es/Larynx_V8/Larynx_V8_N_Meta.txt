@@ -1,0 +1,5 @@
+Field,DataType,DisplayText,Group,Colour
+Pathology,Dictionary,Pruebas patológicas completadas,1,
+Metastasis,Dictionary,Metástasis en ganglios linfáticos (los ganglios de la línea media se consideran ganglios ipsolaterales),1,
+Size,Number,Mayor dimensión del ganglio linfático (cm),1,
+Extranodal,Boolean,Presencia de extensión extraganglionar,2,

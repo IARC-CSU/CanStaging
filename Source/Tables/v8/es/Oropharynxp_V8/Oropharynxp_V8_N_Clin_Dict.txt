@@ -1,0 +1,6 @@
+Key,DisplayText
+1,Los ganglios linfáticos regionales no se pueden evaluar
+2,Sin metástasis en ganglios linfáticos regionales
+3,"Metástasis unilateral, en ganglio(s) linfático(s), todos de 6cm o menos en su mayor dimensión"
+4,"Metástasis contralateral o bilateral en los ganglios linfáticos, todos de 6cm o menos en su mayor dimensión"
+5,Metástasis en ganglios linfáticos maoyres de 6cm de dimensión

@@ -1,0 +1,7 @@
+Key,DisplayText
+1,"Cápsula intacta, sin tumor en la superficie del ovario ni en la superficie de las trompas de Falopio"
+2,Cápsula rota durante la cirugía (derrame quirúrgico)
+3,Cápsula rota antes de la cirugía o tumor en la superficie del ovario o de las trompas de Falopio
+4,Extensión pélvica y/o implantes en útero y/o trompa(s) de Falopio y/u ovario(s)
+5,"Extensión a otros tejidos pélvicos, incluido el intestino dentro de la pelvis"
+6,Cáncer peritoneal primario

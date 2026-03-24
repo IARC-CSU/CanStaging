@@ -1,0 +1,7 @@
+Key,DisplayText
+1,El tumor invade la submucosa
+2,El tumor invade la muscular propia
+3,El tumor invade la subserosa o los tejidos pericólicos o perirrectales no peritonealizados
+4,El tumor perfora el pritoneo visceral
+5,El tumor invade directamente otros órganos o estructuras
+6,El tumor primario no se puede valorar

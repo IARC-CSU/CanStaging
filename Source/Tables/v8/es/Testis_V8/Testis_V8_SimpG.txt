@@ -1,0 +1,4 @@
+M,Result
+M0,Regional
+M1a,A distancia
+M1b,A distancia

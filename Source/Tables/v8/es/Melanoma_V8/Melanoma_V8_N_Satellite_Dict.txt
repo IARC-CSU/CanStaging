@@ -1,0 +1,4 @@
+Key,DisplayText
+1,Sin metástasis satélite o en tránsito
+2,Metástasis satélite
+3,Metástasis en tránsito

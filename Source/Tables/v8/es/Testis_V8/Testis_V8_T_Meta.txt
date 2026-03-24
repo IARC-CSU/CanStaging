@@ -1,0 +1,5 @@
+Field,DataType,DisplayText,Group,Colour
+Tumour,Dictionary,Tumor primario,1,
+Vascular,Boolean,Presencia de invasión vascular/linfática,2,
+Tunica,Boolean,Tumor invade túnica albugínea,2,
+Vaginalis,Boolean,Afectación de túnica vaginalis,2,

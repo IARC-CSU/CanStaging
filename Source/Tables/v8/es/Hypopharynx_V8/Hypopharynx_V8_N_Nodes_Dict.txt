@@ -1,0 +1,6 @@
+Key,DisplayText
+1,Los ganglios linfáticos regionales no se pueden evaluar
+2,Sin metástasis en los ganglios linfáticos regionales
+3,Metástasis en un sólo ganglio ipsilateral
+4,Metástasis en múltiples ganglios linfáticos ipsilaterales
+5,Metástasis en ganglios linfáticos bilaterales o contralaterales

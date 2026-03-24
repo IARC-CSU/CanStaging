@@ -1,0 +1,4 @@
+Key,DisplayText
+3,El carcinoma afecta el tercio inferior de la vagina y/o se extiende a la pared pélvica y/o causa hidronefrosis o insuficiencia renal y/o afecta los ganglios linfáticos pélvicos y/o para-aórticos.
+1,El carcinoma involucra el tercio inferior de la vagina sin extensión a la pared pélvica
+2,Extensión a la pared pélvica y/o hidronefrosis o insuficiencia renal (a menos que se sepa que es otra causa)

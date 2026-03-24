@@ -1,0 +1,4 @@
+Key,DisplayText
+1,El tumor NO invade bronquio principal
+2,El tumor invade el bronquio principal
+3,El tumor invade la carina o la tráquea

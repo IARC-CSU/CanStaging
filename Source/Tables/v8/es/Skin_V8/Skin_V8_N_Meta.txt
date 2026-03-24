@@ -1,0 +1,3 @@
+Field,DataType,DisplayText,Group,Colour
+Nodes,Dictionary,Ganglios linfáticos regionales,1,
+Size,Number,Mayor dimensión del ganglio linfático (cm),1,

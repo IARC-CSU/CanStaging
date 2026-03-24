@@ -1,0 +1,3 @@
+Key,DisplayText
+1,Metástasis por encima del borde caudal del cartílago cricoides
+2,Extensión por debajo del borde caudal del cartílago cricoides

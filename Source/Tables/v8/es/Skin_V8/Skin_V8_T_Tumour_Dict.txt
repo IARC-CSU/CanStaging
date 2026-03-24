@@ -1,0 +1,5 @@
+Key,DisplayText
+1,El tumor primario no se puede evaluar
+2,No hay evidencia de tumor primario
+3,Carcinoma in situ
+4,Tumor maligno

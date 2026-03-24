@@ -1,0 +1,5 @@
+Key,DisplayText
+1,Papilar y Folicular en menores de 55 años
+2,Papilar o Folicular de 55 años en adelante
+3,Medular
+4,Anaplásico

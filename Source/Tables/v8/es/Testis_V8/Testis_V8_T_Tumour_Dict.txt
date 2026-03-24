@@ -1,0 +1,7 @@
+Key,DisplayText
+1,El tumor primario no se puede evaluar
+2,"No hay evidencia de tumor primario (p. ej., cicatriz histológica en el testículo)"
+3,"Neoplasia de células germinales intratubular (carcinoma in situ)"
+4,Tumor limitado al testículo y epidídimo
+5,El tumor invade el cordón espermático
+6,El tumor invade el escroto

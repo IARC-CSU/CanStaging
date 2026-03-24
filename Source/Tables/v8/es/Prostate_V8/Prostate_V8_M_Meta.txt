@@ -1,0 +1,4 @@
+Field,DataType,DisplayText,Group,Colour
+Nodes,Boolean,Metástasis a ganglio(s) linfático(s) no regional(es),3,
+Bone,Boolean,Metástasis ósea(s),3,
+Other,Boolean,Metástasis en otro(s) lugar(es),3,

@@ -1,0 +1,6 @@
+Size,Extension,Invasion,Result,Message
+2,F,F,T1,
+3,F,F,T2,
+4,ANY,F,T3,
+ANY,T,F,T3,
+ANY,ANY,T,T4,

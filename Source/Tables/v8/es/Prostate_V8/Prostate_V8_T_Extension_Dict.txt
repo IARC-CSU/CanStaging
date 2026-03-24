@@ -1,0 +1,7 @@
+Key,DisplayText
+1,Tumor detectado como hallazgo histológico incidental en ≤ 5% del tejido resecado
+2,Tumor detectado como hallazgo histológico incidental en > 5% del tejido resecado
+3,Tumor identificado mediante biopsia por punción
+4,El tumor afecta la mitad de un lóbulo o menos (detectado clínicamente)
+5,El tumor afecta más de la mitad de un lóbulo (detectado clínicamente)
+6,El tumor afecta ambos lóbulos (detectado clínicamente)

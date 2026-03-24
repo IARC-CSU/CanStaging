@@ -1,0 +1,3 @@
+Field,DataType,DisplayText,Group,Colour
+Size,Number,Mayor dimensión del tumor (cm),1,
+Tumour,Dictionary,"Tumor primario (incluyendo carcinomas papilares, foliculares, pobremente diferenciados, de células de Hürthle y anaplásicos)",2,

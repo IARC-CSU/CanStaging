@@ -1,0 +1,3 @@
+Key,DisplayText
+1,Sin metástasis en ganglios linfáticos regionales apelmazados
+2,Metástasis en ganglios linfáticos regionales apelmazados

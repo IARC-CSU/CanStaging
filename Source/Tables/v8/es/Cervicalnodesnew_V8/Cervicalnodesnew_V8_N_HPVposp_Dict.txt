@@ -1,0 +1,3 @@
+Key,DisplayText
+1,Metástasis en 1 a 4 ganglios linfáticos
+2,Metástasis en 5 o más ganglios linfáticos

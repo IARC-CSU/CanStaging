@@ -1,0 +1,4 @@
+Key,DisplayText
+1,Los ganglios linfáticos regionales no se pueden evaluar
+2,Sin metástasis en ganglios linfáticos regionales
+3,Metástasis en ganglio(s) linfático(s) regional(es)

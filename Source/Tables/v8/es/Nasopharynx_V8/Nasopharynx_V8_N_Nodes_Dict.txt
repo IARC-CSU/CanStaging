@@ -1,0 +1,5 @@
+Key,DisplayText
+1,Los ganglios linfáticos regionales no se pueden evaluar
+2,Sin metástasis en los ganglios linfáticos regionales
+3,"Metástasis unilateral, en ganglio(s) linfático(s) cervical(es), y/o metástasis unilateral o bilateral en ganglios linfáticos retrofaríngeos"
+4,Metástasis bilateral en ganglios linfáticos cervicales

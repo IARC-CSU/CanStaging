@@ -1,0 +1,3 @@
+Key,DisplayText
+1,Sin metástasis a distancia
+2,Metástasis distancia

@@ -1,0 +1,10 @@
+Field,DataType,DisplayText,Group,Colour
+Minimal,Boolean,Adenocarcinoma mínimamente invasivo,1,
+Size,Number,Introduzca el tamaño del tumor invasivo (cm),1,
+Bronchus,Dictionary,Invasión bronquial,1,
+Pleura,Boolean,Invade la pleura visceral,1,
+Atelectasis,Boolean,Atelectasia o neumonitis obstructiva (Parte o todo el pulmón),1,
+T3invasion,Boolean,El tumor invade directamente: pared torácica (incluidos los tumores del surco superior); nervio frénico; pleura parietal; pericardio parietal,3,
+NodulesT3,Boolean,Nódulos tumorales separados en el mismo lóbulo que el primario,3,
+NodulesT4,Boolean,Nódulo(s) tumoral(es) separado(s) en un lóbulo ipsilateral distinto,4,
+T4invasion,Boolean,El tumor invade cualquiera de las siguientes estructuras: diafragma; mediastino; corazón o grandes vasos; nervio recurrente laríngeo; cuerpos vertebrales; esófago,4,

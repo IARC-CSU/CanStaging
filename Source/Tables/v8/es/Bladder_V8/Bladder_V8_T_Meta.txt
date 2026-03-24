@@ -1,0 +1,9 @@
+Field,DataType,DisplayText,Group,Colour
+Invasive,Dictionary,Nivel de invasión,1,
+Subepithelial,Boolean,El tumor invade el tejido conjuntivo subepitelial,2,
+MuscularisPropria,Boolean,El tumor invade la muscularis propia,2,
+Muscularis,Dictionary,Invasión de la muscularis propia,2,
+PerivesicalTissue,Boolean,El tumor invade el tejido perivesical,2,
+Perivesical,Dictionary,Invasividad perivesical,2,
+Prostate,Boolean,"El tumor invade el estroma prostático, vesículas seminales, útero o vagina",3,
+Pelvic,Boolean,El tumor invade la pared pélvica o la pared abdominal,3,

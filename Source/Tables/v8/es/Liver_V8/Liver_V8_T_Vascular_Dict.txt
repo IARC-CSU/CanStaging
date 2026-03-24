@@ -1,0 +1,4 @@
+Key,DisplayText
+1,Sin invasión vascular
+2,Invasión vascular
+3,Involucra la rama principal de la vena porta o hepática
